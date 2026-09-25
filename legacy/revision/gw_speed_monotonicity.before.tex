@@ -1,0 +1,860 @@
+\documentclass[11pt,a4paper]{article}
+
+% Compile with: latexmk -pdf gw_speed_monotonicity.tex
+% The accompanying .latexmkrc puts all build products in build/.
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath,amsthm,mathtools}
+\usepackage{newpxtext,newpxmath}
+\usepackage{microtype}
+\usepackage[a4paper,top=25mm,bottom=26mm,left=29mm,right=29mm,headsep=7mm]{geometry}
+\usepackage{xcolor}
+\usepackage{titlesec}
+\usepackage{fancyhdr}
+\usepackage{aliascnt}
+\usepackage[unicode,hidelinks]{hyperref}
+\usepackage[nameinlink,noabbrev]{cleveref}
+
+\definecolor{ink}{gray}{0.12}
+\definecolor{muted}{gray}{0.40}
+\color{ink}
+\hypersetup{
+  pdftitle={A fixed-point correction for speed monotonicity},
+  pdfsubject={Galton--Watson trees with at least two offspring},
+  pdfauthor={},
+  pdfkeywords={Galton--Watson tree, biased random walk, speed monotonicity, recursive distributional equation, fixed-point correction}
+}
+\titleformat{\section}{\large\bfseries}{\thesection}{0.7em}{}
+\titleformat{\subsection}{\normalsize\bfseries}{\thesubsection}{0.6em}{}
+\titlespacing*{\section}{0pt}{2.1ex plus .6ex minus .2ex}{1ex}
+\titlespacing*{\subsection}{0pt}{1.8ex plus .5ex minus .2ex}{.7ex}
+\setlength{\parindent}{1.15em}
+\setlength{\parskip}{0.22em}
+\linespread{1.035}
+\setlength{\emergencystretch}{1.8em}
+\setlength{\headheight}{14pt}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\footnotesize\color{muted}A fixed-point correction for speed monotonicity}
+\fancyhead[R]{\footnotesize\color{muted}Research note}
+\fancyfoot[C]{\footnotesize\thepage}
+\renewcommand{\headrulewidth}{0.25pt}
+\renewcommand{\footrulewidth}{0pt}
+\fancypagestyle{firstpage}{\fancyhf{}\fancyfoot[C]{\footnotesize\thepage}\renewcommand{\headrulewidth}{0pt}}
+\numberwithin{equation}{section}
+\allowdisplaybreaks[1]
+
+\newtheoremstyle{notethm}{.9em}{.8em}{\itshape}{} {\bfseries}{.}{.5em}{}
+\theoremstyle{notethm}
+\newtheorem{theorem}{Theorem}[section]
+\newaliascnt{proposition}{theorem}
+\newtheorem{proposition}[proposition]{Proposition}
+\aliascntresetthe{proposition}
+\newaliascnt{lemma}{theorem}
+\newtheorem{lemma}[lemma]{Lemma}
+\aliascntresetthe{lemma}
+\newaliascnt{corollary}{theorem}
+\newtheorem{corollary}[corollary]{Corollary}
+\aliascntresetthe{corollary}
+\theoremstyle{definition}
+\newaliascnt{remark}{theorem}
+\newtheorem{remark}[remark]{Remark}
+\aliascntresetthe{remark}
+\renewcommand{\qedsymbol}{\ensuremath{\square}}
+\crefname{equation}{equation}{equations}
+\crefname{lemma}{Lemma}{Lemmas}
+\crefname{proposition}{Proposition}{Propositions}
+\crefname{theorem}{Theorem}{Theorems}
+\crefname{corollary}{Corollary}{Corollaries}
+\crefname{remark}{Remark}{Remarks}
+\crefname{section}{Section}{Sections}
+
+\newcommand{\E}{\mathbb E}
+\newcommand{\PP}{\mathbb P}
+\newcommand{\R}{\mathbb R}
+\newcommand{\Law}{\operatorname{Law}}
+\newcommand{\Cov}{\operatorname{Cov}}
+\newcommand{\id}{\mathrm{id}}
+\newcommand{\dd}{\,\mathrm d}
+\newcommand{\st}{\leq_{\mathrm{st}}}
+\newcommand{\Dplus}{D^{+}}
+\newcommand{\cJ}{\mathcal J}
+\newcommand{\cL}{\mathcal L}
+\newcommand{\cF}{\mathscr F}
+\newcommand{\res}{\mathfrak R}
+
+\begin{document}
+\thispagestyle{firstpage}
+\begin{flushleft}
+{\small\scshape\color{muted}Probability \quad / \quad Research note}\par
+\vspace{0.6em}
+{\fontsize{22}{26}\selectfont\bfseries A fixed-point correction\par
+for speed monotonicity}\par
+\vspace{0.5em}
+{\large Galton--Watson trees with at least two offspring}\par
+\vspace{0.7em}
+{\small\color{muted}25 September 2026 \quad\textperiodcentered\quad Working draft}
+\end{flushleft}
+\vspace{-.3em}
+\noindent\rule{\textwidth}{0.4pt}
+\vspace{.2em}
+
+\begin{abstract}
+We record an argument for strict monotonicity of the speed of a biased random
+walk on a Galton--Watson tree whose offspring distribution has finite mean and
+is supported on $\{2,3,\ldots\}$. The main step is an inverse-square reweighting
+inequality for the escape-probability fixed point. The factor two comes from
+retaining the two-child structure under reweighting, rather than from a lower
+bound on the escape probability. A symmetric speed formula then suggests an
+explicit correction that vanishes on every fixed point. This correction makes
+the distributional variation positive and the explicit parameter variation
+negative. Comparing nearby fixed points yields a strictly negative upper
+right Dini derivative throughout $1<\lambda<m$, without differentiating the
+infinite-depth escape probability. A known low-parameter theorem completes the
+monotonicity statement. Classical differentiability is invoked separately,
+under an exponential-moment assumption.
+\end{abstract}
+
+\noindent{\footnotesize\color{muted}\emph{Status.} This working note records an AI-assisted proof argument. The proof and its novelty have not undergone
+independent review; the cited results are distinguished from the argument
+presented here.}
+
+\section{Statement and proof architecture}\label{sec:statement}
+
+Let $\mathbb T$ be a Galton--Watson tree with offspring law $(p_k)_{k\ge0}$.
+Throughout, assume
+\begin{equation}\label{eq:assumptions}
+ \PP(\nu\ge2)=1,\qquad m:=\E\nu<\infty.
+\end{equation}
+At a vertex with $k$ children, the $\lambda$-biased walk jumps to its parent
+with probability $\lambda/(\lambda+k)$ and to each child with probability
+$1/(\lambda+k)$. Thus increasing $\lambda$ increases the bias towards the root.
+The choice of reflection convention at the root does not affect the speed.
+For $0<\lambda<m$, write
+\begin{equation}\label{eq:speed-def}
+ v(\lambda)=\lim_{n\to\infty}\frac{|W_n|}{n}.
+\end{equation}
+The existence, determinism and positivity of this speed are part of the
+standard Galton--Watson random-walk theory recalled in
+\cite[Section~1]{Aidekon}. Set $v(0)=1$.
+
+For a real-valued function $f$, use the upper right Dini derivative
+\begin{equation}\label{eq:dini-def}
+ \Dplus f(\lambda)
+ :=\limsup_{\varepsilon\downarrow0}
+       \frac{f(\lambda+\varepsilon)-f(\lambda)}{\varepsilon}.
+\end{equation}
+
+\begin{theorem}\label{thm:main}
+Under \eqref{eq:assumptions}, for every $1<\lambda<m$ there exists
+$\delta_\lambda>0$ such that
+\begin{equation}\label{eq:main-dini}
+ \Dplus v(\lambda)\le-\delta_\lambda<0.
+\end{equation}
+Consequently, $v$ is strictly decreasing on $[0,m)$.
+\end{theorem}
+
+\begin{corollary}\label{cor:derivative}
+If, in addition, $\E e^{\theta\nu}<\infty$ for some $\theta>0$, then
+$v$ is differentiable on $(0,m)$ and
+\begin{equation}\label{eq:negative-derivative}
+ v'(\lambda)<0,\qquad 0<\lambda<m.
+\end{equation}
+\end{corollary}
+
+The additional moment assumption in \cref{cor:derivative} is used only for the
+classical differentiability theorem of Bowditch--Tokushige
+\cite[Theorem~1.1]{BT}. It is not used in the fixed-point inequalities or in
+\eqref{eq:main-dini}.
+
+\subsection*{The two mechanisms to keep in view}
+
+Let $\beta_\lambda$ be the probability, on a fixed tree, of never hitting the
+parent when the walk starts at the root. Fix $\lambda>1$ and put $c=\lambda-1$.
+The probabilistic core of the proof is
+\begin{equation}\label{eq:roadmap-tilt}
+ \boxed{\quad
+ \E\beta_\lambda
+ <2\,
+ \frac{\E[\beta_\lambda/(c+\beta_\lambda)^2]}
+      {\E[1/(c+\beta_\lambda)^2]}.
+ \quad}
+\end{equation}
+Its proof preserves the two-child structure under a change of measure; it
+does not estimate $\partial_\lambda\beta_\lambda$.
+
+The analytic core is to alter the speed-comparison functional by a quantity
+that is \emph{zero at every recursive fixed point}. For an explicitly chosen
+smooth function $u$, this quantity is
+\begin{equation}\label{eq:roadmap-residual}
+ \res_u(\alpha,\rho)
+ =\E_\rho u(X)
+  -\E_{\nu,\rho}u\biggl(
+      \frac{\sum_{i=1}^{\nu}X_i}{\alpha+\sum_{i=1}^{\nu}X_i}
+    \biggr).
+\end{equation}
+Subtracting $2\res_u$ leaves the value on the true fixed-point curve unchanged,
+but changes both off-curve derivatives in a useful way. The choice
+\begin{equation}\label{eq:roadmap-corrector}
+ u'(x)=\E\frac{\beta_\lambda}
+ {(\lambda-1+x+\beta_\lambda-x\beta_\lambda)^2}
+\end{equation}
+produces an exact cancellation. The same inequality
+\eqref{eq:roadmap-tilt} then controls \emph{both} remaining signs.
+
+The order of the proof is therefore: symmetric speed representation,
+two-child reweighting, explicit correction, and finally a finite-parameter
+comparison of nearby fixed points. No assertion that a root-only response is
+negative is needed.
+
+\section{Escape probabilities and a symmetric speed formula}\label{sec:reduction}
+
+Adjoin an artificial parent to the root $e$. Let $\beta_\lambda(T)$ denote the
+quenched probability of never visiting that parent, starting from $e$.
+For $0<\lambda<m$, $0<\beta_\lambda<1$ almost surely. With
+$\pi_\lambda=\Law(\beta_\lambda)$, the recursive distributional equation is
+\begin{equation}\label{eq:rde}
+ X\ \overset{\mathrm d}=\ F_\lambda(S),\qquad
+ F_\lambda(s)=\frac{s}{\lambda+s},\qquad
+ S=\sum_{i=1}^{\nu}X_i,
+\end{equation}
+where $X_i$ are independent with law $\pi_\lambda$ and independent of $\nu$.
+The RDE follows by a first-step decomposition, including repeated returns
+from children to the root.
+
+For $\alpha>1$ and a probability measure $\rho$ on $[0,1]$, define
+\begin{align}
+ t(x,y)&=x+y-xy,
+ & A_\alpha(x,y)&=\alpha-1+t(x,y),\label{eq:kernels}\\
+ N_\alpha(\rho)&=\E_\rho\frac{XY}{A_\alpha(X,Y)},
+ & Z_\alpha(\rho)&=\E_\rho\frac{t(X,Y)}{A_\alpha(X,Y)},\label{eq:NZ}
+\end{align}
+where $X,Y$ are independent with law $\rho$. If $Z_\alpha(\rho)>0$, write
+$\mathcal V_\alpha(\rho)=N_\alpha(\rho)/Z_\alpha(\rho)$.
+
+\begin{proposition}[Symmetric representation]\label{prop:symmetric}
+For $1<\lambda<m$,
+\begin{equation}\label{eq:symmetric-speed}
+ v(\lambda)=\mathcal V_\lambda(\pi_\lambda)
+ =\frac{\E[XY/A_\lambda(X,Y)]}
+       {\E[t(X,Y)/A_\lambda(X,Y)]}.
+\end{equation}
+\end{proposition}
+
+\begin{proof}
+A\"id\'ekon's formula \cite[Theorem~1.1]{Aidekon} reads
+\begin{equation}\label{eq:aidekon}
+ v(\lambda)=
+ \frac{\E[(\nu-\lambda)X_0/(\lambda-1+X_0+S)]}
+      {\E[(\nu+\lambda)X_0/(\lambda-1+X_0+S)]},
+\end{equation}
+where $X_0,X_1,\ldots$ are independent copies of $\beta_\lambda$ and
+$S=\sum_{i=1}^{\nu}X_i$. Conditional exchangeability gives
+\begin{equation}\label{eq:exchange-speed}
+ \E\frac{\nu X_0}{\lambda-1+X_0+S}
+ =\E\frac{S}{\lambda-1+X_0+S}.
+\end{equation}
+Set $X=X_0$ and $Y=S/(\lambda+S)$. By \eqref{eq:rde}, $X,Y$ are independent
+with law $\pi_\lambda$, and
+\begin{equation}\label{eq:denom-change}
+ \lambda-1+X+S=\frac{A_\lambda(X,Y)}{1-Y}.
+\end{equation}
+The numerator in \eqref{eq:aidekon} is consequently
+\[
+ \lambda\E\frac{Y-X+XY}{A_\lambda(X,Y)}
+ =\lambda N_\lambda(\pi_\lambda),
+\]
+since the $Y-X$ term vanishes by symmetry. The denominator is
+$\lambda Z_\lambda(\pi_\lambda)$.
+\end{proof}
+
+\begin{lemma}[Order and continuity of the fixed-point curve]\label{lem:continuity}
+For $0<\alpha<\gamma<m$, escape probabilities can be coupled on the same tree
+so that $\beta_\gamma\le\beta_\alpha$. Moreover,
+$\lambda\mapsto\pi_\lambda$ is continuous in the $1$-Wasserstein metric.
+In particular, $v$ is continuous on $(1,m)$.
+\end{lemma}
+
+\begin{proof}
+For a finite-depth tree, impose escape value $1$ at the terminal generation
+and iterate the map in \eqref{eq:rde} towards the root. The map is increasing
+in every child value and decreasing in the parameter. Induction gives the
+claimed order at every depth. The finite-depth probabilities decrease to
+the probability of escaping the parent forever, giving the same order in
+the limit.
+
+The annealed escape probability $\E\beta_\lambda$ is continuous by
+\cite[Proposition~2.9]{BT}. In the leafless case the proof uses
+\cite[Lemma~4.7]{BT}, without an exponential-moment assumption. For ordered
+random variables, the coupling just constructed gives
+\begin{equation}\label{eq:W1}
+ W_1(\pi_\alpha,\pi_\gamma)
+ =\E\beta_\alpha-\E\beta_\gamma.
+\end{equation}
+Thus the fixed-point laws are $W_1$-continuous. The kernels in
+\eqref{eq:NZ} are bounded and continuous locally in $\alpha>1$, and the
+normalizing denominator is positive at a nonzero fixed point. This proves
+the stated continuity of $v$.
+\end{proof}
+
+\section{The two-child reweighting inequality}\label{sec:tilt}
+
+This section contains the only sign estimate that depends on the assumption
+$\nu\ge2$. In particular, no maximum offspring or inverse escape-probability
+moment enters the argument.
+
+\begin{lemma}[Inverse-square reweighting]\label{lem:tilt}
+Fix $\lambda>1$, put $c=\lambda-1$, and let $X\in(0,1)$ satisfy
+\eqref{eq:rde} with $\nu\ge2$. Define
+\begin{equation}\label{eq:mu-k}
+ \mu=\E X,\qquad
+ k=\frac{\E[X/(c+X)^2]}{\E[1/(c+X)^2]}.
+\end{equation}
+Then $\mu<2k$.
+\end{lemma}
+
+\begin{proof}
+\emph{Step 1: retain two children after reweighting.}
+Let $M$ be the probability measure obtained by weighting the law of $X$ with
+$(c+X)^{-2}$, and write
+\begin{equation}\label{eq:tilted-moments}
+ k=\E_MX,\qquad j=\E_MX^2,\qquad \ell=\E_MX^3.
+\end{equation}
+Let $Q$ be the probability measure on $(\nu,X_1,X_2,\ldots)$ obtained by
+weighting its original law with $(c+S)^{-2}$. Write
+$S=X_1+H$, where $H=\sum_{i=2}^{\nu}X_i$ is independent of $X_1$.
+The $X_1$-marginal under $Q$, relative to $M$, has density proportional to
+\begin{equation}\label{eq:tilt-ratio}
+ R(x)=(c+x)^2\E(c+x+H)^{-2}
+     =\E\biggl[\biggl(\frac{c+x}{c+x+H}\biggr)^2\biggr].
+\end{equation}
+This is increasing in $x$. Consequently
+\begin{equation}\label{eq:first-child}
+ \E_QX_1=\frac{\E_M[XR(X)]}{\E_MR(X)}\ge \E_MX=k.
+\end{equation}
+For completeness, the covariance used here is nonnegative because, for
+independent $U,V$ with law $M$,
+$2\Cov_M(X,R(X))=\E[(U-V)(R(U)-R(V))]\ge0$.
+
+Conditional exchangeability of the children now gives the decisive estimate
+\begin{equation}\label{eq:two-children}
+ \boxed{\quad
+ \E_QS
+ =\frac{\E[\nu X_1(c+S)^{-2}]}{\E[(c+S)^{-2}]}
+ \ge2\E_QX_1\ge2k.
+ \quad}
+\end{equation}
+The factor two in this inequality is the branching input of the proof.
+
+By \eqref{eq:rde}, $S$ has the same law as $\lambda X/(1-X)$, and
+$c+S$ has the same law as $(c+X)/(1-X)$. Thus
+\begin{equation}\label{eq:QS}
+ \E_QS=\lambda\frac{\E_M[X(1-X)]}{\E_M[(1-X)^2]}
+     =\lambda\frac{k-j}{1-2k+j}.
+\end{equation}
+Combining \eqref{eq:two-children} and \eqref{eq:QS} yields
+\begin{equation}\label{eq:moment-constraint}
+ \lambda(k-j)\ge2k(1-2k+j),
+ \qquad
+ j\le\bar j:=\frac{k(c-1+4k)}{c+1+2k}.
+\end{equation}
+Since $j\ge k^2$ and
+\begin{equation}\label{eq:moment-feasible}
+ \bar j-k^2=\frac{k(1-k)(c+2k-1)}{c+1+2k},
+\end{equation}
+we necessarily have $c+2k-1\ge0$.
+
+\emph{Step 2: undo the reweighting.}
+Returning from $M$ to the original law gives
+\begin{equation}\label{eq:undo-tilt}
+ \mu=
+ \frac{\E_M[X(c+X)^2]}{\E_M[(c+X)^2]}
+ =\frac{c^2k+2cj+\ell}{c^2+2ck+j}.
+\end{equation}
+If $k\ge1/2$, the conclusion follows from $\mu<1$. Suppose henceforth that
+$0<k<1/2$. Since $\ell\le j$,
+\begin{align}
+ &2k(c^2+2ck+j)-(c^2k+2cj+\ell)\notag\\
+ &\hspace{1em}\ge c^2k+4ck^2+(2k-2c-1)j\notag\\
+ &\hspace{1em}\ge c^2k+4ck^2+(2k-2c-1)\bar j,
+ \label{eq:gap-bound}
+\end{align}
+where the last step uses $2k-2c-1<0$ and \eqref{eq:moment-constraint}.
+Set $d=c+2k-1\ge0$. A direct rearrangement gives
+\begin{align}
+ &c^2k+4ck^2+(2k-2c-1)\bar j\notag\\
+ &\quad=\frac{k}{c+1+2k}\bigl[
+ d^3+2d^2+\{2+2k(1-2k)\}d
+                  +2(1-k)(1-2k)\bigr]>0.
+ \label{eq:positive-polynomial}
+\end{align}
+Every term in brackets is nonnegative and the last is strictly positive.
+Equations \eqref{eq:undo-tilt}--\eqref{eq:positive-polynomial} imply $\mu<2k$.
+\end{proof}
+
+\begin{remark}\label{rem:why-two}
+The children need not remain independent under $Q$. Independence is used
+under the original measure in \eqref{eq:tilt-ratio}; conditional exchangeability
+is preserved by the symmetric tilt. The lower bound
+$\nu\ge2$ is needed in \eqref{eq:two-children}. Merely knowing a support bound
+for $X$ does not supply either of these two pieces of information. If
+single-child vertices are allowed, the same argument retains only
+$\E_QS\ge \E_QX_1$ and does not prove \cref{lem:tilt}.
+\end{remark}
+
+\section{From reweighting to a positive variation kernel}\label{sec:kernel}
+
+For the rest of the proof fix $1<\lambda<m$ and abbreviate
+\begin{equation}\label{eq:basepoint}
+ c=\lambda-1,\quad \pi=\pi_\lambda,\quad
+ N=N_\lambda(\pi),\quad Z=Z_\lambda(\pi),\quad v=v(\lambda),
+ \quad A=A_\lambda.
+\end{equation}
+All unqualified copies $X,Y,X_i$ have law $\pi$. Define
+\begin{equation}\label{eq:J-h}
+ h_v(y)=(1+v)y-v,
+ \qquad
+ (\cJ f)(x)=\E\frac{f(Y)}{A(x,Y)^2}.
+\end{equation}
+
+\begin{lemma}[Uniform positive margin]\label{lem:positive-kernel}
+With $k$ as in \cref{lem:tilt},
+\begin{equation}\label{eq:threshold-k}
+ \frac{v}{1+v}<k.
+\end{equation}
+In particular, writing $\eta=(1+v)k-v>0$,
+\begin{equation}\label{eq:J-positive}
+ (\cJ h_v)(x)\ge\frac{\eta}{\lambda^2}>0,
+ \qquad 0\le x\le1.
+\end{equation}
+\end{lemma}
+
+\begin{proof}
+Put $W=\E[X/A(X,Y)]$. Symmetry gives $N+Z=2W$, hence
+$v/(1+v)=N/(2W)$. For fixed $x$, $y\mapsto A(x,y)^{-1}$ is decreasing.
+The one-dimensional covariance inequality therefore gives
+\[
+ \E\frac{Y}{A(x,Y)}\le\mu\E\frac1{A(x,Y)},\qquad \mu=\E X.
+\]
+Multiplying by $x$ and averaging proves $N\le\mu W$. By \cref{lem:tilt},
+\begin{equation}\label{eq:v-mu-k}
+ \frac{v}{1+v}=\frac N{2W}\le\frac\mu2<k.
+\end{equation}
+
+Let $k_x=\E[Y/A(x,Y)^2]/\E[1/A(x,Y)^2]$. Relative to the measure $M$ in
+\cref{lem:tilt}, this tilt has density proportional to
+$\{(c+y)/A(x,y)\}^2$, an increasing function of $y$, since
+\begin{equation}\label{eq:ratio-derivative}
+ \frac{\partial}{\partial y}\frac{c+y}{A(x,y)}
+ =\frac{\lambda x}{A(x,y)^2}\ge0.
+\end{equation}
+Thus $k_x\ge k$. As $A(x,y)\le\lambda$,
+\[
+ (\cJ h_v)(x)
+ =\E[A(x,Y)^{-2}]\bigl((1+v)k_x-v\bigr)
+ \ge\frac{\eta}{\lambda^2}.
+\]
+\end{proof}
+
+\section{An explicit correction and two exact cancellations}\label{sec:correction}
+
+The choice of correction is suggested by differentiating the symmetric
+speed comparison. Indeed,
+\begin{equation}\label{eq:variation-kernel}
+ \frac{\partial}{\partial x}
+       \frac{xy-vt(x,y)}{A(x,y)}
+ =\frac{y^2+c h_v(y)}{A(x,y)^2}.
+\end{equation}
+Accordingly set
+\begin{equation}\label{eq:Psi}
+ \Psi=\cJ(y^2+c h_v(y)),\qquad
+ b(x)=\frac{x(1-x)}{\lambda},\qquad
+ \mathsf C=\E\frac{v\,t(X,Y)-XY}{A(X,Y)^2}.
+\end{equation}
+The quantity $\mathsf C$ is the explicit parameter derivative of
+$N_\alpha(\pi)-vZ_\alpha(\pi)$ at $\alpha=\lambda$.
+
+For a bounded function $r$, define
+\begin{equation}\label{eq:L}
+ (\cL r)(x)=\E\biggl[
+ \frac{\nu\lambda}{(\lambda+x+S_{\nu-1})^2}
+ r\biggl(\frac{x+S_{\nu-1}}{\lambda+x+S_{\nu-1}}\biggr)
+ \biggr],
+ \qquad S_{\nu-1}=\sum_{i=2}^{\nu}X_i.
+\end{equation}
+This is the operator produced by differentiating one RDE update with respect
+to the input law. Its meaning will be used directly through a finite
+transport formula in \cref{sec:comparison}.
+
+Choose
+\begin{equation}\label{eq:r-u}
+ \boxed{\quad r(x)=\cJ\id(x)=\E\frac{Y}{A(x,Y)^2}.\quad}
+\end{equation}
+A convenient primitive, normalized by $u(0)=0$, is
+\begin{equation}\label{eq:u-explicit}
+ u(x)=\int_0^x r(s)\dd s
+     =\E\frac{xY}{(c+Y)A(x,Y)}.
+\end{equation}
+Both $r$ and $u$ are smooth and bounded on $[0,1]$.
+
+\begin{proposition}[Cancellation of the distributional variation]\label{prop:cancel-law}
+The correction \eqref{eq:r-u} satisfies
+\begin{equation}\label{eq:Lr}
+ \cL r=\cJ\bigl(y(1-y)\bigr),\qquad
+ (I-\cL)r=\cJ(y^2).
+\end{equation}
+Consequently,
+\begin{equation}\label{eq:law-margin}
+ \boxed{\quad
+ \Psi-(I-\cL)r=c\,\cJ h_v,
+ \qquad
+ \inf_{x\in[0,1]}\{\Psi-(I-\cL)r\}(x)>0.
+ \quad}
+\end{equation}
+\end{proposition}
+
+\begin{proof}
+The elementary denominator identity
+\begin{equation}\label{eq:denom-F}
+ A(F_\lambda(s),y)
+ =\frac{\lambda(c+s+y)}{\lambda+s}
+\end{equation}
+cancels the derivative of $F_\lambda$ against the squared kernel. Using an
+additional independent copy $Y$ in \eqref{eq:L} gives
+\begin{align}
+ (\cL r)(x)
+ &=\frac1\lambda\E\frac{\nu Y}{(c+x+S_{\nu-1}+Y)^2}\notag\\
+ &=\frac1\lambda\E\frac{S}{(c+x+S)^2}\notag\\
+ &=\E\frac{Y(1-Y)}{A(x,Y)^2}.\label{eq:Lr-proof}
+\end{align}
+The middle equality uses exchangeability of the $\nu$ summands conditional
+on $\nu$, and the last uses \eqref{eq:rde}. Equations \eqref{eq:Psi} and
+\eqref{eq:J-positive} now give \eqref{eq:law-margin}.
+\end{proof}
+
+\begin{proposition}[Cancellation of the parameter variation]\label{prop:cancel-parameter}
+Define
+\begin{equation}\label{eq:K}
+ K=2\E[b(X)r(X)]-\mathsf C.
+\end{equation}
+Then
+\begin{align}
+ \lambda K
+ ={}&2\E\bigl[X(1-X)(\cJ h_v)(X)\bigr]\notag\\
+ &+(1+v)\E\frac{XY(1-X)(1-Y)}{A(X,Y)^2}>0.
+ \label{eq:K-positive}
+\end{align}
+\end{proposition}
+
+\begin{proof}
+By symmetry,
+\begin{equation}\label{eq:K-expanded}
+ K=\E\frac{XY\{1+(2-X-Y)/\lambda\}-v\,t(X,Y)}{A(X,Y)^2}.
+\end{equation}
+Since $\lambda-A(x,y)=(1-x)(1-y)$ and
+$\E[(XY-vt(X,Y))/A(X,Y)]=N-vZ=0$, multiplying
+\eqref{eq:K-expanded} by $\lambda$ removes the term with a single power
+of $A$ in the denominator. The remaining numerator satisfies the pointwise
+identity
+\begin{align}
+ &(1-x)(1-y)\{xy-vt(x,y)\}+xy(2-x-y)\notag\\
+ &\quad=x(1-x)h_v(y)+y(1-y)h_v(x)
+             +(1+v)xy(1-x)(1-y).\label{eq:pointwise-K}
+\end{align}
+Divide by $A(x,y)^2$ and average to obtain \eqref{eq:K-positive}.
+Both terms there are positive, by \cref{lem:positive-kernel} and
+$0<X,Y<1$ almost surely.
+\end{proof}
+
+\noindent\emph{The key consequence.}
+The same positive kernel $\cJ h_v$ controls the two signs. There is no second
+unrelated probabilistic inequality to prove. The correction cancels precisely
+the $y^2$ part of \eqref{eq:variation-kernel}, and the fixed-point equality
+$N-vZ=0$ turns the remaining parameter term into \eqref{eq:K-positive}.
+
+\section{Comparing the actual fixed-point curve}\label{sec:comparison}
+
+In this section $\lambda$, $\pi$, $v$, $r$ and $u$ are all fixed at the
+base point \eqref{eq:basepoint}. In particular, the correction is \emph{not}
+recomputed when $\alpha$ or $\rho$ changes.
+
+For $\alpha>1$ and a probability measure $\rho$ on $[0,1]$, set
+\begin{align}
+ \res_u(\alpha,\rho)
+ &=\E_\rho u(X)-\E_{\nu,\rho}u\bigl(F_\alpha(S_\rho)\bigr),
+ &S_\rho&=\sum_{i=1}^{\nu}X_i,\label{eq:residual}\\
+ \cF(\alpha,\rho)
+ &=N_\alpha(\rho)-vZ_\alpha(\rho)-2\res_u(\alpha,\rho).
+ \label{eq:corrected-functional}
+\end{align}
+Because the offspring law is kept fixed, every true fixed point satisfies
+$\res_u(\alpha,\pi_\alpha)=0$. Hence
+\begin{equation}\label{eq:on-curve}
+ \boxed{\quad
+ \cF(\alpha,\pi_\alpha)
+ =Z_\alpha(\pi_\alpha)\{v(\alpha)-v(\lambda)\}.
+ \quad}
+\end{equation}
+This is the reason the correction is legitimate.
+
+\subsection{A transport formula and its local stability}
+
+Write $\cL_{\alpha,\rho}$ for \eqref{eq:L} with parameter $\alpha$ and
+child law $\rho$. Define
+\begin{equation}\label{eq:G-field}
+ G_{\alpha,\rho}(x)
+ =\int\frac{y^2+(\alpha-1)h_v(y)}{A_\alpha(x,y)^2}\,\rho(\mathrm dy)
+   -r(x)+(\cL_{\alpha,\rho}r)(x).
+\end{equation}
+At the base point, \cref{prop:cancel-law} states that
+\begin{equation}\label{eq:G-base}
+ G_{\lambda,\pi}=c\,\cJ h_v,
+ \qquad \gamma:=\inf_{x\in[0,1]}G_{\lambda,\pi}(x)>0.
+\end{equation}
+
+\begin{lemma}[Transport and continuity]\label{lem:transport}
+The map $(\alpha,\rho)\mapsto G_{\alpha,\rho}$ is continuous at
+$(\lambda,\pi)$, with values in $C([0,1])$ equipped with the uniform norm and
+with $\rho$ equipped with $W_1$.
+Moreover, if $X_0\le X_1$ is a coupling, $X_s=(1-s)X_0+sX_1$, and
+$\rho_s=\Law(X_s)$, then
+\begin{equation}\label{eq:transport-formula}
+ \frac{\mathrm d}{\mathrm ds}\cF(\alpha,\rho_s)
+ =2\E\bigl[(X_1-X_0)G_{\alpha,\rho_s}(X_s)\bigr].
+\end{equation}
+Consequently, $\cF(\alpha,\cdot)$ is increasing along any such ordered
+interpolation lying in a sufficiently small neighborhood of $\pi$, provided
+$\alpha$ is sufficiently close to $\lambda$.
+\end{lemma}
+
+\begin{proof}
+Fix a compact parameter interval $I\subset(1,\infty)$ containing $\lambda$,
+and let $a=\inf I>1$. The double-integral kernel in \eqref{eq:G-field} is
+bounded and jointly continuous on $I\times[0,1]^2$.
+For the recursive term, conditional on $\nu=n$ its integrand is bounded by
+\begin{equation}\label{eq:nu-bound}
+ \frac{n}{a}\|r\|_\infty.
+\end{equation}
+For each fixed $n$ it is jointly continuous in the parameter, the external
+coordinate $x$ and the $n-1$ child coordinates. Integrating against
+$\rho^{\otimes(n-1)}$ therefore gives uniform convergence in $x$ when the
+parameter and the law converge. One way to see uniformity is to use uniform
+continuity of the integrand and then a finite net in $[0,1]$.
+Truncating the sum at $n=M$ leaves a remainder bounded, uniformly in
+$\alpha\in I$, $x$ and $\rho$, by
+\begin{equation}\label{eq:nu-tail}
+ \frac{\|r\|_\infty}{a}\E[\nu\mathbf1_{\{\nu>M\}}]\longrightarrow0.
+\end{equation}
+This proves the asserted continuity. Notice that only $\E\nu<\infty$ is
+used here.
+
+For the transport identity, take independent copies of the coupled pair
+$(X_0,X_1)$ for all child coordinates and for the two variables in
+\eqref{eq:NZ}. Differentiation of $N_\alpha-vZ_\alpha$ gives twice the first
+term of \eqref{eq:G-field}. Differentiation of $\E_{\rho_s}u(X)$ gives
+$\E[(X_1-X_0)r(X_s)]$. Finally, the chain rule for the RDE update produces
+$\E[(X_1-X_0)(\cL_{\alpha,\rho_s}r)(X_s)]$ after conditional
+exchangeability. Interchanging differentiation and expectation is justified
+by \eqref{eq:nu-bound}, $0\le X_1-X_0\le1$ and $\E\nu<\infty$.
+This proves \eqref{eq:transport-formula}.
+
+By continuity and \eqref{eq:G-base}, $G_{\alpha,\rho}\ge\gamma/2$ uniformly
+in $x$ in a sufficiently small neighborhood. Formula
+\eqref{eq:transport-formula} is then nonnegative on every ordered
+interpolation contained in that neighborhood.
+\end{proof}
+
+\subsection{The parameter derivative and the final comparison}
+
+Freezing the distribution $\pi$ while varying the parameter gives
+\begin{equation}\label{eq:parameter-residual}
+ \left.\partial_\alpha\res_u(\alpha,\pi)\right|_{\alpha=\lambda}
+ =\E\bigl[b(X)r(X)\bigr].
+\end{equation}
+Indeed, $\partial_\alpha F_\alpha(s)=-s/(\alpha+s)^2$, which at the fixed
+point equals $-b(F_\lambda(s))$. The derivative is dominated since
+$s/(\alpha+s)^2\le1/(4\alpha)$. From \cref{prop:cancel-parameter},
+\begin{equation}\label{eq:parameter-negative}
+ \left.\partial_\alpha\cF(\alpha,\pi)\right|_{\alpha=\lambda}
+ =\mathsf C-2\E[br]=-K<0.
+\end{equation}
+
+\begin{proof}[Proof of \cref{thm:main} on $(1,m)$]
+Let $\varepsilon>0$ be small enough that $\lambda+\varepsilon<m$.
+By \cref{lem:continuity}, on the same tree
+\[
+ U_\varepsilon:=\beta_{\lambda+\varepsilon}\le
+ V:=\beta_\lambda,
+ \qquad \E(V-U_\varepsilon)\longrightarrow0.
+\]
+The interpolation $X_s=(1-s)U_\varepsilon+sV$ satisfies
+\begin{equation}\label{eq:interpolation-ball}
+ W_1(\Law(X_s),\pi)
+ \le\E|X_s-V|
+ =(1-s)\E(V-U_\varepsilon)
+ \le\E(V-U_\varepsilon).
+\end{equation}
+Thus, for sufficiently small $\varepsilon$, the entire interpolation is
+inside the neighborhood in \cref{lem:transport}. With
+$\alpha=\lambda+\varepsilon$, that lemma gives
+\begin{equation}\label{eq:law-comparison}
+ \cF(\lambda+\varepsilon,\pi_{\lambda+\varepsilon})
+ \le\cF(\lambda+\varepsilon,\pi).
+\end{equation}
+Since $\cF(\lambda,\pi)=0$, \eqref{eq:parameter-negative} yields
+\[
+ \cF(\lambda+\varepsilon,\pi)=-K\varepsilon+o(\varepsilon).
+\]
+Using \eqref{eq:on-curve}, we conclude that
+\begin{equation}\label{eq:finite-comparison}
+ Z_{\lambda+\varepsilon}(\pi_{\lambda+\varepsilon})
+ \{v(\lambda+\varepsilon)-v(\lambda)\}
+ \le-K\varepsilon+o(\varepsilon).
+\end{equation}
+The normalizing factor converges to $Z>0$. Therefore
+\begin{equation}\label{eq:explicit-dini}
+ \boxed{\quad \Dplus v(\lambda)\le-\frac KZ<0.\quad}
+\end{equation}
+This proves \eqref{eq:main-dini}, with $\delta_\lambda=K/Z$.
+
+A continuous function with strictly negative upper right Dini derivative at
+every point of an interval is strictly decreasing there. Indeed, if
+$f(b)\ge f(a)$ for $a<b$, a minimum of $f$ on $[a,b]$ is attained at some
+$x<b$: if $b$ is a minimizer, then $a$ is also one. At such an $x$ all
+sufficiently small right difference quotients are nonnegative, a
+contradiction. By \cref{lem:continuity}, this argument applies to $v$ on
+$(1,m)$.
+\end{proof}
+
+\subsection{The low-parameter interval and classical derivatives}
+
+Let $m_1=\min\{k:p_k>0\}\ge2$. Song--Wang--Xiang
+\cite[Theorem~1.2 and Lemma~2.5]{SWX} establish $v'(\lambda)<0$ for
+\begin{equation}\label{eq:low-range}
+ 0<\lambda\le a_{m_1},\qquad
+ a_{m_1}:=\frac{m_1}{1+\sqrt{1-1/m_1}}>1,
+\end{equation}
+and strict decrease on $[0,a_{m_1}]$. Their derivative statement and its
+justification are given immediately before, and in, Lemma~2.5 of the cited
+preprint. This interval overlaps $(1,m)$, so its strict monotonicity and
+\eqref{eq:explicit-dini} complete \cref{thm:main} on $[0,m)$.
+
+Under the exponential-moment assumption of \cref{cor:derivative},
+\cite[Theorem~1.1]{BT} gives differentiability on $(0,m)$: its lower endpoint
+is zero in the leafless case. At every $\lambda>1$ the derivative equals the
+Dini derivative and is negative by \eqref{eq:explicit-dini}. The remaining
+parameters are covered by \eqref{eq:low-range}. This proves
+\cref{cor:derivative}.
+
+\section{What the correction accomplishes}\label{sec:meaning}
+
+\paragraph{It retains the full recursive response.}
+At a purely formal level, writing $D=-\partial_\lambda\beta_\lambda$ and
+differentiating \eqref{eq:rde} gives
+\begin{equation}\label{eq:formal-response}
+ D=\frac{\beta(1-\beta)}{\lambda}
+    +\frac{(1-\beta)^2}{\lambda}\sum_{i=1}^{\nu}D_i.
+\end{equation}
+Keeping only the first term discards the change in every descendant
+conductance. The correction does not discard that change. Instead,
+$\res_u(\alpha,\pi_\alpha)=0$ supplies an exact identity along the full
+fixed-point curve. The proof above uses finite transport and parameter
+variations of bounded kernels, so \eqref{eq:formal-response} is explanatory
+only, not an assumption or an analytic step in the proof.
+
+\paragraph{The offspring assumptions have separate roles.}
+The inequality $\nu\ge2$ enters precisely in \eqref{eq:two-children}.
+The finite-mean assumption permits \eqref{eq:nu-tail}, the transport
+interchange, and the application of the speed formula. An exponential
+moment is used only to obtain a classical derivative everywhere via the
+external differentiability theorem. No bounded-offspring assumption is
+made, and the argument does not address laws with $p_1>0$.
+
+\paragraph{The proof depends on one probabilistic inequality, not two.}
+The real sign input is \cref{lem:tilt}. It gives $\cJ h_v>0$; the first
+cancellation \eqref{eq:law-margin} and the second cancellation
+\eqref{eq:K-positive} then give the two off-curve signs from that same input.
+The entire mechanism can be read as
+\[
+ \begin{gathered}
+ \text{two children under a tilt}
+ \ \Longrightarrow\ \mu<2k
+ \ \Longrightarrow\ \cJ h_v>0,\\[0.4em]
+ \cJ h_v>0\ \Longrightarrow\
+ \begin{cases}
+   \text{positive distributional variation},\\
+   \text{negative explicit parameter variation}.
+ \end{cases}
+ \end{gathered}
+\]
+The vanishing of the residual on fixed points transfers these off-curve
+signs back to the actual speed.
+
+\begin{remark}[Regular-tree check]\label{rem:regular}
+For the deterministic $d$-ary tree, $\beta_\lambda=1-\lambda/d$ and
+\eqref{eq:symmetric-speed} gives
+\[
+ v(\lambda)=\frac{d-\lambda}{d+\lambda},\qquad
+ v'(\lambda)=-\frac{2d}{(d+\lambda)^2}.
+\]
+The reweighted mean $k$ equals $\E\beta_\lambda$ in this case, so the strict
+inequality of \cref{lem:tilt} is consistent even at a point-mass fixed point.
+\end{remark}
+
+\appendix
+\section{Algebraic verification and reference conventions}\label{sec:appendix}
+
+The accompanying file \texttt{check\_algebra.py} verifies the rational and
+polynomial identities used in the argument by exact symbolic arithmetic.
+In particular, it checks the transport derivative
+\eqref{eq:variation-kernel}, the feasible-moment identity
+\eqref{eq:moment-feasible}, the positive expansion
+\eqref{eq:positive-polynomial}, the denominator cancellation
+\eqref{eq:denom-F}, and the numerator identity \eqref{eq:pointwise-K}.
+It is a check on algebra only: the independence, reweighting, continuity and
+finite-parameter comparison are proved in the text, not certified by that
+script.
+
+All numbered references to external theorems and lemmas refer to the exact
+arXiv versions specified below. This avoids ambiguity between the numbering
+or titles of a preprint and its published version. In particular, the
+escape-probability continuity input and the differentiability input from
+\cite{BT} have different moment requirements and are used separately.
+
+\begingroup
+\small
+\begin{thebibliography}{BT20}
+\setlength{\itemsep}{0.5em}
+
+\bibitem[A\"id14]{Aidekon}
+\'{E}.~A\"id\'ekon.
+\emph{Speed of the biased random walk on a Galton--Watson tree}.
+Probability Theory and Related Fields \textbf{159} (2014), 597--617.
+\href{https://doi.org/10.1007/s00440-013-0515-y}{doi:10.1007/s00440-013-0515-y}.
+Theorem numbering used here:
+\href{https://arxiv.org/abs/1111.4313v4}{arXiv:1111.4313v4} (18 January 2013).
+
+\bibitem[BT20]{BT}
+A.~Bowditch and Y.~Tokushige.
+\emph{Differentiability of the speed of biased random walks on
+Galton--Watson trees}.
+\href{https://arxiv.org/abs/1906.07913v2}{arXiv:1906.07913v2}
+(1 May 2020).
+Theorem~1.1, Proposition~2.9 and Lemma~4.7.
+
+\bibitem[SWX16]{SWX}
+H.~Song, L.~Wang and K.~Xiang.
+\emph{Monotonicity of the speed for biased random walk on
+Galton--Watson tree}.
+\href{https://arxiv.org/abs/1610.08151v1}{arXiv:1610.08151v1}
+(26 October 2016).
+Theorem~1.2 and Lemma~2.5.
+Published under the title \emph{The speed of a biased walk on a
+Galton--Watson tree without leaves is monotonic for low values of bias},
+Journal of Applied Probability \textbf{62} (2025), no.~3;
+\href{https://doi.org/10.1017/jpr.2024.113}{doi:10.1017/jpr.2024.113}.
+
+\end{thebibliography}
+\endgroup
+
+\end{document}

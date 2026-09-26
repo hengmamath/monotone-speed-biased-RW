@@ -1,11 +1,10 @@
-\documentclass[11pt,reqno]{amsart} 
+\documentclass[12pt,reqno]{amsart}
 
 
 
 \usepackage[utf8]{inputenc}
 \usepackage{mathtools,amsthm,amssymb}
-\usepackage{mathrsfs}
-\usepackage[allowunsupported,grade=32]{cmgraded}
+\usepackage[allowunsupported,grade=19]{cmgraded}
 \usepackage{microtype}
 \usepackage[a4paper,top=25mm,bottom=26mm,left=29mm,right=29mm,headsep=7mm]{geometry}
 \usepackage[dvipsnames]{xcolor}
@@ -29,7 +28,7 @@
 \normalsize                  % 使行距倍率立即生效
 \linespacing=\baselineskip   % 同步章节、定理使用的间距基准
 \setlength{\parindent}{1em} % 段首缩进
-\setlength{\parskip}{0pt}   % 段间距
+\setlength{\parskip}{3pt}   % 段间距
 
 \makeatletter
 
@@ -152,7 +151,7 @@
 
 
 \title[Speed monotonicity of BRW on GW trees]{More rootward bias, less speed:\\
- biased random walks on Galton---Watson trees \\in the B\"{o}ttcher case}
+ biased walks on BGW trees  in the B\"{o}ttcher case}
 \author{Heng Ma}
 \address[Heng Ma]{Faculty of Data and Decision Sciences, Technion,  Israel}
 \email{hengmamath(at)gmail(dot)com}
@@ -167,33 +166,23 @@
 
 \newcommand{\E}{\mathbb E}
 \newcommand{\PP}{\mathbb P}
-\newcommand{\R}{\mathbb R}
 \newcommand{\Law}{\operatorname{Law}}
 \newcommand{\Cov}{\operatorname{Cov}}
-\newcommand{\id}{\mathrm{id}}
 \newcommand{\dd}{\,\mathrm d}
-\newcommand{\st}{\leq_{\mathrm{st}}}
 \newcommand{\Dplus}{D^{+}}
 \newcommand{\cJ}{\mathcal J}
 \newcommand{\cL}{\mathcal L}
-\newcommand{\cF}{\mathscr F}
-\newcommand{\res}{\mathfrak R}
+\newcommand{\cF}{\mathcal F}
+\newcommand{\res}{\mathcal R}
 
 \begin{document}
+
+
 \begin{abstract}
 Let $v(\lambda)$ be the speed of the $\lambda$-biased random walk on a
-Galton--Watson tree with offspring mean $m$. If every vertex has at least
-two children and $m<\infty$, we prove that $v$ is strictly decreasing on
-$[0,m)$. More precisely, its upper right Dini derivative is strictly
-negative at every $1<\lambda<m$; an existing low-bias result supplies the
-remaining interval. The proof combines a symmetric representation of the
-speed with a correction that vanishes along the recursive fixed-point
-curve of escape-probability laws. An inverse-square reweighting retains
-two children and gives the correction a positive variation kernel. The
-comparison uses only continuity, rather than differentiability, of the
-escape probabilities. If the offspring law has an exponential moment,
-the classical derivative $v'(\lambda)$ exists and is negative throughout
-$(0,m)$.
+Bienaym\'e--Galton--Watson tree with finite offspring mean $m$.
+If every vertex has at least two children, we prove that $v$ is strictly
+decreasing throughout the transient regime $[0,m)$.
 \end{abstract}
 \maketitle
 
@@ -201,7 +190,7 @@ $(0,m)$.
 
 \section{Introduction}\label{sec:introduction}
 
-Let $\mathbb T$ be a Galton--Watson tree, and let $\nu$ have its offspring
+Let $T$ be a Galton--Watson tree, and let $\nu$ have its offspring
 law $(p_k)_{k\ge0}$. We assume throughout that
 \begin{equation}\label{eq:assumptions}
  \PP(\nu\ge2)=1,\qquad m:=\E\nu<\infty.
@@ -266,14 +255,14 @@ The additional exponential-moment assumption in Corollary~\ref{cor:derivative} i
 used only to invoke the differentiability theorem of Bowditch and
 Tokushige \cite[Theorem~1.1]{BT}.
 
-\subsection*{Proof strategy}
+\subsection{Proof strategy}
 
 Adjoin an artificial parent to the root, and let $\beta_\alpha$ be the
 probability that a walk started at the root never visits this parent. Its
 annealed law $\pi_\alpha=\Law(\beta_\alpha)$ satisfies the recursive equation
 \[
- X\ \overset{\mathrm d}=\ F_\alpha\Bigl(\sum_{i=1}^{\nu}X_i\Bigr),
- \qquad F_\alpha(s)=\frac{s}{\alpha+s},
+ X\ \overset{\mathrm d}=\ f_\alpha\Bigl(\sum_{i=1}^{\nu}X_i\Bigr),
+ \qquad f_\alpha(s)=\frac{s}{\alpha+s},
 \]
 where the $X_i$ are independent with law $\pi_\alpha$ and independent of
 $\nu$. These laws decrease stochastically as $\alpha$ increases. A
@@ -298,7 +287,7 @@ residual
 \begin{equation}\label{eq:roadmap-residual}
  \res_u(\alpha,\rho)
  =\E_\rho u(X)-\E_{\nu,\rho}
-   u\Bigl(F_\alpha\bigl(\textstyle\sum_{i=1}^{\nu}X_i\bigr)\Bigr)
+   u\Bigl(f_\alpha\bigl(\textstyle\sum_{i=1}^{\nu}X_i\bigr)\Bigr)
 \end{equation}
 vanishes at every actual fixed point $\rho=\pi_\alpha$. We therefore
 compare the corrected functional
@@ -306,27 +295,27 @@ $\cF(\alpha,\rho)=N_\alpha(\rho)-vZ_\alpha(\rho)-2\res_u(\alpha,\rho)$;
 on the fixed-point curve it has exactly the sign we seek.
 
 The choice of correction is explicit. With
-$A_\lambda(x,y)=\lambda-1+x+y-xy$, take
+$D_\lambda(x,y)=\lambda-1+x+y-xy$, take
 \begin{equation}\label{eq:roadmap-corrector}
- u'(x)=\E\frac{Y}{A_\lambda(x,Y)^2},
+ u'(x)=\E\frac{Y}{D_\lambda(x,Y)^2},
  \qquad Y\sim\pi_\lambda.
 \end{equation}
 A cancellation between this derivative and the recursive update leaves
 a law-variation kernel whose sign follows from one probabilistic estimate:
 if $c=\lambda-1$ and $\mu=\E\beta_\lambda$, then
 \begin{equation}\label{eq:roadmap-tilt}
- \mu<2k,
+ \mu<2\widehat\mu_1,
  \qquad
- k=\frac{\E[\beta_\lambda/(c+\beta_\lambda)^2]}
+ \widehat\mu_1=\frac{\E[\beta_\lambda/(c+\beta_\lambda)^2]}
          {\E[1/(c+\beta_\lambda)^2]}.
 \end{equation}
 To see the role of the branching assumption, reweight the joint law of
 the children by $(c+\sum_iX_i)^{-2}$. The first child then has mean at
-least $k$, and conditional exchangeability makes the reweighted mean of
-the sum at least $2k$. The recursive equation converts this into
+least $\widehat\mu_1$, and conditional exchangeability makes the reweighted mean of
+the sum at least $2\widehat\mu_1$. The recursive equation converts this into
 \eqref{eq:roadmap-tilt}; the remaining moment calculation is given in
 Lemma~\ref{lem:tilt}. Symmetry of \eqref{eq:roadmap-speed} yields
-$v/(1+v)\le\mu/2<k$. This inequality makes the law-variation kernel
+$v/(1+v)\le\mu/2<\widehat\mu_1$. This inequality makes the law-variation kernel
 uniformly positive and the explicit parameter derivative of $\cF$
 strictly negative at $(\lambda,\pi_\lambda)$.
 
@@ -346,13 +335,13 @@ introduction. The symmetric representation will allow us to compare speeds
 through two independent escape probabilities; the order and continuity
 will later connect the actual fixed points by a short interpolation.
 
-Adjoin an artificial parent to the root $e$. Let $\beta_\lambda(T)$ denote the
-quenched probability of never visiting that parent, starting from $e$.
+Adjoin an artificial parent to the root. Let $\beta_\lambda(T)$ denote the
+quenched probability of never visiting that parent, starting from the root.
 For $0<\lambda<m$, $0<\beta_\lambda<1$ almost surely. With
 $\pi_\lambda=\Law(\beta_\lambda)$, the recursive distributional equation is
 \begin{equation}\label{eq:rde}
- X\ \overset{\mathrm d}=\ F_\lambda(S),\qquad
- F_\lambda(s)=\frac{s}{\lambda+s},\qquad
+ X\ \overset{\mathrm d}=\ f_\lambda(S),\qquad
+ f_\lambda(s)=\frac{s}{\lambda+s},\qquad
  S=\sum_{i=1}^{\nu}X_i,
 \end{equation}
 where $X_i$ are independent with law $\pi_\lambda$ and independent of $\nu$.
@@ -361,20 +350,23 @@ from children to the root.
 
 For $\alpha>1$ and a probability measure $\rho$ on $[0,1]$, define
 \begin{align}
- t(x,y)&=x+y-xy,
- & A_\alpha(x,y)&=\alpha-1+t(x,y),\label{eq:kernels}\\
- N_\alpha(\rho)&=\E_\rho\frac{XY}{A_\alpha(X,Y)},
- & Z_\alpha(\rho)&=\E_\rho\frac{t(X,Y)}{A_\alpha(X,Y)},\label{eq:NZ}
+ q(x,y)&=1-(1-x)(1-y)=x+y-xy,
+ & D_\alpha(x,y)&=\alpha-1+q(x,y),\label{eq:kernels}\\
+ N_\alpha(\rho)&=\E_\rho\frac{XY}{D_\alpha(X,Y)},
+ & Z_\alpha(\rho)&=\E_\rho\frac{q(X,Y)}{D_\alpha(X,Y)},\label{eq:NZ}
 \end{align}
-where $X,Y$ are independent with law $\rho$. If $Z_\alpha(\rho)>0$, write
-$\mathcal V_\alpha(\rho)=N_\alpha(\rho)/Z_\alpha(\rho)$.
+Here $X,Y$ are independent with law $\rho$; $q(x,y)$ is the probability
+of at least one success in two independent trials with success
+probabilities $x,y$, and $D_\alpha$ is the common denominator.
+The quantities $N_\alpha$ and $Z_\alpha$ will be the numerator and
+normalizing factor in the speed formula.
 
 \begin{proposition}[Symmetric representation]\label{prop:symmetric}
 For $1<\lambda<m$,
 \begin{equation}\label{eq:symmetric-speed}
- v(\lambda)=\mathcal V_\lambda(\pi_\lambda)
- =\frac{\E[XY/A_\lambda(X,Y)]}
-       {\E[t(X,Y)/A_\lambda(X,Y)]}.
+ v(\lambda)=\frac{N_\lambda(\pi_\lambda)}{Z_\lambda(\pi_\lambda)}
+ =\frac{\E[XY/D_\lambda(X,Y)]}
+       {\E[q(X,Y)/D_\lambda(X,Y)]}.
 \end{equation}
 \end{proposition}
 
@@ -394,11 +386,11 @@ $S=\sum_{i=1}^{\nu}X_i$. Conditional exchangeability gives
 Set $X=X_0$ and $Y=S/(\lambda+S)$. By \eqref{eq:rde}, $X,Y$ are independent
 with law $\pi_\lambda$, and
 \begin{equation}\label{eq:denom-change}
- \lambda-1+X+S=\frac{A_\lambda(X,Y)}{1-Y}.
+ \lambda-1+X+S=\frac{D_\lambda(X,Y)}{1-Y}.
 \end{equation}
 The numerator in \eqref{eq:aidekon} is consequently
 \[
- \lambda\E\frac{Y-X+XY}{A_\lambda(X,Y)}
+ \lambda\E\frac{Y-X+XY}{D_\lambda(X,Y)}
  =\lambda N_\lambda(\pi_\lambda),
 \]
 since the $Y-X$ term vanishes by symmetry. The denominator is
@@ -437,9 +429,9 @@ the stated continuity of $v$.
 \section{The two-child reweighting inequality}\label{sec:tilt}
 
 Our target is a weighted mean larger than $v/(1+v)$, which makes the
-remaining variation kernel positive. We first prove $\mu<2k$ from the
+remaining variation kernel positive. We first prove $\mu<2\widehat\mu_1$ from the
 recursive law, and then use the symmetric speed formula to obtain
-$v/(1+v)\le\mu/2<k$. The first estimate is where the assumption
+$v/(1+v)\le\mu/2<\widehat\mu_1$. The first estimate is where the assumption
 $\nu\ge2$ enters.
 
 \subsection{Retaining two children under reweighting}
@@ -449,9 +441,9 @@ Fix $\lambda>1$, put $c=\lambda-1$, and let $X\in(0,1)$ satisfy
 \eqref{eq:rde} with $\nu\ge2$. Define
 \begin{equation}\label{eq:mu-k}
  \mu=\E X,\qquad
- k=\frac{\E[X/(c+X)^2]}{\E[1/(c+X)^2]}.
+ \widehat\mu_1=\frac{\E[X/(c+X)^2]}{\E[1/(c+X)^2]}.
 \end{equation}
-Then $\mu<2k$.
+Then $\mu<2\widehat\mu_1$.
 \end{lemma}
 
 \begin{proof}
@@ -460,33 +452,35 @@ new measure. We then express the original mean through those moments.
 
 \smallskip\noindent
 \underline{\textit{Step 1.}} Retain two children after reweighting.
-Let $M$ be the probability measure obtained by weighting the law of $X$ with
-$(c+X)^{-2}$, and write
+Let $\widehat\pi$ be the probability measure obtained by weighting the law
+of $X$ with $(c+X)^{-2}$. A hat will indicate this reweighting; in particular,
+write its first three moments as
 \begin{equation}\label{eq:tilted-moments}
- k=\E_MX,\qquad j=\E_MX^2,\qquad \ell=\E_MX^3.
+ \widehat\mu_j=\E_{\widehat\pi}X^j,\qquad j=1,2,3.
 \end{equation}
-Let $Q$ be the probability measure on $(\nu,X_1,X_2,\ldots)$ obtained by
+Let $\mathbb Q$ be the probability measure on $(\nu,X_1,X_2,\ldots)$ obtained by
 weighting its original law with $(c+S)^{-2}$. Write
-$S=X_1+H$, where $H=\sum_{i=2}^{\nu}X_i$ is independent of $X_1$.
-The $X_1$-marginal under $Q$, relative to $M$, has density proportional to
+$S=X_1+S^{(1)}$, where $S^{(1)}=\sum_{i=2}^{\nu}X_i$ is the sum with the
+first child omitted and is independent of $X_1$ under the original law.
+The $X_1$-marginal under $\mathbb Q$, relative to $\widehat\pi$, has density proportional to
 \begin{equation}\label{eq:tilt-ratio}
- R(x)=(c+x)^2\E(c+x+H)^{-2}
-     =\E\biggl[\biggl(\frac{c+x}{c+x+H}\biggr)^2\biggr].
+ R(x)=(c+x)^2\E(c+x+S^{(1)})^{-2}
+     =\E\biggl[\biggl(\frac{c+x}{c+x+S^{(1)}}\biggr)^2\biggr].
 \end{equation}
 This is increasing in $x$. Consequently
 \begin{equation}\label{eq:first-child}
- \E_QX_1=\frac{\E_M[XR(X)]}{\E_MR(X)}\ge \E_MX=k.
+ \E_{\mathbb Q}X_1=\frac{\E_{\widehat\pi}[XR(X)]}{\E_{\widehat\pi}R(X)}\ge \E_{\widehat\pi}X=\widehat\mu_1.
 \end{equation}
 For completeness, the covariance used here is nonnegative because, for
-independent $U,V$ with law $M$,
-$2\Cov_M(X,R(X))=\E[(U-V)(R(U)-R(V))]\ge0$.
+independent $U,V$ with law $\widehat\pi$,
+$2\Cov_{\widehat\pi}(X,R(X))=\E[(U-V)(R(U)-R(V))]\ge0$.
 
 Conditional exchangeability of the children now gives the decisive estimate
 \begin{equation}\label{eq:two-children}
  \boxed{\quad
- \E_QS
+ \E_{\mathbb Q}S
  =\frac{\E[\nu X_1(c+S)^{-2}]}{\E[(c+S)^{-2}]}
- \ge2\E_QX_1\ge2k.
+ \ge2\E_{\mathbb Q}X_1\ge2\widehat\mu_1.
  \quad}
 \end{equation}
 The factor two in this inequality is the branching input of the proof.
@@ -494,64 +488,71 @@ The factor two in this inequality is the branching input of the proof.
 By \eqref{eq:rde}, $S$ has the same law as $\lambda X/(1-X)$, and
 $c+S$ has the same law as $(c+X)/(1-X)$. Thus
 \begin{equation}\label{eq:QS}
- \E_QS=\lambda\frac{\E_M[X(1-X)]}{\E_M[(1-X)^2]}
-     =\lambda\frac{k-j}{1-2k+j}.
+ \E_{\mathbb Q}S=\lambda\frac{\E_{\widehat\pi}[X(1-X)]}{\E_{\widehat\pi}[(1-X)^2]}
+     =\lambda\frac{\widehat\mu_1-\widehat\mu_2}{1-2\widehat\mu_1+\widehat\mu_2}.
 \end{equation}
 Combining \eqref{eq:two-children} and \eqref{eq:QS} yields
-\begin{equation}\label{eq:moment-constraint}
- \lambda(k-j)\ge2k(1-2k+j),
- \qquad
- j\le\bar j:=\frac{k(c-1+4k)}{c+1+2k}.
-\end{equation}
-Since $j\ge k^2$ and
+\begin{align}
+ \lambda(\widehat\mu_1-\widehat\mu_2)
+ &\ge2\widehat\mu_1(1-2\widehat\mu_1+\widehat\mu_2),\notag\\
+ \widehat\mu_2&\le\overline\mu_2
+ :=\frac{\widehat\mu_1(c-1+4\widehat\mu_1)}{c+1+2\widehat\mu_1}.
+ \label{eq:moment-constraint}
+\end{align}
+Since $\widehat\mu_2\ge \widehat\mu_1^2$ and
 \begin{equation}\label{eq:moment-feasible}
- \bar j-k^2=\frac{k(1-k)(c+2k-1)}{c+1+2k},
+ \overline\mu_2-\widehat\mu_1^2=\frac{\widehat\mu_1(1-\widehat\mu_1)(c+2\widehat\mu_1-1)}{c+1+2\widehat\mu_1},
 \end{equation}
-we necessarily have $c+2k-1\ge0$.
+we necessarily have $c+2\widehat\mu_1-1\ge0$.
 
 \smallskip\noindent
 \underline{\textit{Step 2.}} Undo the reweighting.
-Returning from $M$ to the original law gives
+Returning from $\widehat\pi$ to the original law gives
 \begin{equation}\label{eq:undo-tilt}
  \mu=
- \frac{\E_M[X(c+X)^2]}{\E_M[(c+X)^2]}
- =\frac{c^2k+2cj+\ell}{c^2+2ck+j}.
+ \frac{\E_{\widehat\pi}[X(c+X)^2]}{\E_{\widehat\pi}[(c+X)^2]}
+ =\frac{c^2\widehat\mu_1+2c\widehat\mu_2+\widehat\mu_3}
+        {c^2+2c\widehat\mu_1+\widehat\mu_2}.
 \end{equation}
-If $k\ge1/2$, the conclusion follows from $\mu<1$. Suppose henceforth that
-$0<k<1/2$. Since $\ell\le j$,
+If $\widehat\mu_1\ge1/2$, the conclusion follows from $\mu<1$. Suppose henceforth that
+$0<\widehat\mu_1<1/2$. Since $\widehat\mu_3\le \widehat\mu_2$,
 \begin{align}
- &2k(c^2+2ck+j)-(c^2k+2cj+\ell)\notag\\
- &\hspace{1em}\ge c^2k+4ck^2+(2k-2c-1)j\notag\\
- &\hspace{1em}\ge c^2k+4ck^2+(2k-2c-1)\bar j,
+ &2\widehat\mu_1(c^2+2c\widehat\mu_1+\widehat\mu_2)
+   -(c^2\widehat\mu_1+2c\widehat\mu_2+\widehat\mu_3)\notag\\
+ &\hspace{1em}\ge c^2\widehat\mu_1+4c\widehat\mu_1^2
+                  +(2\widehat\mu_1-2c-1)\widehat\mu_2\notag\\
+ &\hspace{1em}\ge c^2\widehat\mu_1+4c\widehat\mu_1^2
+                  +(2\widehat\mu_1-2c-1)\overline\mu_2,
  \label{eq:gap-bound}
 \end{align}
-where the last step uses $2k-2c-1<0$ and \eqref{eq:moment-constraint}.
-Set $d=c+2k-1\ge0$. A direct rearrangement gives
+where the last step uses $2\widehat\mu_1-2c-1<0$ and \eqref{eq:moment-constraint}.
+Set $\Delta=c+2\widehat\mu_1-1\ge0$. A direct rearrangement gives
 \begin{align}
- &c^2k+4ck^2+(2k-2c-1)\bar j\notag\\
- &\quad=\frac{k}{c+1+2k}\bigl[
- d^3+2d^2+\{2+2k(1-2k)\}d
-                  +2(1-k)(1-2k)\bigr]>0.
+ &c^2\widehat\mu_1+4c\widehat\mu_1^2
+       +(2\widehat\mu_1-2c-1)\overline\mu_2\notag\\
+ &\quad=\frac{\widehat\mu_1}{c+1+2\widehat\mu_1}\Bigl[
+ \Delta^3+2\Delta^2+\{2+2\widehat\mu_1(1-2\widehat\mu_1)\}\Delta\notag\\
+ &\hspace{10em}+2(1-\widehat\mu_1)(1-2\widehat\mu_1)\Bigr]>0.
  \label{eq:positive-polynomial}
 \end{align}
 Every term in brackets is nonnegative and the last is strictly positive.
-Equations \eqref{eq:undo-tilt}--\eqref{eq:positive-polynomial} imply $\mu<2k$.
+Equations \eqref{eq:undo-tilt}--\eqref{eq:positive-polynomial} imply $\mu<2\widehat\mu_1$.
 \end{proof}
 
 \begin{remark}\label{rem:why-two}
-The children need not remain independent under $Q$. Independence is used
+The children need not remain independent under $\mathbb Q$. Independence is used
 under the original measure in \eqref{eq:tilt-ratio}; conditional exchangeability
 is preserved by the symmetric tilt. The lower bound
 $\nu\ge2$ is needed in \eqref{eq:two-children}. Merely knowing a support bound
 for $X$ does not supply either of these two pieces of information. If
 single-child vertices are allowed, the same argument retains only
-$\E_QS\ge \E_QX_1$ and does not prove Lemma~\ref{lem:tilt}.
+$\E_{\mathbb Q}S\ge \E_{\mathbb Q}X_1$ and does not prove Lemma~\ref{lem:tilt}.
 \end{remark}
 
 \begin{remark}[Regular trees]\label{rem:regular}
 For the deterministic $d$-ary tree, $\beta_\lambda=1-\lambda/d$ for
 $0<\lambda<d$ and
-$v(\lambda)=(d-\lambda)/(d+\lambda)$. The reweighted mean $k$ equals
+$v(\lambda)=(d-\lambda)/(d+\lambda)$. The reweighted mean $\widehat\mu_1$ equals
 $\E\beta_\lambda$ in this case, so the strict inequality of
 Lemma~\ref{lem:tilt} also holds for a point-mass fixed point.
 \end{remark}
@@ -562,21 +563,23 @@ For the rest of the proof fix $1<\lambda<m$ and abbreviate
 \begin{equation}\label{eq:basepoint}
  c=\lambda-1,\quad \pi=\pi_\lambda,\quad
  N=N_\lambda(\pi),\quad Z=Z_\lambda(\pi),\quad v=v(\lambda),
- \quad A=A_\lambda.
+ \quad D=D_\lambda.
 \end{equation}
-All unqualified copies $X,Y,X_i$ have law $\pi$. Define
+All unqualified copies $X,Y,X_i$ have law $\pi$. We use the affine function
+$h_v$ to express the threshold $v/(1+v)$, and the weighted integral
+operator $\cJ$ to collect the squared-denominator terms:
 \begin{equation}\label{eq:J-h}
  h_v(y)=(1+v)y-v,
  \qquad
- (\cJ f)(x)=\E\frac{f(Y)}{A(x,Y)^2}.
+ (\cJ g)(x)=\E\frac{g(Y)}{D(x,Y)^2}.
 \end{equation}
 
 \begin{lemma}[Uniform positive margin]\label{lem:positive-kernel}
-With $k$ as in Lemma~\ref{lem:tilt},
+With $\widehat\mu_1$ as in Lemma~\ref{lem:tilt},
 \begin{equation}\label{eq:threshold-k}
- \frac{v}{1+v}<k.
+ \frac{v}{1+v}<\widehat\mu_1.
 \end{equation}
-In particular, writing $\eta=(1+v)k-v>0$,
+In particular, writing $\eta=(1+v)\widehat\mu_1-v>0$,
 \begin{equation}\label{eq:J-positive}
  (\cJ h_v)(x)\ge\frac{\eta}{\lambda^2}>0,
  \qquad 0\le x\le1.
@@ -584,28 +587,30 @@ In particular, writing $\eta=(1+v)k-v>0$,
 \end{lemma}
 
 \begin{proof}
-Put $W=\E[X/A(X,Y)]$. Symmetry gives $N+Z=2W$, hence
-$v/(1+v)=N/(2W)$. For fixed $x$, $y\mapsto A(x,y)^{-1}$ is decreasing.
+Symmetry gives $N+Z=2\E[X/D(X,Y)]$. For fixed $x$,
+$y\mapsto D(x,y)^{-1}$ is decreasing.
 The one-dimensional covariance inequality therefore gives
 \[
- \E\frac{Y}{A(x,Y)}\le\mu\E\frac1{A(x,Y)},\qquad \mu=\E X.
+ \E\frac{Y}{D(x,Y)}\le\mu\E\frac1{D(x,Y)},\qquad \mu=\E X.
 \]
-Multiplying by $x$ and averaging proves $N\le\mu W$. By Lemma~\ref{lem:tilt},
+Multiplying by $x$ and averaging proves $N\le\mu(N+Z)/2$.
+By Lemma~\ref{lem:tilt},
 \begin{equation}\label{eq:v-mu-k}
- \frac{v}{1+v}=\frac N{2W}\le\frac\mu2<k.
+ \frac{v}{1+v}=\frac N{N+Z}\le\frac\mu2<\widehat\mu_1.
 \end{equation}
 
-Let $k_x=\E[Y/A(x,Y)^2]/\E[1/A(x,Y)^2]$. Relative to the measure $M$ in
+Let $\widehat\mu_1(x)=\E[Y/D(x,Y)^2]/\E[1/D(x,Y)^2]$, so that
+$\widehat\mu_1(0)=\widehat\mu_1$. Relative to the measure $\widehat\pi$ in
 Lemma~\ref{lem:tilt}, this tilt has density proportional to
-$\{(c+y)/A(x,y)\}^2$, an increasing function of $y$, since
+$\{(c+y)/D(x,y)\}^2$, an increasing function of $y$, since
 \begin{equation}\label{eq:ratio-derivative}
- \frac{\partial}{\partial y}\frac{c+y}{A(x,y)}
- =\frac{\lambda x}{A(x,y)^2}\ge0.
+ \frac{\partial}{\partial y}\frac{c+y}{D(x,y)}
+ =\frac{\lambda x}{D(x,y)^2}\ge0.
 \end{equation}
-Thus $k_x\ge k$. As $A(x,y)\le\lambda$,
+Thus $\widehat\mu_1(x)\ge \widehat\mu_1$. As $D(x,y)\le\lambda$,
 \[
  (\cJ h_v)(x)
- =\E[A(x,Y)^{-2}]\bigl((1+v)k_x-v\bigr)
+ =\E[D(x,Y)^{-2}]\bigl((1+v)\widehat\mu_1(x)-v\bigr)
  \ge\frac{\eta}{\lambda^2}.
 \]
 \end{proof}
@@ -618,7 +623,7 @@ Throughout this section, $\lambda$, $\pi$ and $v$ are fixed as in
 function $u$ on $[0,1]$, set
 \begin{align}
  \res_u(\alpha,\rho)
- &=\E_\rho u(X)-\E_{\nu,\rho}u\bigl(F_\alpha(S_\rho)\bigr),
+ &=\E_\rho u(X)-\E_{\nu,\rho}u\bigl(f_\alpha(S_\rho)\bigr),
  &S_\rho&=\sum_{i=1}^{\nu}X_i,\label{eq:residual}\\
  \cF(\alpha,\rho)
  &=N_\alpha(\rho)-vZ_\alpha(\rho)-2\res_u(\alpha,\rho).
@@ -643,95 +648,91 @@ and decrease with the explicit parameter near $(\lambda,\pi)$.
 The derivative of one coordinate in the symmetric speed comparison is
 \begin{equation}\label{eq:variation-kernel}
  \frac{\partial}{\partial x}
-       \frac{xy-vt(x,y)}{A(x,y)}
- =\frac{y^2+c h_v(y)}{A(x,y)^2}.
+       \frac{xy-vq(x,y)}{D(x,y)}
+ =\frac{y^2+c h_v(y)}{D(x,y)^2}.
 \end{equation}
-Accordingly set
-\begin{equation}\label{eq:Psi}
- \Psi=\cJ(y^2+c h_v(y)),\qquad
- b(x)=\frac{x(1-x)}{\lambda},\qquad
- \mathsf C=\E\frac{v\,t(X,Y)-XY}{A(X,Y)^2}.
-\end{equation}
-The quantity $\mathsf C$ is the explicit parameter derivative of
-$N_\alpha(\pi)-vZ_\alpha(\pi)$ at $\alpha=\lambda$.
-
-For a bounded function $r$, define
+After averaging over $y$, this gives the kernel $\cJ(y^2+c h_v)$.
+To express the variation of the recursive term, define the linearization
+operator $\cL$ on bounded functions $g$ by
 \begin{equation}\label{eq:L}
- (\cL r)(x)=\E\biggl[
- \frac{\nu\lambda}{(\lambda+x+S_{\nu-1})^2}
- r\biggl(\frac{x+S_{\nu-1}}{\lambda+x+S_{\nu-1}}\biggr)
+ (\cL g)(x)=\E\biggl[
+ \frac{\nu\lambda}{(\lambda+x+S^{(1)})^2}
+ g\biggl(\frac{x+S^{(1)}}{\lambda+x+S^{(1)}}\biggr)
  \biggr],
- \qquad S_{\nu-1}=\sum_{i=2}^{\nu}X_i.
 \end{equation}
-If $r=u'$, this operator records the contribution of all children when
+where $S^{(1)}=\sum_{i=2}^{\nu}X_i$ again omits the first child.
+Applied to $u'$, this operator records the contribution of all children when
 one differentiates the recursive term in $\res_u$ along an interpolation
 of the input variables. Conditional exchangeability gives the factor
-$\nu$. Thus the variation of the residual is governed by $(I-\cL)r$,
-and that of $\cF$ by $\Psi-(I-\cL)r$; the exact transport identity is
+$\nu$. Thus the variation of the residual is governed by $(I-\cL)u'$,
+and that of $\cF$ by $\cJ(y^2+c h_v)-(I-\cL)u'$, where $I$ is the
+identity operator. The exact transport identity is
 proved in Lemma~\ref{lem:transport}.
 
 The preceding section gives the sign of $\cJ h_v$. It therefore suffices
-to find $r$ for which $(I-\cL)r=\cJ(y^2)$, cancelling the other term in
-$\Psi$.
+to choose $u$ so that $(I-\cL)u'=\cJ(y^2)$, cancelling the quadratic term.
 
-Choose
+Choose the derivative of the correction as
 \begin{equation}\label{eq:r-u}
- \boxed{\quad r(x)=\cJ\id(x)=\E\frac{Y}{A(x,Y)^2}.\quad}
+ \boxed{\quad u'(x)=(\cJ\mathrm{id})(x)=\E\frac{Y}{D(x,Y)^2}.\quad}
 \end{equation}
-A convenient primitive, normalized by $u(0)=0$, is
+Here $\mathrm{id}(y)=y$. The primitive normalized by $u(0)=0$ is
 \begin{equation}\label{eq:u-explicit}
- u(x)=\int_0^x r(s)\dd s
-     =\E\frac{xY}{(c+Y)A(x,Y)}.
+ u(x)=\int_0^x u'(s)\dd s
+     =\E\frac{xY}{(c+Y)D(x,Y)}.
 \end{equation}
-Both $r$ and $u$ are smooth and bounded on $[0,1]$.
+Both $u$ and $u'$ are smooth and bounded on $[0,1]$.
 
 \subsection{Verify the two signs}
 
 \begin{proposition}[Cancellation of the distributional variation]\label{prop:cancel-law}
 The correction \eqref{eq:r-u} satisfies
 \begin{equation}\label{eq:Lr}
- \cL r=\cJ\bigl(y(1-y)\bigr),\qquad
- (I-\cL)r=\cJ(y^2).
+ \cL u'=\cJ\bigl(y(1-y)\bigr),\qquad
+ (I-\cL)u'=\cJ(y^2).
 \end{equation}
 Consequently,
 \begin{equation}\label{eq:law-margin}
  \boxed{\quad
- \Psi-(I-\cL)r=c\,\cJ h_v,
- \qquad
- \inf_{x\in[0,1]}\{\Psi-(I-\cL)r\}(x)>0.
+ \bigl[\cJ(y^2+c h_v)-(I-\cL)u'\bigr](x)
+ =c(\cJ h_v)(x)\ge\frac{c\eta}{\lambda^2}>0,
  \quad}
 \end{equation}
+uniformly for $x\in[0,1]$.
 \end{proposition}
 
 \begin{proof}
 The elementary denominator identity
 \begin{equation}\label{eq:denom-F}
- A(F_\lambda(s),y)
+ D(f_\lambda(s),y)
  =\frac{\lambda(c+s+y)}{\lambda+s}
 \end{equation}
-cancels the derivative of $F_\lambda$ against the squared kernel. Using an
+cancels the derivative of $f_\lambda$ against the squared kernel. Using an
 additional independent copy $Y$ in \eqref{eq:L} gives
 \begin{align}
- (\cL r)(x)
- &=\frac1\lambda\E\frac{\nu Y}{(c+x+S_{\nu-1}+Y)^2}\notag\\
+ (\cL u')(x)
+ &=\frac1\lambda\E\frac{\nu Y}{(c+x+S^{(1)}+Y)^2}\notag\\
  &=\frac1\lambda\E\frac{S}{(c+x+S)^2}\notag\\
- &=\E\frac{Y(1-Y)}{A(x,Y)^2}.\label{eq:Lr-proof}
+ &=\E\frac{Y(1-Y)}{D(x,Y)^2}.\label{eq:Lr-proof}
 \end{align}
-The middle equality uses exchangeability of the $\nu$ summands conditional
-on $\nu$, and the last uses \eqref{eq:rde}. Equations \eqref{eq:Psi} and
-\eqref{eq:J-positive} now give \eqref{eq:law-margin}.
+For the middle equality, conditional on $\nu$, the $\nu$ variables
+$Y,X_2,\ldots,X_\nu$ are exchangeable and their sum $Y+S^{(1)}$ has the
+same law as $S$. The last equality uses \eqref{eq:rde}. Together with
+$u'=\cJ\mathrm{id}$ and \eqref{eq:J-positive}, this gives
+\eqref{eq:Lr} and \eqref{eq:law-margin}.
 \end{proof}
 
 \begin{proposition}[Cancellation of the parameter variation]\label{prop:cancel-parameter}
 Define
 \begin{equation}\label{eq:K}
- K=2\E[b(X)r(X)]-\mathsf C.
+ \kappa=\frac2\lambda\E[X(1-X)u'(X)]
+        -\E\frac{v\,q(X,Y)-XY}{D(X,Y)^2}.
 \end{equation}
 Then
 \begin{align}
- \lambda K
+ \lambda \kappa
  ={}&2\E\bigl[X(1-X)(\cJ h_v)(X)\bigr]\notag\\
- &+(1+v)\E\frac{XY(1-X)(1-Y)}{A(X,Y)^2}>0.
+ &+(1+v)\E\frac{XY(1-X)(1-Y)}{D(X,Y)^2}>0.
  \label{eq:K-positive}
 \end{align}
 \end{proposition}
@@ -739,19 +740,19 @@ Then
 \begin{proof}
 By symmetry,
 \begin{equation}\label{eq:K-expanded}
- K=\E\frac{XY\{1+(2-X-Y)/\lambda\}-v\,t(X,Y)}{A(X,Y)^2}.
+ \kappa=\E\frac{XY\{1+(2-X-Y)/\lambda\}-v\,q(X,Y)}{D(X,Y)^2}.
 \end{equation}
-Since $\lambda-A(x,y)=(1-x)(1-y)$ and
-$\E[(XY-vt(X,Y))/A(X,Y)]=N-vZ=0$, multiplying
+Since $\lambda-D(x,y)=(1-x)(1-y)$ and
+$\E[(XY-vq(X,Y))/D(X,Y)]=N-vZ=0$, multiplying
 \eqref{eq:K-expanded} by $\lambda$ removes the term with a single power
-of $A$ in the denominator. The remaining numerator satisfies the pointwise
+of $D$ in the denominator. The remaining numerator satisfies the pointwise
 identity
 \begin{align}
- &(1-x)(1-y)\{xy-vt(x,y)\}+xy(2-x-y)\notag\\
+ &(1-x)(1-y)\{xy-vq(x,y)\}+xy(2-x-y)\notag\\
  &\quad=x(1-x)h_v(y)+y(1-y)h_v(x)
              +(1+v)xy(1-x)(1-y).\label{eq:pointwise-K}
 \end{align}
-Divide by $A(x,y)^2$ and average to obtain \eqref{eq:K-positive}.
+Divide by $D(x,y)^2$ and average to obtain \eqref{eq:K-positive}.
 Both terms there are positive, by Lemma~\ref{lem:positive-kernel} and
 $0<X,Y<1$ almost surely.
 \end{proof}
@@ -762,34 +763,34 @@ The identities above give the required signs at the base point. To compare
 two actual fixed points, the positive law-variation kernel must persist
 along the entire interpolation between them. We establish this local
 stability first, then change the law and the explicit parameter in turn.
-The quantities $\lambda$, $\pi$, $v$, $r$ and $u$ remain fixed at the
+The quantities $\lambda$, $\pi$, $v$ and $u$ remain fixed at the
 base point \eqref{eq:basepoint}; in particular, $u$ is not recomputed
 when $\alpha$ or $\rho$ changes.
 
 \subsection{A transport formula and its local stability}
 
 Write $\cL_{\alpha,\rho}$ for \eqref{eq:L} with parameter $\alpha$ and
-child law $\rho$. Define
+independent child variables with law $\rho$. Define the variation kernel
 \begin{equation}\label{eq:G-field}
  G_{\alpha,\rho}(x)
- =\int\frac{y^2+(\alpha-1)h_v(y)}{A_\alpha(x,y)^2}\,\rho(\mathrm dy)
-   -r(x)+(\cL_{\alpha,\rho}r)(x).
+ =\int\frac{y^2+(\alpha-1)h_v(y)}{D_\alpha(x,y)^2}\,\rho(\mathrm dy)
+   -u'(x)+(\cL_{\alpha,\rho}u')(x).
 \end{equation}
 At the base point, Proposition~\ref{prop:cancel-law} states that
 \begin{equation}\label{eq:G-base}
- G_{\lambda,\pi}=c\,\cJ h_v,
- \qquad \gamma:=\inf_{x\in[0,1]}G_{\lambda,\pi}(x)>0.
+ G_{\lambda,\pi}(x)=c(\cJ h_v)(x)
+ \ge\frac{c\eta}{\lambda^2}>0,\qquad 0\le x\le1.
 \end{equation}
 
 \begin{lemma}[Transport and continuity]\label{lem:transport}
 The map $(\alpha,\rho)\mapsto G_{\alpha,\rho}$ is continuous at
 $(\lambda,\pi)$, with values in $C([0,1])$ equipped with the uniform norm and
 with $\rho$ equipped with $W_1$.
-Moreover, if $X_0\le X_1$ is a coupling, $X_s=(1-s)X_0+sX_1$, and
+Moreover, if $0\le U\le V\le1$ is a coupling, $X_s=(1-s)U+sV$, and
 $\rho_s=\Law(X_s)$, then
 \begin{equation}\label{eq:transport-formula}
  \frac{\mathrm d}{\mathrm ds}\cF(\alpha,\rho_s)
- =2\E\bigl[(X_1-X_0)G_{\alpha,\rho_s}(X_s)\bigr].
+ =2\E\bigl[(V-U)G_{\alpha,\rho_s}(X_s)\bigr].
 \end{equation}
 Consequently, $\cF(\alpha,\cdot)$ is increasing along any such ordered
 interpolation lying in a sufficiently small neighborhood of $\pi$, provided
@@ -799,12 +800,11 @@ $\alpha$ is sufficiently close to $\lambda$.
 \begin{proof}
 \smallskip\noindent
 \underline{\textit{Step 1.}} Preserve positivity in a neighborhood.
-Fix a compact parameter interval $I\subset(1,\infty)$ containing $\lambda$,
-and let $a=\inf I>1$. The double-integral kernel in \eqref{eq:G-field} is
-bounded and jointly continuous on $I\times[0,1]^2$.
+Fix $1<a<\lambda<b<\infty$. The integral kernel in \eqref{eq:G-field} is
+bounded and jointly continuous on $[a,b]\times[0,1]^2$.
 For the recursive term, conditional on $\nu=n$ its integrand is bounded by
 \begin{equation}\label{eq:nu-bound}
- \frac{n}{a}\|r\|_\infty.
+ \frac{n}{a}\|u'\|_\infty.
 \end{equation}
 For each fixed $n$ it is jointly continuous in the parameter, the external
 coordinate $x$ and the $n-1$ child coordinates. Integrating against
@@ -812,25 +812,25 @@ $\rho^{\otimes(n-1)}$ therefore gives uniform convergence in $x$ when the
 parameter and the law converge. One way to see uniformity is to use uniform
 continuity of the integrand and then a finite net in $[0,1]$.
 Truncating the sum at $n=M$ leaves a remainder bounded, uniformly in
-$\alpha\in I$, $x$ and $\rho$, by
+$\alpha\in[a,b]$, $x$ and $\rho$, by
 \begin{equation}\label{eq:nu-tail}
- \frac{\|r\|_\infty}{a}\E[\nu\mathbf1_{\{\nu>M\}}]\longrightarrow0.
+ \frac{\|u'\|_\infty}{a}\E[\nu\mathbf1_{\{\nu>M\}}]\longrightarrow0.
 \end{equation}
 This proves the asserted continuity. Notice that only $\E\nu<\infty$ is
 used here. By \eqref{eq:G-base}, it follows that
-$G_{\alpha,\rho}\ge\gamma/2$ uniformly in $x$ in a sufficiently small
+$G_{\alpha,\rho}\ge c\eta/(2\lambda^2)$ uniformly in $x$ in a sufficiently small
 neighborhood of $(\lambda,\pi)$.
 
 \smallskip\noindent
 \underline{\textit{Step 2.}} Compute the change along an interpolation.
 Take independent copies of the coupled pair
-$(X_0,X_1)$ for all child coordinates and for the two variables in
+$(U,V)$ for all child coordinates and for the two variables in
 \eqref{eq:NZ}. Differentiation of $N_\alpha-vZ_\alpha$ gives twice the first
 term of \eqref{eq:G-field}. Differentiation of $\E_{\rho_s}u(X)$ gives
-$\E[(X_1-X_0)r(X_s)]$. Finally, the chain rule for the RDE update produces
-$\E[(X_1-X_0)(\cL_{\alpha,\rho_s}r)(X_s)]$ after conditional
+$\E[(V-U)u'(X_s)]$. Finally, the chain rule for the RDE update produces
+$\E[(V-U)(\cL_{\alpha,\rho_s}u')(X_s)]$ after conditional
 exchangeability. Interchanging differentiation and expectation is justified
-by \eqref{eq:nu-bound}, $0\le X_1-X_0\le1$ and $\E\nu<\infty$.
+by \eqref{eq:nu-bound}, $0\le V-U\le1$ and $\E\nu<\infty$.
 This proves \eqref{eq:transport-formula}.
 
 The positivity from Step~1 makes \eqref{eq:transport-formula} nonnegative
@@ -842,14 +842,16 @@ on every ordered interpolation contained in that neighborhood.
 Freezing the distribution $\pi$ while varying the parameter gives
 \begin{equation}\label{eq:parameter-residual}
  \left.\partial_\alpha\res_u(\alpha,\pi)\right|_{\alpha=\lambda}
- =\E\bigl[b(X)r(X)\bigr].
+ =\frac1\lambda\E\bigl[X(1-X)u'(X)\bigr].
 \end{equation}
-Indeed, $\partial_\alpha F_\alpha(s)=-s/(\alpha+s)^2$, which at the fixed
-point equals $-b(F_\lambda(s))$. The derivative is dominated since
+Indeed, at $\alpha=\lambda$,
+$\partial_\alpha f_\alpha(s)=-s/(\lambda+s)^2
+=-f_\lambda(s)(1-f_\lambda(s))/\lambda$.
+The derivative is dominated since
 $s/(\alpha+s)^2\le1/(4\alpha)$. From Proposition~\ref{prop:cancel-parameter},
 \begin{equation}\label{eq:parameter-negative}
  \left.\partial_\alpha\cF(\alpha,\pi)\right|_{\alpha=\lambda}
- =\mathsf C-2\E[br]=-K<0.
+ =-\kappa<0.
 \end{equation}
 
 \begin{proof}[Proof of Theorem~\ref{thm:main} on $(1,m)$]
@@ -879,19 +881,19 @@ $\alpha=\lambda+\varepsilon$, that lemma gives
 \end{equation}
 Since $\cF(\lambda,\pi)=0$, \eqref{eq:parameter-negative} yields
 \[
- \cF(\lambda+\varepsilon,\pi)=-K\varepsilon+o(\varepsilon).
+ \cF(\lambda+\varepsilon,\pi)=-\kappa\varepsilon+o(\varepsilon).
 \]
 Using \eqref{eq:on-curve}, we conclude that
 \begin{equation}\label{eq:finite-comparison}
  Z_{\lambda+\varepsilon}(\pi_{\lambda+\varepsilon})
  \{v(\lambda+\varepsilon)-v(\lambda)\}
- \le-K\varepsilon+o(\varepsilon).
+ \le-\kappa\varepsilon+o(\varepsilon).
 \end{equation}
 The normalizing factor converges to $Z>0$. Therefore
 \begin{equation}\label{eq:explicit-dini}
- \boxed{\quad \Dplus v(\lambda)\le-\frac KZ<0.\quad}
+ \boxed{\quad \Dplus v(\lambda)\le-\frac{\kappa}{Z}<0.\quad}
 \end{equation}
-This proves \eqref{eq:main-dini}, with $\delta_\lambda=K/Z$.
+This proves \eqref{eq:main-dini}, with $\delta_\lambda=\kappa/Z$.
 
 A continuous function with strictly negative upper right Dini derivative at
 every point of an interval is strictly decreasing there. Indeed, if

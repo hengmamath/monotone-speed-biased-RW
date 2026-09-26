@@ -1,55 +1,169 @@
-\documentclass[11pt,a4paper]{amsart}
+\documentclass[11pt,reqno]{amsart} 
 
-% Compile with: latexmk -pdf gw_speed_monotonicity.tex
-% The accompanying .latexmkrc puts all build products in build/.
-%\usepackage[T1]{fontenc}
+
+
 \usepackage[utf8]{inputenc}
-\usepackage{mathtools} 
+\usepackage{mathtools,amsthm,amssymb}
 \usepackage{mathrsfs}
-\usepackage[allowunsupported,grade=19]{cmgraded}
+\usepackage[allowunsupported,grade=32]{cmgraded}
 \usepackage{microtype}
 \usepackage[a4paper,top=25mm,bottom=26mm,left=29mm,right=29mm,headsep=7mm]{geometry}
-\usepackage{aliascnt}
-\usepackage[unicode,hidelinks]{hyperref}
-\usepackage[nameinlink,noabbrev]{cleveref}
-
+\usepackage[dvipsnames]{xcolor}
+\usepackage[
+  breaklinks=true,
+  pagebackref=true,
+  hypertexnames=false
+]{hyperref}
 \hypersetup{
-  pdftitle={Strict monotonicity of the speed of biased random walks on Galton--Watson trees with at least two offspring},
-  pdfsubject={Speed monotonicity for biased random walks on Galton--Watson trees},
-  pdfkeywords={Galton--Watson tree, biased random walk, speed monotonicity, recursive distributional equation, fixed-point correction}
+  colorlinks=true,
+  pdfpagemode=UseNone,
+  citecolor=ForestGreen,
+  linkcolor=MidnightBlue,
+  urlcolor=RoyalBlue,
+  pdfstartview=FitH,
 }
-\title[Speed monotonicity on Galton--Watson trees]{Strict monotonicity of the speed of biased random walks on Galton--Watson trees with at least two offspring}
-% Add author names, affiliations and contact details before submission.
-\date{}
-\subjclass[2020]{Primary 60J10; Secondary 60J80, 60K37}
-\keywords{Galton--Watson trees, biased random walk, speed, monotonicity, recursive distributional equation}
-\setlength{\emergencystretch}{1.8em}
-\numberwithin{equation}{section}
-\allowdisplaybreaks[1]
+
+
+% ===== 自行调整的参数 =====
+\linespread{1.05}           % 行距倍率；1 为 amsart 原始行距
+\normalsize                  % 使行距倍率立即生效
+\linespacing=\baselineskip   % 同步章节、定理使用的间距基准
+\setlength{\parindent}{1em} % 段首缩进
+\setlength{\parskip}{0pt}   % 段间距
+
+\makeatletter
+
+% ===== 首页标题区 =====
+\def\@settitle{%
+  \begin{center}%
+    \uppercasenonmath\@title
+    \Large\@title
+  \end{center}}
+
+\def\@setauthors{%
+  \vskip21pt plus6pt minus3pt
+  \begin{center}%
+    {\tiny BY\par}\medskip
+    {\normalsize\scshape\authors\par}\medskip
+    \def\address##1##2{\par ##2\par}%
+    \def\email##1##2{\par e-mail:~##2\par}%
+    {\small\itshape\addresses\par}%
+  \end{center}}
+
+\def\enddoc@text{} % 地址已经排在首页
+
+\renewenvironment{abstract}{%
+  \global\setbox\abstractbox=\vtop\bgroup
+  \vskip10pt
+  \normalfont\tiny\centering\MakeUppercase{\abstractname}\par
+  \Small
+  \list{}{%
+    \leftmargin3pc
+    \rightmargin3pc
+    \labelwidth0pt
+    \listparindent\normalparindent
+    \itemindent0pt
+    \parsep0pt plus1pt
+    \let\fullwidthdisplay\relax
+  }%
+  \item[]
+}{%
+  \vspace*{-10pt}
+  \endlist\egroup
+}
+
+% ===== 章节层级 =====
+\let\@secnumfont\@empty
+
+\def\section{\@startsection{section}{1}{0pt}%
+  {20pt plus4pt minus4pt}
+  {.5\linespacing}
+  {\normalfont\bfseries}}
+
+\def\subsection{\@startsection{subsection}{2}{0pt}%
+  {.5\linespacing plus.7\linespacing}
+  {-.5em}
+  {\normalfont\scshape}}
+
+\def\subsubsection{\@startsection{subsubsection}{3}{0pt}%
+  {.5\linespacing plus.7\linespacing}
+  {-.5em}
+  {\normalfont\itshape}}
+
+% 章节标题后的第一段不缩进
+\let\@afterindenttrue\@afterindentfalse
+\@afterindentfalse
+
+% ===== 定理、定义、备注 =====
+\newtheoremstyle{plain}
+  {.5\linespacing}{.5\linespacing}
+  {\itshape}{1em}{\scshape}{.}{.5em}
+  {\thmname{#1}\thmnumber{ #2}\thmnote{\normalfont{} (#3)}}
 
 \theoremstyle{plain}
 \newtheorem{theorem}{Theorem}[section]
-\newaliascnt{proposition}{theorem}
-\newtheorem{proposition}[proposition]{Proposition}
-\aliascntresetthe{proposition}
-\newaliascnt{lemma}{theorem}
-\newtheorem{lemma}[lemma]{Lemma}
-\aliascntresetthe{lemma}
-\newaliascnt{corollary}{theorem}
-\newtheorem{corollary}[corollary]{Corollary}
-\aliascntresetthe{corollary}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+
+\newtheoremstyle{definition}
+  {.5\linespacing}{.5\linespacing}
+  {\upshape}{1em}{\scshape}{.}{.5em}
+  {\thmname{#1}\thmnumber{ #2}\thmnote{\normalfont{} (#3)}}
+
 \theoremstyle{definition}
-\newaliascnt{remark}{theorem}
-\newtheorem{remark}[remark]{Remark}
-\aliascntresetthe{remark}
-\renewcommand{\qedsymbol}{\ensuremath{\square}}
-\crefname{equation}{equation}{equations}
-\crefname{lemma}{Lemma}{Lemmas}
-\crefname{proposition}{Proposition}{Propositions}
-\crefname{theorem}{Theorem}{Theorems}
-\crefname{corollary}{Corollary}{Corollaries}
-\crefname{remark}{Remark}{Remarks}
-\crefname{section}{Section}{Sections}
+\newtheorem{definition}[theorem]{Definition}
+
+\newtheoremstyle{remark}
+  {.5\linespacing}{.5\linespacing}
+  {\upshape}{1em}{\scshape}{.}{.5em}
+  {\thmname{#1}\thmnumber{ #2}\thmnote{\normalfont{} (#3)}}
+
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+
+% ===== 证明与结束标记 =====
+\renewenvironment{proof}[1][\proofname]{%
+  \par
+  \pushQED{\qed}%
+  \normalfont
+  \topsep6pt plus6pt\relax
+  \trivlist
+  \item[\hskip\labelsep\slshape #1\@addpunct{.}]%
+  \ignorespaces
+}{%
+  \popQED
+  \endtrivlist
+  \@endpefalse
+}
+
+\DeclareRobustCommand{\qed}{%
+  \leavevmode\unskip\penalty9999\hbox{}\nobreak
+  \ifmmode
+    \makebox[0pt][l]{\qquad\hbox{\qedsymbol}}%
+  \else
+    \qquad\hbox{\qedsymbol}%
+  \fi
+}
+\renewcommand{\qedsymbol}{\rule[.47pt]{4pt}{6pt}}
+
+\makeatother
+ 
+
+
+\title[Speed monotonicity of BRW on GW trees]{More rootward bias, less speed:\\
+ biased random walks on Galton---Watson trees \\in the B\"{o}ttcher case}
+\author{Heng Ma}
+\address[Heng Ma]{Faculty of Data and Decision Sciences, Technion,  Israel}
+\email{hengmamath(at)gmail(dot)com}
+\urladdr{\url{https://hengmamath.github.io}}
+\date{\today}
+
+
+\setlength{\emergencystretch}{1.8em}
+\numberwithin{equation}{section}
+\allowdisplaybreaks[1]
+ 
 
 \newcommand{\E}{\mathbb E}
 \newcommand{\PP}{\mathbb P}
@@ -82,6 +196,8 @@ the classical derivative $v'(\lambda)$ exists and is negative throughout
 $(0,m)$.
 \end{abstract}
 \maketitle
+
+ \tableofcontents
 
 \section{Introduction}\label{sec:introduction}
 
@@ -146,7 +262,7 @@ conclusion. The assumption of at least two children enters a single
 reweighting estimate; only the finite mean is needed in the fixed-point
 comparison, so the offspring number may be unbounded. The method does not
 give the corresponding estimate when vertices with one child are allowed.
-The additional exponential-moment assumption in \cref{cor:derivative} is
+The additional exponential-moment assumption in Corollary~\ref{cor:derivative} is
 used only to invoke the differentiability theorem of Bowditch and
 Tokushige \cite[Theorem~1.1]{BT}.
 
@@ -162,7 +278,7 @@ annealed law $\pi_\alpha=\Law(\beta_\alpha)$ satisfies the recursive equation
 where the $X_i$ are independent with law $\pi_\alpha$ and independent of
 $\nu$. These laws decrease stochastically as $\alpha$ increases. A
 symmetric form of A\"id\'ekon's speed formula, proved in
-\cref{prop:symmetric}, is
+Proposition~\ref{prop:symmetric}, is
 \begin{equation}\label{eq:roadmap-speed}
  v(\alpha)
  =\frac{\E[XY/(\alpha-1+X+Y-XY)]}
@@ -209,7 +325,7 @@ the children by $(c+\sum_iX_i)^{-2}$. The first child then has mean at
 least $k$, and conditional exchangeability makes the reweighted mean of
 the sum at least $2k$. The recursive equation converts this into
 \eqref{eq:roadmap-tilt}; the remaining moment calculation is given in
-\cref{lem:tilt}. Symmetry of \eqref{eq:roadmap-speed} yields
+Lemma~\ref{lem:tilt}. Symmetry of \eqref{eq:roadmap-speed} yields
 $v/(1+v)\le\mu/2<k$. This inequality makes the law-variation kernel
 uniformly positive and the explicit parameter derivative of $\cF$
 strictly negative at $(\lambda,\pi_\lambda)$.
@@ -429,7 +545,7 @@ is preserved by the symmetric tilt. The lower bound
 $\nu\ge2$ is needed in \eqref{eq:two-children}. Merely knowing a support bound
 for $X$ does not supply either of these two pieces of information. If
 single-child vertices are allowed, the same argument retains only
-$\E_QS\ge \E_QX_1$ and does not prove \cref{lem:tilt}.
+$\E_QS\ge \E_QX_1$ and does not prove Lemma~\ref{lem:tilt}.
 \end{remark}
 
 \begin{remark}[Regular trees]\label{rem:regular}
@@ -437,7 +553,7 @@ For the deterministic $d$-ary tree, $\beta_\lambda=1-\lambda/d$ for
 $0<\lambda<d$ and
 $v(\lambda)=(d-\lambda)/(d+\lambda)$. The reweighted mean $k$ equals
 $\E\beta_\lambda$ in this case, so the strict inequality of
-\cref{lem:tilt} also holds for a point-mass fixed point.
+Lemma~\ref{lem:tilt} also holds for a point-mass fixed point.
 \end{remark}
 
 \subsection{From the weighted mean to a positive kernel}\label{sec:kernel}
@@ -456,7 +572,7 @@ All unqualified copies $X,Y,X_i$ have law $\pi$. Define
 \end{equation}
 
 \begin{lemma}[Uniform positive margin]\label{lem:positive-kernel}
-With $k$ as in \cref{lem:tilt},
+With $k$ as in Lemma~\ref{lem:tilt},
 \begin{equation}\label{eq:threshold-k}
  \frac{v}{1+v}<k.
 \end{equation}
@@ -474,13 +590,13 @@ The one-dimensional covariance inequality therefore gives
 \[
  \E\frac{Y}{A(x,Y)}\le\mu\E\frac1{A(x,Y)},\qquad \mu=\E X.
 \]
-Multiplying by $x$ and averaging proves $N\le\mu W$. By \cref{lem:tilt},
+Multiplying by $x$ and averaging proves $N\le\mu W$. By Lemma~\ref{lem:tilt},
 \begin{equation}\label{eq:v-mu-k}
  \frac{v}{1+v}=\frac N{2W}\le\frac\mu2<k.
 \end{equation}
 
 Let $k_x=\E[Y/A(x,Y)^2]/\E[1/A(x,Y)^2]$. Relative to the measure $M$ in
-\cref{lem:tilt}, this tilt has density proportional to
+Lemma~\ref{lem:tilt}, this tilt has density proportional to
 $\{(c+y)/A(x,y)\}^2$, an increasing function of $y$, since
 \begin{equation}\label{eq:ratio-derivative}
  \frac{\partial}{\partial y}\frac{c+y}{A(x,y)}
@@ -552,7 +668,7 @@ one differentiates the recursive term in $\res_u$ along an interpolation
 of the input variables. Conditional exchangeability gives the factor
 $\nu$. Thus the variation of the residual is governed by $(I-\cL)r$,
 and that of $\cF$ by $\Psi-(I-\cL)r$; the exact transport identity is
-proved in \cref{lem:transport}.
+proved in Lemma~\ref{lem:transport}.
 
 The preceding section gives the sign of $\cJ h_v$. It therefore suffices
 to find $r$ for which $(I-\cL)r=\cJ(y^2)$, cancelling the other term in
@@ -636,7 +752,7 @@ identity
              +(1+v)xy(1-x)(1-y).\label{eq:pointwise-K}
 \end{align}
 Divide by $A(x,y)^2$ and average to obtain \eqref{eq:K-positive}.
-Both terms there are positive, by \cref{lem:positive-kernel} and
+Both terms there are positive, by Lemma~\ref{lem:positive-kernel} and
 $0<X,Y<1$ almost surely.
 \end{proof}
 
@@ -659,7 +775,7 @@ child law $\rho$. Define
  =\int\frac{y^2+(\alpha-1)h_v(y)}{A_\alpha(x,y)^2}\,\rho(\mathrm dy)
    -r(x)+(\cL_{\alpha,\rho}r)(x).
 \end{equation}
-At the base point, \cref{prop:cancel-law} states that
+At the base point, Proposition~\ref{prop:cancel-law} states that
 \begin{equation}\label{eq:G-base}
  G_{\lambda,\pi}=c\,\cJ h_v,
  \qquad \gamma:=\inf_{x\in[0,1]}G_{\lambda,\pi}(x)>0.
@@ -730,18 +846,18 @@ Freezing the distribution $\pi$ while varying the parameter gives
 \end{equation}
 Indeed, $\partial_\alpha F_\alpha(s)=-s/(\alpha+s)^2$, which at the fixed
 point equals $-b(F_\lambda(s))$. The derivative is dominated since
-$s/(\alpha+s)^2\le1/(4\alpha)$. From \cref{prop:cancel-parameter},
+$s/(\alpha+s)^2\le1/(4\alpha)$. From Proposition~\ref{prop:cancel-parameter},
 \begin{equation}\label{eq:parameter-negative}
  \left.\partial_\alpha\cF(\alpha,\pi)\right|_{\alpha=\lambda}
  =\mathsf C-2\E[br]=-K<0.
 \end{equation}
 
-\begin{proof}[Proof of \cref{thm:main} on $(1,m)$]
+\begin{proof}[Proof of Theorem~\ref{thm:main} on $(1,m)$]
 We first compare the two escape laws at the larger parameter, then use
 the negative parameter derivative with the law frozen at $\pi$.
 
 Let $\varepsilon>0$ be small enough that $\lambda+\varepsilon<m$.
-By \cref{lem:continuity}, on the same tree
+By Lemma~\ref{lem:continuity}, on the same tree
 \[
  U_\varepsilon:=\beta_{\lambda+\varepsilon}\le
  V:=\beta_\lambda,
@@ -755,7 +871,7 @@ The interpolation $X_s=(1-s)U_\varepsilon+sV$ satisfies
  \le\E(V-U_\varepsilon).
 \end{equation}
 Thus, for sufficiently small $\varepsilon$, the entire interpolation is
-inside the neighborhood in \cref{lem:transport}. With
+inside the neighborhood in Lemma~\ref{lem:transport}. With
 $\alpha=\lambda+\varepsilon$, that lemma gives
 \begin{equation}\label{eq:law-comparison}
  \cF(\lambda+\varepsilon,\pi_{\lambda+\varepsilon})
@@ -782,7 +898,7 @@ every point of an interval is strictly decreasing there. Indeed, if
 $f(b)\ge f(a)$ for $a<b$, a minimum of $f$ on $[a,b]$ is attained at some
 $x<b$: if $b$ is a minimizer, then $a$ is also one. At such an $x$ all
 sufficiently small right difference quotients are nonnegative, a
-contradiction. By \cref{lem:continuity}, this argument applies to $v$ on
+contradiction. By Lemma~\ref{lem:continuity}, this argument applies to $v$ on
 $(1,m)$.
 \end{proof}
 
@@ -797,14 +913,14 @@ Let $m_1=\min\{k:p_k>0\}\ge2$. Song--Wang--Xiang
 and strict decrease on $[0,a_{m_1}]$. Their derivative statement and its
 justification are given immediately before, and in, Lemma~2.5 of the cited
 preprint. This interval overlaps $(1,m)$, so its strict monotonicity and
-\eqref{eq:explicit-dini} complete \cref{thm:main} on $[0,m)$.
+\eqref{eq:explicit-dini} complete Theorem~\ref{thm:main} on $[0,m)$.
 
-Under the exponential-moment assumption of \cref{cor:derivative},
+Under the exponential-moment assumption of Corollary~\ref{cor:derivative},
 \cite[Theorem~1.1]{BT} gives differentiability on $(0,m)$: its lower endpoint
 is zero in the leafless case. At every $\lambda>1$ the derivative equals the
 Dini derivative and is negative by \eqref{eq:explicit-dini}. The remaining
 parameters are covered by \eqref{eq:low-range}. This proves
-\cref{cor:derivative}.
+Corollary~\ref{cor:derivative}.
 
 \begin{thebibliography}{99}
 

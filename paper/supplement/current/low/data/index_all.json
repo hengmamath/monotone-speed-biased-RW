@@ -1,0 +1,4799 @@
+{
+  "status": "PASS",
+  "group": "all",
+  "tables": [
+    {
+      "file": "lambert_head_scale_identities_001_power.jsonl.gz",
+      "kind": "power",
+      "entries": 60,
+      "bytes": 582,
+      "sha256": "11033f92305e9dea6f08feb4876d74d36ff2e8880c178f40d1e8a5092a84362f",
+      "metadata": {
+        "check": "A_J lower numerator",
+        "domain": "q,h>0; positive denominator displayed in manuscript"
+      }
+    },
+    {
+      "file": "low_u_selfcontained_fixed_arithmetic_20261006_001_prefix_floor_table.jsonl.gz",
+      "kind": "prefix_floor_table",
+      "entries": 32,
+      "bytes": 469,
+      "sha256": "0529281da06f8a1728ed0b58943cfe2d58a13d53fa712896e3c7325ec60bd579",
+      "metadata": {
+        "unit": "1/1000000",
+        "columns": [
+          "f(6/5)",
+          "f(23/20)",
+          "f(11/10)",
+          "B(6/5)"
+        ]
+      }
+    },
+    {
+      "file": "low_u_selfcontained_fixed_arithmetic_20261006_002_exact_scalar_values.jsonl.gz",
+      "kind": "exact_scalar_values",
+      "entries": 9,
+      "bytes": 435,
+      "sha256": "73038c25625c0cf2f3e0e16525893d762b7be615f09ed56f2e91b854be283dc9",
+      "metadata": {
+        "fields": [
+          "tau6_floor",
+          "tau23_floor",
+          "tau11_floor",
+          "E23",
+          "A_lower",
+          "C_upper",
+          "H_upper",
+          "Cstar",
+          "K0"
+        ]
+      }
+    },
+    {
+      "file": "low_q_full_coupled_certificate_001_power.jsonl.gz",
+      "kind": "power",
+      "entries": 62,
+      "bytes": 554,
+      "sha256": "1113756d80f8ecd8d60971dd872ebfac1681e512ec77555d7f1a88b16f9a7f22",
+      "metadata": {
+        "scales": [
+          "3",
+          "1/6"
+        ],
+        "basis": "power before coordinate scaling"
+      }
+    },
+    {
+      "file": "low_q_full_coupled_certificate_002_bernstein.jsonl.gz",
+      "kind": "bernstein",
+      "entries": 70,
+      "bytes": 1040,
+      "sha256": "8a11a0b078c82041e1510edbfccc2d8f6ecd542ca35d0a5a7a9e6dd40ac0d66c",
+      "metadata": {
+        "scales": [
+          "3",
+          "1/6"
+        ],
+        "bernstein_axes": [
+          0,
+          1
+        ],
+        "other_axes": "ordinary nonnegative powers"
+      }
+    },
+    {
+      "file": "low_q_full_coupled_certificate_003_power.jsonl.gz",
+      "kind": "power",
+      "entries": 24,
+      "bytes": 340,
+      "sha256": "4449b3fba8688dfb7abfa55153159b5a1d3f4764886d56793a67718938f39278",
+      "metadata": {
+        "check": "negative KR factor",
+        "domain": "b,c,j>=0"
+      }
+    },
+    {
+      "file": "low_q_full_coupled_certificate_004_power.jsonl.gz",
+      "kind": "power",
+      "entries": 386,
+      "bytes": 1856,
+      "sha256": "9529dc398657bb937f40455ea40c6ad50f0f0cefffb0af2c0a08b10a229dff5c",
+      "metadata": {
+        "scales": [
+          "3",
+          "1/6",
+          "1"
+        ],
+        "basis": "power before coordinate scaling"
+      }
+    },
+    {
+      "file": "low_q_full_coupled_certificate_005_bernstein.jsonl.gz",
+      "kind": "bernstein",
+      "entries": 840,
+      "bytes": 5725,
+      "sha256": "22cd60e208f7ff1f87059d8c60a8ed0bdfc630c8defc800854326c9c2ef407f1",
+      "metadata": {
+        "scales": [
+          "3",
+          "1/6",
+          "1"
+        ],
+        "bernstein_axes": [
+          0,
+          1,
+          2
+        ],
+        "other_axes": "ordinary nonnegative powers"
+      }
+    },
+    {
+      "file": "low_q_full_coupled_certificate_006_power.jsonl.gz",
+      "kind": "power",
+      "entries": 252,
+      "bytes": 1495,
+      "sha256": "e09cfc5572a07ecff69fca9e158aebbdd3ed8159263e3811a060ddb3cc6399a0",
+      "metadata": {
+        "scales": [
+          "3",
+          "1/6",
+          "1"
+        ],
+        "basis": "power before coordinate scaling"
+      }
+    },
+    {
+      "file": "low_q_full_coupled_certificate_007_bernstein.jsonl.gz",
+      "kind": "bernstein",
+      "entries": 294,
+      "bytes": 3506,
+      "sha256": "c2bcfaf27ff57a8da4c0edb0018efb9eefb4b49c522ee479d837e7bea9c56fe5",
+      "metadata": {
+        "scales": [
+          "3",
+          "1/6",
+          "1"
+        ],
+        "bernstein_axes": [
+          0,
+          1,
+          2
+        ],
+        "other_axes": "ordinary nonnegative powers"
+      }
+    },
+    {
+      "file": "low_q_full_coupled_certificate_008_power.jsonl.gz",
+      "kind": "power",
+      "entries": 529,
+      "bytes": 3212,
+      "sha256": "cf719174652ade5044fede2321f51713269629573b1e730e06b32294a4f31405",
+      "metadata": {
+        "scales": [
+          "3",
+          "1/6",
+          "1"
+        ],
+        "basis": "power before coordinate scaling"
+      }
+    },
+    {
+      "file": "low_q_full_coupled_certificate_009_bernstein.jsonl.gz",
+      "kind": "bernstein",
+      "entries": 639,
+      "bytes": 8722,
+      "sha256": "b3102eaf35e4df3e7b150fc61cf2421f6badafd6fe27618f9665c01c3e5f000f",
+      "metadata": {
+        "scales": [
+          "3",
+          "1/6",
+          "1"
+        ],
+        "bernstein_axes": [
+          0,
+          1,
+          2
+        ],
+        "other_axes": "ordinary nonnegative powers"
+      }
+    },
+    {
+      "file": "low_q_full_coupled_certificate_010_power.jsonl.gz",
+      "kind": "power",
+      "entries": 1871,
+      "bytes": 15149,
+      "sha256": "2a844abb4338989c14af2cacf839440d7bea2bede613460d1f59b21b4aff1337",
+      "metadata": {
+        "scales": [
+          "3",
+          "1/6",
+          "1"
+        ],
+        "basis": "power before coordinate scaling"
+      }
+    },
+    {
+      "file": "low_q_full_coupled_certificate_011_bernstein.jsonl.gz",
+      "kind": "bernstein",
+      "entries": 2277,
+      "bytes": 45831,
+      "sha256": "4c41d7cb0550a52a96b66466abb277369a7fdf98d36373358263b8fe4aff492c",
+      "metadata": {
+        "scales": [
+          "3",
+          "1/6",
+          "1"
+        ],
+        "bernstein_axes": [
+          0,
+          1,
+          2
+        ],
+        "other_axes": "ordinary nonnegative powers"
+      }
+    },
+    {
+      "file": "low_q_full_coupled_certificate_012_power.jsonl.gz",
+      "kind": "power",
+      "entries": 2812,
+      "bytes": 24540,
+      "sha256": "2dec8bdbb8a9a2445c4f0ac710f4f2f70348159af32b18d77166cf18bbecc498",
+      "metadata": {
+        "scales": [
+          "3",
+          "1/6",
+          "1"
+        ],
+        "basis": "power before coordinate scaling"
+      }
+    },
+    {
+      "file": "low_q_full_coupled_certificate_013_bernstein.jsonl.gz",
+      "kind": "bernstein",
+      "entries": 3500,
+      "bytes": 79814,
+      "sha256": "69765e2e8308ca64becf9e81508c50d2ad13a42e7e3397f99ee563b5fd0843d6",
+      "metadata": {
+        "scales": [
+          "3",
+          "1/6",
+          "1"
+        ],
+        "bernstein_axes": [
+          0,
+          1,
+          2
+        ],
+        "other_axes": "ordinary nonnegative powers"
+      }
+    },
+    {
+      "file": "low_q_full_coupled_certificate_014_budget_input_power.jsonl.gz",
+      "kind": "budget_input_power",
+      "entries": 4778,
+      "bytes": 49728,
+      "sha256": "44bba6131046370d9d31eca0fee2f7ef486f28dc693165afc14ae16695388712",
+      "metadata": {
+        "endpoint": "Tlo",
+        "sign": 1
+      }
+    },
+    {
+      "file": "low_q_full_coupled_certificate_015_mixed_bernstein_power.jsonl.gz",
+      "kind": "mixed_bernstein_power",
+      "entries": 6090,
+      "bytes": 308080,
+      "sha256": "ab3eecb936bc6b8d67f5ca960298ed5dc5a38f2c83247c6445d289870d81f42d",
+      "metadata": {
+        "endpoint": "Tlo",
+        "q": [
+          "1/29",
+          "3"
+        ],
+        "c": [
+          "0",
+          "1/6"
+        ],
+        "z": [
+          "0",
+          "1"
+        ]
+      }
+    },
+    {
+      "file": "low_q_full_coupled_certificate_016_bernstein.jsonl.gz",
+      "kind": "bernstein",
+      "entries": 6960,
+      "bytes": 316553,
+      "sha256": "d01b6d6a6ece1d69134941790a28dc324715632ff6f9e2a7dfd205ca716d45ec",
+      "metadata": {
+        "endpoint": "Tlo",
+        "q": [
+          "1/29",
+          "3"
+        ],
+        "c": [
+          "0",
+          "1/6"
+        ],
+        "z": [
+          "0",
+          "1"
+        ]
+      }
+    },
+    {
+      "file": "low_q_full_coupled_certificate_017_sturm_input.jsonl.gz",
+      "kind": "sturm_input",
+      "entries": 7,
+      "bytes": 554,
+      "sha256": "64ab4b2e18d598a3da45ed0da05fa602fd348c581d9861159bdb3bbb6709d86a",
+      "metadata": {
+        "endpoint": "Tlo",
+        "group": [
+          0,
+          0
+        ],
+        "interval": [
+          "0",
+          "1"
+        ]
+      }
+    },
+    {
+      "file": "low_q_full_coupled_certificate_018_sturm_sequence.jsonl.gz",
+      "kind": "sturm_sequence",
+      "entries": 34,
+      "bytes": 6411,
+      "sha256": "19ee1b49819a1ff44a6310473b0b5e635d63f68bf3e32561e510d0e40a222e4b",
+      "metadata": {
+        "endpoint": "Tlo",
+        "group": [
+          0,
+          0
+        ],
+        "interval": [
+          "0",
+          "1"
+        ]
+      }
+    },
+    {
+      "file": "low_q_full_coupled_certificate_019_sturm_input.jsonl.gz",
+      "kind": "sturm_input",
+      "entries": 7,
+      "bytes": 579,
+      "sha256": "60cfb8bd0c44d100d00eafd9561eeac30cf13961943822deb6931113155df83b",
+      "metadata": {
+        "endpoint": "Tlo",
+        "group": [
+          0,
+          1
+        ],
+        "interval": [
+          "0",
+          "1"
+        ]
+      }
+    },
+    {
+      "file": "low_q_full_coupled_certificate_020_sturm_sequence.jsonl.gz",
+      "kind": "sturm_sequence",
+      "entries": 34,
+      "bytes": 7967,
+      "sha256": "181397ee50836e8b12b1f3a298d3eb2d031a8a160f14c7597afd285a66bb4159",
+      "metadata": {
+        "endpoint": "Tlo",
+        "group": [
+          0,
+          1
+        ],
+        "interval": [
+          "0",
+          "1"
+        ]
+      }
+    },
+    {
+      "file": "low_q_full_coupled_certificate_021_sturm_input.jsonl.gz",
+      "kind": "sturm_input",
+      "entries": 7,
+      "bytes": 567,
+      "sha256": "33376f766f2cc07ea92217b1550828db47500accea3401972cd7d126965a1234",
+      "metadata": {
+        "endpoint": "Tlo",
+        "group": [
+          0,
+          2
+        ],
+        "interval": [
+          "0",
+          "1"
+        ]
+      }
+    },
+    {
+      "file": "low_q_full_coupled_certificate_022_sturm_sequence.jsonl.gz",
+      "kind": "sturm_sequence",
+      "entries": 34,
+      "bytes": 9132,
+      "sha256": "f4b1a42b3b1d4c1e4eec59347aac37df9644b2627508f6abefac1cced736a26c",
+      "metadata": {
+        "endpoint": "Tlo",
+        "group": [
+          0,
+          2
+        ],
+        "interval": [
+          "0",
+          "1"
+        ]
+      }
+    },
+    {
+      "file": "low_q_full_coupled_certificate_023_sturm_input.jsonl.gz",
+      "kind": "sturm_input",
+      "entries": 7,
+      "bytes": 610,
+      "sha256": "cb8cc0f9a9b0a2e103f0fe36c00e9028b65e72876f89ddd926f00394a837f535",
+      "metadata": {
+        "endpoint": "Tlo",
+        "group": [
+          0,
+          3
+        ],
+        "interval": [
+          "0",
+          "1"
+        ]
+      }
+    },
+    {
+      "file": "low_q_full_coupled_certificate_024_sturm_sequence.jsonl.gz",
+      "kind": "sturm_sequence",
+      "entries": 34,
+      "bytes": 10383,
+      "sha256": "26501e822028375884b6ad07fa06d0868cdb50862f291b170ac28c047e2ca0e8",
+      "metadata": {
+        "endpoint": "Tlo",
+        "group": [
+          0,
+          3
+        ],
+        "interval": [
+          "0",
+          "1"
+        ]
+      }
+    },
+    {
+      "file": "low_q_full_coupled_certificate_025_sturm_input.jsonl.gz",
+      "kind": "sturm_input",
+      "entries": 7,
+      "bytes": 623,
+      "sha256": "16d0fa62a83b6f3f989ec61105fcd1e49574ca04fcf4fdd340ebad0dd1f9f0b1",
+      "metadata": {
+        "endpoint": "Tlo",
+        "group": [
+          0,
+          4
+        ],
+        "interval": [
+          "0",
+          "1"
+        ]
+      }
+    },
+    {
+      "file": "low_q_full_coupled_certificate_026_sturm_sequence.jsonl.gz",
+      "kind": "sturm_sequence",
+      "entries": 34,
+      "bytes": 11447,
+      "sha256": "843d975e4a74dc4c2506506854d905086413257831ec18306d9027f69e8b1972",
+      "metadata": {
+        "endpoint": "Tlo",
+        "group": [
+          0,
+          4
+        ],
+        "interval": [
+          "0",
+          "1"
+        ]
+      }
+    },
+    {
+      "file": "low_q_full_coupled_certificate_027_sturm_input.jsonl.gz",
+      "kind": "sturm_input",
+      "entries": 7,
+      "bytes": 562,
+      "sha256": "b5b68ea934b90a2439efee6a6ca65a85577d8a5a74a48dfbf746bdf03f290aee",
+      "metadata": {
+        "endpoint": "Tlo",
+        "group": [
+          1,
+          0
+        ],
+        "interval": [
+          "0",
+          "1"
+        ]
+      }
+    },
+    {
+      "file": "low_q_full_coupled_certificate_028_sturm_sequence.jsonl.gz",
+      "kind": "sturm_sequence",
+      "entries": 34,
+      "bytes": 7511,
+      "sha256": "4e1165c564525e80843629ca7aa4f703deba3df5c21ee590b95c6f166635e5d7",
+      "metadata": {
+        "endpoint": "Tlo",
+        "group": [
+          1,
+          0
+        ],
+        "interval": [
+          "0",
+          "1"
+        ]
+      }
+    },
+    {
+      "file": "low_q_full_coupled_certificate_029_sturm_input.jsonl.gz",
+      "kind": "sturm_input",
+      "entries": 7,
+      "bytes": 579,
+      "sha256": "748a00ae2e19f58698ebea81b06b2414e68ab9a8120f9bd49504d82466622261",
+      "metadata": {
+        "endpoint": "Tlo",
+        "group": [
+          1,
+          1
+        ],
+        "interval": [
+          "0",
+          "1"
+        ]
+      }
+    },
+    {
+      "file": "low_q_full_coupled_certificate_030_sturm_sequence.jsonl.gz",
+      "kind": "sturm_sequence",
+      "entries": 34,
+      "bytes": 9011,
+      "sha256": "4885e352c3266694388f5991f5a78f45500c97134e5487cc057feb8d2be97b06",
+      "metadata": {
+        "endpoint": "Tlo",
+        "group": [
+          1,
+          1
+        ],
+        "interval": [
+          "0",
+          "1"
+        ]
+      }
+    },
+    {
+      "file": "low_q_full_coupled_certificate_031_budget_input_power.jsonl.gz",
+      "kind": "budget_input_power",
+      "entries": 4889,
+      "bytes": 50714,
+      "sha256": "30c28adbfa1e6ff30f533a48f34eca5f7db5a41b26f9b0b737c4c28f798265fe",
+      "metadata": {
+        "endpoint": "Tup",
+        "sign": -1
+      }
+    },
+    {
+      "file": "low_q_full_coupled_certificate_032_mixed_bernstein_power.jsonl.gz",
+      "kind": "mixed_bernstein_power",
+      "entries": 6076,
+      "bytes": 300968,
+      "sha256": "64e298a099f5186f8fcc72941d22a4d38ea86f1226d5d39cce8f4195d90ac272",
+      "metadata": {
+        "endpoint": "Tup",
+        "q": [
+          "1/29",
+          "3"
+        ],
+        "c": [
+          "0",
+          "1/6"
+        ],
+        "z": [
+          "0",
+          "1"
+        ]
+      }
+    },
+    {
+      "file": "low_q_full_coupled_certificate_033_bernstein.jsonl.gz",
+      "kind": "bernstein",
+      "entries": 6944,
+      "bytes": 309004,
+      "sha256": "b1ddd31668bb21a9e9fb023e9cdb7e10e270059f9d9bd798f1194603408a4d86",
+      "metadata": {
+        "endpoint": "Tup",
+        "q": [
+          "1/29",
+          "3"
+        ],
+        "c": [
+          "0",
+          "1/6"
+        ],
+        "z": [
+          "0",
+          "1"
+        ]
+      }
+    },
+    {
+      "file": "low_q_full_coupled_certificate_034_sturm_input.jsonl.gz",
+      "kind": "sturm_input",
+      "entries": 7,
+      "bytes": 534,
+      "sha256": "bf9ef10f1d796648bf276a3aa29c14aa89f777f7c4cdca8c133e8f84a0d5e3de",
+      "metadata": {
+        "endpoint": "Tup",
+        "group": [
+          0,
+          0
+        ],
+        "interval": [
+          "0",
+          "1"
+        ]
+      }
+    },
+    {
+      "file": "low_q_full_coupled_certificate_035_sturm_sequence.jsonl.gz",
+      "kind": "sturm_sequence",
+      "entries": 34,
+      "bytes": 5604,
+      "sha256": "d8c5c499c82a191e8db66d15a918befe0b6d8bbe189809068d8dfa8f168c5b3f",
+      "metadata": {
+        "endpoint": "Tup",
+        "group": [
+          0,
+          0
+        ],
+        "interval": [
+          "0",
+          "1"
+        ]
+      }
+    },
+    {
+      "file": "low_q_full_coupled_certificate_036_sturm_input.jsonl.gz",
+      "kind": "sturm_input",
+      "entries": 7,
+      "bytes": 548,
+      "sha256": "03a505fe83664bb805b860b75512a1086cec8311c16fab7eb10daea8b9af6bdb",
+      "metadata": {
+        "endpoint": "Tup",
+        "group": [
+          0,
+          1
+        ],
+        "interval": [
+          "0",
+          "1"
+        ]
+      }
+    },
+    {
+      "file": "low_q_full_coupled_certificate_037_sturm_sequence.jsonl.gz",
+      "kind": "sturm_sequence",
+      "entries": 34,
+      "bytes": 7183,
+      "sha256": "596337d2177328784e5f5d49e4475b96d77bbafc959649fd6776aecb00578649",
+      "metadata": {
+        "endpoint": "Tup",
+        "group": [
+          0,
+          1
+        ],
+        "interval": [
+          "0",
+          "1"
+        ]
+      }
+    },
+    {
+      "file": "low_q_full_coupled_certificate_038_sturm_input.jsonl.gz",
+      "kind": "sturm_input",
+      "entries": 7,
+      "bytes": 547,
+      "sha256": "c1af3cf7787d3054547587cde445536f4092ab90e22a1d4ca8d40c60a8640b6a",
+      "metadata": {
+        "endpoint": "Tup",
+        "group": [
+          0,
+          2
+        ],
+        "interval": [
+          "0",
+          "1"
+        ]
+      }
+    },
+    {
+      "file": "low_q_full_coupled_certificate_039_sturm_sequence.jsonl.gz",
+      "kind": "sturm_sequence",
+      "entries": 34,
+      "bytes": 8664,
+      "sha256": "3549aa4646ef0f8e4979328f5278df285407cf8ab0af1f97649a780edbf2155a",
+      "metadata": {
+        "endpoint": "Tup",
+        "group": [
+          0,
+          2
+        ],
+        "interval": [
+          "0",
+          "1"
+        ]
+      }
+    },
+    {
+      "file": "low_q_full_coupled_certificate_040_sturm_input.jsonl.gz",
+      "kind": "sturm_input",
+      "entries": 7,
+      "bytes": 593,
+      "sha256": "8aba98d1f6e30ce5e26fbce0ee10a15546d1180306f0ca27df40c918668ca195",
+      "metadata": {
+        "endpoint": "Tup",
+        "group": [
+          0,
+          3
+        ],
+        "interval": [
+          "0",
+          "1"
+        ]
+      }
+    },
+    {
+      "file": "low_q_full_coupled_certificate_041_sturm_sequence.jsonl.gz",
+      "kind": "sturm_sequence",
+      "entries": 34,
+      "bytes": 9712,
+      "sha256": "b45cc4d4032a77538999994ec2cae32969f47e040d801af3f50c9b06b88c553d",
+      "metadata": {
+        "endpoint": "Tup",
+        "group": [
+          0,
+          3
+        ],
+        "interval": [
+          "0",
+          "1"
+        ]
+      }
+    },
+    {
+      "file": "low_q_full_coupled_certificate_042_sturm_input.jsonl.gz",
+      "kind": "sturm_input",
+      "entries": 7,
+      "bytes": 607,
+      "sha256": "4de84c7f1b3e2f4b6fc1a4caf6737911615db8a70a3cf7c46c409f7e10ae95b1",
+      "metadata": {
+        "endpoint": "Tup",
+        "group": [
+          0,
+          4
+        ],
+        "interval": [
+          "0",
+          "1"
+        ]
+      }
+    },
+    {
+      "file": "low_q_full_coupled_certificate_043_sturm_sequence.jsonl.gz",
+      "kind": "sturm_sequence",
+      "entries": 34,
+      "bytes": 10410,
+      "sha256": "540d9046ea19e6b421c3d10c83c9de836175fb410e335c2aabd5d22386c4d9b1",
+      "metadata": {
+        "endpoint": "Tup",
+        "group": [
+          0,
+          4
+        ],
+        "interval": [
+          "0",
+          "1"
+        ]
+      }
+    },
+    {
+      "file": "low_q_full_coupled_certificate_044_sturm_input.jsonl.gz",
+      "kind": "sturm_input",
+      "entries": 7,
+      "bytes": 619,
+      "sha256": "6a37b2cff53a3930065c1c7fc22d4c8314a8c7360371e047d357476edf51cd7f",
+      "metadata": {
+        "endpoint": "Tup",
+        "group": [
+          0,
+          5
+        ],
+        "interval": [
+          "0",
+          "1"
+        ]
+      }
+    },
+    {
+      "file": "low_q_full_coupled_certificate_045_sturm_sequence.jsonl.gz",
+      "kind": "sturm_sequence",
+      "entries": 34,
+      "bytes": 11326,
+      "sha256": "c9631e16ea600e93d4eb4edd5fdf6955a847919eee09ab511588cd92289c9247",
+      "metadata": {
+        "endpoint": "Tup",
+        "group": [
+          0,
+          5
+        ],
+        "interval": [
+          "0",
+          "1"
+        ]
+      }
+    },
+    {
+      "file": "low_q_full_coupled_certificate_046_sturm_input.jsonl.gz",
+      "kind": "sturm_input",
+      "entries": 7,
+      "bytes": 538,
+      "sha256": "029afa826ae921c34fa6f673d70e8721c88349256965caf5b4d23ce80cde52a3",
+      "metadata": {
+        "endpoint": "Tup",
+        "group": [
+          1,
+          0
+        ],
+        "interval": [
+          "0",
+          "1"
+        ]
+      }
+    },
+    {
+      "file": "low_q_full_coupled_certificate_047_sturm_sequence.jsonl.gz",
+      "kind": "sturm_sequence",
+      "entries": 34,
+      "bytes": 6771,
+      "sha256": "81fef69cd43d0f7f8353ff24ed8843b8e07983040cecbbeda4a836d8ac22aab8",
+      "metadata": {
+        "endpoint": "Tup",
+        "group": [
+          1,
+          0
+        ],
+        "interval": [
+          "0",
+          "1"
+        ]
+      }
+    },
+    {
+      "file": "low_q_full_coupled_certificate_048_sturm_input.jsonl.gz",
+      "kind": "sturm_input",
+      "entries": 7,
+      "bytes": 547,
+      "sha256": "788693b3a3202f9a2dfab9f119b106316159b9e71125ffbd783edab19cb8f923",
+      "metadata": {
+        "endpoint": "Tup",
+        "group": [
+          1,
+          1
+        ],
+        "interval": [
+          "0",
+          "1"
+        ]
+      }
+    },
+    {
+      "file": "low_q_full_coupled_certificate_049_sturm_sequence.jsonl.gz",
+      "kind": "sturm_sequence",
+      "entries": 34,
+      "bytes": 8021,
+      "sha256": "d6fcd8a029258395c4736eb41d3bc7e449d46c902a2ac8fc681ebd8f91c02154",
+      "metadata": {
+        "endpoint": "Tup",
+        "group": [
+          1,
+          1
+        ],
+        "interval": [
+          "0",
+          "1"
+        ]
+      }
+    },
+    {
+      "file": "mid_q_full_same_e_certificate_001_power.jsonl.gz",
+      "kind": "power",
+      "entries": 124,
+      "bytes": 1890,
+      "sha256": "94b8b90aad7f65a0206e17fddcc2c69a60c436424b156bf2aaac24ab5e4a19c2",
+      "metadata": {
+        "check": "theta",
+        "coordinate": "x=1/10+7*w/30; h in [0,1/2]"
+      }
+    },
+    {
+      "file": "mid_q_full_same_e_certificate_002_bernstein.jsonl.gz",
+      "kind": "bernstein",
+      "entries": 160,
+      "bytes": 2841,
+      "sha256": "db4359fe0f73e87e657610d4f85238c22d62cc60e5c87507b6d64e588a12b77e",
+      "metadata": {
+        "check": "theta",
+        "domain": [
+          [
+            "0",
+            "1"
+          ],
+          [
+            "0",
+            "1/2"
+          ]
+        ]
+      }
+    },
+    {
+      "file": "mid_q_full_same_e_certificate_003_power.jsonl.gz",
+      "kind": "power",
+      "entries": 499,
+      "bytes": 5519,
+      "sha256": "dc319aaa6703691be8607bb420dae3d14169f070301c6844cd8b91d4cb4a4e42",
+      "metadata": {
+        "family": "H",
+        "kind": "slope",
+        "theta": "0",
+        "x": "1/10+7*w/30",
+        "h": [
+          "0",
+          "1/2"
+        ],
+        "v": [
+          "0",
+          "1"
+        ]
+      }
+    },
+    {
+      "file": "mid_q_full_same_e_certificate_004_mixed_bernstein_power.jsonl.gz",
+      "kind": "mixed_bernstein_power",
+      "entries": 735,
+      "bytes": 11035,
+      "sha256": "4acf482d4fbd382fe8f5b96c5f815a9d9e1184b6c4be2802ac2b0b21eb83003c",
+      "metadata": {
+        "family": "H",
+        "kind": "slope",
+        "theta": "0"
+      }
+    },
+    {
+      "file": "mid_q_full_same_e_certificate_005_bernstein.jsonl.gz",
+      "kind": "bernstein",
+      "entries": 735,
+      "bytes": 11625,
+      "sha256": "a9267285e4eca0c0618138fb969ede556ed40f966a4d9225a27274372eb85186",
+      "metadata": {
+        "family": "H",
+        "kind": "slope",
+        "theta": "0",
+        "x": "1/10+7*w/30",
+        "h": [
+          "0",
+          "1/2"
+        ],
+        "v": [
+          "0",
+          "1"
+        ]
+      }
+    },
+    {
+      "file": "mid_q_full_same_e_certificate_006_power.jsonl.gz",
+      "kind": "power",
+      "entries": 889,
+      "bytes": 11688,
+      "sha256": "a36286613dbe00ee9f6c20f1caabf0d3e2937bdede59637da453e13f64241c1c",
+      "metadata": {
+        "family": "H",
+        "kind": "slope",
+        "theta": "1 - 1/(6*q + 6)",
+        "x": "1/10+7*w/30",
+        "h": [
+          "0",
+          "1/2"
+        ],
+        "v": [
+          "0",
+          "1"
+        ]
+      }
+    },
+    {
+      "file": "mid_q_full_same_e_certificate_007_mixed_bernstein_power.jsonl.gz",
+      "kind": "mixed_bernstein_power",
+      "entries": 1207,
+      "bytes": 21223,
+      "sha256": "85245df455cceecce8429397489ad1ed850d631bb5635c3cb3d4c63082b7f847",
+      "metadata": {
+        "family": "H",
+        "kind": "slope",
+        "theta": "1 - 1/(6*q + 6)"
+      }
+    },
+    {
+      "file": "mid_q_full_same_e_certificate_008_bernstein.jsonl.gz",
+      "kind": "bernstein",
+      "entries": 1207,
+      "bytes": 22150,
+      "sha256": "320796bdd52b31ca8724e9937d5a94b3c694cb4bc2b06666e5af6511581fe840",
+      "metadata": {
+        "family": "H",
+        "kind": "slope",
+        "theta": "1 - 1/(6*q + 6)",
+        "x": "1/10+7*w/30",
+        "h": [
+          "0",
+          "1/2"
+        ],
+        "v": [
+          "0",
+          "1"
+        ]
+      }
+    },
+    {
+      "file": "mid_q_full_same_e_certificate_009_power.jsonl.gz",
+      "kind": "power",
+      "entries": 4330,
+      "bytes": 73196,
+      "sha256": "e290d4ce22d53f8e36a0574706f4510542f60c03792638c3c8e52e654586e641",
+      "metadata": {
+        "family": "H",
+        "kind": "price",
+        "theta": "0",
+        "x": "1/10+7*w/30",
+        "h": [
+          "0",
+          "1/2"
+        ],
+        "v": [
+          "0",
+          "1"
+        ]
+      }
+    },
+    {
+      "file": "mid_q_full_same_e_certificate_010_mixed_bernstein_power.jsonl.gz",
+      "kind": "mixed_bernstein_power",
+      "entries": 7719,
+      "bytes": 217517,
+      "sha256": "8741abb402506295431e36312d1922ef0db5832da4b31310f6b8973ab21174bf",
+      "metadata": {
+        "family": "H",
+        "kind": "price",
+        "theta": "0"
+      }
+    },
+    {
+      "file": "mid_q_full_same_e_certificate_011_bernstein.jsonl.gz",
+      "kind": "bernstein",
+      "entries": 7719,
+      "bytes": 234759,
+      "sha256": "ae2dd3b89f9cb98f5f4d16b1fa0cc00f195f9874661a696e08e4fbed96d3f7c7",
+      "metadata": {
+        "family": "H",
+        "kind": "price",
+        "theta": "0",
+        "x": "1/10+7*w/30",
+        "h": [
+          "0",
+          "1/2"
+        ],
+        "v": [
+          "0",
+          "1"
+        ]
+      }
+    },
+    {
+      "file": "mid_q_full_same_e_certificate_012_power.jsonl.gz",
+      "kind": "power",
+      "entries": 5849,
+      "bytes": 109205,
+      "sha256": "bdf48d3342394147a23214afee6ba73a319025fae528a173f0ac86d7e35e21f7",
+      "metadata": {
+        "family": "H",
+        "kind": "price",
+        "theta": "1 - 1/(6*q + 6)",
+        "x": "1/10+7*w/30",
+        "h": [
+          "0",
+          "1/2"
+        ],
+        "v": [
+          "0",
+          "1"
+        ]
+      }
+    },
+    {
+      "file": "mid_q_full_same_e_certificate_013_mixed_bernstein_power.jsonl.gz",
+      "kind": "mixed_bernstein_power",
+      "entries": 9735,
+      "bytes": 304456,
+      "sha256": "77483c13172521b78372a5da00b1a48e3b4c5de0b99366bd1af2a83ee9b8c96b",
+      "metadata": {
+        "family": "H",
+        "kind": "price",
+        "theta": "1 - 1/(6*q + 6)"
+      }
+    },
+    {
+      "file": "mid_q_full_same_e_certificate_014_bernstein.jsonl.gz",
+      "kind": "bernstein",
+      "entries": 9768,
+      "bytes": 330126,
+      "sha256": "989c671c31443597131e980921027c6f0d6cf8d6d73af9bda00335a8612705cc",
+      "metadata": {
+        "family": "H",
+        "kind": "price",
+        "theta": "1 - 1/(6*q + 6)",
+        "x": "1/10+7*w/30",
+        "h": [
+          "0",
+          "1/2"
+        ],
+        "v": [
+          "0",
+          "1"
+        ]
+      }
+    },
+    {
+      "file": "mid_q_full_same_e_certificate_015_sturm_input.jsonl.gz",
+      "kind": "sturm_input",
+      "entries": 10,
+      "bytes": 414,
+      "sha256": "1808c756aaa68a9d0af151921967620e8747e89659be633fbf4295de42d1c647",
+      "metadata": {
+        "family": "H",
+        "kind": "price",
+        "theta": "1 - 1/(6*q + 6)",
+        "group": [
+          0,
+          0
+        ],
+        "interval": [
+          "0",
+          "1"
+        ]
+      }
+    },
+    {
+      "file": "mid_q_full_same_e_certificate_016_sturm_sequence.jsonl.gz",
+      "kind": "sturm_sequence",
+      "entries": 64,
+      "bytes": 3684,
+      "sha256": "b68527b67bb2b8c6a05c8a6b67a5f6433ad2e3030330cc2cbbe142b843aa27c8",
+      "metadata": {
+        "family": "H",
+        "kind": "price",
+        "theta": "1 - 1/(6*q + 6)",
+        "group": [
+          0,
+          0
+        ],
+        "interval": [
+          "0",
+          "1"
+        ]
+      }
+    },
+    {
+      "file": "mid_q_full_same_e_certificate_017_sturm_input.jsonl.gz",
+      "kind": "sturm_input",
+      "entries": 10,
+      "bytes": 407,
+      "sha256": "4aad193bfd2aae9ce780c0678b09cb39e050efcd5a7e3fee2de8144fad9eeb28",
+      "metadata": {
+        "family": "H",
+        "kind": "price",
+        "theta": "1 - 1/(6*q + 6)",
+        "group": [
+          1,
+          0
+        ],
+        "interval": [
+          "0",
+          "1"
+        ]
+      }
+    },
+    {
+      "file": "mid_q_full_same_e_certificate_018_sturm_sequence.jsonl.gz",
+      "kind": "sturm_sequence",
+      "entries": 64,
+      "bytes": 5718,
+      "sha256": "23065d0cf8ac574e6f125ec16702d7f5655785d707d1cd0b83a2b289d1bef26f",
+      "metadata": {
+        "family": "H",
+        "kind": "price",
+        "theta": "1 - 1/(6*q + 6)",
+        "group": [
+          1,
+          0
+        ],
+        "interval": [
+          "0",
+          "1"
+        ]
+      }
+    },
+    {
+      "file": "mid_q_full_same_e_certificate_019_sturm_input.jsonl.gz",
+      "kind": "sturm_input",
+      "entries": 10,
+      "bytes": 421,
+      "sha256": "6529ceeea9e9d5a8e886d11c0e638fddc0a67db29393864120f4b38bfbe71c80",
+      "metadata": {
+        "family": "H",
+        "kind": "price",
+        "theta": "1 - 1/(6*q + 6)",
+        "group": [
+          2,
+          0
+        ],
+        "interval": [
+          "0",
+          "1"
+        ]
+      }
+    },
+    {
+      "file": "mid_q_full_same_e_certificate_020_sturm_sequence.jsonl.gz",
+      "kind": "sturm_sequence",
+      "entries": 64,
+      "bytes": 7459,
+      "sha256": "be473ae2a7a534c67c31767154bc51e2bebd9fa6551efed5965064c8333b79ce",
+      "metadata": {
+        "family": "H",
+        "kind": "price",
+        "theta": "1 - 1/(6*q + 6)",
+        "group": [
+          2,
+          0
+        ],
+        "interval": [
+          "0",
+          "1"
+        ]
+      }
+    },
+    {
+      "file": "mid_q_full_same_e_certificate_021_sturm_input.jsonl.gz",
+      "kind": "sturm_input",
+      "entries": 10,
+      "bytes": 429,
+      "sha256": "0eb5b6c3e1f2a9c85b40615c15a2c116ed316c01f65b4966c4665800f7cb5e14",
+      "metadata": {
+        "family": "H",
+        "kind": "price",
+        "theta": "1 - 1/(6*q + 6)",
+        "group": [
+          3,
+          0
+        ],
+        "interval": [
+          "0",
+          "1"
+        ]
+      }
+    },
+    {
+      "file": "mid_q_full_same_e_certificate_022_sturm_sequence.jsonl.gz",
+      "kind": "sturm_sequence",
+      "entries": 64,
+      "bytes": 9396,
+      "sha256": "04b1723673379d802ec42c13c7f579a0ddac1b2b299829d78f1cb70f9b1b2592",
+      "metadata": {
+        "family": "H",
+        "kind": "price",
+        "theta": "1 - 1/(6*q + 6)",
+        "group": [
+          3,
+          0
+        ],
+        "interval": [
+          "0",
+          "1"
+        ]
+      }
+    },
+    {
+      "file": "mid_q_full_same_e_certificate_023_sturm_input.jsonl.gz",
+      "kind": "sturm_input",
+      "entries": 10,
+      "bytes": 439,
+      "sha256": "ff71295b834fcb502d79d84031df32d3a1026e5e6344ac59e56fd460559b2c2f",
+      "metadata": {
+        "family": "H",
+        "kind": "price",
+        "theta": "1 - 1/(6*q + 6)",
+        "group": [
+          4,
+          0
+        ],
+        "interval": [
+          "0",
+          "1"
+        ]
+      }
+    },
+    {
+      "file": "mid_q_full_same_e_certificate_024_sturm_sequence.jsonl.gz",
+      "kind": "sturm_sequence",
+      "entries": 64,
+      "bytes": 11046,
+      "sha256": "ae99625ea86df4de1716dc109ba156182e7b7079f6780503beaca18b61f7852f",
+      "metadata": {
+        "family": "H",
+        "kind": "price",
+        "theta": "1 - 1/(6*q + 6)",
+        "group": [
+          4,
+          0
+        ],
+        "interval": [
+          "0",
+          "1"
+        ]
+      }
+    },
+    {
+      "file": "mid_q_full_same_e_certificate_025_sturm_input.jsonl.gz",
+      "kind": "sturm_input",
+      "entries": 10,
+      "bytes": 445,
+      "sha256": "9cece7d48f0e9234c23ded0ed5105544ef219f57b9ff659b48478cf8733add25",
+      "metadata": {
+        "family": "H",
+        "kind": "price",
+        "theta": "1 - 1/(6*q + 6)",
+        "group": [
+          5,
+          0
+        ],
+        "interval": [
+          "0",
+          "1"
+        ]
+      }
+    },
+    {
+      "file": "mid_q_full_same_e_certificate_026_sturm_sequence.jsonl.gz",
+      "kind": "sturm_sequence",
+      "entries": 64,
+      "bytes": 12058,
+      "sha256": "7851e64a4b7930d82a5888d0d224e5616948444d283bb5031e21fac92ee6202d",
+      "metadata": {
+        "family": "H",
+        "kind": "price",
+        "theta": "1 - 1/(6*q + 6)",
+        "group": [
+          5,
+          0
+        ],
+        "interval": [
+          "0",
+          "1"
+        ]
+      }
+    },
+    {
+      "file": "mid_q_full_same_e_certificate_027_sturm_input.jsonl.gz",
+      "kind": "sturm_input",
+      "entries": 10,
+      "bytes": 456,
+      "sha256": "40751c1724631cf0f1ee1c83a93b4fbf09f2071b96640bc099c30f44c4f10579",
+      "metadata": {
+        "family": "H",
+        "kind": "price",
+        "theta": "1 - 1/(6*q + 6)",
+        "group": [
+          6,
+          0
+        ],
+        "interval": [
+          "0",
+          "1"
+        ]
+      }
+    },
+    {
+      "file": "mid_q_full_same_e_certificate_028_sturm_sequence.jsonl.gz",
+      "kind": "sturm_sequence",
+      "entries": 64,
+      "bytes": 11759,
+      "sha256": "0fe86936765690163e2e8dc08b5182fbac207f0f01d4f8d05ccc93d72c238e8d",
+      "metadata": {
+        "family": "H",
+        "kind": "price",
+        "theta": "1 - 1/(6*q + 6)",
+        "group": [
+          6,
+          0
+        ],
+        "interval": [
+          "0",
+          "1"
+        ]
+      }
+    },
+    {
+      "file": "mid_q_full_same_e_certificate_029_sturm_input.jsonl.gz",
+      "kind": "sturm_input",
+      "entries": 10,
+      "bytes": 484,
+      "sha256": "a1e8f53568b2dcfe14e3386fba840ddb799a159ba8a7a67d5fa7d68427f37e31",
+      "metadata": {
+        "family": "H",
+        "kind": "price",
+        "theta": "1 - 1/(6*q + 6)",
+        "group": [
+          7,
+          0
+        ],
+        "interval": [
+          "0",
+          "1"
+        ]
+      }
+    },
+    {
+      "file": "mid_q_full_same_e_certificate_030_sturm_sequence.jsonl.gz",
+      "kind": "sturm_sequence",
+      "entries": 64,
+      "bytes": 14356,
+      "sha256": "622082439b4a8ddd808fe02db7c7f85bb01f7e419b631f18337688a3b681a548",
+      "metadata": {
+        "family": "H",
+        "kind": "price",
+        "theta": "1 - 1/(6*q + 6)",
+        "group": [
+          7,
+          0
+        ],
+        "interval": [
+          "0",
+          "1"
+        ]
+      }
+    },
+    {
+      "file": "mid_q_full_same_e_certificate_031_sturm_input.jsonl.gz",
+      "kind": "sturm_input",
+      "entries": 10,
+      "bytes": 502,
+      "sha256": "ad0b147bfdedd425fe6fadbb3cbeef757ec3cd7598a1d7a459d4093d475fa41f",
+      "metadata": {
+        "family": "H",
+        "kind": "price",
+        "theta": "1 - 1/(6*q + 6)",
+        "group": [
+          8,
+          0
+        ],
+        "interval": [
+          "0",
+          "1"
+        ]
+      }
+    },
+    {
+      "file": "mid_q_full_same_e_certificate_032_sturm_sequence.jsonl.gz",
+      "kind": "sturm_sequence",
+      "entries": 64,
+      "bytes": 15739,
+      "sha256": "2cd24114f9020a56cf18d0086f923956f4c8fbd1b3cffb73b101ffff86f2d9bc",
+      "metadata": {
+        "family": "H",
+        "kind": "price",
+        "theta": "1 - 1/(6*q + 6)",
+        "group": [
+          8,
+          0
+        ],
+        "interval": [
+          "0",
+          "1"
+        ]
+      }
+    },
+    {
+      "file": "mid_q_full_same_e_certificate_033_sturm_input.jsonl.gz",
+      "kind": "sturm_input",
+      "entries": 10,
+      "bytes": 501,
+      "sha256": "8f50c482c777da0111d3605ad8ac0d8b64bb0b1a7d01afb6039e3d6c2ba937a0",
+      "metadata": {
+        "family": "H",
+        "kind": "price",
+        "theta": "1 - 1/(6*q + 6)",
+        "group": [
+          9,
+          0
+        ],
+        "interval": [
+          "0",
+          "1"
+        ]
+      }
+    },
+    {
+      "file": "mid_q_full_same_e_certificate_034_sturm_sequence.jsonl.gz",
+      "kind": "sturm_sequence",
+      "entries": 64,
+      "bytes": 15385,
+      "sha256": "eb940b8268e1d477325df4096d84faaf489bf5c35b7bd502031602371cd5293c",
+      "metadata": {
+        "family": "H",
+        "kind": "price",
+        "theta": "1 - 1/(6*q + 6)",
+        "group": [
+          9,
+          0
+        ],
+        "interval": [
+          "0",
+          "1"
+        ]
+      }
+    },
+    {
+      "file": "mid_q_full_same_e_certificate_035_sturm_input.jsonl.gz",
+      "kind": "sturm_input",
+      "entries": 10,
+      "bytes": 512,
+      "sha256": "8a96b3030e3201b66617e13879ef35c7b857c5ca14f8f463e6d73adce8af0f92",
+      "metadata": {
+        "family": "H",
+        "kind": "price",
+        "theta": "1 - 1/(6*q + 6)",
+        "group": [
+          10,
+          0
+        ],
+        "interval": [
+          "0",
+          "1"
+        ]
+      }
+    },
+    {
+      "file": "mid_q_full_same_e_certificate_036_sturm_sequence.jsonl.gz",
+      "kind": "sturm_sequence",
+      "entries": 64,
+      "bytes": 16044,
+      "sha256": "82cbb910d61c0795b3c57bb619478c70dcb284b1e074d85dd40a2b362970f699",
+      "metadata": {
+        "family": "H",
+        "kind": "price",
+        "theta": "1 - 1/(6*q + 6)",
+        "group": [
+          10,
+          0
+        ],
+        "interval": [
+          "0",
+          "1"
+        ]
+      }
+    },
+    {
+      "file": "mid_q_full_same_e_certificate_037_sturm_input.jsonl.gz",
+      "kind": "sturm_input",
+      "entries": 10,
+      "bytes": 491,
+      "sha256": "b6aa0cef916978854b4ed62c12b9e07f0dc123eed9650902004db8bae578b383",
+      "metadata": {
+        "family": "H",
+        "kind": "price",
+        "theta": "1 - 1/(6*q + 6)",
+        "group": [
+          19,
+          0
+        ],
+        "interval": [
+          "0",
+          "1"
+        ]
+      }
+    },
+    {
+      "file": "mid_q_full_same_e_certificate_038_sturm_sequence.jsonl.gz",
+      "kind": "sturm_sequence",
+      "entries": 64,
+      "bytes": 15655,
+      "sha256": "e1497a311e78bb8f410202750f206caa04bcdbef3d84d758ba57609d68d455f3",
+      "metadata": {
+        "family": "H",
+        "kind": "price",
+        "theta": "1 - 1/(6*q + 6)",
+        "group": [
+          19,
+          0
+        ],
+        "interval": [
+          "0",
+          "1"
+        ]
+      }
+    },
+    {
+      "file": "mid_q_full_same_e_certificate_039_sturm_input.jsonl.gz",
+      "kind": "sturm_input",
+      "entries": 10,
+      "bytes": 511,
+      "sha256": "0e8acb3a6710cf93a6a86f2e81ac53e72af7d9dca304c1e501c443f89496e79d",
+      "metadata": {
+        "family": "H",
+        "kind": "price",
+        "theta": "1 - 1/(6*q + 6)",
+        "group": [
+          20,
+          0
+        ],
+        "interval": [
+          "0",
+          "1"
+        ]
+      }
+    },
+    {
+      "file": "mid_q_full_same_e_certificate_040_sturm_sequence.jsonl.gz",
+      "kind": "sturm_sequence",
+      "entries": 64,
+      "bytes": 15709,
+      "sha256": "cff13d3cd7b41c13472d6d27042639dcbbd8e558fa7e2972ee3ca9478702a31c",
+      "metadata": {
+        "family": "H",
+        "kind": "price",
+        "theta": "1 - 1/(6*q + 6)",
+        "group": [
+          20,
+          0
+        ],
+        "interval": [
+          "0",
+          "1"
+        ]
+      }
+    },
+    {
+      "file": "mid_q_full_same_e_certificate_041_sturm_input.jsonl.gz",
+      "kind": "sturm_input",
+      "entries": 10,
+      "bytes": 510,
+      "sha256": "3b6541f7f06bfb9ac63663630c28f6416b6a515b6c0989d18fa68f0473477642",
+      "metadata": {
+        "family": "H",
+        "kind": "price",
+        "theta": "1 - 1/(6*q + 6)",
+        "group": [
+          21,
+          0
+        ],
+        "interval": [
+          "0",
+          "1"
+        ]
+      }
+    },
+    {
+      "file": "mid_q_full_same_e_certificate_042_sturm_sequence.jsonl.gz",
+      "kind": "sturm_sequence",
+      "entries": 64,
+      "bytes": 16618,
+      "sha256": "90b7c604f74fe6f08e9387b88dcf174548dbacfdfb61ff8addb9b036e1035f7b",
+      "metadata": {
+        "family": "H",
+        "kind": "price",
+        "theta": "1 - 1/(6*q + 6)",
+        "group": [
+          21,
+          0
+        ],
+        "interval": [
+          "0",
+          "1"
+        ]
+      }
+    },
+    {
+      "file": "mid_q_full_same_e_certificate_043_sturm_input.jsonl.gz",
+      "kind": "sturm_input",
+      "entries": 10,
+      "bytes": 501,
+      "sha256": "4fe4eca89cd05b81998ce1ecf8120d91f25a91738050a8c8758955659cf4f022",
+      "metadata": {
+        "family": "H",
+        "kind": "price",
+        "theta": "1 - 1/(6*q + 6)",
+        "group": [
+          22,
+          0
+        ],
+        "interval": [
+          "0",
+          "1"
+        ]
+      }
+    },
+    {
+      "file": "mid_q_full_same_e_certificate_044_sturm_sequence.jsonl.gz",
+      "kind": "sturm_sequence",
+      "entries": 64,
+      "bytes": 15449,
+      "sha256": "f80b4f0908ba2e276a228cb67f87337084be9d307df91e62d3949dcc29c4bee8",
+      "metadata": {
+        "family": "H",
+        "kind": "price",
+        "theta": "1 - 1/(6*q + 6)",
+        "group": [
+          22,
+          0
+        ],
+        "interval": [
+          "0",
+          "1"
+        ]
+      }
+    },
+    {
+      "file": "mid_q_full_same_e_certificate_045_sturm_input.jsonl.gz",
+      "kind": "sturm_input",
+      "entries": 10,
+      "bytes": 509,
+      "sha256": "8b3c030b99153fa5befd50ec14660cc65d1ff0609f7331726b2a4e27b635e261",
+      "metadata": {
+        "family": "H",
+        "kind": "price",
+        "theta": "1 - 1/(6*q + 6)",
+        "group": [
+          23,
+          0
+        ],
+        "interval": [
+          "0",
+          "1"
+        ]
+      }
+    },
+    {
+      "file": "mid_q_full_same_e_certificate_046_sturm_sequence.jsonl.gz",
+      "kind": "sturm_sequence",
+      "entries": 64,
+      "bytes": 16484,
+      "sha256": "cfaa6023b4c18140f47e1c8455761fd5efc07076877ff8be353717857c17c1f6",
+      "metadata": {
+        "family": "H",
+        "kind": "price",
+        "theta": "1 - 1/(6*q + 6)",
+        "group": [
+          23,
+          0
+        ],
+        "interval": [
+          "0",
+          "1"
+        ]
+      }
+    },
+    {
+      "file": "mid_q_full_same_e_certificate_047_sturm_input.jsonl.gz",
+      "kind": "sturm_input",
+      "entries": 10,
+      "bytes": 495,
+      "sha256": "01e18a3074e58c69b6392d390b30bf14d2423a5c1d22ae53b992e4a6049b9dce",
+      "metadata": {
+        "family": "H",
+        "kind": "price",
+        "theta": "1 - 1/(6*q + 6)",
+        "group": [
+          24,
+          0
+        ],
+        "interval": [
+          "0",
+          "1"
+        ]
+      }
+    },
+    {
+      "file": "mid_q_full_same_e_certificate_048_sturm_sequence.jsonl.gz",
+      "kind": "sturm_sequence",
+      "entries": 64,
+      "bytes": 15023,
+      "sha256": "9b5362731ac8b43a6228a217cd30d9c62c785a4716b16322787a679d006ab2f6",
+      "metadata": {
+        "family": "H",
+        "kind": "price",
+        "theta": "1 - 1/(6*q + 6)",
+        "group": [
+          24,
+          0
+        ],
+        "interval": [
+          "0",
+          "1"
+        ]
+      }
+    },
+    {
+      "file": "mid_q_full_same_e_certificate_049_sturm_input.jsonl.gz",
+      "kind": "sturm_input",
+      "entries": 10,
+      "bytes": 473,
+      "sha256": "e544f14643a240c848385533a05710296016fd4a3ceb95921c075fd5b401c5c0",
+      "metadata": {
+        "family": "H",
+        "kind": "price",
+        "theta": "1 - 1/(6*q + 6)",
+        "group": [
+          25,
+          0
+        ],
+        "interval": [
+          "0",
+          "1"
+        ]
+      }
+    },
+    {
+      "file": "mid_q_full_same_e_certificate_050_sturm_sequence.jsonl.gz",
+      "kind": "sturm_sequence",
+      "entries": 64,
+      "bytes": 14639,
+      "sha256": "c482614792856e46e3c61de735ffbbae4cc1aa8fe0c9605aad44b4c97f1bdbd3",
+      "metadata": {
+        "family": "H",
+        "kind": "price",
+        "theta": "1 - 1/(6*q + 6)",
+        "group": [
+          25,
+          0
+        ],
+        "interval": [
+          "0",
+          "1"
+        ]
+      }
+    },
+    {
+      "file": "mid_q_full_same_e_certificate_051_sturm_input.jsonl.gz",
+      "kind": "sturm_input",
+      "entries": 10,
+      "bytes": 462,
+      "sha256": "561828e608b3c2cf06430ecd9044d155515026707beee08f6fd6e072020479e6",
+      "metadata": {
+        "family": "H",
+        "kind": "price",
+        "theta": "1 - 1/(6*q + 6)",
+        "group": [
+          26,
+          0
+        ],
+        "interval": [
+          "0",
+          "1"
+        ]
+      }
+    },
+    {
+      "file": "mid_q_full_same_e_certificate_052_sturm_sequence.jsonl.gz",
+      "kind": "sturm_sequence",
+      "entries": 64,
+      "bytes": 12080,
+      "sha256": "d66d067f8ea079eb9a4fada159495c9dedf0c1e1f491e054e55a9992446ebfc4",
+      "metadata": {
+        "family": "H",
+        "kind": "price",
+        "theta": "1 - 1/(6*q + 6)",
+        "group": [
+          26,
+          0
+        ],
+        "interval": [
+          "0",
+          "1"
+        ]
+      }
+    },
+    {
+      "file": "mid_q_full_same_e_certificate_053_sturm_input.jsonl.gz",
+      "kind": "sturm_input",
+      "entries": 10,
+      "bytes": 431,
+      "sha256": "3d3479e3872b2c880e6188055f81425a19ad0fa363b8751ff01a351c072da2fa",
+      "metadata": {
+        "family": "H",
+        "kind": "price",
+        "theta": "1 - 1/(6*q + 6)",
+        "group": [
+          27,
+          0
+        ],
+        "interval": [
+          "0",
+          "1"
+        ]
+      }
+    },
+    {
+      "file": "mid_q_full_same_e_certificate_054_sturm_sequence.jsonl.gz",
+      "kind": "sturm_sequence",
+      "entries": 64,
+      "bytes": 11041,
+      "sha256": "e180d5ad1b9c6b930069e8f35e0c6903c66ac2ad696f738ae0e02a76bb9c8b7c",
+      "metadata": {
+        "family": "H",
+        "kind": "price",
+        "theta": "1 - 1/(6*q + 6)",
+        "group": [
+          27,
+          0
+        ],
+        "interval": [
+          "0",
+          "1"
+        ]
+      }
+    },
+    {
+      "file": "mid_q_full_same_e_certificate_055_sturm_input.jsonl.gz",
+      "kind": "sturm_input",
+      "entries": 10,
+      "bytes": 431,
+      "sha256": "0a61104391468162a33e04b4b1efaf375d3aceb375ed3ae1c93ceb00d6308f4d",
+      "metadata": {
+        "family": "H",
+        "kind": "price",
+        "theta": "1 - 1/(6*q + 6)",
+        "group": [
+          28,
+          0
+        ],
+        "interval": [
+          "0",
+          "1"
+        ]
+      }
+    },
+    {
+      "file": "mid_q_full_same_e_certificate_056_sturm_sequence.jsonl.gz",
+      "kind": "sturm_sequence",
+      "entries": 64,
+      "bytes": 9572,
+      "sha256": "5216e6bcff4e69bd2656ebc4169883297f72e2547864eb469b90bbcfa9519b8f",
+      "metadata": {
+        "family": "H",
+        "kind": "price",
+        "theta": "1 - 1/(6*q + 6)",
+        "group": [
+          28,
+          0
+        ],
+        "interval": [
+          "0",
+          "1"
+        ]
+      }
+    },
+    {
+      "file": "mid_q_full_same_e_certificate_057_sturm_input.jsonl.gz",
+      "kind": "sturm_input",
+      "entries": 10,
+      "bytes": 406,
+      "sha256": "9af6a3c0bac9a6ffedd096bf1070224c9bd9c5fde49a0ddd015561b5d4be5cdd",
+      "metadata": {
+        "family": "H",
+        "kind": "price",
+        "theta": "1 - 1/(6*q + 6)",
+        "group": [
+          29,
+          0
+        ],
+        "interval": [
+          "0",
+          "1"
+        ]
+      }
+    },
+    {
+      "file": "mid_q_full_same_e_certificate_058_sturm_sequence.jsonl.gz",
+      "kind": "sturm_sequence",
+      "entries": 64,
+      "bytes": 8824,
+      "sha256": "5b1f3218ef1cb1399d44052f7e468b720564dc10388feda6619e3de87a720fe2",
+      "metadata": {
+        "family": "H",
+        "kind": "price",
+        "theta": "1 - 1/(6*q + 6)",
+        "group": [
+          29,
+          0
+        ],
+        "interval": [
+          "0",
+          "1"
+        ]
+      }
+    },
+    {
+      "file": "mid_q_full_same_e_certificate_059_sturm_input.jsonl.gz",
+      "kind": "sturm_input",
+      "entries": 10,
+      "bytes": 386,
+      "sha256": "1166ed4e2d011b4662f7e5cc26fd0a975358ae3aa0b6a80ec06eaf2122040832",
+      "metadata": {
+        "family": "H",
+        "kind": "price",
+        "theta": "1 - 1/(6*q + 6)",
+        "group": [
+          30,
+          0
+        ],
+        "interval": [
+          "0",
+          "1"
+        ]
+      }
+    },
+    {
+      "file": "mid_q_full_same_e_certificate_060_sturm_sequence.jsonl.gz",
+      "kind": "sturm_sequence",
+      "entries": 64,
+      "bytes": 7134,
+      "sha256": "3fc0012088727384c37d8e8eaec1c7375408d73bd1f84c92ee9052daf77f6e89",
+      "metadata": {
+        "family": "H",
+        "kind": "price",
+        "theta": "1 - 1/(6*q + 6)",
+        "group": [
+          30,
+          0
+        ],
+        "interval": [
+          "0",
+          "1"
+        ]
+      }
+    },
+    {
+      "file": "mid_q_full_same_e_certificate_061_sturm_input.jsonl.gz",
+      "kind": "sturm_input",
+      "entries": 10,
+      "bytes": 367,
+      "sha256": "3635e2676bd55f2877766fe135d2a208ee51e9f8f94dd8d327048f9aae0ec655",
+      "metadata": {
+        "family": "H",
+        "kind": "price",
+        "theta": "1 - 1/(6*q + 6)",
+        "group": [
+          31,
+          0
+        ],
+        "interval": [
+          "0",
+          "1"
+        ]
+      }
+    },
+    {
+      "file": "mid_q_full_same_e_certificate_062_sturm_sequence.jsonl.gz",
+      "kind": "sturm_sequence",
+      "entries": 64,
+      "bytes": 4575,
+      "sha256": "b55f258ec2117e391ace11fde40d7f5624d8b5d0ef1ff97c1af997e51cfce5b5",
+      "metadata": {
+        "family": "H",
+        "kind": "price",
+        "theta": "1 - 1/(6*q + 6)",
+        "group": [
+          31,
+          0
+        ],
+        "interval": [
+          "0",
+          "1"
+        ]
+      }
+    },
+    {
+      "file": "mid_q_full_same_e_certificate_063_sturm_input.jsonl.gz",
+      "kind": "sturm_input",
+      "entries": 10,
+      "bytes": 359,
+      "sha256": "1fe3e17e66de846b6ceba0682b4a5f38be6e46496e9a38e32e04d4a65d3c40cf",
+      "metadata": {
+        "family": "H",
+        "kind": "price",
+        "theta": "1 - 1/(6*q + 6)",
+        "group": [
+          32,
+          0
+        ],
+        "interval": [
+          "0",
+          "1"
+        ]
+      }
+    },
+    {
+      "file": "mid_q_full_same_e_certificate_064_sturm_sequence.jsonl.gz",
+      "kind": "sturm_sequence",
+      "entries": 64,
+      "bytes": 2519,
+      "sha256": "52775a0a738bc0ea8b82929f4d3ed926c16fec49a81c4511d4c7561fd83a7da2",
+      "metadata": {
+        "family": "H",
+        "kind": "price",
+        "theta": "1 - 1/(6*q + 6)",
+        "group": [
+          32,
+          0
+        ],
+        "interval": [
+          "0",
+          "1"
+        ]
+      }
+    },
+    {
+      "file": "mid_q_full_same_e_certificate_065_power.jsonl.gz",
+      "kind": "power",
+      "entries": 1315,
+      "bytes": 18673,
+      "sha256": "5c500156bfe90b1b4b0cb7aecf74d497513d061d723a17865ae10f1a0d7c5cde",
+      "metadata": {
+        "family": "J",
+        "kind": "slope",
+        "theta": "0",
+        "x": "1/10+7*w/30",
+        "h": [
+          "0",
+          "1/2"
+        ],
+        "v": [
+          "0",
+          "1"
+        ]
+      }
+    },
+    {
+      "file": "mid_q_full_same_e_certificate_066_mixed_bernstein_power.jsonl.gz",
+      "kind": "mixed_bernstein_power",
+      "entries": 1980,
+      "bytes": 41957,
+      "sha256": "9726b467fcb28aeff526bb54020f9eee3ca66e2cf2770d3974dd90fdfb210cfc",
+      "metadata": {
+        "family": "J",
+        "kind": "slope",
+        "theta": "0"
+      }
+    },
+    {
+      "file": "mid_q_full_same_e_certificate_067_bernstein.jsonl.gz",
+      "kind": "bernstein",
+      "entries": 1980,
+      "bytes": 43806,
+      "sha256": "66c7b78389f3ef26e88f88addeb2e6e1f5bf51759ca06d22f3f4e2f0abd79445",
+      "metadata": {
+        "family": "J",
+        "kind": "slope",
+        "theta": "0",
+        "x": "1/10+7*w/30",
+        "h": [
+          "0",
+          "1/2"
+        ],
+        "v": [
+          "0",
+          "1"
+        ]
+      }
+    },
+    {
+      "file": "mid_q_full_same_e_certificate_068_power.jsonl.gz",
+      "kind": "power",
+      "entries": 2055,
+      "bytes": 33269,
+      "sha256": "b9e5322e85f413f5ee451d622afe512778913ed459d4946f7390e703f8a3e2cf",
+      "metadata": {
+        "family": "J",
+        "kind": "slope",
+        "theta": "1 - 1/(6*q + 6)",
+        "x": "1/10+7*w/30",
+        "h": [
+          "0",
+          "1/2"
+        ],
+        "v": [
+          "0",
+          "1"
+        ]
+      }
+    },
+    {
+      "file": "mid_q_full_same_e_certificate_069_mixed_bernstein_power.jsonl.gz",
+      "kind": "mixed_bernstein_power",
+      "entries": 2975,
+      "bytes": 74205,
+      "sha256": "bbb4ab4137e8f77398f9ae4d62a60531bfa8f8637d244cda3afeff491332c021",
+      "metadata": {
+        "family": "J",
+        "kind": "slope",
+        "theta": "1 - 1/(6*q + 6)"
+      }
+    },
+    {
+      "file": "mid_q_full_same_e_certificate_070_bernstein.jsonl.gz",
+      "kind": "bernstein",
+      "entries": 2975,
+      "bytes": 77364,
+      "sha256": "7daa1128e47d93ea96ca9d6e8a1af1390cc96560ceba66f4652e2b67dfd9d290",
+      "metadata": {
+        "family": "J",
+        "kind": "slope",
+        "theta": "1 - 1/(6*q + 6)",
+        "x": "1/10+7*w/30",
+        "h": [
+          "0",
+          "1/2"
+        ],
+        "v": [
+          "0",
+          "1"
+        ]
+      }
+    },
+    {
+      "file": "mid_q_full_same_e_certificate_071_power.jsonl.gz",
+      "kind": "power",
+      "entries": 5102,
+      "bytes": 90965,
+      "sha256": "6302d5f4587b8da52fbe54c74dca7e5fa829470c9f754fabc849feecddaf3a45",
+      "metadata": {
+        "family": "J",
+        "kind": "price",
+        "theta": "0",
+        "x": "1/10+7*w/30",
+        "h": [
+          "0",
+          "1/2"
+        ],
+        "v": [
+          "0",
+          "1"
+        ]
+      }
+    },
+    {
+      "file": "mid_q_full_same_e_certificate_072_mixed_bernstein_power.jsonl.gz",
+      "kind": "mixed_bernstein_power",
+      "entries": 8288,
+      "bytes": 242466,
+      "sha256": "d6f190ba033cfa73b52484495fa77d1094800e6063f17315ce99d63bdc53f20c",
+      "metadata": {
+        "family": "J",
+        "kind": "price",
+        "theta": "0"
+      }
+    },
+    {
+      "file": "mid_q_full_same_e_certificate_073_bernstein.jsonl.gz",
+      "kind": "bernstein",
+      "entries": 8288,
+      "bytes": 265188,
+      "sha256": "8ec37b30588d7fa06cdcbdff29268e5566ca5eb663e97534c76ed98e99f7aa70",
+      "metadata": {
+        "family": "J",
+        "kind": "price",
+        "theta": "0",
+        "x": "1/10+7*w/30",
+        "h": [
+          "0",
+          "1/2"
+        ],
+        "v": [
+          "0",
+          "1"
+        ]
+      }
+    },
+    {
+      "file": "mid_q_full_same_e_certificate_074_power.jsonl.gz",
+      "kind": "power",
+      "entries": 6771,
+      "bytes": 132814,
+      "sha256": "32c5a79898129eadac9ffe50c0d999dccac9f0bfe6b7d34a4b56ba3957f92ffc",
+      "metadata": {
+        "family": "J",
+        "kind": "price",
+        "theta": "1 - 1/(6*q + 6)",
+        "x": "1/10+7*w/30",
+        "h": [
+          "0",
+          "1/2"
+        ],
+        "v": [
+          "0",
+          "1"
+        ]
+      }
+    },
+    {
+      "file": "mid_q_full_same_e_certificate_075_mixed_bernstein_power.jsonl.gz",
+      "kind": "mixed_bernstein_power",
+      "entries": 10745,
+      "bytes": 348340,
+      "sha256": "6b556dcb1d620651193876daa0ee64cc11fec5d1b3b9036ebcc1f3bb6b9fd0b0",
+      "metadata": {
+        "family": "J",
+        "kind": "price",
+        "theta": "1 - 1/(6*q + 6)"
+      }
+    },
+    {
+      "file": "mid_q_full_same_e_certificate_076_bernstein.jsonl.gz",
+      "kind": "bernstein",
+      "entries": 10745,
+      "bytes": 383751,
+      "sha256": "479f57f67a8c685e0ab58fa40e8ae2fc6b4b8febf8916c37642939c1de4dd47f",
+      "metadata": {
+        "family": "J",
+        "kind": "price",
+        "theta": "1 - 1/(6*q + 6)",
+        "x": "1/10+7*w/30",
+        "h": [
+          "0",
+          "1/2"
+        ],
+        "v": [
+          "0",
+          "1"
+        ]
+      }
+    },
+    {
+      "file": "mid_q_full_same_e_certificate_077_budget_input_power.jsonl.gz",
+      "kind": "budget_input_power",
+      "entries": 4557,
+      "bytes": 50117,
+      "sha256": "78b26660b1330395b06f041b688f0ed94a04b8ada6681d8fd78ee65f29f84332",
+      "metadata": {
+        "endpoint": "Tlo",
+        "sign": 1,
+        "x_power": 28
+      }
+    },
+    {
+      "file": "mid_q_full_same_e_certificate_078_bernstein.jsonl.gz",
+      "kind": "bernstein",
+      "entries": 10150,
+      "bytes": 435042,
+      "sha256": "5528ebd7884319089dacfdd564423e036d6d09aaf5fddfb26b2c64670fdff4a7",
+      "metadata": {
+        "endpoint": "Tlo",
+        "x": [
+          "1/10",
+          "1/3"
+        ],
+        "h": [
+          "0",
+          "1/2"
+        ],
+        "z": [
+          "0",
+          "1"
+        ]
+      }
+    },
+    {
+      "file": "mid_q_full_same_e_certificate_079_budget_input_power.jsonl.gz",
+      "kind": "budget_input_power",
+      "entries": 4696,
+      "bytes": 51161,
+      "sha256": "dec9fdaada67022e0b6ef14af2d5765388e11860024054a46f6d9b682036ca5f",
+      "metadata": {
+        "endpoint": "Tup",
+        "sign": -1,
+        "x_power": 26
+      }
+    },
+    {
+      "file": "mid_q_full_same_e_certificate_080_bernstein.jsonl.gz",
+      "kind": "bernstein",
+      "entries": 10850,
+      "bytes": 469106,
+      "sha256": "ccfc87dc9f4f45ea70e29eb97fd2863b7aff9afe70c694422d81bcc8f2f057d0",
+      "metadata": {
+        "endpoint": "Tup",
+        "x": [
+          "1/10",
+          "1/3"
+        ],
+        "h": [
+          "0",
+          "1/2"
+        ],
+        "z": [
+          "0",
+          "1"
+        ]
+      }
+    },
+    {
+      "file": "middle_q_coupled_certificate_001_power.jsonl.gz",
+      "kind": "power",
+      "entries": 1419,
+      "bytes": 6804,
+      "sha256": "adb2a5ab90b2b80b36dd6fa47edd0e371400fd5c2a376029d25f6c51776c93df",
+      "metadata": {
+        "check": "physical-domain-price",
+        "g": "0",
+        "x": [
+          "0",
+          "1/10"
+        ],
+        "h": [
+          "0",
+          "1/2"
+        ],
+        "v": [
+          "0",
+          "1"
+        ],
+        "t": "nonnegative ordinary powers"
+      }
+    },
+    {
+      "file": "middle_q_coupled_certificate_002_mixed_bernstein_power.jsonl.gz",
+      "kind": "mixed_bernstein_power",
+      "entries": 4319,
+      "bytes": 40118,
+      "sha256": "6d1dfec54c5a1d6632e81dba49ba702338171ecab10600aae058817b68cf4dce",
+      "metadata": {
+        "g": "0",
+        "bernstein_axes": [
+          0,
+          1,
+          3
+        ],
+        "t": "ordinary powers"
+      }
+    },
+    {
+      "file": "middle_q_coupled_certificate_003_power.jsonl.gz",
+      "kind": "power",
+      "entries": 1455,
+      "bytes": 7089,
+      "sha256": "10a3ba8a62d08c9d8266b12ed3715f51b2ac4126a16f1461bad64b873ed6fd58",
+      "metadata": {
+        "check": "physical-domain-price",
+        "g": "1",
+        "x": [
+          "0",
+          "1/10"
+        ],
+        "h": [
+          "0",
+          "1/2"
+        ],
+        "v": [
+          "0",
+          "1"
+        ],
+        "t": "nonnegative ordinary powers"
+      }
+    },
+    {
+      "file": "middle_q_coupled_certificate_004_mixed_bernstein_power.jsonl.gz",
+      "kind": "mixed_bernstein_power",
+      "entries": 4319,
+      "bytes": 40205,
+      "sha256": "a4029b4049541938b5ff3b4079718441684bcaa7aea5ee9c5d71d2ff079a54ba",
+      "metadata": {
+        "g": "1",
+        "bernstein_axes": [
+          0,
+          1,
+          3
+        ],
+        "t": "ordinary powers"
+      }
+    },
+    {
+      "file": "middle_q_coupled_certificate_005_power.jsonl.gz",
+      "kind": "power",
+      "entries": 60,
+      "bytes": 620,
+      "sha256": "a384fbe6eb5e7a5fbf91c50d53c5f27355df8aecf189affa74094d51499c7b7a",
+      "metadata": {
+        "check": "source",
+        "h": [
+          "0",
+          "1/2"
+        ],
+        "x": [
+          "0",
+          "1/10"
+        ],
+        "negative_payment": "65345524702337817/204800000000",
+        "constant_credit": "380160"
+      }
+    },
+    {
+      "file": "finite_h_quarter_certificate_001_power.jsonl.gz",
+      "kind": "power",
+      "entries": 36,
+      "bytes": 448,
+      "sha256": "e5b81878ab933b2585e9bc5837d1aff86399dc69409998b6794cbc7eb8f74af0",
+      "metadata": {
+        "check": "Q3c source/gap or head",
+        "age": "i",
+        "g_endpoint": "",
+        "domain": [
+          [
+            "0",
+            "1/10"
+          ],
+          [
+            "0",
+            "1/4"
+          ]
+        ]
+      }
+    },
+    {
+      "file": "finite_h_quarter_certificate_002_bernstein.jsonl.gz",
+      "kind": "bernstein",
+      "entries": 90,
+      "bytes": 1306,
+      "sha256": "ada3e13dab415cc34d94997728c1cad568a790ddd305cbbb1870c325df5acddd",
+      "metadata": {
+        "check": "Q3c source/gap or head",
+        "age": "i",
+        "g_endpoint": "",
+        "domain": [
+          [
+            "0",
+            "1/10"
+          ],
+          [
+            "0",
+            "1/4"
+          ]
+        ]
+      }
+    },
+    {
+      "file": "finite_h_quarter_certificate_003_power.jsonl.gz",
+      "kind": "power",
+      "entries": 20,
+      "bytes": 348,
+      "sha256": "1f9e312975e77036cdfc2939bd73884ed7c105c8edbcbd67acac1a428bcd6a74",
+      "metadata": {
+        "check": "Q3c source/gap or head",
+        "age": "i",
+        "g_endpoint": "",
+        "domain": [
+          [
+            "0",
+            "1/10"
+          ],
+          [
+            "0",
+            "1/4"
+          ]
+        ]
+      }
+    },
+    {
+      "file": "finite_h_quarter_certificate_004_bernstein.jsonl.gz",
+      "kind": "bernstein",
+      "entries": 56,
+      "bytes": 788,
+      "sha256": "30d9a87d198faa8e7d2499851c020cb32ea2fbf64270710608726cfce74ec9da",
+      "metadata": {
+        "check": "Q3c source/gap or head",
+        "age": "i",
+        "g_endpoint": "",
+        "domain": [
+          [
+            "0",
+            "1/10"
+          ],
+          [
+            "0",
+            "1/4"
+          ]
+        ]
+      }
+    },
+    {
+      "file": "finite_h_quarter_certificate_005_power.jsonl.gz",
+      "kind": "power",
+      "entries": 40,
+      "bytes": 536,
+      "sha256": "521249925a26031251f0d938398f978599d8d2a711299eda7712d06a5bae943b",
+      "metadata": {
+        "check": "Q3c source/gap or head",
+        "age": "i",
+        "g_endpoint": "",
+        "domain": [
+          [
+            "0",
+            "1/10"
+          ],
+          [
+            "0",
+            "1/4"
+          ]
+        ]
+      }
+    },
+    {
+      "file": "finite_h_quarter_certificate_006_bernstein.jsonl.gz",
+      "kind": "bernstein",
+      "entries": 110,
+      "bytes": 1704,
+      "sha256": "764f934271ec02283a6637120ae7efe8655490f6663852a3a79ab3de30324172",
+      "metadata": {
+        "check": "Q3c source/gap or head",
+        "age": "i",
+        "g_endpoint": "",
+        "domain": [
+          [
+            "0",
+            "1/10"
+          ],
+          [
+            "0",
+            "1/4"
+          ]
+        ]
+      }
+    },
+    {
+      "file": "finite_h_quarter_certificate_007_power.jsonl.gz",
+      "kind": "power",
+      "entries": 213,
+      "bytes": 1922,
+      "sha256": "6ad1eaee3925c33cea0e1be4179ff7272be014306ea9a9f3df280273a473499d",
+      "metadata": {
+        "check": "Q3c source/gap or head",
+        "age": "1",
+        "g_endpoint": "1/8",
+        "domain": [
+          [
+            "0",
+            "1/10"
+          ],
+          [
+            "0",
+            "1/4"
+          ]
+        ]
+      }
+    },
+    {
+      "file": "finite_h_quarter_certificate_008_bernstein.jsonl.gz",
+      "kind": "bernstein",
+      "entries": 587,
+      "bytes": 15945,
+      "sha256": "e94983e4864db4ff84e42dc87d1edd0c3002d03d6d078f990760ea30bd4dde33",
+      "metadata": {
+        "check": "Q3c source/gap or head",
+        "age": "1",
+        "g_endpoint": "1/8",
+        "domain": [
+          [
+            "0",
+            "1/10"
+          ],
+          [
+            "0",
+            "1/4"
+          ]
+        ]
+      }
+    },
+    {
+      "file": "finite_h_quarter_certificate_009_power.jsonl.gz",
+      "kind": "power",
+      "entries": 212,
+      "bytes": 1871,
+      "sha256": "45905f9a4074b857be80254e7392518be86f14583b96f8d750ccb2b2273db93e",
+      "metadata": {
+        "check": "Q3c source/gap or head",
+        "age": "1",
+        "g_endpoint": "1/4",
+        "domain": [
+          [
+            "0",
+            "1/10"
+          ],
+          [
+            "0",
+            "1/4"
+          ]
+        ]
+      }
+    },
+    {
+      "file": "finite_h_quarter_certificate_010_bernstein.jsonl.gz",
+      "kind": "bernstein",
+      "entries": 587,
+      "bytes": 15864,
+      "sha256": "885d91d31bbc754003b193f7ed1c2e81aecf8628274f22eaa7d6383ad7a6b176",
+      "metadata": {
+        "check": "Q3c source/gap or head",
+        "age": "1",
+        "g_endpoint": "1/4",
+        "domain": [
+          [
+            "0",
+            "1/10"
+          ],
+          [
+            "0",
+            "1/4"
+          ]
+        ]
+      }
+    },
+    {
+      "file": "finite_h_quarter_certificate_011_power.jsonl.gz",
+      "kind": "power",
+      "entries": 287,
+      "bytes": 2863,
+      "sha256": "58745d3c5b7a45edd9348760a054e9a002d17393ce033b451a50e6afcf706702",
+      "metadata": {
+        "check": "Q3c source/gap or head",
+        "age": "2",
+        "g_endpoint": "1/8",
+        "domain": [
+          [
+            "0",
+            "1/10"
+          ],
+          [
+            "0",
+            "1/4"
+          ]
+        ]
+      }
+    },
+    {
+      "file": "finite_h_quarter_certificate_012_bernstein.jsonl.gz",
+      "kind": "bernstein",
+      "entries": 944,
+      "bytes": 30806,
+      "sha256": "0c269f072fc2fc01bebb2b9faf8ddd30c0f2f1b6c18d5f0db5f7121503d51d87",
+      "metadata": {
+        "check": "Q3c source/gap or head",
+        "age": "2",
+        "g_endpoint": "1/8",
+        "domain": [
+          [
+            "0",
+            "1/10"
+          ],
+          [
+            "0",
+            "1/4"
+          ]
+        ]
+      }
+    },
+    {
+      "file": "finite_h_quarter_certificate_013_power.jsonl.gz",
+      "kind": "power",
+      "entries": 287,
+      "bytes": 2798,
+      "sha256": "2f298a55824fd080d43f82c69be641a7b1e3bc2432a0bb7a264152797342fa23",
+      "metadata": {
+        "check": "Q3c source/gap or head",
+        "age": "2",
+        "g_endpoint": "1/4",
+        "domain": [
+          [
+            "0",
+            "1/10"
+          ],
+          [
+            "0",
+            "1/4"
+          ]
+        ]
+      }
+    },
+    {
+      "file": "finite_h_quarter_certificate_014_bernstein.jsonl.gz",
+      "kind": "bernstein",
+      "entries": 944,
+      "bytes": 30407,
+      "sha256": "dae4e27f5aacd8ba0ce252b994c9e922799267748cbcf506b9ab84c30c4b458a",
+      "metadata": {
+        "check": "Q3c source/gap or head",
+        "age": "2",
+        "g_endpoint": "1/4",
+        "domain": [
+          [
+            "0",
+            "1/10"
+          ],
+          [
+            "0",
+            "1/4"
+          ]
+        ]
+      }
+    },
+    {
+      "file": "finite_h_quarter_certificate_015_power.jsonl.gz",
+      "kind": "power",
+      "entries": 343,
+      "bytes": 3730,
+      "sha256": "aa734e613fd6589852f9213e30146fcf90ed775a06d9fb654a1098b22bde2991",
+      "metadata": {
+        "check": "Q3c source/gap or head",
+        "age": "3",
+        "g_endpoint": "1/8",
+        "domain": [
+          [
+            "0",
+            "1/10"
+          ],
+          [
+            "0",
+            "1/4"
+          ]
+        ]
+      }
+    },
+    {
+      "file": "finite_h_quarter_certificate_016_bernstein.jsonl.gz",
+      "kind": "bernstein",
+      "entries": 1427,
+      "bytes": 53879,
+      "sha256": "a0d5ce39f64a964ebaf251a4cb396be969f6cf5ad435f4dfac54e7f90c74be03",
+      "metadata": {
+        "check": "Q3c source/gap or head",
+        "age": "3",
+        "g_endpoint": "1/8",
+        "domain": [
+          [
+            "0",
+            "1/10"
+          ],
+          [
+            "0",
+            "1/4"
+          ]
+        ]
+      }
+    },
+    {
+      "file": "finite_h_quarter_certificate_017_power.jsonl.gz",
+      "kind": "power",
+      "entries": 343,
+      "bytes": 3656,
+      "sha256": "df41cea30a0907c8f43addbc0b4740d08b74b2c9e9b02be77f4b04279bf6e2bd",
+      "metadata": {
+        "check": "Q3c source/gap or head",
+        "age": "3",
+        "g_endpoint": "1/4",
+        "domain": [
+          [
+            "0",
+            "1/10"
+          ],
+          [
+            "0",
+            "1/4"
+          ]
+        ]
+      }
+    },
+    {
+      "file": "finite_h_quarter_certificate_018_bernstein.jsonl.gz",
+      "kind": "bernstein",
+      "entries": 1427,
+      "bytes": 53588,
+      "sha256": "75b213e9a6d9f0508e39d666a9b97d0eb74ff05ebc3a732bac8ae6f92dd5613e",
+      "metadata": {
+        "check": "Q3c source/gap or head",
+        "age": "3",
+        "g_endpoint": "1/4",
+        "domain": [
+          [
+            "0",
+            "1/10"
+          ],
+          [
+            "0",
+            "1/4"
+          ]
+        ]
+      }
+    },
+    {
+      "file": "finite_h_quarter_certificate_019_power.jsonl.gz",
+      "kind": "power",
+      "entries": 399,
+      "bytes": 4744,
+      "sha256": "d235cdf29685a5b276c5db98947b8ded311960f4aae120ee256842451e6ed7c7",
+      "metadata": {
+        "check": "Q3c source/gap or head",
+        "age": "4",
+        "g_endpoint": "1/8",
+        "domain": [
+          [
+            "0",
+            "1/10"
+          ],
+          [
+            "0",
+            "1/4"
+          ]
+        ]
+      }
+    },
+    {
+      "file": "finite_h_quarter_certificate_020_bernstein.jsonl.gz",
+      "kind": "bernstein",
+      "entries": 2008,
+      "bytes": 86376,
+      "sha256": "38d7db8119e810b44e204bb5693d00180d0d40b2b1724b0ecdb93deec0cc4b83",
+      "metadata": {
+        "check": "Q3c source/gap or head",
+        "age": "4",
+        "g_endpoint": "1/8",
+        "domain": [
+          [
+            "0",
+            "1/10"
+          ],
+          [
+            "0",
+            "1/4"
+          ]
+        ]
+      }
+    },
+    {
+      "file": "finite_h_quarter_certificate_021_power.jsonl.gz",
+      "kind": "power",
+      "entries": 399,
+      "bytes": 4678,
+      "sha256": "783718db221dc493649184fd186d51ac82921b4a3842f961097619666a89a8db",
+      "metadata": {
+        "check": "Q3c source/gap or head",
+        "age": "4",
+        "g_endpoint": "1/4",
+        "domain": [
+          [
+            "0",
+            "1/10"
+          ],
+          [
+            "0",
+            "1/4"
+          ]
+        ]
+      }
+    },
+    {
+      "file": "finite_h_quarter_certificate_022_bernstein.jsonl.gz",
+      "kind": "bernstein",
+      "entries": 2008,
+      "bytes": 85963,
+      "sha256": "ad3e3b8f785e9f689cff6d12a07672661423f5c3d93373e8022b7d5cb9754d49",
+      "metadata": {
+        "check": "Q3c source/gap or head",
+        "age": "4",
+        "g_endpoint": "1/4",
+        "domain": [
+          [
+            "0",
+            "1/10"
+          ],
+          [
+            "0",
+            "1/4"
+          ]
+        ]
+      }
+    },
+    {
+      "file": "finite_h_quarter_certificate_023_power.jsonl.gz",
+      "kind": "power",
+      "entries": 455,
+      "bytes": 5748,
+      "sha256": "2110f071583e6b6b757670677ecb28347ae567c1a4bb38652fe5e84a8bafe5a3",
+      "metadata": {
+        "check": "Q3c source/gap or head",
+        "age": "5",
+        "g_endpoint": "1/8",
+        "domain": [
+          [
+            "0",
+            "1/10"
+          ],
+          [
+            "0",
+            "1/4"
+          ]
+        ]
+      }
+    },
+    {
+      "file": "finite_h_quarter_certificate_024_bernstein.jsonl.gz",
+      "kind": "bernstein",
+      "entries": 2687,
+      "bytes": 128243,
+      "sha256": "eb484b13bb090758fa3679eea066f942ebb7726aebd0cb3d73a2765a145b6fe5",
+      "metadata": {
+        "check": "Q3c source/gap or head",
+        "age": "5",
+        "g_endpoint": "1/8",
+        "domain": [
+          [
+            "0",
+            "1/10"
+          ],
+          [
+            "0",
+            "1/4"
+          ]
+        ]
+      }
+    },
+    {
+      "file": "finite_h_quarter_certificate_025_power.jsonl.gz",
+      "kind": "power",
+      "entries": 455,
+      "bytes": 5681,
+      "sha256": "f4cbba708317c5e6ad097e3b0e035365fae207ec12d4e3b23a1575ca1a48edc4",
+      "metadata": {
+        "check": "Q3c source/gap or head",
+        "age": "5",
+        "g_endpoint": "1/4",
+        "domain": [
+          [
+            "0",
+            "1/10"
+          ],
+          [
+            "0",
+            "1/4"
+          ]
+        ]
+      }
+    },
+    {
+      "file": "finite_h_quarter_certificate_026_bernstein.jsonl.gz",
+      "kind": "bernstein",
+      "entries": 2687,
+      "bytes": 127773,
+      "sha256": "79031512889cf291f9d448b25c315514c8e41b614a709e9a6377c522d6462e80",
+      "metadata": {
+        "check": "Q3c source/gap or head",
+        "age": "5",
+        "g_endpoint": "1/4",
+        "domain": [
+          [
+            "0",
+            "1/10"
+          ],
+          [
+            "0",
+            "1/4"
+          ]
+        ]
+      }
+    },
+    {
+      "file": "finite_h_quarter_certificate_027_power.jsonl.gz",
+      "kind": "power",
+      "entries": 511,
+      "bytes": 6946,
+      "sha256": "6225d46f6a145db02fb2f9de9e3052b3571710d1985a452bb6a11bfb342191a8",
+      "metadata": {
+        "check": "Q3c source/gap or head",
+        "age": "6",
+        "g_endpoint": "1/8",
+        "domain": [
+          [
+            "0",
+            "1/10"
+          ],
+          [
+            "0",
+            "1/4"
+          ]
+        ]
+      }
+    },
+    {
+      "file": "finite_h_quarter_certificate_028_bernstein.jsonl.gz",
+      "kind": "bernstein",
+      "entries": 3464,
+      "bytes": 183880,
+      "sha256": "f625126e1a91fb3085cd4e7ffc2c370c4aa562af77715eeab7d298f9acc769c0",
+      "metadata": {
+        "check": "Q3c source/gap or head",
+        "age": "6",
+        "g_endpoint": "1/8",
+        "domain": [
+          [
+            "0",
+            "1/10"
+          ],
+          [
+            "0",
+            "1/4"
+          ]
+        ]
+      }
+    },
+    {
+      "file": "finite_h_quarter_certificate_029_power.jsonl.gz",
+      "kind": "power",
+      "entries": 511,
+      "bytes": 6821,
+      "sha256": "3c9df9de7f645966f6f81dbf9ebe7dd2dfcbc281ddb2eade25526ec41e948c8f",
+      "metadata": {
+        "check": "Q3c source/gap or head",
+        "age": "6",
+        "g_endpoint": "1/4",
+        "domain": [
+          [
+            "0",
+            "1/10"
+          ],
+          [
+            "0",
+            "1/4"
+          ]
+        ]
+      }
+    },
+    {
+      "file": "finite_h_quarter_certificate_030_bernstein.jsonl.gz",
+      "kind": "bernstein",
+      "entries": 3464,
+      "bytes": 183187,
+      "sha256": "66b263c2656b7ac0292016183e2b14ae0e4fcc5e3d5d58a4c774e5e26f2301a2",
+      "metadata": {
+        "check": "Q3c source/gap or head",
+        "age": "6",
+        "g_endpoint": "1/4",
+        "domain": [
+          [
+            "0",
+            "1/10"
+          ],
+          [
+            "0",
+            "1/4"
+          ]
+        ]
+      }
+    },
+    {
+      "file": "finite_h_quarter_certificate_031_power.jsonl.gz",
+      "kind": "power",
+      "entries": 567,
+      "bytes": 8077,
+      "sha256": "7fe23bbff89152017ae57725824647c727e1985dd468173a9695a9e10224e430",
+      "metadata": {
+        "check": "Q3c source/gap or head",
+        "age": "7",
+        "g_endpoint": "1/8",
+        "domain": [
+          [
+            "0",
+            "1/10"
+          ],
+          [
+            "0",
+            "1/4"
+          ]
+        ]
+      }
+    },
+    {
+      "file": "finite_h_quarter_certificate_032_bernstein.jsonl.gz",
+      "kind": "bernstein",
+      "entries": 4339,
+      "bytes": 252829,
+      "sha256": "d23dfd58481b905565a0e4263f3ba857f6df86129b888f173931d1cba02d7399",
+      "metadata": {
+        "check": "Q3c source/gap or head",
+        "age": "7",
+        "g_endpoint": "1/8",
+        "domain": [
+          [
+            "0",
+            "1/10"
+          ],
+          [
+            "0",
+            "1/4"
+          ]
+        ]
+      }
+    },
+    {
+      "file": "finite_h_quarter_certificate_033_power.jsonl.gz",
+      "kind": "power",
+      "entries": 567,
+      "bytes": 7994,
+      "sha256": "c072aa8803afa8f7ab401b7d8a3439e61e3110a32d1a79bb428bc1e405ac83bb",
+      "metadata": {
+        "check": "Q3c source/gap or head",
+        "age": "7",
+        "g_endpoint": "1/4",
+        "domain": [
+          [
+            "0",
+            "1/10"
+          ],
+          [
+            "0",
+            "1/4"
+          ]
+        ]
+      }
+    },
+    {
+      "file": "finite_h_quarter_certificate_034_bernstein.jsonl.gz",
+      "kind": "bernstein",
+      "entries": 4339,
+      "bytes": 251579,
+      "sha256": "c5c225b8fed05e42acdb954d8bbe494fc817cb4180c8f253a17a9980a833924f",
+      "metadata": {
+        "check": "Q3c source/gap or head",
+        "age": "7",
+        "g_endpoint": "1/4",
+        "domain": [
+          [
+            "0",
+            "1/10"
+          ],
+          [
+            "0",
+            "1/4"
+          ]
+        ]
+      }
+    },
+    {
+      "file": "finite_h_quarter_certificate_035_power.jsonl.gz",
+      "kind": "power",
+      "entries": 623,
+      "bytes": 9362,
+      "sha256": "bf543fa37015e1bca6cf3dc5e01cc2649439738b249686aab1ab09b8d32e704b",
+      "metadata": {
+        "check": "Q3c source/gap or head",
+        "age": "8",
+        "g_endpoint": "1/8",
+        "domain": [
+          [
+            "0",
+            "1/10"
+          ],
+          [
+            "0",
+            "1/4"
+          ]
+        ]
+      }
+    },
+    {
+      "file": "finite_h_quarter_certificate_036_bernstein.jsonl.gz",
+      "kind": "bernstein",
+      "entries": 5312,
+      "bytes": 335443,
+      "sha256": "168e32d37a6b07710d38cf309a62eb78596a038fd97308bc233dfad6bb01e763",
+      "metadata": {
+        "check": "Q3c source/gap or head",
+        "age": "8",
+        "g_endpoint": "1/8",
+        "domain": [
+          [
+            "0",
+            "1/10"
+          ],
+          [
+            "0",
+            "1/4"
+          ]
+        ]
+      }
+    },
+    {
+      "file": "finite_h_quarter_certificate_037_power.jsonl.gz",
+      "kind": "power",
+      "entries": 623,
+      "bytes": 9279,
+      "sha256": "5215e2d22c47b7c4b107a47bd1989ae459c26bbde7966f13067c592e3d351959",
+      "metadata": {
+        "check": "Q3c source/gap or head",
+        "age": "8",
+        "g_endpoint": "1/4",
+        "domain": [
+          [
+            "0",
+            "1/10"
+          ],
+          [
+            "0",
+            "1/4"
+          ]
+        ]
+      }
+    },
+    {
+      "file": "finite_h_quarter_certificate_038_bernstein.jsonl.gz",
+      "kind": "bernstein",
+      "entries": 5312,
+      "bytes": 334256,
+      "sha256": "d921c77ac7b2c81133a39cc8e35b877a42373357f8268cdee88c9b7c04bc70ae",
+      "metadata": {
+        "check": "Q3c source/gap or head",
+        "age": "8",
+        "g_endpoint": "1/4",
+        "domain": [
+          [
+            "0",
+            "1/10"
+          ],
+          [
+            "0",
+            "1/4"
+          ]
+        ]
+      }
+    },
+    {
+      "file": "finite_h_quarter_certificate_039_power.jsonl.gz",
+      "kind": "power",
+      "entries": 679,
+      "bytes": 10667,
+      "sha256": "7fbb21729f9619bf4fd999150b81e5b97e93d618e540633b450f842b14a17f82",
+      "metadata": {
+        "check": "Q3c source/gap or head",
+        "age": "9",
+        "g_endpoint": "1/8",
+        "domain": [
+          [
+            "0",
+            "1/10"
+          ],
+          [
+            "0",
+            "1/4"
+          ]
+        ]
+      }
+    },
+    {
+      "file": "finite_h_quarter_certificate_040_bernstein.jsonl.gz",
+      "kind": "bernstein",
+      "entries": 6383,
+      "bytes": 433055,
+      "sha256": "e9bfcfb3c1b763a9cd15dc6041f88c1d3bd53239a708b2c649975d140b6e8d05",
+      "metadata": {
+        "check": "Q3c source/gap or head",
+        "age": "9",
+        "g_endpoint": "1/8",
+        "domain": [
+          [
+            "0",
+            "1/10"
+          ],
+          [
+            "0",
+            "1/4"
+          ]
+        ]
+      }
+    },
+    {
+      "file": "finite_h_quarter_certificate_041_power.jsonl.gz",
+      "kind": "power",
+      "entries": 679,
+      "bytes": 10549,
+      "sha256": "2b69145d3032f339d3036524648f0a603083366989186affc9873f640d3ac11a",
+      "metadata": {
+        "check": "Q3c source/gap or head",
+        "age": "9",
+        "g_endpoint": "1/4",
+        "domain": [
+          [
+            "0",
+            "1/10"
+          ],
+          [
+            "0",
+            "1/4"
+          ]
+        ]
+      }
+    },
+    {
+      "file": "finite_h_quarter_certificate_042_bernstein.jsonl.gz",
+      "kind": "bernstein",
+      "entries": 6383,
+      "bytes": 431611,
+      "sha256": "9e6447215ee2d8867d98e8607be88acd7eaddcf4c80ef8cf827a32c1a3208494",
+      "metadata": {
+        "check": "Q3c source/gap or head",
+        "age": "9",
+        "g_endpoint": "1/4",
+        "domain": [
+          [
+            "0",
+            "1/10"
+          ],
+          [
+            "0",
+            "1/4"
+          ]
+        ]
+      }
+    },
+    {
+      "file": "finite_h_quarter_certificate_043_power.jsonl.gz",
+      "kind": "power",
+      "entries": 735,
+      "bytes": 12136,
+      "sha256": "34112c509077de9baf436a513e66f9709d949d1dbeae6ab628baae985f12fc2d",
+      "metadata": {
+        "check": "Q3c source/gap or head",
+        "age": "10",
+        "g_endpoint": "1/8",
+        "domain": [
+          [
+            "0",
+            "1/10"
+          ],
+          [
+            "0",
+            "1/4"
+          ]
+        ]
+      }
+    },
+    {
+      "file": "finite_h_quarter_certificate_044_bernstein.jsonl.gz",
+      "kind": "bernstein",
+      "entries": 7552,
+      "bytes": 554499,
+      "sha256": "66fa3d86c21fb9652f849d61941de9bdc05f983776bb8d122b2515942eeff10e",
+      "metadata": {
+        "check": "Q3c source/gap or head",
+        "age": "10",
+        "g_endpoint": "1/8",
+        "domain": [
+          [
+            "0",
+            "1/10"
+          ],
+          [
+            "0",
+            "1/4"
+          ]
+        ]
+      }
+    },
+    {
+      "file": "finite_h_quarter_certificate_045_power.jsonl.gz",
+      "kind": "power",
+      "entries": 735,
+      "bytes": 12057,
+      "sha256": "3bdda143668ec6ed49599257814fd0605b0a0d1295bb0ff989c036f019d6ef04",
+      "metadata": {
+        "check": "Q3c source/gap or head",
+        "age": "10",
+        "g_endpoint": "1/4",
+        "domain": [
+          [
+            "0",
+            "1/10"
+          ],
+          [
+            "0",
+            "1/4"
+          ]
+        ]
+      }
+    },
+    {
+      "file": "finite_h_quarter_certificate_046_bernstein.jsonl.gz",
+      "kind": "bernstein",
+      "entries": 7552,
+      "bytes": 553258,
+      "sha256": "69de468000f9676331f3fa903a6e2ff6ee345dfa3879321c0adfd6ee1a528a4a",
+      "metadata": {
+        "check": "Q3c source/gap or head",
+        "age": "10",
+        "g_endpoint": "1/4",
+        "domain": [
+          [
+            "0",
+            "1/10"
+          ],
+          [
+            "0",
+            "1/4"
+          ]
+        ]
+      }
+    },
+    {
+      "file": "finite_h_quarter_certificate_047_power.jsonl.gz",
+      "kind": "power",
+      "entries": 791,
+      "bytes": 13630,
+      "sha256": "922d8e2c17bc98fc45de46e2945b14987f3008610dd4eea10304e4909d45d4cd",
+      "metadata": {
+        "check": "Q3c source/gap or head",
+        "age": "11",
+        "g_endpoint": "1/8",
+        "domain": [
+          [
+            "0",
+            "1/10"
+          ],
+          [
+            "0",
+            "1/4"
+          ]
+        ]
+      }
+    },
+    {
+      "file": "finite_h_quarter_certificate_048_bernstein.jsonl.gz",
+      "kind": "bernstein",
+      "entries": 8819,
+      "bytes": 693856,
+      "sha256": "00b058c0a82f3613772b0c19e27ad8dce0f127f9fa249c42f8f3839563152716",
+      "metadata": {
+        "check": "Q3c source/gap or head",
+        "age": "11",
+        "g_endpoint": "1/8",
+        "domain": [
+          [
+            "0",
+            "1/10"
+          ],
+          [
+            "0",
+            "1/4"
+          ]
+        ]
+      }
+    },
+    {
+      "file": "finite_h_quarter_certificate_049_power.jsonl.gz",
+      "kind": "power",
+      "entries": 791,
+      "bytes": 13455,
+      "sha256": "ebb9863b507292e873db18e9c349a08a5b13ab4c28e02b1f467b9d24257386eb",
+      "metadata": {
+        "check": "Q3c source/gap or head",
+        "age": "11",
+        "g_endpoint": "1/4",
+        "domain": [
+          [
+            "0",
+            "1/10"
+          ],
+          [
+            "0",
+            "1/4"
+          ]
+        ]
+      }
+    },
+    {
+      "file": "finite_h_quarter_certificate_050_bernstein.jsonl.gz",
+      "kind": "bernstein",
+      "entries": 8819,
+      "bytes": 692543,
+      "sha256": "74f43a7331eacc4c16d88b0867387bed124bdf5be2604c8ff841b8ccec196dc2",
+      "metadata": {
+        "check": "Q3c source/gap or head",
+        "age": "11",
+        "g_endpoint": "1/4",
+        "domain": [
+          [
+            "0",
+            "1/10"
+          ],
+          [
+            "0",
+            "1/4"
+          ]
+        ]
+      }
+    },
+    {
+      "file": "finite_h_quarter_certificate_051_power.jsonl.gz",
+      "kind": "power",
+      "entries": 847,
+      "bytes": 15200,
+      "sha256": "f11ad734c6bea86e274c826fab18f11093efb807290d01fcc87cd4d125d05a76",
+      "metadata": {
+        "check": "Q3c source/gap or head",
+        "age": "12",
+        "g_endpoint": "1/8",
+        "domain": [
+          [
+            "0",
+            "1/10"
+          ],
+          [
+            "0",
+            "1/4"
+          ]
+        ]
+      }
+    },
+    {
+      "file": "finite_h_quarter_certificate_052_bernstein.jsonl.gz",
+      "kind": "bernstein",
+      "entries": 10184,
+      "bytes": 853548,
+      "sha256": "043bdfa1d0fbd69f92a68b223be8e6b8cb0e46f918fb027d38cfce000da197ba",
+      "metadata": {
+        "check": "Q3c source/gap or head",
+        "age": "12",
+        "g_endpoint": "1/8",
+        "domain": [
+          [
+            "0",
+            "1/10"
+          ],
+          [
+            "0",
+            "1/4"
+          ]
+        ]
+      }
+    },
+    {
+      "file": "finite_h_quarter_certificate_053_power.jsonl.gz",
+      "kind": "power",
+      "entries": 847,
+      "bytes": 15102,
+      "sha256": "b3d59ff2367ded080a9d397d0de29dd7053238d5ec1ae310b7aedf7c10e93534",
+      "metadata": {
+        "check": "Q3c source/gap or head",
+        "age": "12",
+        "g_endpoint": "1/4",
+        "domain": [
+          [
+            "0",
+            "1/10"
+          ],
+          [
+            "0",
+            "1/4"
+          ]
+        ]
+      }
+    },
+    {
+      "file": "finite_h_quarter_certificate_054_bernstein.jsonl.gz",
+      "kind": "bernstein",
+      "entries": 10184,
+      "bytes": 850391,
+      "sha256": "75f7194a38779405ce69a540fad270c0489dceefe47586468471baa1639e1360",
+      "metadata": {
+        "check": "Q3c source/gap or head",
+        "age": "12",
+        "g_endpoint": "1/4",
+        "domain": [
+          [
+            "0",
+            "1/10"
+          ],
+          [
+            "0",
+            "1/4"
+          ]
+        ]
+      }
+    },
+    {
+      "file": "finite_h_quarter_certificate_055_power.jsonl.gz",
+      "kind": "power",
+      "entries": 903,
+      "bytes": 16882,
+      "sha256": "069522c95acee3e9e88083862c526969545a5115da1d2cd468812126de80b2ef",
+      "metadata": {
+        "check": "Q3c source/gap or head",
+        "age": "13",
+        "g_endpoint": "1/8",
+        "domain": [
+          [
+            "0",
+            "1/10"
+          ],
+          [
+            "0",
+            "1/4"
+          ]
+        ]
+      }
+    },
+    {
+      "file": "finite_h_quarter_certificate_056_bernstein.jsonl.gz",
+      "kind": "bernstein",
+      "entries": 11647,
+      "bytes": 1031674,
+      "sha256": "d21a9cde4511d87a52d856a4541a0214cb1106e0fd01bc6384d84cb87f97dbba",
+      "metadata": {
+        "check": "Q3c source/gap or head",
+        "age": "13",
+        "g_endpoint": "1/8",
+        "domain": [
+          [
+            "0",
+            "1/10"
+          ],
+          [
+            "0",
+            "1/4"
+          ]
+        ]
+      }
+    },
+    {
+      "file": "finite_h_quarter_certificate_057_power.jsonl.gz",
+      "kind": "power",
+      "entries": 903,
+      "bytes": 16733,
+      "sha256": "a2d78b1a5821d145267d2299898bd635e214effc64e327ce3badf7e538d7f44a",
+      "metadata": {
+        "check": "Q3c source/gap or head",
+        "age": "13",
+        "g_endpoint": "1/4",
+        "domain": [
+          [
+            "0",
+            "1/10"
+          ],
+          [
+            "0",
+            "1/4"
+          ]
+        ]
+      }
+    },
+    {
+      "file": "finite_h_quarter_certificate_058_bernstein.jsonl.gz",
+      "kind": "bernstein",
+      "entries": 11647,
+      "bytes": 1028776,
+      "sha256": "718bb5fe03ac3fe639679ac08233c42bddad68046acf1933675d1301f4d907ca",
+      "metadata": {
+        "check": "Q3c source/gap or head",
+        "age": "13",
+        "g_endpoint": "1/4",
+        "domain": [
+          [
+            "0",
+            "1/10"
+          ],
+          [
+            "0",
+            "1/4"
+          ]
+        ]
+      }
+    },
+    {
+      "file": "finite_h_quarter_certificate_059_power.jsonl.gz",
+      "kind": "power",
+      "entries": 959,
+      "bytes": 18598,
+      "sha256": "5daba1e50ac6765cd479c199bfda76f31bc46dda69c801f1ec044b2b276d86b1",
+      "metadata": {
+        "check": "Q3c source/gap or head",
+        "age": "14",
+        "g_endpoint": "1/8",
+        "domain": [
+          [
+            "0",
+            "1/10"
+          ],
+          [
+            "0",
+            "1/4"
+          ]
+        ]
+      }
+    },
+    {
+      "file": "finite_h_quarter_certificate_060_bernstein.jsonl.gz",
+      "kind": "bernstein",
+      "entries": 13208,
+      "bytes": 1240062,
+      "sha256": "b3f13408190c65a49e44ae690de6318466f619f19683d555cd450316da42a84d",
+      "metadata": {
+        "check": "Q3c source/gap or head",
+        "age": "14",
+        "g_endpoint": "1/8",
+        "domain": [
+          [
+            "0",
+            "1/10"
+          ],
+          [
+            "0",
+            "1/4"
+          ]
+        ]
+      }
+    },
+    {
+      "file": "finite_h_quarter_certificate_061_power.jsonl.gz",
+      "kind": "power",
+      "entries": 959,
+      "bytes": 18359,
+      "sha256": "2ba70fd8a7463e51d84bd729757fcf51b128ebf9fc743add74199107b7b3c526",
+      "metadata": {
+        "check": "Q3c source/gap or head",
+        "age": "14",
+        "g_endpoint": "1/4",
+        "domain": [
+          [
+            "0",
+            "1/10"
+          ],
+          [
+            "0",
+            "1/4"
+          ]
+        ]
+      }
+    },
+    {
+      "file": "finite_h_quarter_certificate_062_bernstein.jsonl.gz",
+      "kind": "bernstein",
+      "entries": 13208,
+      "bytes": 1236525,
+      "sha256": "2bb07188a8c7b62a2102f0b67449c0a29b493398cd1f439e8d22ceb093047aa3",
+      "metadata": {
+        "check": "Q3c source/gap or head",
+        "age": "14",
+        "g_endpoint": "1/4",
+        "domain": [
+          [
+            "0",
+            "1/10"
+          ],
+          [
+            "0",
+            "1/4"
+          ]
+        ]
+      }
+    },
+    {
+      "file": "finite_h_quarter_certificate_063_power.jsonl.gz",
+      "kind": "power",
+      "entries": 1015,
+      "bytes": 20203,
+      "sha256": "087eaf9c5be47a6840126bc86aef2b5804c20ed58dce82afd7fceb6eaca07fde",
+      "metadata": {
+        "check": "Q3c source/gap or head",
+        "age": "15",
+        "g_endpoint": "1/8",
+        "domain": [
+          [
+            "0",
+            "1/10"
+          ],
+          [
+            "0",
+            "1/4"
+          ]
+        ]
+      }
+    },
+    {
+      "file": "finite_h_quarter_certificate_064_bernstein.jsonl.gz",
+      "kind": "bernstein",
+      "entries": 14867,
+      "bytes": 1457203,
+      "sha256": "7ff5372b3dd0a214cceca30ea1e391bc788fda2cdd7b19cff4bb591da7a0bf38",
+      "metadata": {
+        "check": "Q3c source/gap or head",
+        "age": "15",
+        "g_endpoint": "1/8",
+        "domain": [
+          [
+            "0",
+            "1/10"
+          ],
+          [
+            "0",
+            "1/4"
+          ]
+        ]
+      }
+    },
+    {
+      "file": "finite_h_quarter_certificate_065_power.jsonl.gz",
+      "kind": "power",
+      "entries": 1015,
+      "bytes": 19954,
+      "sha256": "c4ba5b2702838b4e02e961cf4aafb75a6a99f84fbb424d5b4227180b3698ac61",
+      "metadata": {
+        "check": "Q3c source/gap or head",
+        "age": "15",
+        "g_endpoint": "1/4",
+        "domain": [
+          [
+            "0",
+            "1/10"
+          ],
+          [
+            "0",
+            "1/4"
+          ]
+        ]
+      }
+    },
+    {
+      "file": "finite_h_quarter_certificate_066_bernstein.jsonl.gz",
+      "kind": "bernstein",
+      "entries": 14867,
+      "bytes": 1454084,
+      "sha256": "d9d49ffbee6ed6c8ec6fbe8e42c191a42b54d11b895d3230446850aaf102df98",
+      "metadata": {
+        "check": "Q3c source/gap or head",
+        "age": "15",
+        "g_endpoint": "1/4",
+        "domain": [
+          [
+            "0",
+            "1/10"
+          ],
+          [
+            "0",
+            "1/4"
+          ]
+        ]
+      }
+    },
+    {
+      "file": "finite_h_quarter_certificate_067_power.jsonl.gz",
+      "kind": "power",
+      "entries": 1071,
+      "bytes": 22111,
+      "sha256": "b4f4f5cea11e2aa103a48cc1175268fc46be5bad43e4f116d6098e53794e0064",
+      "metadata": {
+        "check": "Q3c source/gap or head",
+        "age": "16",
+        "g_endpoint": "1/8",
+        "domain": [
+          [
+            "0",
+            "1/10"
+          ],
+          [
+            "0",
+            "1/4"
+          ]
+        ]
+      }
+    },
+    {
+      "file": "finite_h_quarter_certificate_068_bernstein.jsonl.gz",
+      "kind": "bernstein",
+      "entries": 16624,
+      "bytes": 1727689,
+      "sha256": "459460701fe218c496d62d8e4a3bb103cc339b04b90e519fa80c1a755fd4c08a",
+      "metadata": {
+        "check": "Q3c source/gap or head",
+        "age": "16",
+        "g_endpoint": "1/8",
+        "domain": [
+          [
+            "0",
+            "1/10"
+          ],
+          [
+            "0",
+            "1/4"
+          ]
+        ]
+      }
+    },
+    {
+      "file": "finite_h_quarter_certificate_069_power.jsonl.gz",
+      "kind": "power",
+      "entries": 1071,
+      "bytes": 21956,
+      "sha256": "db2181ed9b32a37fe13aa6197b7f153e2355124acc8b6c3f8c768b57b7822973",
+      "metadata": {
+        "check": "Q3c source/gap or head",
+        "age": "16",
+        "g_endpoint": "1/4",
+        "domain": [
+          [
+            "0",
+            "1/10"
+          ],
+          [
+            "0",
+            "1/4"
+          ]
+        ]
+      }
+    },
+    {
+      "file": "finite_h_quarter_certificate_070_bernstein.jsonl.gz",
+      "kind": "bernstein",
+      "entries": 16624,
+      "bytes": 1724117,
+      "sha256": "f02dc51e52e6dbe2f4ae09f0d4e1471e11a4092f77eb5d7c1d0c2d4c24ba2e0b",
+      "metadata": {
+        "check": "Q3c source/gap or head",
+        "age": "16",
+        "g_endpoint": "1/4",
+        "domain": [
+          [
+            "0",
+            "1/10"
+          ],
+          [
+            "0",
+            "1/4"
+          ]
+        ]
+      }
+    },
+    {
+      "file": "finite_h_quarter_certificate_071_power.jsonl.gz",
+      "kind": "power",
+      "entries": 1127,
+      "bytes": 23859,
+      "sha256": "de22ff7474d1812ba90b190388a24b1df5fdb700e9bfd20924b186bd57a1ce2b",
+      "metadata": {
+        "check": "Q3c source/gap or head",
+        "age": "17",
+        "g_endpoint": "1/8",
+        "domain": [
+          [
+            "0",
+            "1/10"
+          ],
+          [
+            "0",
+            "1/4"
+          ]
+        ]
+      }
+    },
+    {
+      "file": "finite_h_quarter_certificate_072_bernstein.jsonl.gz",
+      "kind": "bernstein",
+      "entries": 18479,
+      "bytes": 1998681,
+      "sha256": "b5b8259e2277b96a080a3275f5e22cfc0ad02a1ac3d4b85a8703d81ec1961b3b",
+      "metadata": {
+        "check": "Q3c source/gap or head",
+        "age": "17",
+        "g_endpoint": "1/8",
+        "domain": [
+          [
+            "0",
+            "1/10"
+          ],
+          [
+            "0",
+            "1/4"
+          ]
+        ]
+      }
+    },
+    {
+      "file": "finite_h_quarter_certificate_073_power.jsonl.gz",
+      "kind": "power",
+      "entries": 1127,
+      "bytes": 23723,
+      "sha256": "0926dfe6578cae73da815fdacfbd77ced667ddcee5c6bedfbb9b3896de9961b2",
+      "metadata": {
+        "check": "Q3c source/gap or head",
+        "age": "17",
+        "g_endpoint": "1/4",
+        "domain": [
+          [
+            "0",
+            "1/10"
+          ],
+          [
+            "0",
+            "1/4"
+          ]
+        ]
+      }
+    },
+    {
+      "file": "finite_h_quarter_certificate_074_bernstein.jsonl.gz",
+      "kind": "bernstein",
+      "entries": 18479,
+      "bytes": 1995286,
+      "sha256": "f85d2f3c28a1fdfb2d8931bc473475b36f6bf254fe4cc637cc2c75505eab4e10",
+      "metadata": {
+        "check": "Q3c source/gap or head",
+        "age": "17",
+        "g_endpoint": "1/4",
+        "domain": [
+          [
+            "0",
+            "1/10"
+          ],
+          [
+            "0",
+            "1/4"
+          ]
+        ]
+      }
+    },
+    {
+      "file": "finite_h_quarter_certificate_075_power.jsonl.gz",
+      "kind": "power",
+      "entries": 1183,
+      "bytes": 25993,
+      "sha256": "c6cd2be139b1769e909d883c662e525a71a2d02fce22e52b969207a513e041db",
+      "metadata": {
+        "check": "Q3c source/gap or head",
+        "age": "18",
+        "g_endpoint": "1/8",
+        "domain": [
+          [
+            "0",
+            "1/10"
+          ],
+          [
+            "0",
+            "1/4"
+          ]
+        ]
+      }
+    },
+    {
+      "file": "finite_h_quarter_certificate_076_bernstein.jsonl.gz",
+      "kind": "bernstein",
+      "entries": 20432,
+      "bytes": 2328077,
+      "sha256": "a29cd5b4dd57c91a90ea75f04adf2c3f8dd9e290d6c0e24b0b450da3eed8ede6",
+      "metadata": {
+        "check": "Q3c source/gap or head",
+        "age": "18",
+        "g_endpoint": "1/8",
+        "domain": [
+          [
+            "0",
+            "1/10"
+          ],
+          [
+            "0",
+            "1/4"
+          ]
+        ]
+      }
+    },
+    {
+      "file": "finite_h_quarter_certificate_077_power.jsonl.gz",
+      "kind": "power",
+      "entries": 1183,
+      "bytes": 25792,
+      "sha256": "7207fe640bbf65bb772cd5f34e7d3d525c24a3af962ff8fb9d12c45459daa884",
+      "metadata": {
+        "check": "Q3c source/gap or head",
+        "age": "18",
+        "g_endpoint": "1/4",
+        "domain": [
+          [
+            "0",
+            "1/10"
+          ],
+          [
+            "0",
+            "1/4"
+          ]
+        ]
+      }
+    },
+    {
+      "file": "finite_h_quarter_certificate_078_bernstein.jsonl.gz",
+      "kind": "bernstein",
+      "entries": 20432,
+      "bytes": 2322822,
+      "sha256": "9de08ac600af2a41b83ab6410e5599124b0bfd16b4a971f813fd0793084eeb32",
+      "metadata": {
+        "check": "Q3c source/gap or head",
+        "age": "18",
+        "g_endpoint": "1/4",
+        "domain": [
+          [
+            "0",
+            "1/10"
+          ],
+          [
+            "0",
+            "1/4"
+          ]
+        ]
+      }
+    },
+    {
+      "file": "finite_h_quarter_certificate_079_power.jsonl.gz",
+      "kind": "power",
+      "entries": 1239,
+      "bytes": 28014,
+      "sha256": "0f8cc066532d313673ac887036e6d8773491a5434780577eafcf3500e3b4ec6f",
+      "metadata": {
+        "check": "Q3c source/gap or head",
+        "age": "19",
+        "g_endpoint": "1/8",
+        "domain": [
+          [
+            "0",
+            "1/10"
+          ],
+          [
+            "0",
+            "1/4"
+          ]
+        ]
+      }
+    },
+    {
+      "file": "finite_h_quarter_certificate_080_bernstein.jsonl.gz",
+      "kind": "bernstein",
+      "entries": 22483,
+      "bytes": 2669073,
+      "sha256": "d5320c7ffb2441ec71f4c75e25e997f819b926248cb3617ed1c30558914a9b21",
+      "metadata": {
+        "check": "Q3c source/gap or head",
+        "age": "19",
+        "g_endpoint": "1/8",
+        "domain": [
+          [
+            "0",
+            "1/10"
+          ],
+          [
+            "0",
+            "1/4"
+          ]
+        ]
+      }
+    },
+    {
+      "file": "finite_h_quarter_certificate_081_power.jsonl.gz",
+      "kind": "power",
+      "entries": 1239,
+      "bytes": 27799,
+      "sha256": "b71b72417d8451a508170ed11da20e7fac6aa7823e69464304b1acd148c6fceb",
+      "metadata": {
+        "check": "Q3c source/gap or head",
+        "age": "19",
+        "g_endpoint": "1/4",
+        "domain": [
+          [
+            "0",
+            "1/10"
+          ],
+          [
+            "0",
+            "1/4"
+          ]
+        ]
+      }
+    },
+    {
+      "file": "finite_h_quarter_certificate_082_bernstein.jsonl.gz",
+      "kind": "bernstein",
+      "entries": 22483,
+      "bytes": 2666000,
+      "sha256": "047a3721371ca49a462a655170947611f478d0007e13bf1ba5b277b9b77b4cab",
+      "metadata": {
+        "check": "Q3c source/gap or head",
+        "age": "19",
+        "g_endpoint": "1/4",
+        "domain": [
+          [
+            "0",
+            "1/10"
+          ],
+          [
+            "0",
+            "1/4"
+          ]
+        ]
+      }
+    },
+    {
+      "file": "finite_h_quarter_certificate_083_power.jsonl.gz",
+      "kind": "power",
+      "entries": 1295,
+      "bytes": 30161,
+      "sha256": "03270fb662ec4072d2925680cd739516d01204352557dac83f7454a7b304bff3",
+      "metadata": {
+        "check": "Q3c source/gap or head",
+        "age": "20",
+        "g_endpoint": "1/8",
+        "domain": [
+          [
+            "0",
+            "1/10"
+          ],
+          [
+            "0",
+            "1/4"
+          ]
+        ]
+      }
+    },
+    {
+      "file": "finite_h_quarter_certificate_084_bernstein.jsonl.gz",
+      "kind": "bernstein",
+      "entries": 24632,
+      "bytes": 3043188,
+      "sha256": "ff99445bd937fd87e55839f55878a6e35c7d58f82dba8f6f7444319f4f0cc897",
+      "metadata": {
+        "check": "Q3c source/gap or head",
+        "age": "20",
+        "g_endpoint": "1/8",
+        "domain": [
+          [
+            "0",
+            "1/10"
+          ],
+          [
+            "0",
+            "1/4"
+          ]
+        ]
+      }
+    },
+    {
+      "file": "finite_h_quarter_certificate_085_power.jsonl.gz",
+      "kind": "power",
+      "entries": 1295,
+      "bytes": 29992,
+      "sha256": "ef3a60d0b474166258bd2d2fc0b1388a62027b1257b6edc6e8dd1d15a2648376",
+      "metadata": {
+        "check": "Q3c source/gap or head",
+        "age": "20",
+        "g_endpoint": "1/4",
+        "domain": [
+          [
+            "0",
+            "1/10"
+          ],
+          [
+            "0",
+            "1/4"
+          ]
+        ]
+      }
+    },
+    {
+      "file": "finite_h_quarter_certificate_086_bernstein.jsonl.gz",
+      "kind": "bernstein",
+      "entries": 24632,
+      "bytes": 3036740,
+      "sha256": "bf912d27731765f1c1111498bf1a9b0bf18db458e19f6cc24dd9a33c59d4655b",
+      "metadata": {
+        "check": "Q3c source/gap or head",
+        "age": "20",
+        "g_endpoint": "1/4",
+        "domain": [
+          [
+            "0",
+            "1/10"
+          ],
+          [
+            "0",
+            "1/4"
+          ]
+        ]
+      }
+    },
+    {
+      "file": "finite_h_quarter_certificate_087_power.jsonl.gz",
+      "kind": "power",
+      "entries": 1351,
+      "bytes": 32401,
+      "sha256": "d96dcff974f08fc093c834d7c306c492e545c816f1dc17592467d4d8aab54612",
+      "metadata": {
+        "check": "Q3c source/gap or head",
+        "age": "21",
+        "g_endpoint": "1/8",
+        "domain": [
+          [
+            "0",
+            "1/10"
+          ],
+          [
+            "0",
+            "1/4"
+          ]
+        ]
+      }
+    },
+    {
+      "file": "finite_h_quarter_certificate_088_bernstein.jsonl.gz",
+      "kind": "bernstein",
+      "entries": 26879,
+      "bytes": 3477321,
+      "sha256": "4b9d2222d0240c6f8a7177389aaf98db9b27c7dc7296f33b1cf7dfa7a92b9f17",
+      "metadata": {
+        "check": "Q3c source/gap or head",
+        "age": "21",
+        "g_endpoint": "1/8",
+        "domain": [
+          [
+            "0",
+            "1/10"
+          ],
+          [
+            "0",
+            "1/4"
+          ]
+        ]
+      }
+    },
+    {
+      "file": "finite_h_quarter_certificate_089_power.jsonl.gz",
+      "kind": "power",
+      "entries": 1351,
+      "bytes": 32147,
+      "sha256": "a3a3ebc3d2532856e085d1147298d3f245353815933c648743d8200032c08120",
+      "metadata": {
+        "check": "Q3c source/gap or head",
+        "age": "21",
+        "g_endpoint": "1/4",
+        "domain": [
+          [
+            "0",
+            "1/10"
+          ],
+          [
+            "0",
+            "1/4"
+          ]
+        ]
+      }
+    },
+    {
+      "file": "finite_h_quarter_certificate_090_bernstein.jsonl.gz",
+      "kind": "bernstein",
+      "entries": 26879,
+      "bytes": 3472241,
+      "sha256": "4a27d696a6b1b301422fdfd44024fc5ce4b30dde51fadb4b786dcfbb8543329c",
+      "metadata": {
+        "check": "Q3c source/gap or head",
+        "age": "21",
+        "g_endpoint": "1/4",
+        "domain": [
+          [
+            "0",
+            "1/10"
+          ],
+          [
+            "0",
+            "1/4"
+          ]
+        ]
+      }
+    },
+    {
+      "file": "finite_h_quarter_certificate_091_power.jsonl.gz",
+      "kind": "power",
+      "entries": 1407,
+      "bytes": 34672,
+      "sha256": "49ee5f20c9d16be0edb364585d7244d885dab11ec777b106ec8066f0f3ebe413",
+      "metadata": {
+        "check": "Q3c source/gap or head",
+        "age": "22",
+        "g_endpoint": "1/8",
+        "domain": [
+          [
+            "0",
+            "1/10"
+          ],
+          [
+            "0",
+            "1/4"
+          ]
+        ]
+      }
+    },
+    {
+      "file": "finite_h_quarter_certificate_092_bernstein.jsonl.gz",
+      "kind": "bernstein",
+      "entries": 29224,
+      "bytes": 3935431,
+      "sha256": "319bd561a885987b5d61f170bfa9db7b65307a9e1168ff5b91b207f7f23665b2",
+      "metadata": {
+        "check": "Q3c source/gap or head",
+        "age": "22",
+        "g_endpoint": "1/8",
+        "domain": [
+          [
+            "0",
+            "1/10"
+          ],
+          [
+            "0",
+            "1/4"
+          ]
+        ]
+      }
+    },
+    {
+      "file": "finite_h_quarter_certificate_093_power.jsonl.gz",
+      "kind": "power",
+      "entries": 1407,
+      "bytes": 34451,
+      "sha256": "292066911309239fc4da77e95dbc978c2e43300fd66e6c0c6af400e5bc793730",
+      "metadata": {
+        "check": "Q3c source/gap or head",
+        "age": "22",
+        "g_endpoint": "1/4",
+        "domain": [
+          [
+            "0",
+            "1/10"
+          ],
+          [
+            "0",
+            "1/4"
+          ]
+        ]
+      }
+    },
+    {
+      "file": "finite_h_quarter_certificate_094_bernstein.jsonl.gz",
+      "kind": "bernstein",
+      "entries": 29224,
+      "bytes": 3928119,
+      "sha256": "1e5444690a72602f865b7a9be96c78c87a0b06a8d408d04faad363a97b183d7a",
+      "metadata": {
+        "check": "Q3c source/gap or head",
+        "age": "22",
+        "g_endpoint": "1/4",
+        "domain": [
+          [
+            "0",
+            "1/10"
+          ],
+          [
+            "0",
+            "1/4"
+          ]
+        ]
+      }
+    },
+    {
+      "file": "finite_h_quarter_certificate_095_power.jsonl.gz",
+      "kind": "power",
+      "entries": 1463,
+      "bytes": 36884,
+      "sha256": "c59745621db971cec14cd08f173a134302f703e325b283993f1ca34131e2f21a",
+      "metadata": {
+        "check": "Q3c source/gap or head",
+        "age": "23",
+        "g_endpoint": "1/8",
+        "domain": [
+          [
+            "0",
+            "1/10"
+          ],
+          [
+            "0",
+            "1/4"
+          ]
+        ]
+      }
+    },
+    {
+      "file": "finite_h_quarter_certificate_096_bernstein.jsonl.gz",
+      "kind": "bernstein",
+      "entries": 31667,
+      "bytes": 4414737,
+      "sha256": "2d1a22194090d260d3f0eacbcdd524b09a36fb2397a288750d97070a4b398f1f",
+      "metadata": {
+        "check": "Q3c source/gap or head",
+        "age": "23",
+        "g_endpoint": "1/8",
+        "domain": [
+          [
+            "0",
+            "1/10"
+          ],
+          [
+            "0",
+            "1/4"
+          ]
+        ]
+      }
+    },
+    {
+      "file": "finite_h_quarter_certificate_097_power.jsonl.gz",
+      "kind": "power",
+      "entries": 1463,
+      "bytes": 36594,
+      "sha256": "345ddfb5635c1ddb4802a1a86a461ae9580bdb60a7615569498682f645f8b4aa",
+      "metadata": {
+        "check": "Q3c source/gap or head",
+        "age": "23",
+        "g_endpoint": "1/4",
+        "domain": [
+          [
+            "0",
+            "1/10"
+          ],
+          [
+            "0",
+            "1/4"
+          ]
+        ]
+      }
+    },
+    {
+      "file": "finite_h_quarter_certificate_098_bernstein.jsonl.gz",
+      "kind": "bernstein",
+      "entries": 31667,
+      "bytes": 4408927,
+      "sha256": "8025504280b16feb35762fab6c418622cc4fd6d05a6140750ee790b81c734ee9",
+      "metadata": {
+        "check": "Q3c source/gap or head",
+        "age": "23",
+        "g_endpoint": "1/4",
+        "domain": [
+          [
+            "0",
+            "1/10"
+          ],
+          [
+            "0",
+            "1/4"
+          ]
+        ]
+      }
+    },
+    {
+      "file": "finite_h_quarter_certificate_099_power.jsonl.gz",
+      "kind": "power",
+      "entries": 1519,
+      "bytes": 39314,
+      "sha256": "00b28737c892153161de87c645de66e202c32abc7d08a763dff3ac32a6e70d97",
+      "metadata": {
+        "check": "Q3c source/gap or head",
+        "age": "24",
+        "g_endpoint": "1/8",
+        "domain": [
+          [
+            "0",
+            "1/10"
+          ],
+          [
+            "0",
+            "1/4"
+          ]
+        ]
+      }
+    },
+    {
+      "file": "finite_h_quarter_certificate_100_bernstein.jsonl.gz",
+      "kind": "bernstein",
+      "entries": 34208,
+      "bytes": 4936119,
+      "sha256": "be71c063aafc591287f52113cebe9c3a6ccda29ceb50f672ddf7ed2ee16095c4",
+      "metadata": {
+        "check": "Q3c source/gap or head",
+        "age": "24",
+        "g_endpoint": "1/8",
+        "domain": [
+          [
+            "0",
+            "1/10"
+          ],
+          [
+            "0",
+            "1/4"
+          ]
+        ]
+      }
+    },
+    {
+      "file": "finite_h_quarter_certificate_101_power.jsonl.gz",
+      "kind": "power",
+      "entries": 1519,
+      "bytes": 39017,
+      "sha256": "8fe3a94c871b03a64eda63da2897202b2c4d20332d634f9a7f7d3b46c4fa4e5a",
+      "metadata": {
+        "check": "Q3c source/gap or head",
+        "age": "24",
+        "g_endpoint": "1/4",
+        "domain": [
+          [
+            "0",
+            "1/10"
+          ],
+          [
+            "0",
+            "1/4"
+          ]
+        ]
+      }
+    },
+    {
+      "file": "finite_h_quarter_certificate_102_bernstein.jsonl.gz",
+      "kind": "bernstein",
+      "entries": 34208,
+      "bytes": 4927692,
+      "sha256": "41386ebcb933becaf8bd14826e7a8fc758d924db0db076f8687d1dd7393e0fa8",
+      "metadata": {
+        "check": "Q3c source/gap or head",
+        "age": "24",
+        "g_endpoint": "1/4",
+        "domain": [
+          [
+            "0",
+            "1/10"
+          ],
+          [
+            "0",
+            "1/4"
+          ]
+        ]
+      }
+    }
+  ],
+  "table_count": 239,
+  "compressed_bytes": 78719143,
+  "stored_rational_entries": 886006
+}

@@ -1,0 +1,1533 @@
+[
+  {
+    "file": "mid_q_full_same_e_certificate_001_power.jsonl.gz",
+    "kind": "power",
+    "entries": 124,
+    "bytes": 1890,
+    "sha256": "94b8b90aad7f65a0206e17fddcc2c69a60c436424b156bf2aaac24ab5e4a19c2",
+    "metadata": {
+      "check": "theta",
+      "coordinate": "x=1/10+7*w/30; h in [0,1/2]"
+    }
+  },
+  {
+    "file": "mid_q_full_same_e_certificate_002_bernstein.jsonl.gz",
+    "kind": "bernstein",
+    "entries": 160,
+    "bytes": 2841,
+    "sha256": "db4359fe0f73e87e657610d4f85238c22d62cc60e5c87507b6d64e588a12b77e",
+    "metadata": {
+      "check": "theta",
+      "domain": [
+        [
+          "0",
+          "1"
+        ],
+        [
+          "0",
+          "1/2"
+        ]
+      ]
+    }
+  },
+  {
+    "file": "mid_q_full_same_e_certificate_003_power.jsonl.gz",
+    "kind": "power",
+    "entries": 499,
+    "bytes": 5519,
+    "sha256": "dc319aaa6703691be8607bb420dae3d14169f070301c6844cd8b91d4cb4a4e42",
+    "metadata": {
+      "family": "H",
+      "kind": "slope",
+      "theta": "0",
+      "x": "1/10+7*w/30",
+      "h": [
+        "0",
+        "1/2"
+      ],
+      "v": [
+        "0",
+        "1"
+      ]
+    }
+  },
+  {
+    "file": "mid_q_full_same_e_certificate_004_mixed_bernstein_power.jsonl.gz",
+    "kind": "mixed_bernstein_power",
+    "entries": 735,
+    "bytes": 11035,
+    "sha256": "4acf482d4fbd382fe8f5b96c5f815a9d9e1184b6c4be2802ac2b0b21eb83003c",
+    "metadata": {
+      "family": "H",
+      "kind": "slope",
+      "theta": "0"
+    }
+  },
+  {
+    "file": "mid_q_full_same_e_certificate_005_bernstein.jsonl.gz",
+    "kind": "bernstein",
+    "entries": 735,
+    "bytes": 11625,
+    "sha256": "a9267285e4eca0c0618138fb969ede556ed40f966a4d9225a27274372eb85186",
+    "metadata": {
+      "family": "H",
+      "kind": "slope",
+      "theta": "0",
+      "x": "1/10+7*w/30",
+      "h": [
+        "0",
+        "1/2"
+      ],
+      "v": [
+        "0",
+        "1"
+      ]
+    }
+  },
+  {
+    "file": "mid_q_full_same_e_certificate_006_power.jsonl.gz",
+    "kind": "power",
+    "entries": 889,
+    "bytes": 11688,
+    "sha256": "a36286613dbe00ee9f6c20f1caabf0d3e2937bdede59637da453e13f64241c1c",
+    "metadata": {
+      "family": "H",
+      "kind": "slope",
+      "theta": "1 - 1/(6*q + 6)",
+      "x": "1/10+7*w/30",
+      "h": [
+        "0",
+        "1/2"
+      ],
+      "v": [
+        "0",
+        "1"
+      ]
+    }
+  },
+  {
+    "file": "mid_q_full_same_e_certificate_007_mixed_bernstein_power.jsonl.gz",
+    "kind": "mixed_bernstein_power",
+    "entries": 1207,
+    "bytes": 21223,
+    "sha256": "85245df455cceecce8429397489ad1ed850d631bb5635c3cb3d4c63082b7f847",
+    "metadata": {
+      "family": "H",
+      "kind": "slope",
+      "theta": "1 - 1/(6*q + 6)"
+    }
+  },
+  {
+    "file": "mid_q_full_same_e_certificate_008_bernstein.jsonl.gz",
+    "kind": "bernstein",
+    "entries": 1207,
+    "bytes": 22150,
+    "sha256": "320796bdd52b31ca8724e9937d5a94b3c694cb4bc2b06666e5af6511581fe840",
+    "metadata": {
+      "family": "H",
+      "kind": "slope",
+      "theta": "1 - 1/(6*q + 6)",
+      "x": "1/10+7*w/30",
+      "h": [
+        "0",
+        "1/2"
+      ],
+      "v": [
+        "0",
+        "1"
+      ]
+    }
+  },
+  {
+    "file": "mid_q_full_same_e_certificate_009_power.jsonl.gz",
+    "kind": "power",
+    "entries": 4330,
+    "bytes": 73196,
+    "sha256": "e290d4ce22d53f8e36a0574706f4510542f60c03792638c3c8e52e654586e641",
+    "metadata": {
+      "family": "H",
+      "kind": "price",
+      "theta": "0",
+      "x": "1/10+7*w/30",
+      "h": [
+        "0",
+        "1/2"
+      ],
+      "v": [
+        "0",
+        "1"
+      ]
+    }
+  },
+  {
+    "file": "mid_q_full_same_e_certificate_010_mixed_bernstein_power.jsonl.gz",
+    "kind": "mixed_bernstein_power",
+    "entries": 7719,
+    "bytes": 217517,
+    "sha256": "8741abb402506295431e36312d1922ef0db5832da4b31310f6b8973ab21174bf",
+    "metadata": {
+      "family": "H",
+      "kind": "price",
+      "theta": "0"
+    }
+  },
+  {
+    "file": "mid_q_full_same_e_certificate_011_bernstein.jsonl.gz",
+    "kind": "bernstein",
+    "entries": 7719,
+    "bytes": 234759,
+    "sha256": "ae2dd3b89f9cb98f5f4d16b1fa0cc00f195f9874661a696e08e4fbed96d3f7c7",
+    "metadata": {
+      "family": "H",
+      "kind": "price",
+      "theta": "0",
+      "x": "1/10+7*w/30",
+      "h": [
+        "0",
+        "1/2"
+      ],
+      "v": [
+        "0",
+        "1"
+      ]
+    }
+  },
+  {
+    "file": "mid_q_full_same_e_certificate_012_power.jsonl.gz",
+    "kind": "power",
+    "entries": 5849,
+    "bytes": 109205,
+    "sha256": "bdf48d3342394147a23214afee6ba73a319025fae528a173f0ac86d7e35e21f7",
+    "metadata": {
+      "family": "H",
+      "kind": "price",
+      "theta": "1 - 1/(6*q + 6)",
+      "x": "1/10+7*w/30",
+      "h": [
+        "0",
+        "1/2"
+      ],
+      "v": [
+        "0",
+        "1"
+      ]
+    }
+  },
+  {
+    "file": "mid_q_full_same_e_certificate_013_mixed_bernstein_power.jsonl.gz",
+    "kind": "mixed_bernstein_power",
+    "entries": 9735,
+    "bytes": 304456,
+    "sha256": "77483c13172521b78372a5da00b1a48e3b4c5de0b99366bd1af2a83ee9b8c96b",
+    "metadata": {
+      "family": "H",
+      "kind": "price",
+      "theta": "1 - 1/(6*q + 6)"
+    }
+  },
+  {
+    "file": "mid_q_full_same_e_certificate_014_bernstein.jsonl.gz",
+    "kind": "bernstein",
+    "entries": 9768,
+    "bytes": 330126,
+    "sha256": "989c671c31443597131e980921027c6f0d6cf8d6d73af9bda00335a8612705cc",
+    "metadata": {
+      "family": "H",
+      "kind": "price",
+      "theta": "1 - 1/(6*q + 6)",
+      "x": "1/10+7*w/30",
+      "h": [
+        "0",
+        "1/2"
+      ],
+      "v": [
+        "0",
+        "1"
+      ]
+    }
+  },
+  {
+    "file": "mid_q_full_same_e_certificate_015_sturm_input.jsonl.gz",
+    "kind": "sturm_input",
+    "entries": 10,
+    "bytes": 414,
+    "sha256": "1808c756aaa68a9d0af151921967620e8747e89659be633fbf4295de42d1c647",
+    "metadata": {
+      "family": "H",
+      "kind": "price",
+      "theta": "1 - 1/(6*q + 6)",
+      "group": [
+        0,
+        0
+      ],
+      "interval": [
+        "0",
+        "1"
+      ]
+    }
+  },
+  {
+    "file": "mid_q_full_same_e_certificate_016_sturm_sequence.jsonl.gz",
+    "kind": "sturm_sequence",
+    "entries": 64,
+    "bytes": 3684,
+    "sha256": "b68527b67bb2b8c6a05c8a6b67a5f6433ad2e3030330cc2cbbe142b843aa27c8",
+    "metadata": {
+      "family": "H",
+      "kind": "price",
+      "theta": "1 - 1/(6*q + 6)",
+      "group": [
+        0,
+        0
+      ],
+      "interval": [
+        "0",
+        "1"
+      ]
+    }
+  },
+  {
+    "file": "mid_q_full_same_e_certificate_017_sturm_input.jsonl.gz",
+    "kind": "sturm_input",
+    "entries": 10,
+    "bytes": 407,
+    "sha256": "4aad193bfd2aae9ce780c0678b09cb39e050efcd5a7e3fee2de8144fad9eeb28",
+    "metadata": {
+      "family": "H",
+      "kind": "price",
+      "theta": "1 - 1/(6*q + 6)",
+      "group": [
+        1,
+        0
+      ],
+      "interval": [
+        "0",
+        "1"
+      ]
+    }
+  },
+  {
+    "file": "mid_q_full_same_e_certificate_018_sturm_sequence.jsonl.gz",
+    "kind": "sturm_sequence",
+    "entries": 64,
+    "bytes": 5718,
+    "sha256": "23065d0cf8ac574e6f125ec16702d7f5655785d707d1cd0b83a2b289d1bef26f",
+    "metadata": {
+      "family": "H",
+      "kind": "price",
+      "theta": "1 - 1/(6*q + 6)",
+      "group": [
+        1,
+        0
+      ],
+      "interval": [
+        "0",
+        "1"
+      ]
+    }
+  },
+  {
+    "file": "mid_q_full_same_e_certificate_019_sturm_input.jsonl.gz",
+    "kind": "sturm_input",
+    "entries": 10,
+    "bytes": 421,
+    "sha256": "6529ceeea9e9d5a8e886d11c0e638fddc0a67db29393864120f4b38bfbe71c80",
+    "metadata": {
+      "family": "H",
+      "kind": "price",
+      "theta": "1 - 1/(6*q + 6)",
+      "group": [
+        2,
+        0
+      ],
+      "interval": [
+        "0",
+        "1"
+      ]
+    }
+  },
+  {
+    "file": "mid_q_full_same_e_certificate_020_sturm_sequence.jsonl.gz",
+    "kind": "sturm_sequence",
+    "entries": 64,
+    "bytes": 7459,
+    "sha256": "be473ae2a7a534c67c31767154bc51e2bebd9fa6551efed5965064c8333b79ce",
+    "metadata": {
+      "family": "H",
+      "kind": "price",
+      "theta": "1 - 1/(6*q + 6)",
+      "group": [
+        2,
+        0
+      ],
+      "interval": [
+        "0",
+        "1"
+      ]
+    }
+  },
+  {
+    "file": "mid_q_full_same_e_certificate_021_sturm_input.jsonl.gz",
+    "kind": "sturm_input",
+    "entries": 10,
+    "bytes": 429,
+    "sha256": "0eb5b6c3e1f2a9c85b40615c15a2c116ed316c01f65b4966c4665800f7cb5e14",
+    "metadata": {
+      "family": "H",
+      "kind": "price",
+      "theta": "1 - 1/(6*q + 6)",
+      "group": [
+        3,
+        0
+      ],
+      "interval": [
+        "0",
+        "1"
+      ]
+    }
+  },
+  {
+    "file": "mid_q_full_same_e_certificate_022_sturm_sequence.jsonl.gz",
+    "kind": "sturm_sequence",
+    "entries": 64,
+    "bytes": 9396,
+    "sha256": "04b1723673379d802ec42c13c7f579a0ddac1b2b299829d78f1cb70f9b1b2592",
+    "metadata": {
+      "family": "H",
+      "kind": "price",
+      "theta": "1 - 1/(6*q + 6)",
+      "group": [
+        3,
+        0
+      ],
+      "interval": [
+        "0",
+        "1"
+      ]
+    }
+  },
+  {
+    "file": "mid_q_full_same_e_certificate_023_sturm_input.jsonl.gz",
+    "kind": "sturm_input",
+    "entries": 10,
+    "bytes": 439,
+    "sha256": "ff71295b834fcb502d79d84031df32d3a1026e5e6344ac59e56fd460559b2c2f",
+    "metadata": {
+      "family": "H",
+      "kind": "price",
+      "theta": "1 - 1/(6*q + 6)",
+      "group": [
+        4,
+        0
+      ],
+      "interval": [
+        "0",
+        "1"
+      ]
+    }
+  },
+  {
+    "file": "mid_q_full_same_e_certificate_024_sturm_sequence.jsonl.gz",
+    "kind": "sturm_sequence",
+    "entries": 64,
+    "bytes": 11046,
+    "sha256": "ae99625ea86df4de1716dc109ba156182e7b7079f6780503beaca18b61f7852f",
+    "metadata": {
+      "family": "H",
+      "kind": "price",
+      "theta": "1 - 1/(6*q + 6)",
+      "group": [
+        4,
+        0
+      ],
+      "interval": [
+        "0",
+        "1"
+      ]
+    }
+  },
+  {
+    "file": "mid_q_full_same_e_certificate_025_sturm_input.jsonl.gz",
+    "kind": "sturm_input",
+    "entries": 10,
+    "bytes": 445,
+    "sha256": "9cece7d48f0e9234c23ded0ed5105544ef219f57b9ff659b48478cf8733add25",
+    "metadata": {
+      "family": "H",
+      "kind": "price",
+      "theta": "1 - 1/(6*q + 6)",
+      "group": [
+        5,
+        0
+      ],
+      "interval": [
+        "0",
+        "1"
+      ]
+    }
+  },
+  {
+    "file": "mid_q_full_same_e_certificate_026_sturm_sequence.jsonl.gz",
+    "kind": "sturm_sequence",
+    "entries": 64,
+    "bytes": 12058,
+    "sha256": "7851e64a4b7930d82a5888d0d224e5616948444d283bb5031e21fac92ee6202d",
+    "metadata": {
+      "family": "H",
+      "kind": "price",
+      "theta": "1 - 1/(6*q + 6)",
+      "group": [
+        5,
+        0
+      ],
+      "interval": [
+        "0",
+        "1"
+      ]
+    }
+  },
+  {
+    "file": "mid_q_full_same_e_certificate_027_sturm_input.jsonl.gz",
+    "kind": "sturm_input",
+    "entries": 10,
+    "bytes": 456,
+    "sha256": "40751c1724631cf0f1ee1c83a93b4fbf09f2071b96640bc099c30f44c4f10579",
+    "metadata": {
+      "family": "H",
+      "kind": "price",
+      "theta": "1 - 1/(6*q + 6)",
+      "group": [
+        6,
+        0
+      ],
+      "interval": [
+        "0",
+        "1"
+      ]
+    }
+  },
+  {
+    "file": "mid_q_full_same_e_certificate_028_sturm_sequence.jsonl.gz",
+    "kind": "sturm_sequence",
+    "entries": 64,
+    "bytes": 11759,
+    "sha256": "0fe86936765690163e2e8dc08b5182fbac207f0f01d4f8d05ccc93d72c238e8d",
+    "metadata": {
+      "family": "H",
+      "kind": "price",
+      "theta": "1 - 1/(6*q + 6)",
+      "group": [
+        6,
+        0
+      ],
+      "interval": [
+        "0",
+        "1"
+      ]
+    }
+  },
+  {
+    "file": "mid_q_full_same_e_certificate_029_sturm_input.jsonl.gz",
+    "kind": "sturm_input",
+    "entries": 10,
+    "bytes": 484,
+    "sha256": "a1e8f53568b2dcfe14e3386fba840ddb799a159ba8a7a67d5fa7d68427f37e31",
+    "metadata": {
+      "family": "H",
+      "kind": "price",
+      "theta": "1 - 1/(6*q + 6)",
+      "group": [
+        7,
+        0
+      ],
+      "interval": [
+        "0",
+        "1"
+      ]
+    }
+  },
+  {
+    "file": "mid_q_full_same_e_certificate_030_sturm_sequence.jsonl.gz",
+    "kind": "sturm_sequence",
+    "entries": 64,
+    "bytes": 14356,
+    "sha256": "622082439b4a8ddd808fe02db7c7f85bb01f7e419b631f18337688a3b681a548",
+    "metadata": {
+      "family": "H",
+      "kind": "price",
+      "theta": "1 - 1/(6*q + 6)",
+      "group": [
+        7,
+        0
+      ],
+      "interval": [
+        "0",
+        "1"
+      ]
+    }
+  },
+  {
+    "file": "mid_q_full_same_e_certificate_031_sturm_input.jsonl.gz",
+    "kind": "sturm_input",
+    "entries": 10,
+    "bytes": 502,
+    "sha256": "ad0b147bfdedd425fe6fadbb3cbeef757ec3cd7598a1d7a459d4093d475fa41f",
+    "metadata": {
+      "family": "H",
+      "kind": "price",
+      "theta": "1 - 1/(6*q + 6)",
+      "group": [
+        8,
+        0
+      ],
+      "interval": [
+        "0",
+        "1"
+      ]
+    }
+  },
+  {
+    "file": "mid_q_full_same_e_certificate_032_sturm_sequence.jsonl.gz",
+    "kind": "sturm_sequence",
+    "entries": 64,
+    "bytes": 15739,
+    "sha256": "2cd24114f9020a56cf18d0086f923956f4c8fbd1b3cffb73b101ffff86f2d9bc",
+    "metadata": {
+      "family": "H",
+      "kind": "price",
+      "theta": "1 - 1/(6*q + 6)",
+      "group": [
+        8,
+        0
+      ],
+      "interval": [
+        "0",
+        "1"
+      ]
+    }
+  },
+  {
+    "file": "mid_q_full_same_e_certificate_033_sturm_input.jsonl.gz",
+    "kind": "sturm_input",
+    "entries": 10,
+    "bytes": 501,
+    "sha256": "8f50c482c777da0111d3605ad8ac0d8b64bb0b1a7d01afb6039e3d6c2ba937a0",
+    "metadata": {
+      "family": "H",
+      "kind": "price",
+      "theta": "1 - 1/(6*q + 6)",
+      "group": [
+        9,
+        0
+      ],
+      "interval": [
+        "0",
+        "1"
+      ]
+    }
+  },
+  {
+    "file": "mid_q_full_same_e_certificate_034_sturm_sequence.jsonl.gz",
+    "kind": "sturm_sequence",
+    "entries": 64,
+    "bytes": 15385,
+    "sha256": "eb940b8268e1d477325df4096d84faaf489bf5c35b7bd502031602371cd5293c",
+    "metadata": {
+      "family": "H",
+      "kind": "price",
+      "theta": "1 - 1/(6*q + 6)",
+      "group": [
+        9,
+        0
+      ],
+      "interval": [
+        "0",
+        "1"
+      ]
+    }
+  },
+  {
+    "file": "mid_q_full_same_e_certificate_035_sturm_input.jsonl.gz",
+    "kind": "sturm_input",
+    "entries": 10,
+    "bytes": 512,
+    "sha256": "8a96b3030e3201b66617e13879ef35c7b857c5ca14f8f463e6d73adce8af0f92",
+    "metadata": {
+      "family": "H",
+      "kind": "price",
+      "theta": "1 - 1/(6*q + 6)",
+      "group": [
+        10,
+        0
+      ],
+      "interval": [
+        "0",
+        "1"
+      ]
+    }
+  },
+  {
+    "file": "mid_q_full_same_e_certificate_036_sturm_sequence.jsonl.gz",
+    "kind": "sturm_sequence",
+    "entries": 64,
+    "bytes": 16044,
+    "sha256": "82cbb910d61c0795b3c57bb619478c70dcb284b1e074d85dd40a2b362970f699",
+    "metadata": {
+      "family": "H",
+      "kind": "price",
+      "theta": "1 - 1/(6*q + 6)",
+      "group": [
+        10,
+        0
+      ],
+      "interval": [
+        "0",
+        "1"
+      ]
+    }
+  },
+  {
+    "file": "mid_q_full_same_e_certificate_037_sturm_input.jsonl.gz",
+    "kind": "sturm_input",
+    "entries": 10,
+    "bytes": 491,
+    "sha256": "b6aa0cef916978854b4ed62c12b9e07f0dc123eed9650902004db8bae578b383",
+    "metadata": {
+      "family": "H",
+      "kind": "price",
+      "theta": "1 - 1/(6*q + 6)",
+      "group": [
+        19,
+        0
+      ],
+      "interval": [
+        "0",
+        "1"
+      ]
+    }
+  },
+  {
+    "file": "mid_q_full_same_e_certificate_038_sturm_sequence.jsonl.gz",
+    "kind": "sturm_sequence",
+    "entries": 64,
+    "bytes": 15655,
+    "sha256": "e1497a311e78bb8f410202750f206caa04bcdbef3d84d758ba57609d68d455f3",
+    "metadata": {
+      "family": "H",
+      "kind": "price",
+      "theta": "1 - 1/(6*q + 6)",
+      "group": [
+        19,
+        0
+      ],
+      "interval": [
+        "0",
+        "1"
+      ]
+    }
+  },
+  {
+    "file": "mid_q_full_same_e_certificate_039_sturm_input.jsonl.gz",
+    "kind": "sturm_input",
+    "entries": 10,
+    "bytes": 511,
+    "sha256": "0e8acb3a6710cf93a6a86f2e81ac53e72af7d9dca304c1e501c443f89496e79d",
+    "metadata": {
+      "family": "H",
+      "kind": "price",
+      "theta": "1 - 1/(6*q + 6)",
+      "group": [
+        20,
+        0
+      ],
+      "interval": [
+        "0",
+        "1"
+      ]
+    }
+  },
+  {
+    "file": "mid_q_full_same_e_certificate_040_sturm_sequence.jsonl.gz",
+    "kind": "sturm_sequence",
+    "entries": 64,
+    "bytes": 15709,
+    "sha256": "cff13d3cd7b41c13472d6d27042639dcbbd8e558fa7e2972ee3ca9478702a31c",
+    "metadata": {
+      "family": "H",
+      "kind": "price",
+      "theta": "1 - 1/(6*q + 6)",
+      "group": [
+        20,
+        0
+      ],
+      "interval": [
+        "0",
+        "1"
+      ]
+    }
+  },
+  {
+    "file": "mid_q_full_same_e_certificate_041_sturm_input.jsonl.gz",
+    "kind": "sturm_input",
+    "entries": 10,
+    "bytes": 510,
+    "sha256": "3b6541f7f06bfb9ac63663630c28f6416b6a515b6c0989d18fa68f0473477642",
+    "metadata": {
+      "family": "H",
+      "kind": "price",
+      "theta": "1 - 1/(6*q + 6)",
+      "group": [
+        21,
+        0
+      ],
+      "interval": [
+        "0",
+        "1"
+      ]
+    }
+  },
+  {
+    "file": "mid_q_full_same_e_certificate_042_sturm_sequence.jsonl.gz",
+    "kind": "sturm_sequence",
+    "entries": 64,
+    "bytes": 16618,
+    "sha256": "90b7c604f74fe6f08e9387b88dcf174548dbacfdfb61ff8addb9b036e1035f7b",
+    "metadata": {
+      "family": "H",
+      "kind": "price",
+      "theta": "1 - 1/(6*q + 6)",
+      "group": [
+        21,
+        0
+      ],
+      "interval": [
+        "0",
+        "1"
+      ]
+    }
+  },
+  {
+    "file": "mid_q_full_same_e_certificate_043_sturm_input.jsonl.gz",
+    "kind": "sturm_input",
+    "entries": 10,
+    "bytes": 501,
+    "sha256": "4fe4eca89cd05b81998ce1ecf8120d91f25a91738050a8c8758955659cf4f022",
+    "metadata": {
+      "family": "H",
+      "kind": "price",
+      "theta": "1 - 1/(6*q + 6)",
+      "group": [
+        22,
+        0
+      ],
+      "interval": [
+        "0",
+        "1"
+      ]
+    }
+  },
+  {
+    "file": "mid_q_full_same_e_certificate_044_sturm_sequence.jsonl.gz",
+    "kind": "sturm_sequence",
+    "entries": 64,
+    "bytes": 15449,
+    "sha256": "f80b4f0908ba2e276a228cb67f87337084be9d307df91e62d3949dcc29c4bee8",
+    "metadata": {
+      "family": "H",
+      "kind": "price",
+      "theta": "1 - 1/(6*q + 6)",
+      "group": [
+        22,
+        0
+      ],
+      "interval": [
+        "0",
+        "1"
+      ]
+    }
+  },
+  {
+    "file": "mid_q_full_same_e_certificate_045_sturm_input.jsonl.gz",
+    "kind": "sturm_input",
+    "entries": 10,
+    "bytes": 509,
+    "sha256": "8b3c030b99153fa5befd50ec14660cc65d1ff0609f7331726b2a4e27b635e261",
+    "metadata": {
+      "family": "H",
+      "kind": "price",
+      "theta": "1 - 1/(6*q + 6)",
+      "group": [
+        23,
+        0
+      ],
+      "interval": [
+        "0",
+        "1"
+      ]
+    }
+  },
+  {
+    "file": "mid_q_full_same_e_certificate_046_sturm_sequence.jsonl.gz",
+    "kind": "sturm_sequence",
+    "entries": 64,
+    "bytes": 16484,
+    "sha256": "cfaa6023b4c18140f47e1c8455761fd5efc07076877ff8be353717857c17c1f6",
+    "metadata": {
+      "family": "H",
+      "kind": "price",
+      "theta": "1 - 1/(6*q + 6)",
+      "group": [
+        23,
+        0
+      ],
+      "interval": [
+        "0",
+        "1"
+      ]
+    }
+  },
+  {
+    "file": "mid_q_full_same_e_certificate_047_sturm_input.jsonl.gz",
+    "kind": "sturm_input",
+    "entries": 10,
+    "bytes": 495,
+    "sha256": "01e18a3074e58c69b6392d390b30bf14d2423a5c1d22ae53b992e4a6049b9dce",
+    "metadata": {
+      "family": "H",
+      "kind": "price",
+      "theta": "1 - 1/(6*q + 6)",
+      "group": [
+        24,
+        0
+      ],
+      "interval": [
+        "0",
+        "1"
+      ]
+    }
+  },
+  {
+    "file": "mid_q_full_same_e_certificate_048_sturm_sequence.jsonl.gz",
+    "kind": "sturm_sequence",
+    "entries": 64,
+    "bytes": 15023,
+    "sha256": "9b5362731ac8b43a6228a217cd30d9c62c785a4716b16322787a679d006ab2f6",
+    "metadata": {
+      "family": "H",
+      "kind": "price",
+      "theta": "1 - 1/(6*q + 6)",
+      "group": [
+        24,
+        0
+      ],
+      "interval": [
+        "0",
+        "1"
+      ]
+    }
+  },
+  {
+    "file": "mid_q_full_same_e_certificate_049_sturm_input.jsonl.gz",
+    "kind": "sturm_input",
+    "entries": 10,
+    "bytes": 473,
+    "sha256": "e544f14643a240c848385533a05710296016fd4a3ceb95921c075fd5b401c5c0",
+    "metadata": {
+      "family": "H",
+      "kind": "price",
+      "theta": "1 - 1/(6*q + 6)",
+      "group": [
+        25,
+        0
+      ],
+      "interval": [
+        "0",
+        "1"
+      ]
+    }
+  },
+  {
+    "file": "mid_q_full_same_e_certificate_050_sturm_sequence.jsonl.gz",
+    "kind": "sturm_sequence",
+    "entries": 64,
+    "bytes": 14639,
+    "sha256": "c482614792856e46e3c61de735ffbbae4cc1aa8fe0c9605aad44b4c97f1bdbd3",
+    "metadata": {
+      "family": "H",
+      "kind": "price",
+      "theta": "1 - 1/(6*q + 6)",
+      "group": [
+        25,
+        0
+      ],
+      "interval": [
+        "0",
+        "1"
+      ]
+    }
+  },
+  {
+    "file": "mid_q_full_same_e_certificate_051_sturm_input.jsonl.gz",
+    "kind": "sturm_input",
+    "entries": 10,
+    "bytes": 462,
+    "sha256": "561828e608b3c2cf06430ecd9044d155515026707beee08f6fd6e072020479e6",
+    "metadata": {
+      "family": "H",
+      "kind": "price",
+      "theta": "1 - 1/(6*q + 6)",
+      "group": [
+        26,
+        0
+      ],
+      "interval": [
+        "0",
+        "1"
+      ]
+    }
+  },
+  {
+    "file": "mid_q_full_same_e_certificate_052_sturm_sequence.jsonl.gz",
+    "kind": "sturm_sequence",
+    "entries": 64,
+    "bytes": 12080,
+    "sha256": "d66d067f8ea079eb9a4fada159495c9dedf0c1e1f491e054e55a9992446ebfc4",
+    "metadata": {
+      "family": "H",
+      "kind": "price",
+      "theta": "1 - 1/(6*q + 6)",
+      "group": [
+        26,
+        0
+      ],
+      "interval": [
+        "0",
+        "1"
+      ]
+    }
+  },
+  {
+    "file": "mid_q_full_same_e_certificate_053_sturm_input.jsonl.gz",
+    "kind": "sturm_input",
+    "entries": 10,
+    "bytes": 431,
+    "sha256": "3d3479e3872b2c880e6188055f81425a19ad0fa363b8751ff01a351c072da2fa",
+    "metadata": {
+      "family": "H",
+      "kind": "price",
+      "theta": "1 - 1/(6*q + 6)",
+      "group": [
+        27,
+        0
+      ],
+      "interval": [
+        "0",
+        "1"
+      ]
+    }
+  },
+  {
+    "file": "mid_q_full_same_e_certificate_054_sturm_sequence.jsonl.gz",
+    "kind": "sturm_sequence",
+    "entries": 64,
+    "bytes": 11041,
+    "sha256": "e180d5ad1b9c6b930069e8f35e0c6903c66ac2ad696f738ae0e02a76bb9c8b7c",
+    "metadata": {
+      "family": "H",
+      "kind": "price",
+      "theta": "1 - 1/(6*q + 6)",
+      "group": [
+        27,
+        0
+      ],
+      "interval": [
+        "0",
+        "1"
+      ]
+    }
+  },
+  {
+    "file": "mid_q_full_same_e_certificate_055_sturm_input.jsonl.gz",
+    "kind": "sturm_input",
+    "entries": 10,
+    "bytes": 431,
+    "sha256": "0a61104391468162a33e04b4b1efaf375d3aceb375ed3ae1c93ceb00d6308f4d",
+    "metadata": {
+      "family": "H",
+      "kind": "price",
+      "theta": "1 - 1/(6*q + 6)",
+      "group": [
+        28,
+        0
+      ],
+      "interval": [
+        "0",
+        "1"
+      ]
+    }
+  },
+  {
+    "file": "mid_q_full_same_e_certificate_056_sturm_sequence.jsonl.gz",
+    "kind": "sturm_sequence",
+    "entries": 64,
+    "bytes": 9572,
+    "sha256": "5216e6bcff4e69bd2656ebc4169883297f72e2547864eb469b90bbcfa9519b8f",
+    "metadata": {
+      "family": "H",
+      "kind": "price",
+      "theta": "1 - 1/(6*q + 6)",
+      "group": [
+        28,
+        0
+      ],
+      "interval": [
+        "0",
+        "1"
+      ]
+    }
+  },
+  {
+    "file": "mid_q_full_same_e_certificate_057_sturm_input.jsonl.gz",
+    "kind": "sturm_input",
+    "entries": 10,
+    "bytes": 406,
+    "sha256": "9af6a3c0bac9a6ffedd096bf1070224c9bd9c5fde49a0ddd015561b5d4be5cdd",
+    "metadata": {
+      "family": "H",
+      "kind": "price",
+      "theta": "1 - 1/(6*q + 6)",
+      "group": [
+        29,
+        0
+      ],
+      "interval": [
+        "0",
+        "1"
+      ]
+    }
+  },
+  {
+    "file": "mid_q_full_same_e_certificate_058_sturm_sequence.jsonl.gz",
+    "kind": "sturm_sequence",
+    "entries": 64,
+    "bytes": 8824,
+    "sha256": "5b1f3218ef1cb1399d44052f7e468b720564dc10388feda6619e3de87a720fe2",
+    "metadata": {
+      "family": "H",
+      "kind": "price",
+      "theta": "1 - 1/(6*q + 6)",
+      "group": [
+        29,
+        0
+      ],
+      "interval": [
+        "0",
+        "1"
+      ]
+    }
+  },
+  {
+    "file": "mid_q_full_same_e_certificate_059_sturm_input.jsonl.gz",
+    "kind": "sturm_input",
+    "entries": 10,
+    "bytes": 386,
+    "sha256": "1166ed4e2d011b4662f7e5cc26fd0a975358ae3aa0b6a80ec06eaf2122040832",
+    "metadata": {
+      "family": "H",
+      "kind": "price",
+      "theta": "1 - 1/(6*q + 6)",
+      "group": [
+        30,
+        0
+      ],
+      "interval": [
+        "0",
+        "1"
+      ]
+    }
+  },
+  {
+    "file": "mid_q_full_same_e_certificate_060_sturm_sequence.jsonl.gz",
+    "kind": "sturm_sequence",
+    "entries": 64,
+    "bytes": 7134,
+    "sha256": "3fc0012088727384c37d8e8eaec1c7375408d73bd1f84c92ee9052daf77f6e89",
+    "metadata": {
+      "family": "H",
+      "kind": "price",
+      "theta": "1 - 1/(6*q + 6)",
+      "group": [
+        30,
+        0
+      ],
+      "interval": [
+        "0",
+        "1"
+      ]
+    }
+  },
+  {
+    "file": "mid_q_full_same_e_certificate_061_sturm_input.jsonl.gz",
+    "kind": "sturm_input",
+    "entries": 10,
+    "bytes": 367,
+    "sha256": "3635e2676bd55f2877766fe135d2a208ee51e9f8f94dd8d327048f9aae0ec655",
+    "metadata": {
+      "family": "H",
+      "kind": "price",
+      "theta": "1 - 1/(6*q + 6)",
+      "group": [
+        31,
+        0
+      ],
+      "interval": [
+        "0",
+        "1"
+      ]
+    }
+  },
+  {
+    "file": "mid_q_full_same_e_certificate_062_sturm_sequence.jsonl.gz",
+    "kind": "sturm_sequence",
+    "entries": 64,
+    "bytes": 4575,
+    "sha256": "b55f258ec2117e391ace11fde40d7f5624d8b5d0ef1ff97c1af997e51cfce5b5",
+    "metadata": {
+      "family": "H",
+      "kind": "price",
+      "theta": "1 - 1/(6*q + 6)",
+      "group": [
+        31,
+        0
+      ],
+      "interval": [
+        "0",
+        "1"
+      ]
+    }
+  },
+  {
+    "file": "mid_q_full_same_e_certificate_063_sturm_input.jsonl.gz",
+    "kind": "sturm_input",
+    "entries": 10,
+    "bytes": 359,
+    "sha256": "1fe3e17e66de846b6ceba0682b4a5f38be6e46496e9a38e32e04d4a65d3c40cf",
+    "metadata": {
+      "family": "H",
+      "kind": "price",
+      "theta": "1 - 1/(6*q + 6)",
+      "group": [
+        32,
+        0
+      ],
+      "interval": [
+        "0",
+        "1"
+      ]
+    }
+  },
+  {
+    "file": "mid_q_full_same_e_certificate_064_sturm_sequence.jsonl.gz",
+    "kind": "sturm_sequence",
+    "entries": 64,
+    "bytes": 2519,
+    "sha256": "52775a0a738bc0ea8b82929f4d3ed926c16fec49a81c4511d4c7561fd83a7da2",
+    "metadata": {
+      "family": "H",
+      "kind": "price",
+      "theta": "1 - 1/(6*q + 6)",
+      "group": [
+        32,
+        0
+      ],
+      "interval": [
+        "0",
+        "1"
+      ]
+    }
+  },
+  {
+    "file": "mid_q_full_same_e_certificate_065_power.jsonl.gz",
+    "kind": "power",
+    "entries": 1315,
+    "bytes": 18673,
+    "sha256": "5c500156bfe90b1b4b0cb7aecf74d497513d061d723a17865ae10f1a0d7c5cde",
+    "metadata": {
+      "family": "J",
+      "kind": "slope",
+      "theta": "0",
+      "x": "1/10+7*w/30",
+      "h": [
+        "0",
+        "1/2"
+      ],
+      "v": [
+        "0",
+        "1"
+      ]
+    }
+  },
+  {
+    "file": "mid_q_full_same_e_certificate_066_mixed_bernstein_power.jsonl.gz",
+    "kind": "mixed_bernstein_power",
+    "entries": 1980,
+    "bytes": 41957,
+    "sha256": "9726b467fcb28aeff526bb54020f9eee3ca66e2cf2770d3974dd90fdfb210cfc",
+    "metadata": {
+      "family": "J",
+      "kind": "slope",
+      "theta": "0"
+    }
+  },
+  {
+    "file": "mid_q_full_same_e_certificate_067_bernstein.jsonl.gz",
+    "kind": "bernstein",
+    "entries": 1980,
+    "bytes": 43806,
+    "sha256": "66c7b78389f3ef26e88f88addeb2e6e1f5bf51759ca06d22f3f4e2f0abd79445",
+    "metadata": {
+      "family": "J",
+      "kind": "slope",
+      "theta": "0",
+      "x": "1/10+7*w/30",
+      "h": [
+        "0",
+        "1/2"
+      ],
+      "v": [
+        "0",
+        "1"
+      ]
+    }
+  },
+  {
+    "file": "mid_q_full_same_e_certificate_068_power.jsonl.gz",
+    "kind": "power",
+    "entries": 2055,
+    "bytes": 33269,
+    "sha256": "b9e5322e85f413f5ee451d622afe512778913ed459d4946f7390e703f8a3e2cf",
+    "metadata": {
+      "family": "J",
+      "kind": "slope",
+      "theta": "1 - 1/(6*q + 6)",
+      "x": "1/10+7*w/30",
+      "h": [
+        "0",
+        "1/2"
+      ],
+      "v": [
+        "0",
+        "1"
+      ]
+    }
+  },
+  {
+    "file": "mid_q_full_same_e_certificate_069_mixed_bernstein_power.jsonl.gz",
+    "kind": "mixed_bernstein_power",
+    "entries": 2975,
+    "bytes": 74205,
+    "sha256": "bbb4ab4137e8f77398f9ae4d62a60531bfa8f8637d244cda3afeff491332c021",
+    "metadata": {
+      "family": "J",
+      "kind": "slope",
+      "theta": "1 - 1/(6*q + 6)"
+    }
+  },
+  {
+    "file": "mid_q_full_same_e_certificate_070_bernstein.jsonl.gz",
+    "kind": "bernstein",
+    "entries": 2975,
+    "bytes": 77364,
+    "sha256": "7daa1128e47d93ea96ca9d6e8a1af1390cc96560ceba66f4652e2b67dfd9d290",
+    "metadata": {
+      "family": "J",
+      "kind": "slope",
+      "theta": "1 - 1/(6*q + 6)",
+      "x": "1/10+7*w/30",
+      "h": [
+        "0",
+        "1/2"
+      ],
+      "v": [
+        "0",
+        "1"
+      ]
+    }
+  },
+  {
+    "file": "mid_q_full_same_e_certificate_071_power.jsonl.gz",
+    "kind": "power",
+    "entries": 5102,
+    "bytes": 90965,
+    "sha256": "6302d5f4587b8da52fbe54c74dca7e5fa829470c9f754fabc849feecddaf3a45",
+    "metadata": {
+      "family": "J",
+      "kind": "price",
+      "theta": "0",
+      "x": "1/10+7*w/30",
+      "h": [
+        "0",
+        "1/2"
+      ],
+      "v": [
+        "0",
+        "1"
+      ]
+    }
+  },
+  {
+    "file": "mid_q_full_same_e_certificate_072_mixed_bernstein_power.jsonl.gz",
+    "kind": "mixed_bernstein_power",
+    "entries": 8288,
+    "bytes": 242466,
+    "sha256": "d6f190ba033cfa73b52484495fa77d1094800e6063f17315ce99d63bdc53f20c",
+    "metadata": {
+      "family": "J",
+      "kind": "price",
+      "theta": "0"
+    }
+  },
+  {
+    "file": "mid_q_full_same_e_certificate_073_bernstein.jsonl.gz",
+    "kind": "bernstein",
+    "entries": 8288,
+    "bytes": 265188,
+    "sha256": "8ec37b30588d7fa06cdcbdff29268e5566ca5eb663e97534c76ed98e99f7aa70",
+    "metadata": {
+      "family": "J",
+      "kind": "price",
+      "theta": "0",
+      "x": "1/10+7*w/30",
+      "h": [
+        "0",
+        "1/2"
+      ],
+      "v": [
+        "0",
+        "1"
+      ]
+    }
+  },
+  {
+    "file": "mid_q_full_same_e_certificate_074_power.jsonl.gz",
+    "kind": "power",
+    "entries": 6771,
+    "bytes": 132814,
+    "sha256": "32c5a79898129eadac9ffe50c0d999dccac9f0bfe6b7d34a4b56ba3957f92ffc",
+    "metadata": {
+      "family": "J",
+      "kind": "price",
+      "theta": "1 - 1/(6*q + 6)",
+      "x": "1/10+7*w/30",
+      "h": [
+        "0",
+        "1/2"
+      ],
+      "v": [
+        "0",
+        "1"
+      ]
+    }
+  },
+  {
+    "file": "mid_q_full_same_e_certificate_075_mixed_bernstein_power.jsonl.gz",
+    "kind": "mixed_bernstein_power",
+    "entries": 10745,
+    "bytes": 348340,
+    "sha256": "6b556dcb1d620651193876daa0ee64cc11fec5d1b3b9036ebcc1f3bb6b9fd0b0",
+    "metadata": {
+      "family": "J",
+      "kind": "price",
+      "theta": "1 - 1/(6*q + 6)"
+    }
+  },
+  {
+    "file": "mid_q_full_same_e_certificate_076_bernstein.jsonl.gz",
+    "kind": "bernstein",
+    "entries": 10745,
+    "bytes": 383751,
+    "sha256": "479f57f67a8c685e0ab58fa40e8ae2fc6b4b8febf8916c37642939c1de4dd47f",
+    "metadata": {
+      "family": "J",
+      "kind": "price",
+      "theta": "1 - 1/(6*q + 6)",
+      "x": "1/10+7*w/30",
+      "h": [
+        "0",
+        "1/2"
+      ],
+      "v": [
+        "0",
+        "1"
+      ]
+    }
+  },
+  {
+    "file": "mid_q_full_same_e_certificate_077_budget_input_power.jsonl.gz",
+    "kind": "budget_input_power",
+    "entries": 4557,
+    "bytes": 50117,
+    "sha256": "78b26660b1330395b06f041b688f0ed94a04b8ada6681d8fd78ee65f29f84332",
+    "metadata": {
+      "endpoint": "Tlo",
+      "sign": 1,
+      "x_power": 28
+    }
+  },
+  {
+    "file": "mid_q_full_same_e_certificate_078_bernstein.jsonl.gz",
+    "kind": "bernstein",
+    "entries": 10150,
+    "bytes": 435042,
+    "sha256": "5528ebd7884319089dacfdd564423e036d6d09aaf5fddfb26b2c64670fdff4a7",
+    "metadata": {
+      "endpoint": "Tlo",
+      "x": [
+        "1/10",
+        "1/3"
+      ],
+      "h": [
+        "0",
+        "1/2"
+      ],
+      "z": [
+        "0",
+        "1"
+      ]
+    }
+  },
+  {
+    "file": "mid_q_full_same_e_certificate_079_budget_input_power.jsonl.gz",
+    "kind": "budget_input_power",
+    "entries": 4696,
+    "bytes": 51161,
+    "sha256": "dec9fdaada67022e0b6ef14af2d5765388e11860024054a46f6d9b682036ca5f",
+    "metadata": {
+      "endpoint": "Tup",
+      "sign": -1,
+      "x_power": 26
+    }
+  },
+  {
+    "file": "mid_q_full_same_e_certificate_080_bernstein.jsonl.gz",
+    "kind": "bernstein",
+    "entries": 10850,
+    "bytes": 469106,
+    "sha256": "ccfc87dc9f4f45ea70e29eb97fd2863b7aff9afe70c694422d81bcc8f2f057d0",
+    "metadata": {
+      "endpoint": "Tup",
+      "x": [
+        "1/10",
+        "1/3"
+      ],
+      "h": [
+        "0",
+        "1/2"
+      ],
+      "z": [
+        "0",
+        "1"
+      ]
+    }
+  }
+]

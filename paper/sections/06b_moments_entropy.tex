@@ -1,0 +1,262 @@
+\subsection{Moment inequalities from the escape recursion}
+To estimate $D_\lambda$, we compare the moments of $X/(c+X)$ with an explicit sequence. This comparison gives a positive lower bound for $\Psi$ and bounds on the tails of the series used below.
+
+Put
+\begin{equation}\label{eq:archive-parameters}
+ \begin{gathered}
+ W=\frac1{c+X},\quad w=\E W,\quad h=w^{-1}-c,\quad d=1-h,\\
+ U=\frac{X}{c+X},\qquad u=\E U=\frac{h}{c+h}.
+ \end{gathered}
+\end{equation}
+Here $0<h<1$ and $0<U<1/\lambda$ almost surely. In these moment estimates, $d$ denotes $1-h$ and $u$ denotes $\E U$. In Section~\ref{sec:low}, $d$ denoted $1-\lambda$, and in Section~\ref{sec:preliminaries}, $u$ denoted a primitive. Define
+\begin{equation}\label{eq:canonical-moment-sequences}
+ a_n=\E U^n,\qquad \beta_n=\frac{h}{\lambda^n-d},\qquad
+ \rho_n=\frac{a_n}{\beta_n},\qquad n\ge0.
+\end{equation}
+The sequence $\beta_n$ in~\eqref{eq:canonical-moment-sequences} consists of deterministic comparison moments. We continue to write $\beta_\lambda$ for the random escape probability.
+
+\begin{lemma}[Monotonicity of the moment ratios]\label{lem:canonical-moments}
+For the fixed offspring law satisfying~\eqref{eq:assumptions},
+\begin{equation}\label{eq:rho-monotone}
+ \rho_0=\rho_1=1,\qquad
+ \rho_n>\rho_{n+1}>0\quad(n\ge1),\qquad \rho_n\longrightarrow0.
+\end{equation}
+In particular, $a_n/a_{n-1}<\beta_n/\beta_{n-1}$ for $n\ge2$.
+\end{lemma}
+\begin{proof}
+Let $S=\sum_{i=1}^{\nu}X_i$ and $T=\sum_{i=2}^{\nu}X_i$. The first child is independent of $T$, including the random number of summands. Write
+\[
+ H=\frac1{c+S}=\frac{W_1}{1+W_1T}.
+\]
+The recursion gives $\lambda W\overset{\mathrm d}=1+H$. Consequently,
+$\E H/w=\lambda-1/w=d$. Since $0<X<1$, we have $1/\lambda<W<1/c$, and thus $0<h<1$.
+
+For a bounded increasing function $f$ on $[0,1]$, $H\le W_1$ gives
+\[
+ \E[Hf(1-cH)]\ge\E[Hf(1-cW_1)].
+\]
+Condition on $W_1$. The multiplier $M(a)=\E(1+aT)^{-1}$ decreases in $a$. Under the probability measure that weights the law of $W_1$ by $W_1/w$, both $M(W_1)$ and $f(1-cW_1)$ are decreasing functions of $W_1$. Their covariance is nonnegative. Restoring the original measure gives
+\begin{equation}\label{eq:chosen-child-comparison}
+ \E[Hf(1-cH)]\ge
+ \frac{\E H}{w}\E[Wf(1-cW)]
+ =d\E[Wf(U)].
+\end{equation}
+No change of law for $\nu$ is made here. Since $m>1$ and $\nu\ge1$, the event $\nu\ge2$ has positive probability. On that event $T>0$, so the first inequality is strict for $f(t)=t^n$, $n\ge1$.
+
+Using $H\overset{\mathrm d}=\lambda W-1$ and $1-cH\overset{\mathrm d}=\lambda U$ in~\eqref{eq:chosen-child-comparison}, and multiplying by $c$, yields
+\[
+ (\lambda^n-d)a_n-(\lambda^{n+1}-d)a_{n+1}>0,
+ \qquad n\ge1.
+\]
+Division by $h$ proves the strict decrease in~\eqref{eq:rho-monotone}; $a_0=\beta_0=1$ and $a_1=\beta_1=h/(c+h)$ prove its initial values. Finally,
+\[
+ \rho_n=\frac{\E[(\lambda U)^n]-d\E U^n}{h}\longrightarrow0,
+\]
+by bounded convergence, since $0<\lambda U<1$ almost surely. This proves the limit without a deterministic escape bound strictly smaller than one.
+\end{proof}
+
+\begin{lemma}[An upper bound for the speed and a lower bound for the kernel]\label{lem:harmonic-speed}
+For $X$ with law $\pi_\lambda$, one has $v<v_p<h$, where $v_p$ is the symmetric speed quotient of the comparison law whose $U$-moments are $\beta_n$. Moreover, $\inf_{0\le x\le1}\Psi(x)>0$.
+\end{lemma}
+\begin{proof}
+Let $V$ be an independent copy of $U$. Substituting $X=cU/(1-U)$ and $Y=cV/(1-V)$ into the pair kernels gives
+\[
+ \frac{XY}{A(X,Y)}=\frac{cUV}{1-\lambda UV},\qquad
+ \frac{t(X,Y)}{A(X,Y)}=
+ \frac{U+V-(\lambda+1)UV}{1-\lambda UV}.
+\]
+Since $\lambda UV\le1/\lambda<1$, geometric expansion and absolute convergence give
+\begin{equation}\label{eq:moment-speed-expansion}
+ N=cT,\qquad Z=2Q-(\lambda+1)T,\qquad
+ T=\sum_{n\ge1}\lambda^{n-1}a_n^2,\quad
+ Q=\sum_{n\ge1}\lambda^{n-1}a_na_{n-1}.
+\end{equation}
+For example, the summands in $T$ are at most $\lambda^{-n-1}$ and those in $Q$ at most $\lambda^{-n}$. Thus
+\[
+ v=\frac{c}{2Q/T-(\lambda+1)},\qquad
+ \frac QT=
+ \frac{\sum_{n\ge1}\lambda^{n-1}a_n^2(a_{n-1}/a_n)}
+ {\sum_{n\ge1}\lambda^{n-1}a_n^2}.
+\]
+
+The sequence $\beta_n$ is realized by $U_p=\lambda^{-L}$, where
+$\PP(L=j)=h d^{j-1}$ for $j\ge1$. Its corresponding escape coordinate is $cU_p/(1-U_p)\in(0,1]$, so its symmetric denominator is positive. Write $T_p,Q_p$ for the sums in~\eqref{eq:moment-speed-expansion} with $a_n$ replaced by $\beta_n$, and $v_p=cT_p/[2Q_p-(\lambda+1)T_p]$. The ratios
+\[
+ \frac{\beta_{n-1}}{\beta_n}
+ =\lambda+\frac{dc}{\lambda^{n-1}-d}
+\]
+decrease with $n$. Lemma~\ref{lem:canonical-moments} implies $a_{n-1}/a_n\ge\beta_{n-1}/\beta_n$, strictly for $n\ge2$. The weights $\lambda^{n-1}a_n^2$ are the comparison weights $\lambda^{n-1}\beta_n^2$ multiplied by the decreasing sequence $\rho_n^2$. The covariance inequality for two decreasing sequences therefore gives
+\[
+ \frac QT>
+ \frac{\sum_{n\ge1}\lambda^{n-1}\beta_n^2\rho_n^2
+       (\beta_{n-1}/\beta_n)}
+ {\sum_{n\ge1}\lambda^{n-1}\beta_n^2\rho_n^2}
+ \ge\frac{Q_p}{T_p}.
+\]
+All sums are absolutely convergent; the covariance inequality follows first for finite truncations and then by passage to the limit. Positivity of both quotient denominators gives $v<v_p$.
+
+To prove $v_p<h$, put
+\[
+ Q_* =\sum_{n\ge1}\frac{\lambda^{n-1}}{(\lambda^n-d)^2},\qquad
+ R_* =\sum_{n\ge1}
+ \frac{\lambda^{n-1}}{(\lambda^n-d)^2(\lambda^{n-1}-d)}.
+\]
+Then $Q_p/T_p=\lambda+dcR_*/Q_*$ and $v_p=1/(1+2dR_*/Q_*)$. Set $s_n=(\lambda^{n-1}-d)^{-1}$. The identity
+$s_n-s_{n+1}=c\lambda^{n-1}s_ns_{n+1}$ yields
+\begin{align*}
+ 2hR_*-Q_*
+ &=\frac1c\sum_{n\ge1}(s_n-s_{n+1})s_{n+1}(2h-s_n^{-1})\\
+ &=\frac1c\sum_{n\ge1}(s_n-s_{n+1})^2(s_n^{-1}-h)>0.
+\end{align*}
+To verify the second equality, subtract its summands: the difference is
+$h(s_n^2-s_{n+1}^2)-(s_n-s_{n+1})$. The series telescopes to $hs_1^2-s_1=0$, because $s_1=1/h$ and $s_n\to0$. Each term in the final series is nonnegative and every term with $n\ge2$ is positive. Since $d=1-h>0$, the inequality $2hR_*>Q_*$ is equivalent to $v_p<h$.
+
+It remains to deduce positivity of $\Psi$. With $z=\E(c+X)^{-2}$, expansion at $x=0$ gives
+\begin{equation}\label{eq:Psi-zero-positive}
+ \Psi(0)=1-c(1-v)w-c\lambda vz
+ >1-(c+v)w=(h-v)w>0.
+\end{equation}
+Here $cz<w$, since $X>0$, and $v>0$. The polynomial $y^2+c((1+v)y-v)$ is increasing on $[0,1]$. Relative to the law weighted by $(c+y)^{-2}$, the law weighted by $A(x,y)^{-2}$ has increasing density proportional to $((c+y)/A(x,y))^2$. Its expectation of this polynomial is at least $\Psi(0)/z$. Since $\cJ1(x)\ge1/\lambda^2$,
+\[
+ \Psi(x)\ge\frac{\Psi(0)}{\lambda^2z}>0\qquad(0\le x\le1).
+\]
+\end{proof}
+
+\subsection{An identity for \texorpdfstring{$g$}{g} and a lower bound for \texorpdfstring{$D_\lambda$}{D(lambda)}}
+To bound $D_\lambda$ while retaining contributions from all powers of $\cL$ in the series for $\mathcal R$, we use the function
+\begin{equation}\label{eq:entropy-function}
+ g(x)=\frac{x(c+x)\log(1+c/x)}{\lambda c\log\lambda}-\frac{x}{c}
+ \quad(x>0),\qquad g(0)=0.
+\end{equation}
+The formula defines $g$ for all positive $x$, since it will also be applied to a sum of child escapes. On $[0,1]$ it is continuous, nonnegative and bounded.
+
+\begin{lemma}[An identity for $g$ under the escape recursion]\label{lem:entropy-response}
+For a finite positive child list $x_1,\ldots,x_n$, with $S=\sum_i x_i$,
+\begin{equation}\label{eq:entropy-pair}
+ \sum_i g(x_i)-g(S)
+ =\frac1{\lambda c\log\lambda}\int_0^c(c-a)
+ \sum_{i<j}\frac{x_ix_j(2a+x_i+x_j)}
+ {(a+S)(a+x_i)(a+x_j)}\dd a.
+\end{equation}
+For the random child escapes $X_1,\ldots,X_\nu$, define
+\[
+ \delta_g=F_\lambda'(S)\left(\sum_{i=1}^{\nu}g(X_i)-g(S)\right).
+\]
+This random variable is integrable, nonnegative, and positive on $\{\nu\ge2\}$. For every $f\in C([0,1])$,
+\begin{equation}\label{eq:entropy-stationarity}
+ \E[g(X)(I-\cL)f(X)]
+ =\E[b(X)f(X)]-\E[\delta_g f(F_\lambda(S))].
+\end{equation}
+Consequently the positive measure $\eta(f)=\E[b(X)(\mathcal Rf)(X)]$ satisfies
+\begin{equation}\label{eq:response-lower-measures}
+ \eta\ge g\pi_\lambda,\qquad \eta\ge b\pi_\lambda,
+ \qquad \eta\ge\max(g,b)\pi_\lambda.
+\end{equation}
+\end{lemma}
+\begin{proof}
+Polynomial division under the integral gives
+\[
+ x(c+x)\log(1+c/x)
+ =cx+\frac{c^2}{2}-\int_0^c\frac{a(c-a)}{a+x}\dd a.
+\]
+Subtract the value at $S$ from the sum over the children. The linear terms cancel. The remaining integrand is simplified by
+\begin{align*}
+ \frac{n-1}{a}-\sum_i\frac1{a+x_i}+\frac1{a+S}
+ &=\frac1a\left(\sum_i\frac{x_i}{a+x_i}-\frac{S}{a+S}\right)\\
+ &=\frac1a\sum_{i<j}
+ \frac{x_ix_j(2a+x_i+x_j)}{(a+S)(a+x_i)(a+x_j)}.
+\end{align*}
+Multiplication by $a(c-a)$ proves~\eqref{eq:entropy-pair}; the simplified integrand is integrable at $a=0$. Differentiating the one-variable integral identity gives
+\[
+ g''(x)=-\frac2{\lambda c\log\lambda}
+ \int_0^c\frac{a(c-a)}{(a+x)^3}\dd a<0.
+\]
+Together with $g(0)=g(1)=0$, this proves the claimed properties on $[0,1]$. Strict positivity of the summands in~\eqref{eq:entropy-pair} gives the assertions about the sign of $\delta_g$.
+
+Direct substitution in~\eqref{eq:entropy-function} gives the identity for a single child,
+\[
+ g(F_\lambda(s))=b(F_\lambda(s))+F_\lambda'(s)g(s),\qquad s>0.
+\]
+For example, $c+F_\lambda(s)=\lambda(c+s)/(\lambda+s)$ and
+$1+c/F_\lambda(s)=\lambda(1+c/s)$ separate the logarithm into the two required terms. Thus
+\[
+ g(F_\lambda(S))
+ =b(F_\lambda(S))+F_\lambda'(S)\sum_i g(X_i)-\delta_g.
+\]
+Multiply by $f(F_\lambda(S))$, take expectations, and use the fixed-point equation and conditional exchangeability. The middle term becomes $\E[g(X)(\cL f)(X)]$, proving~\eqref{eq:entropy-stationarity}.
+
+These expectations are justified for unbounded $\nu$. If $M=\max_{[0,1]}g$, then $g(S)\ge-S/c$ and $S\le\nu$, so
+\begin{equation}\label{eq:entropy-integrability}
+ 0\le\delta_g\le\frac{M+1/c}{\lambda}\nu.
+\end{equation}
+The exchangeability term is at most $M\|f\|_\infty\nu/\lambda$ in absolute value. Both bounds are integrable. No derivative of $g$ at zero is used as a test in Lemma~\ref{lem:full-response}.
+
+Apply~\eqref{eq:entropy-stationarity} with $\mathcal R f$ in place of $f$. For nonnegative continuous $f$, positivity of the resolvent gives
+\[
+ \eta(f)=\E[g(X)f(X)]+\E[\delta_g(\mathcal Rf)(F_\lambda(S))]
+ \ge\E[g(X)f(X)].
+\]
+The Neumann series separately gives $\mathcal R f\ge f$, hence $\eta\ge b\pi_\lambda$. These inequalities hold as inequalities of finite Borel measures, by continuous approximation on the compact interval. Splitting a Borel set into its intersections with $\{g\ge b\}$ and $\{g<b\}$ proves the last assertion in~\eqref{eq:response-lower-measures}.
+\end{proof}
+
+\begin{lemma}[A lower bound for $D_\lambda$]\label{lem:calibration}
+Set
+\begin{equation}\label{eq:calibrated-floor}
+ \begin{gathered}
+ \alpha=\min\left\{1,\frac{\Psi(0)}{\cJ(y^2)(0)}\right\}>0,
+ \qquad H_* =\Psi-\alpha\cJ(y^2),\\
+ F_* =2\alpha\E[br]-C+2\E[gH_*].
+ \end{gathered}
+\end{equation}
+Then $H_*\ge0$ on $[0,1]$ and
+\begin{equation}\label{eq:floor-remainder}
+ D_\lambda=F_*+2\E[\delta_g(\mathcal RH_*)(F_\lambda(S))]\ge F_*.
+\end{equation}
+If $\alpha=1$, then $D_\lambda>0$. In the remaining case $0<\alpha<1$,
+\begin{equation}\label{eq:hard-calibration}
+ \begin{gathered}
+ A_0=1-(\lambda+1)u+\lambda a_2>0,\qquad
+ \alpha=\frac{u-(v/c)A_0}{a_2}>\lambda^2u,\\
+ u<\lambda^{-2},\qquad h<\frac1{\lambda+1}.
+ \end{gathered}
+\end{equation}
+In particular, $(\lambda+1)h\ge1$ implies $\alpha=1$ and hence $D_\lambda>0$.
+\end{lemma}
+\begin{proof}
+The polynomial $(1-\alpha)y^2+c((1+v)y-v)$ is increasing on $[0,1]$. Its inverse-square weighted expectation at zero is nonnegative by the choice of $\alpha$. The increasing-density comparison used in Lemma~\ref{lem:harmonic-speed} therefore gives $H_*\ge0$ everywhere. Since $(I-\cL)r=\cJ(y^2)$, we have
+\[
+ \mathcal R\Psi=\alpha r+\mathcal RH_*.
+\]
+Apply~\eqref{eq:entropy-stationarity} with $f=\mathcal RH_*$ and insert this decomposition into~\eqref{eq:full-sign}. This proves~\eqref{eq:floor-remainder}.
+
+If $\alpha=1$, then $\cJ h_v(0)\ge0$, and the same increasing-density comparison gives $\cJ h_v(x)\ge0$ for all $x$. Identity~\eqref{eq:positive-K} remains valid without assuming the strict weighted-mean inequality. Its second term is strictly positive because $0<X,Y<1$, so $2\E[br]-C>0$. Formula~\eqref{eq:floor-remainder} and $gH_*\ge0$ prove $D_\lambda>0$.
+
+Suppose $\alpha<1$. The identities
+\[
+ \cJ(y^2)(0)=a_2,\qquad
+ \Psi(0)=u-\frac vc\{1-(\lambda+1)u+\lambda a_2\}
+\]
+give the formula for $\alpha$. Also $A_0=\E[(1-U)(1-\lambda U)]>0$. Since $v<h=cu/(1-u)$,
+\[
+ \alpha>
+ \frac{u-uA_0/(1-u)}{a_2}
+ =\frac{\lambda u(u-a_2)}{(1-u)a_2}.
+\]
+Lemma~\ref{lem:canonical-moments} gives
+$a_2<\beta_2=u/(\lambda+1-\lambda u)$. Hence
+$(u-a_2)/[(1-u)a_2]>\lambda$, proving $\alpha>\lambda^2u$. Because $\alpha<1$, this implies $u<\lambda^{-2}$, and $h=cu/(1-u)<c/(\lambda^2-1)=1/(\lambda+1)$.
+\end{proof}
+
+At $v=N/Z$ we also have the identity
+\begin{equation}\label{eq:C-kernel-identity}
+ C=\E\left[b(X)\cJ\bigl((1-y)(2v-(1+v)y)\bigr)(X)\right].
+\end{equation}
+To check it without a sign assumption, put $q=xy-vt(x,y)$. Direct polynomial expansion gives
+\[
+ x(1-x)(1-y)(2v-(1+v)y)
+ +y(1-y)(1-x)(2v-(1+v)x)
+ =-2(1-x)(1-y)q.
+\]
+After averaging and using symmetry, the right-hand side of~\eqref{eq:C-kernel-identity} is
+$-\lambda^{-1}\E[(1-X)(1-Y)q/A^2]$.
+Since $(1-x)(1-y)=\lambda-A(x,y)$ and $\E[q/A]=N-vZ=0$, this is $-\E[q/A^2]=C$. If $v$ is replaced by an upper bound with the escape law fixed, $N-vZ$ need no longer vanish. We retain this term in the next subsection.

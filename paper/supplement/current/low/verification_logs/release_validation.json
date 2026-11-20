@@ -1,0 +1,18 @@
+{
+  "status": "PASS",
+  "arithmetic_command": "python3 verify.py",
+  "arithmetic_exit_code": 0,
+  "arithmetic_seconds": 572.937,
+  "arithmetic_programs": 10,
+  "data_validation_command": "python3 check_data.py",
+  "data_validation_exit_code": 0,
+  "data_validation_stdout": "PASS: unpacked 239 exact tables with 886006 rational entries.\nCompressed table bytes: 78719143\n",
+  "table_count": 239,
+  "stored_rational_entries": 886006,
+  "compressed_table_bytes": 78719143,
+  "python": "3.14.7",
+  "sympy": "1.14.0",
+  "complete_inventory": true,
+  "program_and_archive_hashes_rechecked": true,
+  "scope": "Fresh exact finite arithmetic and independent lossless-table validation; all analytic reductions are in the manuscript."
+}

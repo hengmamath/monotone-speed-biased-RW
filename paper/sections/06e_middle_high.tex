@@ -1,0 +1,868 @@
+\subsection{Kernel and integral bounds for \texorpdfstring{$707/500\le\lambda<(3+\sqrt5)/2$}{707/500 <= lambda < (3+sqrt(5))/2}}\label{sec:middle-high}
+
+We prove $v'(\lambda)<0$ on the two intervals
+\[
+ \frac{707}{500}\le\lambda\le\frac{39}{20},
+ \qquad
+ \frac{39}{20}\le\lambda<\frac{3+\sqrt5}{2},
+ \qquad \lambda<m.
+\]
+Fix the offspring law. Lemma~\ref{lem:canonical-moments} gives the moment inequalities, and Lemma~\ref{lem:full-response} gives the derivative formula
+\[
+ D=2\eta(\Psi)-C,\qquad
+ \eta(f)=\E[b(X)(\mathcal Rf)(X)],\qquad v'(\lambda)=-D/Z,
+\]
+where $Z>0$. Lemma~\ref{lem:calibration} gives $D>0$ when $(\lambda+1)h\ge1$. It therefore suffices to consider
+\begin{equation}\label{eq:mh-hard}
+ 0<h<\frac1{\lambda+1},\qquad
+ 0<a_1=\E U<\lambda^{-2},\qquad U=\frac{X}{c+X},\quad c=\lambda-1.
+\end{equation}
+We use $\inf\Psi>0$ and $v<h$ from Lemma~\ref{lem:harmonic-speed}. Recall that $a_n=\E U^n$, $\beta_n=h/(\lambda^n-1+h)$ and $\rho_n=a_n/\beta_n$. The polynomial bounds below hold on domains that contain the parameter values obtained from the escape law.
+
+\subsubsection{Kernel bounds for \texorpdfstring{$707/500\le\lambda\le39/20$}{707/500 <= lambda <= 39/20}}
+Define
+\[
+ P_v(y)=y^2+c\{(1+v)y-v\},\qquad
+ P_c(y)=(1-y)\{2v-(1+v)y\}.
+\]
+Thus $\Psi=\cJ P_v$, and~\eqref{eq:C-kernel-identity} gives
+\begin{equation}\label{eq:mh-C-kernel}
+ C=\E[b(X)(\cJ P_c)(X)].
+\end{equation}
+The measure comparison of Lemma~\ref{lem:entropy-response} gives
+\begin{equation}\label{eq:mh-max-source}
+ \eta\ge\max(g,b)\pi_\lambda,
+ \qquad
+ D\ge\E\left[2\max\{g(X),b(X)\}\Psi(X)-b(X)(\cJ P_c)(X)\right].
+\end{equation}
+All functions in the last expectation are bounded. The identity for one child
+\[
+ g(F_\lambda(z))-b(F_\lambda(z))=F_\lambda'(z)g(z)
+\]
+and the signs $g(z)>0$ for $0<z<1$, $g(1)=0$, and $g(z)<0$ for $z>1$ show that
+\begin{equation}\label{eq:mh-source-split}
+ g(x)\ge b(x)\quad\left(0<x\le\frac1{\lambda+1}\right),
+ \qquad
+ b(x)\ge g(x)\quad\left(\frac1{\lambda+1}\le x<1\right).
+\end{equation}
+Consequently, for $707/500\le\lambda\le39/20$, it suffices to prove
+\begin{align}\label{eq:mh-two-kernels}
+ 2\frac{g(x)}{b(x)}\Psi(x)-(\cJ P_c)(x)&>0,
+ &&0<x\le\frac1{\lambda+1},\notag\\
+ 2\Psi(x)-(\cJ P_c)(x)&>0,
+ &&\frac1{\lambda+1}\le x<1.
+\end{align}
+Multiplication by $b$ gives the bounded integrand in~\eqref{eq:mh-max-source}, even if the ratio $g/b$ is unbounded.
+
+\subsubsection{A four-moment bound on \texorpdfstring{$v/(1+v)$}{v/(1+v)}}
+Put $s=a_2/a_1$ for the kernel estimates on $707/500\le\lambda\le39/20$. The moment comparison and Jensen's inequality give
+\begin{equation}\label{eq:mh-moment-domain}
+ \begin{gathered}
+ a_1\le s\le\frac1{D_2},\qquad D_2=\lambda+1-\lambda a_1,\\
+ D_3=\lambda^2+\lambda+1-\lambda(\lambda+1)a_1,\\
+ D_4=\lambda^3+\lambda^2+\lambda+1-\lambda(\lambda^2+\lambda+1)a_1.
+ \end{gathered}
+\end{equation}
+and
+\[
+ a_3\le a_2D_2/D_3,\qquad a_4\le a_2D_2/D_4.
+\]
+All three denominators are positive; in particular $D_2>\lambda$. Write
+\begin{equation}\label{eq:mh-four-envelope}
+ \begin{split}
+ A(a_1)&=c\lambda+c\lambda^2(D_2/D_3)^2+\lambda^4(D_2/D_4)^2,\\
+ E_4&=c+A(a_1)s^2,\qquad
+ B=1-\lambda a_1+\lambda a_1s(1-\lambda s)>0.
+ \end{split}
+\end{equation}
+Here $A(a_1)$ is a scalar moment bound, distinct from the pair denominator $A_\lambda(x,y)$.
+
+To bound the terms of order four and higher, set
+\[
+ T=\sum_{n\ge1}\lambda^{n-1}a_n^2,
+ \qquad Q=\sum_{n\ge1}\lambda^{n-1}a_na_{n-1},\qquad a_0=1.
+\]
+Since $0<U<1/\lambda$, both series converge absolutely. Expanding the pair denominator gives
+\begin{equation}\label{eq:mh-moment-speed}
+ v=\frac{cT}{2Q-(\lambda+1)T},\qquad
+ \frac{v}{1+v}=\frac{cT}{2(Q-T)}.
+\end{equation}
+For $n\ge4$, $a_n\le a_4\lambda^{-(n-4)}$, whence
+\[
+ \sum_{n\ge4}\lambda^{n-1}a_n^2
+ \le\frac{\lambda^3a_4^2}{1-1/\lambda}
+ =\frac{\lambda^4a_4^2}{c}.
+\]
+Retaining the first three terms of $T$ and the first two terms of $Q-\lambda T$ therefore gives
+\begin{align*}
+ cT&\le c a_1^2+c\lambda a_2^2+c\lambda^2a_3^2+\lambda^4a_4^2
+ \le a_1^2E_4,\\
+ Q-\lambda T&\ge a_1-\lambda a_1^2+\lambda a_1a_2-\lambda^2a_2^2=a_1B.
+\end{align*}
+For the second bound, every omitted term is nonnegative because $a_{n-1}\ge\lambda a_n$. The function $cT/[2(a_1B+cT)]$ increases with $T$. Thus
+\begin{equation}\label{eq:mh-speed-upper}
+ \frac{v}{1+v}\le\frac{a_1E_4}{2(B+a_1E_4)}<\frac12.
+\end{equation}
+No moment of the offspring number beyond its first moment has entered these bounds.
+
+\subsubsection{The kernel for \texorpdfstring{$1/(\lambda+1)\le x<1$}{1/(lambda+1) <= x < 1}}
+We prove the second inequality in~\eqref{eq:mh-two-kernels} on the slightly larger bias interval $7/5\le\lambda\le39/20$. At $x=1/(\lambda+1)$,
+\[
+ A_\lambda(x,y)=\frac{\lambda(\lambda+y)}{\lambda+1}.
+\]
+Substitution of $y=cU/(1-U)$ yields the exact identity
+\begin{equation}\label{eq:mh-high-FG}
+ \frac{2P_v(y)-P_c(y)}{(1+v)(\lambda+y)^2}
+ =F(U)-2\frac{v}{1+v}G(U),
+\end{equation}
+where
+\[
+ F(U)=\frac{cU(2c+1-\lambda U)}{(\lambda-U)^2},\qquad
+ G(U)=\frac{\lambda-(3\lambda-1)U+\lambda^2U^2}{(\lambda-U)^2}>0.
+\]
+The positivity follows alternatively from $G(U)=(y^2-y+\lambda)/(\lambda+y)^2$.
+Set
+\[
+ f_1=\frac{c(2c+1)}{\lambda^2},\qquad
+ f_2=\frac{c\{(4-\lambda)c+2-\lambda\}}{\lambda^3}>0,
+ \qquad \gamma_0=\frac{3c}{\lambda^2},\quad
+ \gamma_1=\frac{2\lambda+1}{(\lambda+1)^2}.
+\]
+For $1<\lambda\le2$ and $0\le U\le1/\lambda$,
+\begin{equation}\label{eq:mh-high-FG-bounds}
+ F(U)\ge f_1U+f_2U^2,\qquad
+ G(U)\le\frac1\lambda-\min(\gamma_0,\gamma_1)U.
+\end{equation}
+Indeed the first remainder is
+\[
+ \frac{cU^3}{\lambda^3(\lambda-U)^2}
+ \left[\lambda\{3(2c+1)-2\lambda^2\}
+       -U\{2(2c+1)-\lambda^2\}\right].
+\]
+Its bracket decreases with $U$ and at $U=1/\lambda$ equals
+$-2c(\lambda^3-2\lambda^2-\lambda+1)/\lambda>0$, since
+$\lambda^3-2\lambda^2-\lambda+1=(\lambda-2)(\lambda^2-1)-1\le-1$.
+For the second inequality, the function
+\[
+ \frac{G(0)-G(U)}U
+ =\frac{3c-(\lambda^2-1/\lambda)U}{(\lambda-U)^2}
+\]
+has derivative whose numerator decreases with $U$. Its minimum is therefore at one of the two endpoints, where its values are $\gamma_0,\gamma_1$.
+
+For $\ell=0,1$ consider the explicit cubic
+\begin{equation}\label{eq:mh-high-sigma}
+ \Sigma_\ell(s)=(f_1+f_2s)(B+a_1E_4)
+                 -E_4(1/\lambda-\gamma_\ell a_1).
+\end{equation}
+Its coefficients in increasing powers of $s$ are
+\begin{align*}
+ C_0&=f_1(1-\lambda a_1)+c\{a_1(f_1+\gamma_\ell)-1/\lambda\},\\
+ C_1&=f_2(1-a_1)+\lambda a_1f_1,\\
+ C_2&=\lambda a_1(f_2-\lambda f_1)+A(a_1)\{a_1(f_1+\gamma_\ell)-1/\lambda\},\\
+ C_3&=a_1f_2\{A(a_1)-\lambda^2\}.
+\end{align*}
+The following finite algebra lemma states the exact arithmetic used here.
+
+\begin{lemma}[Coefficient inequalities for the kernel at $x=1/(\lambda+1)$]\label{lem:mh-high-arithmetic}
+For $\lambda\ge7/5$ the five rational expressions
+\[
+ \lambda^2-A(\lambda^{-2}),\quad
+ \lambda-f_1-\gamma_0,\quad\lambda-f_1-\gamma_1,\quad
+ \lambda^3-\lambda^2+\lambda-2,\quad
+ \lambda^5+\lambda^4-\lambda^3-3\lambda^2+1
+\]
+are strictly positive. For an independent coordinate $0\le u\le1$, define
+\begin{align*}
+ H_2&=\lambda^2+\lambda-u,\\
+ H_3&=\lambda^3+\lambda^2+\lambda-(\lambda+1)u,\\
+ H_4&=\lambda^4+\lambda^3+\lambda^2+\lambda-(\lambda^2+\lambda+1)u,\\
+ \mathrm{Den}&=H_2^2H_3^2H_4^2,\\
+ E_n&=c\mathrm{Den}+c\lambda^3H_3^2H_4^2
+             +c\lambda^4H_2^2H_4^2+\lambda^6H_2^2H_3^2,\\
+ V_n&=\lambda(\lambda-u)\mathrm{Den}
+       +\lambda^2uH_2H_3^2H_4^2-u\lambda^4H_3^2H_4^2+uE_n,\\
+ L_n&=\lambda H_2(2c+1)+\lambda\{(4-\lambda)c+2-\lambda\},\\
+ N_0&=cL_nV_n-E_nH_2(\lambda^4-3c\lambda u),\\
+ N_1&=cL_nV_n(\lambda+1)^2
+       -E_nH_2\{\lambda^3(\lambda-u)(\lambda+1)^2+\lambda^5u\}.
+\end{align*}
+Then $N_0,N_1>0$. Every $H_i$ and $\mathrm{Den}$ is strictly positive on this domain. At $u=\lambda^2a_1$ the exact identities are
+\[
+ \Sigma_0(1/D_2)=\frac{N_0}{\lambda^5H_2\mathrm{Den}},\qquad
+ \Sigma_1(1/D_2)=\frac{N_1}{\lambda^5H_2\mathrm{Den}(\lambda+1)^2}.
+\]
+\end{lemma}
+
+Only finite coefficient arithmetic is used in this lemma. More explicitly, after writing $\tau=\lambda-7/5$, the numerators and denominators of the first five rational expressions have nonnegative coefficients and positive constants. Each $N_\ell$ has degree at most eight in $u$. Its nine degree-eight Bernstein coefficients are polynomials in $\tau$ with nonnegative coefficients and positive constants. The exact rational definitions above and the conversion
+\begin{equation}\label{eq:mh-bernstein}
+ [u^j]_{\mathrm{Bern},d}\left(\sum_{b=0}^dp_bu^b\right)
+ =\sum_{b=0}^j p_b\frac{\binom jb}{\binom db}
+\end{equation}
+specify all eighteen coefficient checks in the supplement. Positivity follows on $0\le u\le1$ because the Bernstein basis is nonnegative and sums to one. Finally $H_i$ decrease in $u$, and their values at $u=1$ are respectively $\lambda^2+\lambda-1$, $\lambda^3+\lambda^2-1$, and $\lambda^4+\lambda^3-1$, all positive.
+
+The ratios $D_2/D_3,D_2/D_4$ increase with $a_1$, so $A(a_1)\le A(\lambda^{-2})<\lambda^2$. Lemma~\ref{lem:mh-high-arithmetic} and
+\[
+ \lambda f_1-f_2=\frac{2c^2(\lambda^2+\lambda-1)}{\lambda^3}>0
+\]
+give $C_2<0,C_3<0$. Hence $\Sigma_\ell$ is strictly concave on $[0,1/D_2]$. At $s=0$ its value satisfies
+\begin{align*}
+ C_0(\gamma_0)&\ge\frac{c(\lambda^3-\lambda^2+\lambda-2)}{\lambda^4}>0,\\
+ C_0(\gamma_1)&\ge\frac{c(\lambda^5+\lambda^4-\lambda^3-3\lambda^2+1)}{\lambda^4(\lambda+1)^2}>0.
+\end{align*}
+The other endpoint is positive by Lemma~\ref{lem:mh-high-arithmetic}. Concavity therefore proves~\eqref{eq:mh-high-sigma} positive for every admissible $s$.
+Taking expectations in~\eqref{eq:mh-high-FG-bounds} and choosing $\gamma=\min(\gamma_0,\gamma_1)$ gives
+\[
+ \frac{v}{1+v}\le\frac{a_1E_4}{2(B+a_1E_4)}
+ <\frac{a_1(f_1+f_2s)}{2(1/\lambda-\gamma a_1)}
+ \le\frac{\E F(U)}{2\E G(U)}.
+\]
+The denominator is positive because $\gamma a_1<1/\lambda$. This proves the kernel inequality at $x=1/(\lambda+1)$.
+
+To extend it to larger $x$, the polynomial
+\[
+ 2P_v(y)-P_c(y)
+ =(1-v)y^2+\{2c(1+v)+1+3v\}y-2\lambda v
+\]
+is strictly increasing for $y\ge0$, has negative value at zero and positive value $2\lambda$ at one. Let its unique zero be $y_0\in(0,1)$. For $x\ge1/(\lambda+1)$ the ratio
+\[
+ W_x(y)=\left[\frac{A_\lambda(1/(\lambda+1),y)}{A_\lambda(x,y)}\right]^2
+\]
+increases in $y$, since
+\[
+ \frac{\dd}{\dd y}\log W_x(y)
+ =\frac{2\lambda\{x-1/(\lambda+1)\}}
+ {A_\lambda(1/(\lambda+1),y)A_\lambda(x,y)}\ge0.
+\]
+Multiplying $[W_x(y)-W_x(y_0)][2P_v(y)-P_c(y)]\ge0$ by the positive reciprocal square at $1/(\lambda+1)$ and integrating proves the required strict inequality for every larger $x$.
+
+\subsubsection{The kernel for \texorpdfstring{$0<x\le1/(\lambda+1)$}{0 < x <= 1/(lambda+1)}}
+For $0<x\le1/(\lambda+1)$ put $\theta=\lambda x/(c+x)$, so $0<\theta\le1/\lambda$. The formula for $g$ gives
+\[
+ \frac{g(x)}{b(x)}=-\frac1c-\frac{\log\theta}{\log\lambda(1-\theta)}.
+\]
+We use the rational lower bound
+\begin{equation}\label{eq:mh-Rrat}
+ R=1+\frac{9\lambda(1-\lambda\theta)
+                  \{28\lambda+17+(17\lambda+19)\theta\}}
+ {c(\lambda+1)(2\lambda+7)(2\lambda+1)(2+7\theta)(2+\theta)}
+ \le\frac{g(x)}{b(x)},\qquad R\ge1.
+\end{equation}
+To bound the logarithmic term, observe that for $0<\theta\le1/\lambda$,
+\begin{align*}
+ \frac{g(x)}{b(x)}-1
+ &=\frac{1/\lambda-\theta}{\log\lambda}
+   \int_0^1\frac{1-t}
+   {\{\theta+(1-\theta)t\}\{1/\lambda+(1-1/\lambda)t\}}\,\dd t.
+\end{align*}
+The reciprocal product in this integrand is convex in $t$. Apply Jensen's inequality separately on $[0,1/2]$ and $[1/2,1]$ with weight $(1-t)\dd t$. The masses are $3/8,1/8$ and the means $2/9,2/3$, respectively. The integral is therefore at least
+\[
+ \lambda\left\{
+ \frac{243}{8(2+7\theta)(2\lambda+7)}
+ +\frac9{8(2+\theta)(2\lambda+1)}\right\}.
+\]
+The trapezoid bound for the convex function $1/t$ gives
+$\log\lambda\le c(\lambda+1)/(2\lambda)$. Substitution and addition of the two fractions give exactly~\eqref{eq:mh-Rrat}. Equality holds at $\theta=1/\lambda$.
+
+For fixed $R\ge1$, the signed kernel divided by $1+v$ decreases as $v/(1+v)$ increases: its numerator has derivative
+\[
+ -2R(y^2+c)-2(1-y)<0.
+\]
+Since $\Psi>0$, we may first replace $g(x)/b(x)$ by $R$, and then replace $v/(1+v)$ by the upper bound in~\eqref{eq:mh-speed-upper}. Both operations give lower bounds for the expected signed kernel.
+
+We record the exact quadratic reduction before proving its sign. In this calculation only, write $r=v/(1+v)$ and denote the three polynomial coefficients by
+\[
+ C=2r(1+cR),\quad
+ L=c+2(\lambda+1)r+2Rc(c+2r),\quad K=\lambda(c+C).
+\]
+Substitution of $y=cU/(1-U)$ gives
+\begin{equation}\label{eq:mh-low-transform}
+ \frac{2RP_v(y)-P_c(y)}{(1+v)A_\lambda(x,y)^2}
+ =\frac{-C+LU-KU^2}{(c+x)^2(1-\theta U)^2}.
+\end{equation}
+Put $D_1=L-2\theta C$ and $E_1=-K+2\theta L-3\theta^2C$. The expression
+\[
+ D_1=c+2r\{\lambda+1-2\theta\}+2Rc\{c+2r(1-\theta)\}
+\]
+is strictly positive. Polynomial division yields
+\[
+ \frac{-C+LU-KU^2}{(1-\theta U)^2}
+ =-C+D_1U+U^2j(U),\qquad
+ j(U)=\frac{E_1-\theta^2D_1U}{(1-\theta U)^2}.
+\]
+Its derivative is
+\[
+ j'(U)=\frac{\theta\{2E_1-\theta D_1-\theta^2D_1U\}}{(1-\theta U)^3}.
+\]
+The numerator decreases with $U$, so $j$ attains its minimum at $0$ or $1/\lambda$. Consequently the expectation in~\eqref{eq:mh-low-transform} is strictly positive if both
+\begin{equation}\label{eq:mh-B01}
+ B_0=-C+D_1a_1+E_1a_1s>0,\qquad
+ B_1=(-C+D_1a_1)(1-\theta/\lambda)^2
+             +(E_1-\theta^2D_1/\lambda)a_1s>0.
+\end{equation}
+We now verify these two inequalities at $r=a_1E_4/[2(B+a_1E_4)]$ and $R$ from~\eqref{eq:mh-Rrat}, throughout $707/500\le\lambda\le39/20$. The ratio $r$ and the coefficients $C,L,K$ in this reduction will not denote the response function or parameter term outside this calculation.
+
+\subsubsection{Concavity for \texorpdfstring{$a_1\le s\le1/D_2$}{a1 <= s <= 1/D2}}
+The dependence on $s$ in~\eqref{eq:mh-B01} can be handled before the endpoint arithmetic. Set
+\begin{align*}
+ T&=1+cR,\qquad M=1+2cR,\qquad m_b=cM,\\
+ e_b&=-\lambda c+2\theta m_b,\\
+ l_d&=2(\lambda+1)+4cR-4\theta T,\\
+ e_r&=-2\lambda T+4\theta(\lambda+1)+8\theta cR-6\theta^2T.
+\end{align*}
+Here $T$ is a rational coefficient, rather than the moment sum in~\eqref{eq:mh-moment-speed}. For $i=0$ take
+\[
+ (w,m_0,m_1,l_0,l_1)=(1,m_b,e_b,l_d,e_r),
+\]
+and for $i=1$ take
+\[
+ w=(1-\theta/\lambda)^2,\quad
+ (m_0,m_1,l_0,l_1)
+ =(m_bw,e_b-\theta^2m_b/\lambda,l_dw,e_r-\theta^2l_d/\lambda).
+\]
+Define, for either choice,
+\begin{equation}\label{eq:mh-hybrid-sigma}
+ \Sigma_i=(B+a_1E_4)(m_0+m_1s)
+               +\frac{a_1E_4}{2}(l_0+l_1s)-E_4Tw.
+\end{equation}
+Direct substitution into~\eqref{eq:mh-B01} gives
+\begin{equation}\label{eq:mh-hybrid-normalization}
+ B_i=\frac{a_1\Sigma_i}{B+a_1E_4}.
+\end{equation}
+All denominators are positive, including $w$, because $\theta/\lambda\le\lambda^{-2}<1$.
+
+We prove $\Sigma_i''(s)<0$ for $a_1\le s\le1/D_2$ and $7/5\le\lambda\le39/20$. With
+\[
+ K_0=a_1(m_0+l_0/2)-Tw,\qquad K_1=a_1(m_1+l_1/2),
+\]
+the four cubic coefficients of~\eqref{eq:mh-hybrid-sigma} are
+\begin{align*}
+ C_0&=m_0(1-\lambda a_1)+cK_0,\\
+ C_1&=m_1(1-\lambda a_1)+\lambda a_1m_0+cK_1,\\
+ C_2&=\lambda a_1m_1-\lambda^2a_1m_0+A(a_1)K_0,\\
+ C_3&=-\lambda^2a_1m_1+A(a_1)K_1.
+\end{align*}
+Thus $\Sigma_i''=2(C_2+3C_3s)$, and its sign is affine in $A(a_1)$. It suffices to prove negativity at $A=0$ and $A=\lambda^2$.
+
+We first bound $R$ from~\eqref{eq:mh-Rrat}. The derivative of
+$\{28\lambda+17+(17\lambda+19)\theta\}/\{(2+7\theta)(2+\theta)\}$ has numerator
+\[
+ -4(95\lambda+49)-14(28\lambda+17)\theta
+                    -7(17\lambda+19)\theta^2<0.
+\]
+Moreover the value of $R-1$ at $\theta=0$ decreases with $\lambda$: the logarithmic derivative of its numerator is less than $2/\lambda$, while the two denominator factors $c,\lambda+1$ alone have logarithmic derivative $2\lambda/(\lambda^2-1)>2/\lambda$. Its value at $7/5$ gives
+\begin{equation}\label{eq:mh-price-bounds}
+ 1\le R\le1+5(1-\lambda\theta),\qquad
+ \lambda\le T,\quad 2\lambda-1\le M\le1+12c-10c\lambda\theta<13.
+\end{equation}
+Also $D_2\ge59/35>3/2$, so $s<2/3$. Put $\zeta=c/T\in[0,c/\lambda]$.
+
+\begin{lemma}[Finite algebra used in the curvature proof]\label{lem:mh-curvature-arithmetic}
+For $7/5\le\lambda\le39/20$, all four values
+\[
+ 1-\lambda^{-2}\left[2-3\lambda s+
+ \frac{\{(12+6\zeta)s-2(2-\lambda+\zeta)/\lambda\}^2}{36s}\right]
+\]
+are strictly positive when $\zeta\in\{0,c/\lambda\}$ and
+$s\in\{\lambda^{-2},(\lambda+1-1/\lambda)^{-1}\}$.
+The polynomial
+\[
+ F(\lambda,t)=\lambda^4-(1+12c-10ct)(4\lambda^2t-2t^2-\lambda^4)
+\]
+is positive for $\lambda\ge7/5$ and $0\le t\le1$.
+Finally set
+\[
+ h_0=4-2\lambda-2/\lambda+2\zeta+
+        \frac{2(c-\zeta)}{(1-\lambda^{-2})^2},\qquad
+ g=2+\lambda(\lambda-2-\zeta)
+       -\frac{\lambda(c-\zeta)}{(1-\lambda^{-2})^2}.
+\]
+The following five rational quantities are strictly positive:
+\begin{gather*}
+ 6\frac{\lambda^2}{\lambda^2+\lambda-1}-2
+ -\frac{2c}{\lambda(1-\lambda^{-2})^3}
+       \left(3\frac{\lambda^2}{\lambda^2+\lambda-1}-2\right),\\
+ -g\big|_{\zeta=0},\quad
+ (-12g-h_0^2)\big|_{\zeta=0},\quad
+ (1/10-g)\big|_{\zeta=c/\lambda},\quad
+ (\lambda^2-1/5-h_0)\big|_{\zeta=c/\lambda}.
+\end{gather*}
+All displayed denominators are positive for $\lambda>1$. These assertions are finite coefficient inequalities: after $\lambda=7/5+\tau$, the nine rational numerators and denominators have nonnegative coefficients and positive constants; the six degree-five Bernstein coefficients of $F$ in $t$ have the same property as polynomials in $\tau$.
+\end{lemma}
+
+We give the remaining continuous curvature argument. For $i=0,A=0$, divide $C_2+3C_3s$ by the positive number $a_1c\lambda$ and put $x=1-3\lambda s$. The result is
+\[
+ x(2\theta M-\lambda)-\lambda M.
+\]
+When $0\le x\le1$, its maximum is at $x=0$ or $1$. The first value is negative; the second is at most $M(2/\lambda-\lambda)-\lambda<0$, since $2/\lambda-\lambda\le1/35$ and $M<13$. When $x<0$, omit the nonpositive term $2\theta Mx$ and use $M\ge2\lambda-1$ to obtain the strict upper bound $\lambda^2(3s-2)<0$.
+
+For $i=0,A=\lambda^2$, division by $\lambda^2T$ gives
+\[
+ a_1(h_0+3sg)-1,\qquad
+ h_0=2-\frac{2\theta}{\lambda}(2-\lambda+\zeta),\quad
+ g=-\lambda+4\theta+2\zeta\theta-3\theta^2.
+\]
+Completing the square in $\theta$ bounds this by
+\begin{equation}\label{eq:mh-curvature-square}
+ a_1\left[2-3\lambda s+
+ \frac{\{(12+6\zeta)s-2(2-\lambda+\zeta)/\lambda\}^2}{36s}\right]-1.
+\end{equation}
+The bracket is convex first in $\zeta$, and then, with $\zeta$ fixed, in $s$. We need only $\zeta=0,c/\lambda$ and $s=a_1,1/D_2$. To see that these endpoint bounds increase with $a_1$, put
+\[
+ p=12+6\zeta,\quad q=2(2-\lambda+\zeta)/\lambda,\quad
+ L=p^2/36-3\lambda,\quad b=2-pq/18.
+\]
+The expressions in~\eqref{eq:mh-curvature-square}, before subtracting one, are
+$ba_1+La_1^2+q^2/36$ and
+$a_1[b+L/D_2+q^2D_2/36]$. At $\zeta=0$ their derivatives are bounded below, respectively, by
+\[
+ \frac{10\lambda^2-26\lambda+24}{3\lambda^2}>0,
+ \qquad\frac{\lambda^2-5\lambda+12}{3\lambda^2}>0.
+\]
+Both numerators have negative discriminants. At $\zeta=c/\lambda$, one has $0<q\le62/49$, $p<18$, $b>2-q>0$, and
+\[
+ L=9-3\lambda-6/\lambda+1/\lambda^2>1/4.
+\]
+The last function decreases on $[7/5,2]$ and equals $1/4$ at two. Both derivatives are again positive. We may therefore replace $a_1$ by $\lambda^{-2}$; the first four inequalities of Lemma~\ref{lem:mh-curvature-arithmetic} prove strict negativity.
+
+For $i=1,A=0$, the corresponding expression divided by $a_1c\lambda$ is
+\[
+ -\lambda x+M\{(x+1)J_\theta-\lambda\},\qquad
+ x=1-3\lambda s,\quad J_\theta=2\theta-\theta^2/\lambda.
+\]
+For $0\le x\le1$, check the two endpoints. At zero it is $-\lambda Mw<0$. At one, if $2J_\theta-\lambda>0$, use~\eqref{eq:mh-price-bounds}; multiplication of the required strict inequality by $\lambda^3$ gives precisely $F(\lambda,\lambda\theta)>0$ from Lemma~\ref{lem:mh-curvature-arithmetic}. If the bracket is nonpositive there is nothing to prove. For $x\le-1$, use $J_\theta\ge0$ and $M\ge2\lambda-1$ to obtain $\lambda^2(3s-2)<0$. For $-1\le x\le0$, use $J_\theta\le2/\lambda-1/\lambda^3<\lambda$ and $M\ge2\lambda-1$. The resulting affine function of $x$ is negative at both endpoints: its values there are $-2\lambda c$ and $(2\lambda-1)(2/\lambda-1/\lambda^3-\lambda)$.
+
+For $i=1,A=\lambda^2$, divide by $\lambda^2Tw$. The result is $a_1(h_0+3sg)-1$, where now
+\[
+ h_0=4-2\lambda-2\theta+2\zeta+2(c-\zeta)/w,
+ \qquad g=2\lambda\theta+\lambda(\lambda-2-\zeta)-\lambda(c-\zeta)/w.
+\]
+It is affine in $\zeta$, so take $\zeta=0,c/\lambda$. Its remaining dependence is
+\[
+ h_0+3sg=4-2\lambda+2\zeta+3\lambda s(\lambda-2-\zeta)
+ +(6\lambda s-2)\theta+(c-\zeta)(2-3\lambda s)/w.
+\]
+If $\lambda s\le2/3$, this is convex in $\theta$ and its maximum is at $0$ or $1/\lambda$. If $\lambda s>2/3$, it is concave. At $\theta=1/\lambda$ its derivative is bounded below by
+\[
+ 6\lambda s-2-\frac{2c}{\lambda(1-\lambda^{-2})^3}(3\lambda s-2)>0.
+\]
+Indeed this expression is affine in $\lambda s$, equals two at $2/3$, and is positive at the other endpoint $\lambda^2/(\lambda^2+\lambda-1)$ by Lemma~\ref{lem:mh-curvature-arithmetic}. Thus the maximum is again at an endpoint in $\theta$.
+At $\theta=0$, $h_0=2,g=-\lambda$ and
+\[
+ a_1(h_0+3sg)-1\le2a_1-3\lambda a_1^2-1
+ \le1/(3\lambda)-1<0.
+\]
+At $\theta=1/\lambda,\zeta=0$, the finite lemma gives $g<0$ and $-12g>h_0^2$; since $s\ge a_1$, completing the square in $a_1$ gives an upper bound $h_0^2/(-12g)-1<0$.
+At $\theta=1/\lambda,\zeta=c/\lambda$, the same lemma gives $g<1/10$ and $h_0+1/5<\lambda^2$. Since $s<2/3$, it follows that $h_0+3sg<\lambda^2$, and $a_1\le\lambda^{-2}$ again gives strict negativity. Affinity in $A$ proves
+\begin{equation}\label{eq:mh-s-concavity}
+ \Sigma_0''(s)<0,\qquad\Sigma_1''(s)<0
+ \quad(a_1\le s\le1/D_2).
+\end{equation}
+
+\subsubsection{Positivity at \texorpdfstring{$s=a_1$ and $s=1/D_2$}{s = a1 and s = 1/D2}}
+We next prove the four endpoint inequalities required by~\eqref{eq:mh-s-concavity}. At $s=a_1$, taking $R=1$ gives a lower bound after dividing $\Sigma_i$ by the positive factor $Tw$. At $s=1/D_2$ we use the dependence of $A(a_1)$ on the first moment to narrow the interval $0\le A\le\lambda^2$ used in the concavity argument.
+
+Set $J_\theta=2\theta-\theta^2/\lambda$ and $\Phi_i=\Sigma_i/(Tw)$. Direct expansion of~\eqref{eq:mh-hybrid-sigma} gives
+\begin{align*}
+ \Phi_i&=BP_i+E_4(a_1Q_i-1),\\
+ P_0&=2c(1+2\theta s)-\zeta\{1+(\lambda+2\theta)s\},\\
+ Q_0&=2\lambda-2\theta+s\{-\lambda(1+\zeta)+4\lambda\theta-3\theta^2\},\\
+ P_1&=2c-\zeta+\frac{s}{w}\{2cJ_\theta-\zeta(\lambda+J_\theta)\},\\
+ Q_1&=2\lambda-2\theta+
+ \frac{s}{w}\{-\lambda(1+\zeta)+4\lambda\theta-5\theta^2+2\theta^3/\lambda\}.
+\end{align*}
+In these expressions $B,E_4$ are independent of $\zeta$. Thus
+\begin{align*}
+ \partial_\zeta\Phi_0&=-B\{1+(\lambda+2\theta)s\}-\lambda a_1sE_4<0,\\
+ \partial_\zeta\Phi_1&=-B\{1+s(\lambda+J_\theta)/w\}
+                      -\lambda a_1sE_4/w<0.
+\end{align*}
+Since $R\ge1$ gives $\zeta\le c/\lambda$, the value of $\Phi_i$ at $R=1$ is a lower bound for $\Phi_i$ at the value of $R$ in~\eqref{eq:mh-Rrat}. The positive factor $Tw$ then transfers strict positivity to $\Sigma_i$.
+
+\begin{lemma}[Coefficient inequalities at $s=a_1$]\label{lem:mh-lower-arithmetic}
+In~\eqref{eq:mh-hybrid-sigma}, replace $A(a_1)$ temporarily by $b\in\{0,\lambda^2\}$, and set $R=1$, $a_1=s=u/\lambda^2$, $\theta=t/\lambda$. The explicit products
+\begin{equation}\label{eq:mh-lower-polynomials}
+ F_i^b(\lambda,u,t)
+ =\lambda^{8+2i}\left.\frac{\Sigma_i}{T}\right|_{R=1,\ a_1=s=u/\lambda^2,\ A=b,\ \theta=t/\lambda}
+ \quad(i=0,1)
+\end{equation}
+are polynomials and are strictly positive for $\lambda\ge7/5$, $0\le u,t\le1$. Their respective degrees in $(u,t)$ are at most $(4,2)$ and $(4,3)$. Every coefficient in the corresponding product Bernstein bases is a polynomial in $\lambda-7/5$ with nonnegative coefficients and positive constant.
+\end{lemma}
+
+Equation~\eqref{eq:mh-lower-polynomials} and the definitions of $B,E_4,T,m_0,m_1,l_0,l_1$ specify the four polynomials. Formula~\eqref{eq:mh-bernstein} in each variable reduces the lemma to $2\cdot15+2\cdot20=70$ finite coefficient checks. All factors divided out are positive powers of $\lambda$ and $T=\lambda$. Because $\Sigma_i$ is affine in $A$, the lemma covers $0<A(a_1)<\lambda^2$. The comparison with $R=1$ therefore gives
+\begin{equation}\label{eq:mh-lower-positive}
+ \Sigma_0(a_1)>0,\qquad\Sigma_1(a_1)>0.
+\end{equation}
+
+At $s=1/D_2$ we first bound $A(a_1)$. Differentiation gives
+\begin{align*}
+ (D_2/D_3)'&=\lambda^2/D_3^2,&
+ (D_2/D_3)''&=2\lambda^3(\lambda+1)/D_3^3,\\
+ (D_2/D_4)'&=\lambda^2(\lambda+1)/D_4^2,&
+ (D_2/D_4)''&=2\lambda^3(\lambda+1)(\lambda^2+\lambda+1)/D_4^3.
+\end{align*}
+Thus $A'>0,A''>0$ on $0\le a_1\le\lambda^{-2}$. The endpoint values are
+\begin{align*}
+ A_0=A(0)&=c\lambda+
+ \frac{c\lambda^2(\lambda+1)^2}{(\lambda^2+\lambda+1)^2}
+ +\frac{\lambda^4}{(\lambda^2+1)^2},\\
+ A_{\max}=A(\lambda^{-2})&=c\lambda+
+ \frac{c\lambda^2(\lambda^2+\lambda-1)^2}{(\lambda^3+\lambda^2-1)^2}
+ +\frac{\lambda^4(\lambda^2+\lambda-1)^2}{(\lambda^4+\lambda^3-1)^2}.
+\end{align*}
+\begin{lemma}[Finite chord bound]\label{lem:mh-chord-arithmetic}
+The rational difference $1/3-A_{\max}+A_0$ is positive for $\lambda\ge7/5$. Its denominator is
+\[
+ 3(\lambda^2+1)^2(\lambda^2+\lambda+1)^2
+   (\lambda^3+\lambda^2-1)^2(\lambda^4+\lambda^3-1)^2>0,
+\]
+and its numerator is the explicit polynomial
+\begin{align*}
+ &\lambda^{22}+6\lambda^{21}+13\lambda^{20}+16\lambda^{19}+5\lambda^{18}
+ -35\lambda^{17}-67\lambda^{16}-59\lambda^{15}-13\lambda^{14}\\
+ &\quad+45\lambda^{13}+37\lambda^{12}+11\lambda^{11}-22\lambda^{10}-9\lambda^9
+ +22\lambda^8+18\lambda^7+15\lambda^6\\
+ &\quad-19\lambda^5-8\lambda^4-8\lambda^3+3\lambda^2+2\lambda+1.
+\end{align*}
+All its coefficients after translation by $7/5$ are positive.
+\end{lemma}
+The displayed numerator makes Lemma~\ref{lem:mh-chord-arithmetic} a finite, degree-twenty-two coefficient check. Increasing convexity of $A$ and that lemma give the bound
+\begin{equation}\label{eq:mh-A-chord}
+ A_0\le A(a_1)\le A_0+\frac{\lambda^2a_1}{3}.
+\end{equation}
+
+To bound $\Sigma_i(1/D_2)$, we use independent polynomial variables $u,t\in[0,1]$. We will evaluate the polynomials at $u=\lambda^2a_1$, $t=\lambda\theta$. Put
+\begin{align*}
+ H&=\lambda^2+\lambda-u,\\
+ D_r&=(\lambda+1)(2\lambda+7)(2\lambda+1)(2\lambda+7t)(2\lambda+t),\\
+ Z_r&=cD_r+9\lambda^2(1-t)\{28\lambda^2+17\lambda+(17\lambda+19)t\},\\
+ T_n&=D_r+Z_r,\qquad M_0=c(D_r+2Z_r),\\
+ N_m&=-\lambda^2cD_r+2tM_0,\\
+ N_d&=2\lambda(\lambda+1)D_r+4\lambda Z_r-4tT_n,\\
+ N_e&=-2\lambda^3T_n+4t\lambda(\lambda+1)D_r+8t\lambda Z_r-6t^2T_n,\\
+ \delta_0&=(\lambda^2+\lambda+1)^2(\lambda^2+1)^2,\\
+ \alpha_0&=c\lambda\delta_0+c\lambda^2(\lambda+1)^2(\lambda^2+1)^2
+                         +\lambda^4(\lambda^2+\lambda+1)^2.
+\end{align*}
+For the lower and upper bounds in~\eqref{eq:mh-A-chord}, respectively, use
+\[
+ (\alpha,\delta)=(\alpha_0,\delta_0)
+ \quad\hbox{or}\quad
+ (\alpha,\delta)=(3\alpha_0+u\delta_0,3\delta_0).
+\]
+In either case $A=\alpha/\delta$ and $\delta$ is independent of $u$. Define
+\begin{align*}
+ E_n&=c\delta H^2+\alpha\lambda^2,\\
+ V_n&=\delta\{\lambda(\lambda-u)H^2+\lambda^2uH-\lambda^4u\}+uE_n,\\
+ N_0&=\lambda HV_nM_0+\lambda V_nN_m
+       +\tfrac12uE_n(HN_d+N_e)-\lambda^3HE_nT_n,\\
+ N_1&=\{\lambda HV_nM_0+\tfrac12uE_nHN_d-\lambda^3HE_nT_n\}(\lambda^2-t)^2\\
+    &\qquad+\lambda^3V_n(\lambda^2N_m-t^2M_0)
+       +\tfrac12\lambda^2uE_n(\lambda^2N_e-t^2N_d).
+\end{align*}
+These products satisfy
+\begin{equation}\label{eq:mh-upper-numerators}
+ \Sigma_0(1/D_2)=\frac{N_0}{\lambda^3\delta H^3D_r},\qquad
+ \Sigma_1(1/D_2)=\frac{N_1}{\lambda^7\delta H^3D_r}.
+\end{equation}
+For example the coefficient substitutions are
+\[
+ \begin{gathered}
+ cR=Z_r/D_r,\quad T=T_n/D_r,\quad m_b=M_0/D_r,\\
+ e_b=N_m/(\lambda D_r),\quad
+ l_d=N_d/(\lambda D_r),\quad e_r=N_e/(\lambda^2D_r).
+ \end{gathered}
+\]
+and $E_4=E_n/(\delta H^2)$, $B+a_1E_4=V_n/(\lambda^2\delta H^2)$.
+They verify~\eqref{eq:mh-upper-numerators} term by term. Every displayed denominator is positive: $H\ge\lambda^2+\lambda-1>0$, $D_r>0$, and $\delta>0$.
+
+\begin{lemma}[Finite algebra for the two integrations]\label{lem:mh-integral-arithmetic}
+For each of the two pairs $(\alpha,\delta)$ above, set
+\[
+ K_i=H\partial_uN_i+4N_i\qquad(i=0,1).
+\]
+Then $K_i>0$ for $707/500\le\lambda\le39/20$ and $0\le u,t\le1$. The $u^4$ terms cancel in this definition, and the degrees in $(u,t)$ are at most $(3,4)$ and $(3,5)$, respectively. Their product Bernstein coefficients, viewed as polynomials in $\lambda-7/5$, are nonnegative with positive constants, with one exception: for the upper pair and $i=0$, the coefficient with Bernstein indices $(0,4)$ has this property after translation by $707/500$ instead.
+
+For the lower pair define the exact polynomial quotients
+\[
+ W_0(\lambda,t)=\frac{N_0(\lambda,0,t)}{\lambda^5(\lambda+1)},\qquad
+ W_1(\lambda,t)=\frac{N_1(\lambda,0,t)}{\lambda^6(\lambda+1)}.
+\]
+Their derivatives in $\lambda$, with $t$ fixed, are strictly positive for $\lambda\ge7/5$, $0\le t\le1$. Their degree-three and degree-four Bernstein coefficients in $t$, respectively, have nonnegative coefficients and positive constants after translation by $7/5$. At $\lambda=707/500$, all four degree-three Bernstein coefficients of $W_0$ are positive. Define $b_j$ to be the degree-five Bernstein coefficients of the explicitly defined polynomial $W_1(707/500,t)$, so that
+\begin{equation}\label{eq:mh-boundary-P}
+ W_1(707/500,t)=\sum_{j=0}^5\binom5j b_jt^j(1-t)^{5-j}.
+\end{equation}
+These exact rational coefficients satisfy
+\[
+ 72b_0+25b_1>0,\qquad10b_2-40b_0>0,\qquad10b_3-187b_0>0,
+ \qquad b_0,b_4,b_5>0.
+\]
+\end{lemma}
+
+Lemma~\ref{lem:mh-integral-arithmetic} reduces to coefficient calculations for the displayed products. Formula~\eqref{eq:mh-bernstein} gives the $88$ Bernstein coefficients for the four choices of $K_i$, nine for the two derivatives, and four for $W_0(707/500,t)$. The monotonicity in $u$ applies to $N_i/H^4$.
+
+For completeness, the finite comparisons in Lemma~\ref{lem:mh-integral-arithmetic} prove the sign of the polynomial in~\eqref{eq:mh-boundary-P} by an estimate on the whole half-line. The exact rational values of the $b_j$ belong to the coefficient data; their defining polynomial and the inequalities used here are explicit.
+For $0\le t<1$ set $y=t/(1-t)$. Multiplication by $(1+y)^5/b_0$ bounds the polynomial from below by
+\[
+ 1-\frac{72}{5}y+40y^2+187y^3.
+\]
+For $0\le y\le1/12$, omit the cubic term and use that the resulting quadratic decreases on this interval; its value at $1/12$ is $7/90>0$. For $y\ge1/12$, use $187y^3\ge(187/12)y^2$ to obtain
+\[
+ 1-\frac{72}{5}y+\frac{667}{12}y^2
+ =\frac{667}{12}\left(y-\frac{432}{3335}\right)^2
+     +\frac{1123}{16675}>0.
+\]
+At $t=1$ the value is $b_5>0$. Thus $W_1(707/500,t)>0$ on the entire closed interval.
+
+We can now perform the two integrations. First, for $\lambda\ge707/500$ and fixed $t$,
+\[
+ W_i(\lambda,t)=W_i(707/500,t)+
+       \int_{707/500}^{\lambda}\partial_\ell W_i(\ell,t)\,\dd\ell>0.
+\]
+This proves $N_i(\lambda,0,t)>0$ for the lower pair. For the upper pair both $N_i$ and $\delta$ at $u=0$ are exactly three times their lower-pair values, so the same positivity holds.
+Second,
+\[
+ \frac{\partial}{\partial u}\frac{N_i}{H^4}=\frac{K_i}{H^5}>0.
+\]
+Since $H>0$ for the entire integration interval,
+\[
+ \frac{N_i(\lambda,u,t)}{H(\lambda,u)^4}
+ =\frac{N_i(\lambda,0,t)}{H(\lambda,0)^4}
+  +\int_0^u\frac{K_i(\lambda,z,t)}{H(\lambda,z)^5}\,\dd z>0.
+\]
+Both integrations use rational functions of the independent variables. By~\eqref{eq:mh-upper-numerators}, $\Sigma_i(1/D_2)>0$ at both bounds for $A$ in~\eqref{eq:mh-A-chord}. Since $\Sigma_i$ is affine in $A$, the inequality holds at $A=A(a_1)$ as well. Together with~\eqref{eq:mh-lower-positive} and strict concavity~\eqref{eq:mh-s-concavity}, this proves $\Sigma_i(s)>0$ for $a_1\le s\le1/D_2$. Equation~\eqref{eq:mh-hybrid-normalization} now proves~\eqref{eq:mh-B01}.
+
+Returning to~\eqref{eq:mh-low-transform}, the comparisons in $R$ and $v/(1+v)$ prove the first inequality in~\eqref{eq:mh-two-kernels}. The kernel estimate for $x\ge1/(\lambda+1)$ gives the second. At $x=1/(\lambda+1)$ both inequalities are strict even though $g=b$ and $R=1$. Since $0<X<1$ almost surely and $b(X)>0$, equations~\eqref{eq:mh-max-source}--\eqref{eq:mh-source-split} give
+\begin{equation}\label{eq:mh-middle-conclusion}
+ D>0\qquad\left(707/500\le\lambda\le39/20,\quad\lambda<m\right).
+\end{equation}
+\subsubsection{An integral formula for \texorpdfstring{$39/20\le\lambda<(3+\sqrt5)/2$}{39/20 <= lambda < (3+sqrt(5))/2}}
+For $39/20\le\lambda<(3+\sqrt5)/2$ we retain the full series for $\mathcal R$ and express $D$ as a signed integral using the response measure $\eta$.
+For every continuous $f$,
+\[
+ \eta((I-\cL)f)=\E[b(X)f(X)].
+\]
+Apply this with $f=\cJ P_c$ and use~\eqref{eq:mh-C-kernel}. It gives
+\begin{equation}\label{eq:mh-direct-signed}
+ D=\eta(2\cJ P_v-\cJ P_c+\cL\cJ P_c).
+\end{equation}
+Conditional on $\nu$, the escape probabilities $X_i$ at the children of the root are independent with law $\pi_\lambda$. Write $S=\sum_{i=1}^\nu X_i$. Cancellation of denominators and exchangeability give
+\[
+ (\cL\cJ P_c)(x)
+ =\frac1\lambda\E\frac{\sum_{i=1}^\nu P_c(X_i)}{(c+x+S)^2}.
+\]
+The recursion also gives
+\[
+ (\cJ P)(x)=\frac1{\lambda^2}
+ \E\frac{(\lambda+S)^2P(F_\lambda(S))}{(c+x+S)^2}
+\]
+for either polynomial $P=P_v,P_c$. Expanding both sides gives
+\begin{align}\label{eq:mh-root-polynomial}
+ &(\lambda+S)^2\{2P_v(F_\lambda(S))-P_c(F_\lambda(S))\}
+       +\lambda\sum_{i=1}^\nu P_c(X_i)\notag\\
+ &\quad=\lambda\left[
+ 2S^2+2\{c-(\lambda+1)v\}S
+ +(1+v)\sum_{i=1}^\nu X_i^2+2v(\nu-\lambda^2)\right].
+\end{align}
+Divide the bracket in~\eqref{eq:mh-root-polynomial} by $\lambda(c+x+S)^2$ and take expectation over the root and its children. Applying $\eta$ to the resulting function of $x$ gives $D$ by~\eqref{eq:mh-direct-signed}. The quotient is absolutely integrable uniformly in $x\in[0,1]$ because $S^2/(c+S)^2\le1$, $\sum_iX_i^2\le S$ and $\E\nu<\infty$.
+
+Let $f(z)=\E z^\nu$ be the offspring generating function, and set
+\[
+ \phi(t)=\E e^{-tX},\qquad
+ w(t)=\eta(e^{-t\cdot}),\qquad
+ \xi(\dd t)=t e^{-ct}f(\phi(t))\,\dd t.
+\]
+The function $w$ is positive, bounded and decreasing, because $\eta$ is a finite positive measure with $\eta\ge b\pi_\lambda$. The measure $\xi$ is finite, positive and nonzero. For $t>0$ define the exponentially weighted means
+\[
+ u_t=\frac{\E[Xe^{-tX}]}{\phi(t)},\quad
+ z_t=\frac{\E[X^2e^{-tX}]}{\phi(t)},\quad
+ n_t=\frac{\phi(t)f'(\phi(t))}{f(\phi(t))},\quad
+ j_t=\frac{\phi(t)^2f''(\phi(t))}{f(\phi(t))}.
+\]
+They are finite even when the offspring second moment is infinite, since $0<\phi(t)<1$. Define
+\begin{equation}\label{eq:mh-B-source}
+ B(t)=(3+v)n_tz_t+2j_tu_t^2
+       +2\{c-(\lambda+1)v\}n_tu_t+2v(n_t-\lambda^2).
+\end{equation}
+The identities
+\begin{align*}
+ \E e^{-tS}&=f(\phi),&
+ \E[Se^{-tS}]&=f'(\phi)\E[Xe^{-tX}],\\
+ \E[S^2e^{-tS}]&=f'(\phi)\E[X^2e^{-tX}]
+                         +f''(\phi)(\E[Xe^{-tX}])^2,&
+ \E[\nu e^{-tS}]&=\phi f'(\phi)
+\end{align*}
+and $\int_0^\infty te^{-(c+x+S)t}\dd t=(c+x+S)^{-2}$ now give
+\begin{equation}\label{eq:mh-signed-integral}
+ \begin{gathered}
+ D=\frac1\lambda\int_0^\infty w(t)B(t)\,\xi(\dd t),\qquad
+ I:=\int_0^\infty B(t)\,\xi(\dd t),\\
+ I=\E\frac{2S^2+2\{c-(\lambda+1)v\}S
+ +(1+v)\sum_iX_i^2+2v(\nu-\lambda^2)}{(c+S)^2}.
+ \end{gathered}
+\end{equation}
+The preceding absolute bounds justify applying Tonelli's theorem separately to the nonnegative terms before subtracting. They also give $\int|B|\dd\xi<\infty$.
+
+If $c-(\lambda+1)v\ge0$, then $B(t)$ decreases strictly. The weighted moments $u_t,z_t$ of $X$ decrease by the covariance inequality. The weighted offspring law assigns mass proportional to $\PP(\nu=n)\phi(t)^n$. Its means of $n$ and $n(n-1)$ decrease as $\phi(t)$ decreases. The mean $n_t$ decreases strictly, because the offspring law has positive mass at one and at some larger value. Thus each term in~\eqref{eq:mh-B-source} is nonincreasing, and the term $2vn_t$ gives strict decrease. The covariance inequality for the two decreasing functions $w,B$ yields
+\begin{equation}\label{eq:mh-source-Chebyshev}
+ D\ge\frac1\lambda\frac{\int w\dd\xi}{\int\dd\xi}\,I.
+\end{equation}
+For an unbounded $B$, first apply the inequality to $\max(-k,\min(B,k))$ and then use $|\max(-k,\min(B,k))|\le|B|$ and boundedness of $w$ to pass to the limit. Hence $I>0$ and $c-(\lambda+1)v\ge0$ imply $D>0$.
+
+\subsubsection{A speed bound for \texorpdfstring{$39/20\le\lambda<(3+\sqrt5)/2$}{39/20 <= lambda < (3+sqrt(5))/2}}
+Assume $39/20\le\lambda<(3+\sqrt5)/2$ and~\eqref{eq:mh-hard}. From here on, write $s=h/c$. Then
+\begin{equation}\label{eq:mh-coarse-domain}
+ c\ge19/20,\quad
+ 0<s<\frac1{c(c+2)}\le\frac{400}{1121}<\frac9{25},\quad
+ 0<\rho_2<1,\quad d=1-cs>0,
+\end{equation}
+and the first two moments of $U$ are
+\[
+ a_1=\frac{s}{1+s},\qquad a_2=\frac{\rho_2s}{c+2+s}.
+\]
+Retain $T,Q$ from~\eqref{eq:mh-moment-speed}. The full moment ratio comparison gives
+\begin{align}\label{eq:mh-coarse-TQ}
+ Q&\ge\lambda T+D_0,\notag\\
+ D_0&=a_1(1-\lambda a_1)+\lambda a_2(a_1-\lambda a_2)>0.
+\end{align}
+The two factors are strictly positive: $a_1<\lambda^{-2}<\lambda^{-1}$, and $\beta_1>\lambda\beta_2$, together with $\rho_2<1$, gives $a_1>\lambda a_2$. For every $n\ge2$, $a_n\le\rho_2\beta_n\le\rho_2h/(\lambda^n-1)$, so
+\[
+ T\le a_1^2+\rho_2^2h^2\sum_{n\ge2}\frac{\lambda^{n-1}}{(\lambda^n-1)^2}.
+\]
+We bound this entire series. If $\ell=\log\lambda$, its $n$th term after multiplication by $c^2$ is
+\[
+ \frac{c^2\lambda^{n-1}}{(\lambda^n-1)^2}
+ =\left[\frac{\sinh(\ell/2)}{\sinh(n\ell/2)}\right]^2.
+\]
+It decreases with $\ell$, because its logarithmic derivative is
+$\coth(\ell/2)-n\coth(n\ell/2)<0$; the function $x\coth x$ increases on $(0,\infty)$. The latter follows by differentiating its numerator $\sinh x\cosh x-x$, whose derivative is $2\sinh^2x>0$.
+For every $\lambda>1$, the tail with $n\ge5$ satisfies
+\[
+ c^2\sum_{n\ge5}\frac{\lambda^{n-1}}{(\lambda^n-1)^2}
+ \le\frac{c^2}{(1-\lambda^{-5})^2}\sum_{n\ge5}\lambda^{-n-1}
+ =\frac{c\lambda^5}{(\lambda^5-1)^2}.
+\]
+At $\lambda=19/10$, the terms with $n=2,3,4$ and the bound for $n\ge5$ are respectively
+\[
+ \frac{190}{841}<\frac{23}{100},\quad
+ \frac{36100}{423801}<\frac9{100},\quad
+ \frac{6859000}{178730161}<\frac1{25},\quad
+ \frac{24760990000}{627316273089}<\frac1{25}.
+\]
+Their right-hand sides sum to $2/5$. Termwise comparison and the limit of nonnegative partial sums therefore prove, for every $\lambda\ge19/10$,
+\begin{equation}\label{eq:mh-coarse-V}
+ T\le\overline T=s^2\{(1+s)^{-2}+(2/5)\rho_2^2\},\qquad
+ v\le V=\frac{c\overline T}{c\overline T+2D_0}.
+\end{equation}
+The speed bound follows first from~\eqref{eq:mh-coarse-TQ}, then from monotonicity of $cT/(cT+2D_0)$ in $T$.
+
+For $39/20\le\lambda<2$ we have $D_0>\overline T$. Indeed $D_0-\overline T$ is a concave quadratic in $\rho_2$, and hence is at least the smaller of its two endpoint values. At zero its value is $s(1-\lambda s)/(1+s)^2>0$. At one, with $L=c+2+s$, its value is
+\[
+ s\left\{\frac{1-\lambda s}{(1+s)^2}-\frac25s\right\}
+ +\frac{\lambda s^2d}{(1+s)L^2}>0.
+\]
+The bracket is positive because
+\[
+ \frac{1-\lambda s}{(1+s)^2}\ge\frac{175}{1156},\qquad
+ \frac25s\le\frac{18}{125},\qquad
+ \frac{175}{1156}-\frac{18}{125}=\frac{1067}{144500}>0.
+\]
+The inequality $D_0>\overline T$ is equivalent to $V<c/(\lambda+1)$. For $2\le\lambda<(3+\sqrt5)/2$, the simpler bound $v<h<1/(\lambda+1)$ gives
+$c-(\lambda+1)v>c-1\ge0$. We have thus proved $c-(\lambda+1)v>0$ on $39/20\le\lambda<(3+\sqrt5)/2$, as needed for~\eqref{eq:mh-source-Chebyshev}.
+
+\subsubsection{A lower bound on \texorpdfstring{$I$}{I} from the offspring number at the root}
+To prove $I>0$, we distinguish whether the root has one child or at least two. Put
+\[
+ W=(c+X)^{-1},\quad w_0=\E W=(c+h)^{-1},\quad
+ H=(c+S)^{-1},\quad z=\E W^2,\quad z_H=\E H^2.
+\]
+The recursion implies $\lambda W\overset{\mathrm d}=1+H$, so
+\[
+ \E H=d w_0,\qquad z_H=\lambda^2z-2\lambda w_0+1.
+\]
+Define the two root expectations
+\[
+ A_{\rm root}=\E\frac{\sum_iX_i^2}{(c+S)^2},\qquad
+ N_{\rm root}=\E\frac{\nu-1}{(c+S)^2}.
+\]
+Expanding the root expression in~\eqref{eq:mh-signed-integral} gives
+\begin{equation}\label{eq:mh-I-root}
+ I=2-2\{c+(\lambda+1)v\}d w_0
+             +(1+v)A_{\rm root}+2vN_{\rm root}.
+\end{equation}
+Let $p=\PP(\nu=1)$. Conditional on $\nu=1$, the sum $S$ has the law of $X$. On $\{\nu\ge2\}$ we have $\nu-1\ge1$. Thus
+\[
+ A_{\rm root}\ge p a_2,\qquad
+ N_{\rm root}\ge z_H-pz\ge0,\qquad 0<p\le p_{\max}=z_H/z.
+\]
+The resulting lower bound in~\eqref{eq:mh-I-root} is affine in $p$. Its two endpoints on $[0,p_{\max}]$ therefore give
+\begin{align}\label{eq:mh-F-endpoints}
+ I&\ge\min\{F_0(v),F_1(v)\},\notag\\
+ F_0(v)&=2-2\{c+(\lambda+1)v\}d w_0+2vz_H,\notag\\
+ F_1(v)&=2-2\{c+(\lambda+1)v\}d w_0+(1+v)a_2p_{\max}.
+\end{align}
+These functions are affine in $v$, and
+\[
+ F_0(0)=\frac{2\lambda s}{1+s}>0,\qquad F_1(0)=F_0(0)+a_2p_{\max}>0.
+\]
+Since $0<v\le V$, it remains to check $F_0(V)>0,F_1(V)>0$. No sign assumption on their slopes is necessary.
+
+\begin{lemma}[The sixty-three coefficient inequalities]\label{lem:mh-coarse-arithmetic}
+For independent real variables $c\ge19/20$, $0\le s\le9/25$, and $0\le r\le1$, put $\lambda=c+1$, $L=c+2+s$, and define the explicit polynomials
+\begin{align*}
+ D_N&=s(1-cs)L^2+\lambda r s^2(1+s)L
+                         -\lambda^2r^2s^2(1+s)^2,\\
+ A_N&=\{1-(2c+1)s\}L+\lambda^2rs(1+s),\\
+ B_N&=(1-s)L+rs(1+s),\\
+ E_N&=c(2c+3)s-(c+2),\\
+ T_N&=s^2L^2\{5+2r^2(1+s)^2\},\\
+ s^2P_0&=T_N(A_N+cLE_N)+10\lambda csLD_N,\\
+ s^2P_1&=(T_NE_N+10\lambda sD_N)LB_N
+                   +(1+s)rsA_N(cT_N+5D_N).
+\end{align*}
+The numerators in the last two lines are divisible by $s^2$, so $P_0,P_1$ are polynomials, and
+\begin{equation}\label{eq:mh-coarse-positive}
+ P_0\ge151,\qquad P_1\ge40
+\end{equation}
+on the entire stated rectangular domain.
+\end{lemma}
+
+Here is the exact finite arithmetic content of the lemma. Put $e=c-19/20$. The degrees in $(e,s,r)$ of $P_0,P_1$ are $(6,6,3)$ and $(6,8,4)$. If
+\[
+ [e^k]P_\ell=\sum_{i,b}a_{kib}s^ir^b,
+\]
+its degree-$D$ Bernstein coefficients in $r$, where $D=3$ for $\ell=0$ and $D=4$ for $\ell=1$, are
+\[
+ u_{kj}(s)=\sum_i\left[\sum_{b\le j}a_{kib}
+                \frac{\binom jb}{\binom Db}\right]s^i.
+\]
+There are $7\cdot4+7\cdot5=63$ such polynomials. For each nonzero polynomial, let $q$ be its first nonzero power and write $u_{kj}(s)=\sum_{i\ge q}a_is^i$. Direct rational arithmetic gives $a_q>0$ and
+\begin{equation}\label{eq:mh-coarse-payment}
+ a_q+\sum_{i>q,\ a_i<0}a_i(9/25)^{i-q}>0.
+\end{equation}
+For $k=0,\ldots,5$, $q=0$, and the following lower bounds hold for every Bernstein coefficient in the indicated block:
+\[
+\begin{array}{c|rrrrrr}
+ k&0&1&2&3&4&5\\ \hline
+ P_0&151&197&173&99&28&3\\
+ P_1&40&235&278&133&25&2/5
+\end{array}
+\]
+Four of the polynomials vanish identically. The coefficients of $e^6$ factor as
+\[
+ [e^6]P_0=4r^2s(1+s)^2,\qquad
+ [e^6]P_1=4r^2s(1-s)(1+s)^2.
+\]
+Inequality~\eqref{eq:mh-coarse-payment} bounds each nonzero polynomial for $0\le s\le9/25$. After factoring out $s^q$, we discard the positive higher-order terms and bound each negative term in absolute value at $s=9/25$. Since the Bernstein basis is nonnegative and sums to one and $e\ge0$, the coefficient inequalities give~\eqref{eq:mh-coarse-positive}.
+
+We now substitute $r=\rho_2$ and $s=h/c$. The moment formulas give
+\begin{align*}
+ D_0&=\frac{D_N}{(1+s)^2L^2},&
+ \overline T&=\frac{T_N}{5(1+s)^2L^2},\\
+ z_H&=\frac{A_N}{c^2(1+s)L},&
+ z&=\frac{B_N}{c^2(1+s)L},\\
+ F_0(V)&=\frac{2s^2P_0}{c(1+s)L(cT_N+10D_N)},&
+ F_1(V)&=\frac{2s^2P_1}{(1+s)LB_N(cT_N+10D_N)}.
+\end{align*}
+At these moment values all denominators are strictly positive. Indeed $c,s,L,B_N>0$ and $D_N>0$ by~\eqref{eq:mh-coarse-TQ}. The polynomial lemma on the larger rectangle only bounds $P_0,P_1$. Lemma~\ref{lem:mh-coarse-arithmetic} now gives $F_0(V),F_1(V)>0$. Equations~\eqref{eq:mh-F-endpoints} and~\eqref{eq:mh-source-Chebyshev} prove $I>0$ and $D>0$.
+
+Combining the integral bound for $39/20\le\lambda<(3+\sqrt5)/2$, the kernel bound~\eqref{eq:mh-middle-conclusion}, and the case $(\lambda+1)h\ge1$ proves $v'(\lambda)<0$ throughout $707/500\le\lambda<(3+\sqrt5)/2$, with $\lambda<m$. Section~\ref{sec:high} gives the Dini derivative bound for $(3+\sqrt5)/2\le\lambda<m$.

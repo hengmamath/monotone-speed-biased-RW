@@ -1,0 +1,129 @@
+\subsection{Linear response of the escape law}\label{sec:linear-response}
+Fix $1<\lambda<m$. Throughout this subsection, $c=\lambda-1$, $X,Y$ are independent with law $\pi_\lambda$, and $v=v(\lambda)$. We retain $A$, $\cJ$, $\cL$, $r$, $b$ and $C$ from Section~\ref{sec:kernel-identities}, evaluated at this bias and law. To differentiate the speed formula we use
+\begin{equation}\label{eq:full-response-defs}
+ \Psi=\cJ\bigl(y^2+c h_v(y)\bigr),\qquad
+ \mathcal R=(I-\cL)^{-1}.
+\end{equation}
+We first construct the inverse $\mathcal R$, then use it to differentiate expectations under $\pi_\lambda$ using only the finite mean of $\nu$.
+
+\begin{lemma}[Positive inverse]\label{lem:positive-inverse}
+The operator $\cL$ is bounded and positive on $C([0,1])$. Its Neumann series $\mathcal R=\sum_{j\ge0}\cL^j$ converges in operator norm and defines a positive inverse of $I-\cL$. In a neighborhood of any fixed $\lambda\in(1,m)$, the tails of the series admit a common geometric bound in an equivalent norm.
+\end{lemma}
+\begin{proof}
+For $f\in C([0,1])$, the integrand defining $\cL f$ is bounded in absolute value by $\nu\|f\|_\infty/\lambda$. Thus finite mean gives boundedness, and dominated convergence gives continuity in $x$. Positivity follows directly from the formula for $\cL$. Identity~\eqref{eq:Lr} gives
+\[
+ (I-\cL)r=\cJ(y^2),\qquad
+ r(x)\ge\frac{\E Y}{\lambda^2}>0,\qquad
+ \cJ(y^2)(x)\ge\frac{\E Y^2}{\lambda^2}>0.
+\]
+The norm $\|f\|_r=\sup_{0\le x\le1}|f(x)|/r(x)$ is equivalent to the uniform norm. Since $\cL$ is positive,
+\[
+ |\cL f|\le\|f\|_r\cL r,
+ \qquad \|\cL\|_r\le
+ 1-\min_{0\le x\le1}\frac{\cJ(y^2)(x)}{r(x)}<1.
+\]
+The geometric series therefore converges and gives the asserted positive inverse.
+
+For the local statement, keep this base function $r$ fixed. If $\alpha\to\lambda$ and $\rho\to\pi_\lambda$ in $W_1$, then
+\begin{equation}\label{eq:fixed-test-continuity}
+ \|\cL_{\alpha,\rho}f-\cL f\|_\infty\longrightarrow0
+ \quad\text{for each fixed }f\in C([0,1]).
+\end{equation}
+Indeed, for $\nu\le M$ there are only finitely many continuous kernels on compact cubes, and their integrals converge uniformly in $x$. For biases $\alpha\ge a>1$, the sum of the two discarded tails is at most $2\|f\|_\infty\E[\nu;\nu>M]/a$. First choose $M$ and then take the limit. Apply~\eqref{eq:fixed-test-continuity} with $f=r$. The strictly positive minimum of $r-\cL r$ persists for nearby operators $\cL_{\alpha,\pi_\alpha}$, so their norms in $\|\cdot\|_r$ have a common bound strictly below one. This gives the local geometric bound using convergence on each fixed test function.
+\end{proof}
+
+
+\begin{lemma}[Local Lipschitz continuity]\label{lem:law-lipschitz}
+The map $\lambda\mapsto\pi_\lambda$ is locally Lipschitz in $W_1$ on $(1,m)$.
+\end{lemma}
+\begin{proof}
+Continuity was proved in Lemma~\ref{lem:continuity} without differentiation. Fix the base parameter, put $u(x)=\int_0^x r(s)\dd s$, and retain the recursion residual
+\[
+ \res_u(\lambda,\rho)=\E_\rho u(X)
+ -\E_{\nu,\rho}u\left(F_\lambda\left(\sum_{i=1}^{\nu}X_i\right)\right).
+\]
+By~\eqref{eq:fixed-test-continuity}, every law on the ordered interpolation between $\pi_\lambda$ and $\pi_{\lambda+\varepsilon}$ satisfies
+\[
+ r-\cL_{\lambda,\rho}r\ge\tfrac12\min_{[0,1]}\cJ(y^2)
+\]
+when $|\varepsilon|$ is small. Integrating the residual's law derivative along that interpolation, in its increasing direction, gives
+\[
+ |\res_u(\lambda,\pi_{\lambda+\varepsilon})|
+ \ge\tfrac12\min_{[0,1]}\cJ(y^2)\,
+ W_1(\pi_{\lambda+\varepsilon},\pi_\lambda).
+\]
+The residual at $\pi_\lambda$ is zero. The fixed-point equation at $\lambda+\varepsilon$ also gives
+\[
+ \res_u(\lambda,\pi_{\lambda+\varepsilon})
+ =\E_{\nu,\pi_{\lambda+\varepsilon}}
+ \left[u(F_{\lambda+\varepsilon}(S))-u(F_\lambda(S))\right].
+\]
+For $\alpha\ge a>1$ and $s\ge0$,
+\[
+ |\partial_\alpha F_\alpha(s)|=\frac{s}{(\alpha+s)^2}
+ \le\frac1{4a}.
+\]
+The residual is consequently at most $|\varepsilon|\|r\|_\infty/(4a)$ in absolute value. Combining the two inequalities proves the bound centered at the fixed parameter. To obtain a common Lipschitz constant on a neighborhood, keep the same base function $r$ and use $\res_u(\alpha,\pi_\beta)$ for any two nearby biases $\alpha,\beta$. The continuity in~\eqref{eq:fixed-test-continuity} preserves the same positive lower bound for $r-\cL_{\alpha,\rho}r$ for all their interpolating laws. The residual at $\pi_\alpha$ is zero, and its parameter bound is at most $|\beta-\alpha|\|r\|_\infty/(4a)$. Thus the same constant bounds $W_1(\pi_\alpha,\pi_\beta)/|\beta-\alpha|$ throughout a sufficiently small neighborhood. Neither estimate requires a second offspring moment.
+\end{proof}
+
+\begin{lemma}[Derivatives of expectations and of the speed]\label{lem:full-response}
+For every $f\in C^1([0,1])$,
+\begin{equation}\label{eq:weak-response}
+ \frac{\dd}{\dd\lambda}\E f(\beta_\lambda)
+ =-\E[b(X)(\mathcal R f')(X)].
+\end{equation}
+The derivative is continuous on $(1,m)$. In particular, $v\in C^1((1,m))$ and
+\begin{equation}\label{eq:full-sign}
+ v'(\lambda)=-\frac{D_\lambda}{Z},\qquad
+ D_\lambda=2\E[b(X)(\mathcal R\Psi)(X)]-C,
+ \qquad Z=Z_\lambda(\pi_\lambda)>0.
+\end{equation}
+\end{lemma}
+\begin{proof}
+Couple $X=\beta_\lambda$ and $X_\varepsilon=\beta_{\lambda+\varepsilon}$ on the same tree. For $\varepsilon\ne0$ small, define a positive finite measure by
+\[
+ \eta_\varepsilon(a)=\E\left[\frac1\varepsilon
+ \int_{X_\varepsilon}^{X}a(s)\dd s\right],
+ \qquad a\in C([0,1]).
+\]
+Positivity holds for both signs of $\varepsilon$, by the same-tree order. Lemma~\ref{lem:law-lipschitz} bounds its mass:
+\[
+ \eta_\varepsilon(1)=
+ \frac{W_1(\pi_{\lambda+\varepsilon},\pi_\lambda)}{|\varepsilon|}.
+\]
+Let $u$ be a primitive of a fixed continuous $a$. Then
+$(\E u(X_\varepsilon)-\E u(X))/\varepsilon=-\eta_\varepsilon(a)$.
+Use the fixed-point equations to compute the same difference by first changing the bias at fixed child law $\pi_{\lambda+\varepsilon}$, and then changing the child law at fixed bias $\lambda$. The parameter contribution tends to $-\E[b(X)a(X)]$. Its integrand is bounded by $\|a\|_\infty/(4a_0)$ for a positive lower bound $a_0$ on the nearby biases, because $|\partial_\alpha F_\alpha(s)|\le1/(4a_0)$.
+
+For the child-law contribution, let $X_t=(1-t)X+tX_\varepsilon$ and $\rho_t=\Law(X_t)$. Differentiating the finite-child recursion and using exchangeability gives the exact quotient
+\[
+ -\int_0^1\E\left[
+ \frac{X-X_\varepsilon}{\varepsilon}
+ (\cL_{\lambda,\rho_t}a)(X_t)\right]\dd t.
+\]
+For each fixed $a$, finite-mean truncation as in~\eqref{eq:fixed-test-continuity} yields
+\[
+ \sup_{0\le t\le1}
+ \|\cL_{\lambda,\rho_t}a-\cL a\|_\infty\longrightarrow0.
+\]
+Multiplying this uniform error by the bounded mass $\eta_\varepsilon(1)$ shows that the child-law quotient is $-\eta_\varepsilon(\cL a)+o(1)$. Hence
+\begin{equation}\label{eq:response-difference-measures}
+ \eta_\varepsilon((I-\cL)a)=\E[ba]+o(1).
+\end{equation}
+Take $a=\mathcal R f'$, which is continuous by Lemma~\ref{lem:positive-inverse}. Equation~\eqref{eq:response-difference-measures} gives~\eqref{eq:weak-response} for two-sided increments. This passage uses bounded expectations of $(X-X_\varepsilon)/\varepsilon$ and a uniform test-function error; it does not require uniform integrability of the random difference quotients.
+
+For continuity of the derivative, nearby operators converge on each fixed continuous test by~\eqref{eq:fixed-test-continuity}. Each finite Neumann sum therefore converges strongly, by induction on its length and uniform boundedness of the operators. The common geometric tail bound in Lemma~\ref{lem:positive-inverse} then proves strong convergence of the resolvents. Together with $W_1$ continuity of $\pi_\lambda$ and continuity of $b$, this proves continuity in~\eqref{eq:weak-response}.
+
+Finally, freeze $v=v(\lambda)$ in
+\[
+ H_\alpha(x,y)=\frac{xy-vt(x,y)}{\alpha-1+t(x,y)}.
+\]
+On any compact bias interval in $(1,m)$, this kernel and its first derivatives are bounded and uniformly continuous on $[0,1]^2$. Its averaged coordinate derivative at the base parameter is $\Psi$, by~\eqref{eq:variation-kernel}; its averaged explicit parameter derivative is $C$. Applying~\eqref{eq:weak-response} to the two marginals gives
+\[
+ \left.\frac{\dd}{\dd\alpha}
+ \E H_\alpha(\beta_\alpha,\widetilde\beta_\alpha)
+ \right|_{\alpha=\lambda}
+ =C-2\E[b\mathcal R\Psi].
+\]
+Here the two escapes are independent. For precision, the averaged test in one marginal can depend on the increment through the other marginal. Its derivative converges uniformly to the base averaged derivative, by compact uniform continuity and $W_1$ convergence. The resulting difference-quotient error is bounded by that uniform difference times $\eta_\varepsilon(1)$, so it tends to zero. The same argument applied separately to $N_\lambda$ and $Z_\lambda$ first establishes differentiability of their quotient. Since the last display equals $Z v'(\lambda)$, it proves~\eqref{eq:full-sign}. Strong resolvent continuity proves that $v'$ is continuous.
+\end{proof}

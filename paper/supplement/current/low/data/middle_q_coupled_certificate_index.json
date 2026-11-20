@@ -1,0 +1,102 @@
+[
+  {
+    "file": "middle_q_coupled_certificate_001_power.jsonl.gz",
+    "kind": "power",
+    "entries": 1419,
+    "bytes": 6804,
+    "sha256": "adb2a5ab90b2b80b36dd6fa47edd0e371400fd5c2a376029d25f6c51776c93df",
+    "metadata": {
+      "check": "physical-domain-price",
+      "g": "0",
+      "x": [
+        "0",
+        "1/10"
+      ],
+      "h": [
+        "0",
+        "1/2"
+      ],
+      "v": [
+        "0",
+        "1"
+      ],
+      "t": "nonnegative ordinary powers"
+    }
+  },
+  {
+    "file": "middle_q_coupled_certificate_002_mixed_bernstein_power.jsonl.gz",
+    "kind": "mixed_bernstein_power",
+    "entries": 4319,
+    "bytes": 40118,
+    "sha256": "6d1dfec54c5a1d6632e81dba49ba702338171ecab10600aae058817b68cf4dce",
+    "metadata": {
+      "g": "0",
+      "bernstein_axes": [
+        0,
+        1,
+        3
+      ],
+      "t": "ordinary powers"
+    }
+  },
+  {
+    "file": "middle_q_coupled_certificate_003_power.jsonl.gz",
+    "kind": "power",
+    "entries": 1455,
+    "bytes": 7089,
+    "sha256": "10a3ba8a62d08c9d8266b12ed3715f51b2ac4126a16f1461bad64b873ed6fd58",
+    "metadata": {
+      "check": "physical-domain-price",
+      "g": "1",
+      "x": [
+        "0",
+        "1/10"
+      ],
+      "h": [
+        "0",
+        "1/2"
+      ],
+      "v": [
+        "0",
+        "1"
+      ],
+      "t": "nonnegative ordinary powers"
+    }
+  },
+  {
+    "file": "middle_q_coupled_certificate_004_mixed_bernstein_power.jsonl.gz",
+    "kind": "mixed_bernstein_power",
+    "entries": 4319,
+    "bytes": 40205,
+    "sha256": "a4029b4049541938b5ff3b4079718441684bcaa7aea5ee9c5d71d2ff079a54ba",
+    "metadata": {
+      "g": "1",
+      "bernstein_axes": [
+        0,
+        1,
+        3
+      ],
+      "t": "ordinary powers"
+    }
+  },
+  {
+    "file": "middle_q_coupled_certificate_005_power.jsonl.gz",
+    "kind": "power",
+    "entries": 60,
+    "bytes": 620,
+    "sha256": "a384fbe6eb5e7a5fbf91c50d53c5f27355df8aecf189affa74094d51499c7b7a",
+    "metadata": {
+      "check": "source",
+      "h": [
+        "0",
+        "1/2"
+      ],
+      "x": [
+        "0",
+        "1/10"
+      ],
+      "negative_payment": "65345524702337817/204800000000",
+      "constant_credit": "380160"
+    }
+  }
+]

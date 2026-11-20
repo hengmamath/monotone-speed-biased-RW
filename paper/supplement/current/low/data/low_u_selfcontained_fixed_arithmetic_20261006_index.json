@@ -1,0 +1,38 @@
+[
+  {
+    "file": "low_u_selfcontained_fixed_arithmetic_20261006_001_prefix_floor_table.jsonl.gz",
+    "kind": "prefix_floor_table",
+    "entries": 32,
+    "bytes": 469,
+    "sha256": "0529281da06f8a1728ed0b58943cfe2d58a13d53fa712896e3c7325ec60bd579",
+    "metadata": {
+      "unit": "1/1000000",
+      "columns": [
+        "f(6/5)",
+        "f(23/20)",
+        "f(11/10)",
+        "B(6/5)"
+      ]
+    }
+  },
+  {
+    "file": "low_u_selfcontained_fixed_arithmetic_20261006_002_exact_scalar_values.jsonl.gz",
+    "kind": "exact_scalar_values",
+    "entries": 9,
+    "bytes": 435,
+    "sha256": "73038c25625c0cf2f3e0e16525893d762b7be615f09ed56f2e91b854be283dc9",
+    "metadata": {
+      "fields": [
+        "tau6_floor",
+        "tau23_floor",
+        "tau11_floor",
+        "E23",
+        "A_lower",
+        "C_upper",
+        "H_upper",
+        "Cstar",
+        "K0"
+      ]
+    }
+  }
+]

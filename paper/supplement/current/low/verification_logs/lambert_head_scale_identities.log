@@ -1,0 +1,44 @@
+PASS full static coefficient
+PASS full affine coefficient
+PASS positive upper coefficient decomposition
+PASS lower second difference
+PASS upper second difference
+PASS boundary n-1
+PASS boundary n
+PASS boundary top-1
+PASS boundary top
+PASS ALL-N positive coefficient sum
+PASS smallN C polynomial 1
+PASS smallN C polynomial 2
+PASS slope upper lower second difference
+PASS slope upper interior second difference
+PASS slope upper boundary n
+PASS slope upper boundary n+1
+PASS slope upper top-1
+PASS slope upper top
+PASS smallN slope polynomial 1
+PASS smallN slope polynomial 2
+PASS sharp B derivative-at-one
+PASS complete full-mixture lower
+PASS complete full-mixture upper
+PASS whole affine cap cancellation
+PASS whole cap quotient source
+PASS complete hard calibration normal form
+PASS complete Ehard normalization
+PASS normalized hard-gap maximum
+PASS hard-gap monotonicity
+PASS exact negative J factor
+PASS global J coefficient positive denominator
+PASS ALL 60 nonnegative numerator coefficients; strict global J coercivity
+PASS ALL-age fractional Faulhaber
+PASS complete q>=50 Jminus cost; exact constant 36185979/8318750000 <1/200
+34 NEW exact algebra/certificates PASS; whole head SIZE still OPEN.
+PASS ALL exponential upper coefficients
+PASS ALL mixture moment 0
+PASS ALL mixture moment 1
+PASS ALL mixture moment 2
+PASS ALL mixture moment 3
+PASS ALL reciprocal-N mixture moment
+PASS ALL affine constant sharper expectation
+PASS complete cubic P upper
+42 total NEW exact checks PASS; 231 whole-H bound is a sufficient upper only.

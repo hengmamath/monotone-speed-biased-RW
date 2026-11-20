@@ -1,0 +1,221 @@
+\section{Strict decrease for \texorpdfstring{$0<\lambda<1$}{0 < lambda < 1}}\label{sec:low}
+
+We now allow vertices with a single child. For $0<\lambda<1$, the escape probability is at least $1-\lambda$ on every tree. This bound allows us to compare the escape laws at two biases. We combine the comparison with a resistance estimate to show that the decrease in escape probabilities outweighs the explicit dependence on $\lambda$ in the speed formula.
+
+\subsection{An affine bound for the escape probabilities}
+\begin{lemma}\label{lem:low-transport}
+For $0<\lambda<\alpha<1$, the same-tree escape probabilities satisfy
+\begin{equation}\label{eq:low-transport}
+ \beta_\alpha\le T_{\lambda,\alpha}(\beta_\lambda),\qquad
+ T_{\lambda,\alpha}(x)
+ =1-\frac{\alpha(1+\lambda)}{\lambda(1+\alpha)}(1-x).
+\end{equation}
+The affine map $T_{\lambda,\alpha}$ is increasing and sends $[1-\lambda,1]$ into $[1-\alpha,1]$. Moreover, $\lambda\mapsto\beta_\lambda(T)$ is locally Lipschitz on $(0,1)$, uniformly in the tree.
+\end{lemma}
+
+\begin{proof}
+We first bound the derivative of the finite-depth recursion, integrate the bound, and then let the depth tend to infinity. Take terminal value one; the resulting recursion is differentiable for positive bias. Put $d=1-\lambda$ and $a_\lambda=1/[\lambda(1+\lambda)]$. At a vertex with $n\ge1$ children, write $x=S/(\lambda+S)$, where $S=\sum_{i=1}^n x_i$. If every child value is at least $d$, then $S\ge nd\ge d$ and $S/(\lambda+S)\ge d/(\lambda+d)=d$. Thus induction gives $d\le x\le1$ at every depth. With $q=-\partial_\lambda x$ and $q_i=-\partial_\lambda x_i$,
+\begin{equation}\label{eq:finite-sensitivity}
+ q=\frac{S+\lambda\sum_{i=1}^n q_i}{(\lambda+S)^2},
+ \qquad 0\le q\le\frac{x}{d}\le\frac1d.
+\end{equation}
+For the upper bound, the induction hypothesis $q_i\le x_i/d$ gives
+\[
+ q\le\frac{S+\lambda S/d}{(\lambda+S)^2}
+ =\frac{S}{d(\lambda+S)^2}
+ \le\frac{x}{d},
+\]
+because $\lambda+S\ge\lambda+d=1$. At the terminal generation the derivative is zero, so the induction starts.
+
+We also claim $q\ge a_\lambda(1-x)$. The claim holds at the terminal vertices. If it holds for all children, subtracting the required numerator from the numerator in~\eqref{eq:finite-sensitivity} gives
+\begin{align*}
+ S+\lambda a_\lambda(n-S)-a_\lambda\lambda(\lambda+S)
+ &=\frac{n-\lambda-dS}{1+\lambda}\\
+ &\ge\frac{\lambda(n-1)}{1+\lambda}\ge0,
+\end{align*}
+where $S\le n$ was used. Integration of $(1-x)'\ge a_\lambda(1-x)$ between $\lambda$ and $\alpha$ yields~\eqref{eq:low-transport} at finite depth, since
+\begin{equation*}
+ \exp\left(\int_\lambda^\alpha\frac{\dd s}{s(1+s)}\right)
+ =\frac{\alpha(1+\lambda)}{\lambda(1+\alpha)}.
+\end{equation*}
+The affine map $T_{\lambda,\alpha}$ is continuous, so letting the depth tend to infinity proves the comparison for $\beta_\lambda$ and $\beta_\alpha$. On every compact interval $[a,b]\subset(0,1)$, the finite-depth derivative bound is at most $1/(1-b)$. Integrating that bound between any two biases and then passing to the depth limit gives
+\[
+ |\beta_{\lambda_1}(T)-\beta_{\lambda_2}(T)|
+ \le\frac{|\lambda_1-\lambda_2|}{1-b},
+ \qquad \lambda_1,\lambda_2\in[a,b],
+\]
+uniformly in the tree. Finally,
+\begin{equation*}
+ T_{\lambda,\alpha}(1-\lambda)
+ =1-\frac{\alpha(1+\lambda)}{1+\alpha}\ge1-\alpha,
+ \qquad T_{\lambda,\alpha}(1)=1,
+\end{equation*}
+which verifies the support assertion.
+\end{proof}
+
+\subsection{Stochastic order and the speed quotient}
+Fix $0<\lambda<1$ and write $d=1-\lambda$. For a probability law $\sigma$ supported on $[d,1]$, put $N=N_\lambda(\sigma)$ and $Z=Z_\lambda(\sigma)$. Its speed quotient $v=N/Z=\mathcal V_\lambda(\sigma)$ satisfies
+\begin{equation}\label{eq:low-speed-range}
+ \frac{d}{1+\lambda}\le v\le1.
+\end{equation}
+Indeed $\mathcal V_\lambda(\sigma)$ is a weighted average of $xy/t(x,y)$, which lies between $d/(2-d)$ and one on $[d,1]^2$. With $v$ fixed at this quotient, let
+\begin{equation}\label{eq:low-Psi}
+ \begin{gathered}
+ P_v(y)=y^2-d\{(1+v)y-v\},\\
+ \Psi(x)=\E_\sigma\frac{P_v(Y)}{A_\lambda(x,Y)^2},\qquad
+ C=\E_\sigma\frac{v\,t(X,Y)-XY}{A_\lambda(X,Y)^2}.
+ \end{gathered}
+\end{equation}
+The coordinate derivative of $(xy-vt(x,y))/A_\lambda(x,y)$ is $P_v(y)/A_\lambda(x,y)^2$. Since
+\begin{equation*}
+ P_v(y)=y(y-d)+dv(1-y)>0,\qquad d\le y\le1,
+\end{equation*}
+increasing the escape variables increases the quotient. To see this, couple $X_0\le X_1$ with laws supported on $[d,1]$ and put $X_s=(1-s)X_0+sX_1$. Write $v_s=\mathcal V_\lambda(\Law(X_s))$, and let $Y_s$ be an independent copy. Quotient differentiation gives
+\[
+ \frac{\dd}{\dd s}\mathcal V_\lambda(\Law(X_s))
+ =\frac{2}{Z_\lambda(\Law(X_s))}
+ \E\left[(X_1-X_0)
+ \frac{P_{v_s}(Y_s)}{A_\lambda(X_s,Y_s)^2}\right]\ge0.
+\]
+For each $s$, the quotient obeys~\eqref{eq:low-speed-range}, so $P_{v_s}>0$ by the displayed factorization. The positive denominator bound~\eqref{eq:low-denominator} bounds every kernel derivative on this compact square and justifies differentiation under the expectation. Thus $\mathcal V_\lambda$ preserves stochastic order among laws supported on $[1-\lambda,1]$. More generally, if $X$ varies differentiably within this interval with uniformly bounded derivative $\dot X$, the same quotient rule gives the derivative $2\E[\dot X\Psi(X)]/Z$. Changing $\lambda$ with the law fixed gives the derivative $C/Z$.
+
+From now on, $X,Y$ are independent with law $\pi_\lambda$ at the fixed parameter $\lambda$, $N=N_\lambda(\pi_\lambda)$, $Z=Z_\lambda(\pi_\lambda)$ and $v=v(\lambda)$. All expectations in~\eqref{eq:low-Psi} refer to this law. The affine comparison in Lemma~\ref{lem:low-transport} bounds the speed at a larger bias by $\mathcal V_\alpha(\Law(T_{\lambda,\alpha}(X)))$, with equality at $\alpha=\lambda$. Its derivative there is
+\[
+ \frac1Z\left(C-\frac{2}{\lambda(1+\lambda)}
+ \E[(1-X)\Psi(X)]\right).
+\]
+We will prove that this derivative is negative. Identity~\eqref{eq:low-identity} below expresses the negative of its numerator with a positive coefficient of $C$ and a nonpositive coefficient of $\E[1/A_\lambda(X,Y)]$. The next three lemmas provide the corresponding bounds, together with $v\E(1/X)\le1$.
+
+\begin{lemma}[Speed and mean resistance]\label{lem:resistance}
+Write $\rho=\E(1/X)$ and $e=\E(1/\nu)$. Then
+\begin{equation}\label{eq:resistance}
+ v\le1-\lambda e,\qquad
+ 1<\rho\le\frac1{1-\lambda e},\qquad v\rho\le1.
+\end{equation}
+\end{lemma}
+
+\begin{proof}
+To bound $v$, we write~\eqref{eq:degree-speed} as a weighted average of local drifts. Let $T_j=\sum_{i=1}^jX_i$ for independent $X_i$ with law $\pi_\lambda$. Conditional on $\nu=n$, the weight in the denominator is
+\begin{equation*}
+ W_{n+1},\qquad
+ W_j=\frac{j-d}{j}\E\frac{T_j}{T_j-d}
+ =1+d\E\frac{1-X_1}{T_j-d},\qquad j\ge2.
+\end{equation*}
+The identity for $W_j$ follows by exchangeability: $\E[X_1/(T_j-d)]=j^{-1}\E[T_j/(T_j-d)]$. Coupling all $T_j$ by one independent sequence shows that $W_j$ decreases with $j$, since the nonnegative numerator $1-X_1$ stays fixed while the denominator increases. The degree formula is exactly
+\[
+ v=\frac{\E\left[W_{\nu+1}(\nu-\lambda)/(\nu+\lambda)\right]}
+ {\E W_{\nu+1}}.
+\]
+The local drift $(n-\lambda)/(n+\lambda)$ increases with $n$, whereas $W_{n+1}$ decreases. Their covariance is nonpositive. All terms are integrable: $T_j-d\ge(j-1)d$ and the local drift is bounded. Consequently,
+\begin{equation*}
+ v\le\E\frac{\nu-\lambda}{\nu+\lambda}
+ =1-2\lambda\E\frac1{\nu+\lambda}
+ \le1-\lambda\E\frac1\nu.
+\end{equation*}
+For the last inequality, $\lambda<1\le\nu$ implies $2/(\nu+\lambda)\ge1/\nu$.
+
+The resistance $R=1/X$ is bounded by $1/d$ and satisfies
+\begin{equation*}
+ R\overset{\mathrm d}=1+\frac{\lambda}{\sum_{i=1}^{\nu}R_i^{-1}}.
+\end{equation*}
+The harmonic-mean inequality gives $(\sum_{i=1}^{\nu}R_i^{-1})^{-1}\le\nu^{-2}\sum_{i=1}^{\nu}R_i$. Conditional on $\nu=n$, independence gives the expectation of the right-hand side as $\rho/n$. Thus $\rho\le1+\lambda e\rho$. Since $\lambda e<1$, this gives $\rho\le(1-\lambda e)^{-1}$. Both $v$ and $\rho$ are positive, and their respective upper bounds give $v\rho\le(1-\lambda e)/(1-\lambda e)=1$. Strictness of $\rho>1$ follows from $X<1$ almost surely.
+\end{proof}
+
+\begin{lemma}[Sign of the explicit parameter term]\label{lem:Cpositive}
+The quantity $C$ in~\eqref{eq:low-Psi}, evaluated under $\pi_\lambda$, is nonnegative.
+\end{lemma}
+
+\begin{proof}
+We expand $C$ and the identity $vZ-N=0$ in the same powers of $\lambda^{-1}$. Their coefficients will express $C$ as a covariance of two increasing sequences. Put $a_j=\E(1-X)^j$ and $b_j=a_j-a_{j+1}$ for $j\ge0$. Since $1-X\le\lambda$, the geometric expansion of $A_\lambda^{-1}=[\lambda-(1-X)(1-Y)]^{-1}$ gives absolutely convergent series
+\begin{align*}
+ N&=\lambda^{-1}\sum_{j\ge0}b_j^2\lambda^{-j},\\
+ Z&=\lambda^{-1}\sum_{j\ge0}b_j(2a_j-b_j)\lambda^{-j},\\
+ C&=\lambda^{-2}\sum_{j\ge0}(j+1)
+ \{2va_jb_j-(1+v)b_j^2\}\lambda^{-j}.
+\end{align*}
+For example $a_j,b_j\le\lambda^j$, so the series for $C$ is dominated by a constant times $\sum(j+1)\lambda^j$. The expansion follows from
+\[
+ \frac1{A_\lambda(X,Y)}=\frac1\lambda
+ \sum_{j\ge0}\left(\frac{(1-X)(1-Y)}\lambda\right)^j,
+ \quad b_j=\E[X(1-X)^j].
+\]
+The expansion of $A_\lambda^{-2}$ has the additional factors $j+1$. Since $0<X<1$, all $a_j,b_j$ are positive. Cauchy--Schwarz gives $a_{j+1}^2\le a_ja_{j+2}$, so $a_{j+1}/a_j$ increases and $b_j/a_j=1-a_{j+1}/a_j$ decreases. Therefore $2v-(1+v)b_j/a_j$ increases with $j$. Its weighted sum is
+\[
+ \sum_{j\ge0}a_jb_j\lambda^{-j}
+ \left(2v-(1+v)\frac{b_j}{a_j}\right)
+ =\lambda(vZ-N)=0.
+\]
+Normalize the summable positive weights $a_jb_j\lambda^{-j}$ to a probability distribution on the nonnegative integers. The covariance of the increasing sequences $j+1$ and $2v-(1+v)b_j/a_j$ is nonnegative. The zero weighted mean shows that the series for $C$ equals a positive constant times this covariance. Its first moment is finite by the geometric bound already proved, so $C\ge0$.
+\end{proof}
+
+\begin{lemma}[Reciprocal kernel estimate]\label{lem:reciprocal}
+With $\rho=\E(1/X)$, set $B_\rho=2\rho-1-d\rho^2$. Then $B_\rho>0$ and
+\begin{equation}\label{eq:reciprocal}
+ K:=\E\frac1{A_\lambda(X,Y)}\le\frac{\rho^2}{B_\rho}.
+\end{equation}
+\end{lemma}
+
+\begin{proof}
+For $R,S\in[1,1/d]$, the reciprocal kernel is
+\begin{equation*}
+ \frac1{A_\lambda(1/R,1/S)}=\frac{RS}{R+S-1-dRS}.
+\end{equation*}
+Its second derivative in $R$ equals
+\begin{equation*}
+ -\frac{2S(S-1)(1-dS)}{(R+S-1-dRS)^3}\le0,
+\end{equation*}
+and the same holds in $S$. All denominators are positive on $[1,1/d]^2$, since $R+S-1-dRS=RS A_\lambda(1/R,1/S)$. Apply Jensen's inequality first in $R=1/X$, conditional on $S=1/Y$, and then in $S$:
+\[
+ K\le\E\frac{\rho S}{\rho+S-1-d\rho S}
+ \le\frac{\rho^2}{2\rho-1-d\rho^2}.
+\]
+Independence makes the conditional mean of $R$ equal to $\rho$. Since $\rho\in[1,1/d]$, the same denominator identity gives $B_\rho=\rho^2A_\lambda(1/\rho,1/\rho)>0$.
+\end{proof}
+
+\subsection{A negative upper bound for \texorpdfstring{$\Dplus v(\lambda)$}{the upper right Dini derivative}}
+\begin{proof}[Proof of Theorem~\ref{thm:low}]
+For $\alpha>\lambda$ close to $\lambda$, Lemma~\ref{lem:low-transport} and stochastic monotonicity of $\mathcal V_\alpha$ on $[1-\alpha,1]$ give
+\begin{equation}\label{eq:low-upper-comparison}
+ v(\alpha)\le
+ \mathcal V_\alpha\bigl(\Law(T_{\lambda,\alpha}(\beta_\lambda))\bigr).
+\end{equation}
+Equality holds at $\alpha=\lambda$. We will show that the right-hand side has a strictly negative derivative there.
+
+
+At $\alpha=\lambda$, the derivative of $T_{\lambda,\alpha}(X)$ with respect to $\alpha$ is $-a_\lambda(1-X)$ by Lemma~\ref{lem:low-transport}, where $a_\lambda=1/[\lambda(1+\lambda)]$. By the derivative formulas following~\eqref{eq:low-Psi}, the derivative of the upper bound in~\eqref{eq:low-upper-comparison} is $-D_a/Z$, where
+\begin{equation}\label{eq:low-margin}
+ D_a=2a_\lambda\E[(1-X)\Psi(X)]-C.
+\end{equation}
+We prove $D_a>0$ using the three preceding lemmas. Write $\Delta=(1+\lambda)v-d\ge0$, where nonnegativity follows from~\eqref{eq:low-speed-range}. The exact identity is
+\begin{equation}\label{eq:low-identity}
+ \lambda(1+\lambda)D_a=(1+v)-\Delta K+d\lambda C.
+\end{equation}
+To verify~\eqref{eq:low-identity}, expand
+\begin{align*}
+ &(1-x)P_v(y)+(1-y)P_v(x)-\lambda(1+\lambda)\{vt(x,y)-xy\}\\
+ &\qquad=A_\lambda(x,y)\{x+y-(2-d+d^2)v\}-d\lambda(xy-dv).
+\end{align*}
+Divide by $A_\lambda(x,y)^2$ and average. Using $xy-dv=xy-vt(x,y)+vA_\lambda(x,y)$ and $(2-d+d^2)+d\lambda=2$, we obtain
+\begin{align*}
+ \lambda(1+\lambda)D_a
+ &=\E\frac{X+Y-2v}{A_\lambda(X,Y)}+d\lambda C\\
+ &=(1+v)(1+dK)-2vK+d\lambda C\\
+ &=(1+v)-\Delta K+d\lambda C.
+\end{align*}
+The second equality uses $x+y=t(x,y)+xy$, $N=vZ$ and $Z=1+dK$. This proves~\eqref{eq:low-identity}.
+
+Lemmas~\ref{lem:Cpositive} and~\ref{lem:reciprocal} imply
+\begin{equation*}
+ \lambda(1+\lambda)D_a\ge1+v-\Delta\frac{\rho^2}{B_\rho}.
+\end{equation*}
+The right-hand side decreases as a function of $v$, since
+\begin{equation*}
+ B_\rho-(1+\lambda)\rho^2=-(\rho-1)^2-\rho^2<0.
+\end{equation*}
+Using $v\le1/\rho$ from Lemma~\ref{lem:resistance} gives
+\begin{equation}\label{eq:low-strict}
+ D_a\ge\frac{1-1/\rho}{\lambda(1+\lambda)B_\rho}>0.
+\end{equation}
+
+It remains to justify differentiating the right-hand side of~\eqref{eq:low-upper-comparison}. On a sufficiently small right interval $[\lambda,\lambda+\delta]\subset(0,1)$, the variables $T_{\lambda,\alpha}(\beta_\lambda)$ lie in $[1-\alpha,1]$, so~\eqref{eq:low-denominator} bounds the denominators away from zero. Both $T_{\lambda,\alpha}(\beta_\lambda)$ and its derivative in $\alpha$ are uniformly bounded there. Differentiation under the expectation is therefore legitimate, and the derivative of the upper bound at $\alpha=\lambda$ is $-D_a/Z$, by~\eqref{eq:low-Psi} and~\eqref{eq:low-margin}. Subtracting the common value at $\alpha=\lambda$ in~\eqref{eq:low-upper-comparison}, dividing by $\alpha-\lambda$, and taking the upper limit gives $\Dplus v(\lambda)\le-D_a/Z<0$. The local Lipschitz bound in Lemma~\ref{lem:low-transport} is uniform over trees. Together with the same denominator bound and the speed formula, it gives continuity of $v$ on $(0,1)$. The Dini criterion in Section~\ref{sec:direct-comparison} completes the proof.
+\end{proof}

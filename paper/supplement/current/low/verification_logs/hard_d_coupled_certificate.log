@@ -1,0 +1,4 @@
+244--245 complete weighted head/derivative/integral identities PASS
+246 COMPLETE quadratic normalized charge 187913/8748000 PASS
+247 WHOLE q>=10,h>=1/4 budget 16616808991576441/1057412094912360000 >1/100 PASS
+All new exact checks PASS. Independent audit pending; general med still OPEN.

@@ -1,0 +1,118 @@
+{
+  "lambda_": 1.01,
+  "branch_probability": 0.056666666666666664,
+  "seed": 74210,
+  "branch_degrees": [
+    10
+  ],
+  "branch_weights": [
+    1.0
+  ],
+  "population": 50000,
+  "iterations": 200,
+  "moment_depth": 2000,
+  "hard_branch": true,
+  "floor_scope": "These unclipped-alpha floor values apply as Fstar ONLY in the hard branch.",
+  "status": "UNCERTIFIED population/depth/moment cutoff; no actual-law certification",
+  "u": 0.8409752064250106,
+  "v": 0.04393613811765505,
+  "alpha_raw": 0.920500291759169,
+  "h": 0.05288327609294727,
+  "Gu": 0.4155271213320478,
+  "P": 0.02812419153096077,
+  "H": 3.5706630653798346,
+  "t": 5.791910406679497,
+  "q": 5.449517873395323,
+  "M": 9.83116376164865,
+  "root_baseline_normalized": -0.5760007695633902,
+  "Fcap_normalized": 0.188984903276605,
+  "Fcap_minus_alpha_Gamma_normalized": -0.1935079331433926,
+  "Theta_credit_normalized": 0.08447585922809939,
+  "marker_lower_credit_normalized": 0.08214790404727611,
+  "Fstar_normalized": 0.2734607625047044,
+  "marker_kernel_xi0": 2.2501231028895186,
+  "marker_kernel_xi1": -0.4931276365083337,
+  "marker_chord_paid": -0.48728966105369087,
+  "calibrated_response_new_price": {
+    "status": "UNCERTIFIED actual-law/marker diagnostic, not proof",
+    "xbar": 0.8530368765444916,
+    "xsecond": 0.7402698946571229,
+    "ybar": 0.7112925236242518,
+    "ysecond": 0.5262621030717424,
+    "vx": 0.012597981912340739,
+    "vy": 0.020325048907985588,
+    "t1": 0.026571773698969736,
+    "t2": 0.03780060794302541,
+    "t3": 0.041951152527498675,
+    "ThetaJ": 0.011548971753199092,
+    "ThetaDisp": 6.965306094304359e-05,
+    "new_paid_floor": 0.2006035280907471,
+    "remaining_marker_credit": 0.07052927923313397
+  },
+  "actual_whole_defect_price": {
+    "status": "UNCERTIFIED: all roots, all signed prices and full speed deficit retained",
+    "Fpipe_normalized": 0.1810942551318333,
+    "Bactual": 0.08298246531469816,
+    "Cspeed": 1.007353847882696,
+    "first17_prices": [
+      -0.07508946251913873,
+      0.8055376734966542,
+      0.9916235419177726,
+      1.0678237899510914,
+      1.083781635128846,
+      1.0667110254448118,
+      1.0318331776472771,
+      0.9878222827476866,
+      0.9396883610589164,
+      0.8903418022162555,
+      0.8414651395466777,
+      0.7940110677898384,
+      0.7484933915510461,
+      0.7051603476729271,
+      0.6640995652582635,
+      0.6253024717371476,
+      0.5887042018484265
+    ],
+    "sampled_whole_signed_price": 0.09042394307202886,
+    "sampled_complete_kernel": 0.27113280732389156
+  },
+  "marker_first_tail_prices": [
+    3.6941012416678083,
+    4.062192704681761,
+    4.1422183215831705,
+    4.07842335264433,
+    3.944238892800402,
+    3.7781498009914043,
+    3.6006730001764753,
+    3.4227732163239066,
+    3.250204832590375,
+    3.0858290675475795,
+    2.930885756668325,
+    2.7857072545914776
+  ],
+  "marker_first_curvature_coefficients": [
+    0.3680914630139531,
+    0.08002561690140908,
+    -0.06379496893883996,
+    -0.13418445984392768,
+    -0.1660890918089981,
+    -0.17747680081492945,
+    -0.17789978385256866,
+    -0.17256838373353123,
+    -0.16437576504279594,
+    -0.15494331087925417,
+    -0.14517850207684724,
+    -0.1355811701018368
+  ],
+  "original_law": [
+    [
+      1,
+      0.9433333333333334
+    ],
+    [
+      10,
+      0.056666666666666664
+    ]
+  ],
+  "purpose": "Genuine HARD law tests payment of NEGATIVE whole root chord; uncertified."
+}

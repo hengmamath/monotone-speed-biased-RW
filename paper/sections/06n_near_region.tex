@@ -1,0 +1,1174 @@
+\subsection{Moment estimates for \texorpdfstring{$2/\sqrt3\le\lambda\le707/500$}{2/sqrt(3) <= lambda <= 707/500}}\label{sec:near-region}
+We now prove $D_\lambda>0$ for
+\begin{equation}\label{eq:near-domain}
+ \frac2{\sqrt3}\le\lambda\le\frac{707}{500},\qquad \lambda<m.
+\end{equation}
+Lemma~\ref{lem:calibration} covers $\alpha=1$. We may therefore assume $0<\alpha<1$, so that $0<u<\lambda^{-2}$. We keep the moments $a_s=\E U^s$ of the given escape law fixed when varying $w$ in $\widetilde F(w)$. We write $a=a(w)$ and retain $h=cu/(1-u)$.
+
+\subsubsection{A comparison that retains the first two moments}
+Set
+\begin{equation}\label{eq:near-profile-defs}
+ \begin{gathered}
+ Z_s=(1-u)\sum_{j=0}^{s-1}\lambda^j+u,\qquad r_s=\frac{Z_s}{Z_{s+1}},\\
+ A=Z_2=1+\lambda(1-u),\qquad B=Z_3=1+\lambda(\lambda+1)(1-u).
+ \end{gathered}
+\end{equation}
+Thus $\beta_s=u/Z_s$, $r_s=\beta_{s+1}/\beta_s$, and $A$ without arguments is the scalar $Z_2$, distinct from the pair kernel $A(x,y)$. Write
+\[
+ z=\frac{a_2}{u},\qquad \rho=\frac{a_2}{\beta_2}=Az.
+\]
+Here $\rho$ is the value at $s=2$ of the moment ratio $\rho(s)=a_s/\beta_s$. The recursion on $\{\nu=1\}$ rules out a positive constant value of $U$. Hence $a_2>u^2$, and Lemma~\ref{lem:canonical-moments} gives
+\begin{equation}\label{eq:near-moment-domain}
+ u<z<1/A,\qquad uA<\rho<1.
+\end{equation}
+
+To bound the contribution of the terms $\lambda^{n-1}\beta_n^2$ to the speed quotient, put
+\begin{equation}\label{eq:near-cap}
+ \begin{gathered}
+ \ell_L=2\left(\frac c{\lambda+1}+\frac{c^3}{3(\lambda+1)^3}
+                   +\frac{c^5}{5(\lambda+1)^5}\right),\qquad
+ \ell_U=\ell_L+\frac{2c^7}{7(\lambda+1)^7[1-c^2/(\lambda+1)^2]},\\
+ K_{\rm cap}=\frac c{\lambda\ell_L}+\frac{1-u}{2}
+ +\frac{\ell_U}{12c}(\lambda+1-2\lambda u)(1-u).
+ \end{gathered}
+\end{equation}
+All denominators in this formula are positive.
+
+\begin{lemma}[Second-moment comparison]\label{lem:near-prefix}
+For the moments of $U$ satisfying~\eqref{eq:near-moment-domain}, define
+\begin{equation}\label{eq:near-assigned-pair}
+ \begin{gathered}
+ T_2=u^2\left[1+\frac{\rho^2(K_{\rm cap}-1+u)}{1-u}\right],\qquad
+ Q_2=u+\lambda u^2z+\frac{Au^2z^2}{1-u},\\
+ w=\frac{cT_2}{2Q_2-(\lambda+1)T_2},\qquad
+ a=\frac{u-(w/c)A_0}{a_2}.
+ \end{gathered}
+\end{equation}
+Then all displayed denominators are positive and
+\begin{equation}\label{eq:near-assigned-range}
+ v<w<h,\qquad \lambda^2u<a<\alpha<1.
+\end{equation}
+Moreover, $1<K_{\rm cap}<2/(1+\lambda u)$.
+\end{lemma}
+\begin{proof}
+Let
+\[
+ \kappa=\frac{c^2}{1-u}\sum_{n\ge1}
+               \frac{\lambda^{n-1}}{(\lambda^n-d)^2}.
+\]
+We first justify the bound $\kappa<K_{\rm cap}$. For $s>0$,
+\[
+ \frac1{1-e^{-s}}<\frac1s+\frac12+\frac{s}{12}.
+\]
+Indeed, after multiplication by the positive denominator, the difference is
+\[
+ (e^s-1)(1-s/2+s^2/12)-s
+ =\sum_{n\ge5}\frac{(n-3)(n-4)}{12n!}s^n>0.
+\]
+The function $f(x)=\lambda^{x-1}/(\lambda^x-d)^2$ is the positive exponential mixture
+\[
+ f(x)=\lambda^{-1}\sum_{j\ge0}(j+1)d^j
+                    e^{-(j+1)x\log\lambda}.
+\]
+Tonelli's theorem and the preceding one-variable inequality give
+\[
+ \sum_{n\ge1}f(n)<\int_1^\infty f(x)\dd x+\tfrac12 f(1)-\tfrac1{12}f'(1).
+\]
+Evaluation of these three terms, using $c+h=c/(1-u)$, yields
+\[
+ \kappa<\frac c{\lambda\log\lambda}+\frac{1-u}{2}
+ +\frac{\log\lambda}{12c}(\lambda+1-2\lambda u)(1-u).
+\]
+The positive series for $2\operatorname{arctanh}(c/(\lambda+1))$ shows
+\[
+ \ell_L<\log\lambda<\ell_U<\frac{c(\lambda+1)}{2\lambda}.
+\]
+Since $\lambda+1-2\lambda u>0$, this proves $\kappa<K_{\rm cap}$.
+
+The same inequalities give
+\[
+ K_{\rm cap}<k_0:=
+ \frac{\lambda^2+13\lambda+6-\lambda(3\lambda+7)u+2\lambda^2u^2}{12\lambda}.
+\]
+For $23/20\le\lambda\le3/2$ and $0\le u\le\lambda^{-2}$, $(1+\lambda u)k_0<2$. Here is a finite verification of its sign which also records the relevant domain. After multiplying by $12\lambda^4$ and using the degree-three Bernstein basis in $\lambda^2u\in[0,1]$, the four coefficients are
+\[
+\begin{split}
+ &-\lambda^3(\lambda^2-11\lambda+6),\\
+ &-\tfrac13\lambda^2(3\lambda^3-32\lambda^2+28\lambda-1),\\
+ &-\tfrac13\lambda c(3\lambda^3-28\lambda^2+10\lambda+5),\\
+ &-c^2(\lambda^3-8\lambda^2-\lambda+2).
+\end{split}
+\]
+Each is positive. The three cubics have negative derivatives on this interval and are negative at $23/20$; the quadratic is negative there as well. Also
+\[
+ K_{\rm cap}>\frac2{\lambda+1}+\frac{1-\lambda^{-2}}2>1
+\]
+on the same interval. This proves the asserted range of $K_{\rm cap}$.
+
+Divide each moment $a_s$ by the corresponding term of $1,u,\rho\beta_2,\rho\beta_3,\ldots$. The ratios equal one through index two and decrease thereafter. The successive backward ratios of the comparison sequence are $1/u$, $1/z$, and then $1/r_s$, in decreasing order. The covariance argument used in Lemma~\ref{lem:harmonic-speed}, first for finite sums and then by absolute convergence, gives $Q/T>Q_2(\kappa)/T_2(\kappa)$. The formulas follow from
+\[
+ \sum_{n\ge1}\lambda^{n-1}\beta_n^2=\frac{u^2\kappa}{1-u},
+ \qquad \sum_{n\ge1}\lambda^{n-1}\beta_n\beta_{n-1}=\frac u{1-u}.
+\]
+The second identity telescopes, since
+$(\lambda^{n-1}-d)^{-1}-(\lambda^n-d)^{-1}
+=c\lambda^{n-1}/[(\lambda^{n-1}-d)(\lambda^n-d)]$.
+
+For completeness, the denominators needed for this comparison can be checked before taking any quotient. Set
+\[
+ R=1+\frac{A^2(K_{\rm cap}-1+u)z^2}{1-u},\qquad
+ Q=2+2\lambda uz+\frac{2Auz^2}{1-u}.
+\]
+Both $Q-R$ and $Q-(\lambda+1)uR$ are positive for $0\le z\le1/A$. If their quadratic coefficient is nonnegative, every coefficient is nonnegative and the constant is positive. Otherwise they are concave, and their endpoint values are positive: at $z=1/A$ they are respectively $(2-K_{\rm cap})/(1-u)$ and $[2-(\lambda+1)uK_{\rm cap}]/(1-u)$. The range of $K_{\rm cap}$ proves these signs. Increasing $\kappa$ to $K_{\rm cap}$ increases the speed quotient, so $v<w$.
+
+The comparison with the full reference sequence is equally explicit. With $T_p(K)=u^2K/(1-u)$ and $Q_p=u/(1-u)$,
+\[
+ T_p(K)Q_2-T_2(K)Q_p
+ =\frac{(1-\rho^2)u^3(K-1)}{1-u}
+   +\lambda(\rho-\rho^2)u\beta_2T_p(K)\ge0.
+\]
+Consequently
+\[
+ w\le\frac{cuK_{\rm cap}}{2-(\lambda+1)uK_{\rm cap}}<\frac{cu}{1-u}=h.
+\]
+The function $a(w)$ strictly decreases with $w$. The calculation for~\eqref{eq:hard-calibration} gives $a(h)>\lambda^2u$ and $a(v)=\alpha$, so $v<w<h$ yields $\lambda^2u<a<\alpha$.
+\end{proof}
+
+\subsubsection{An inequality for the first three moments of \texorpdfstring{$U$}{U}}
+The next step uses the recursion itself. Moment inequalities for an arbitrary law on $(0,1/\lambda)$ would not suffice.
+
+\begin{lemma}[Three-moment inequality]\label{lem:near-three-moments}
+The moments of $U$ under the escape law satisfy
+\begin{equation}\label{eq:near-three-moment-bound}
+ \frac{a_3}{a_2}<\frac1{\lambda+1-\lambda a_2/u}.
+\end{equation}
+\end{lemma}
+\begin{proof}
+Put $\eta=(a_2-a_3)/(u-a_2)$ and $p(y)=(y-\eta)(1-y)$. Then $0<\eta\le z$ and $\E[Up(U)]=0$; the upper bound follows from $ua_3\ge a_2^2$. For a child list $x_i=U_i$, set
+\[
+ S=\sum_i\frac{x_i}{1-x_i},\quad F=\frac S{1+S},\quad
+ A_i=\left(1+(1-x_i)\sum_{j\ne i}\frac{x_j}{1-x_j}\right)^{-1}.
+\]
+The recursion says $F\overset{\mathrm d}=\lambda U$. Directly,
+\[
+ F=1-A_i(1-x_i),\qquad \sum_i x_iA_i=F,
+ \qquad p(F)=A_ip(x_i)+A_i(1-A_i)(1-x_i)^2.
+\]
+Replace $x_i$ by $\eta$ only in the definition of $A_i$, obtaining $A_{i,\eta}$. Independence of the $i$th child from the other children gives
+\[
+\begin{split}
+ \E[Fp(F)]={}&\E\sum_i x_i(A_i^2-A_{i,\eta}^2)p(x_i)\\
+ &+\E\sum_i x_iA_i^2(1-A_i)(1-x_i)^2>0.
+\end{split}
+\]
+The first summands are nonnegative because $A_i$ increases with $x_i$. The second sum is positive when there are at least two children. Every absolute integrand is bounded by a constant times $\nu$, so finite mean justifies conditioning and summation. Substitution of $F\overset{\mathrm d}=\lambda U$ gives
+\[
+ \E[Fp(F)]
+ =\frac{\lambda cu}{1-z}
+ \left[z-(\lambda+1-\lambda z)\frac{a_3}{u}\right].
+\]
+Its strict positivity is precisely~\eqref{eq:near-three-moment-bound}.
+\end{proof}
+
+To deduce positivity of the moment differences $\Delta_s^{\mathrm{ass}}$ below from~\eqref{eq:near-three-moment-bound}, we need the following bounds on $K_{\rm cap}$.
+
+\begin{lemma}[Upper bounds on $K_{\rm cap}$]\label{lem:near-cap-arithmetic}
+Let $2/\sqrt3\le\lambda\le707/500$, $0<u\le\lambda^{-2}$, and define
+\[
+\begin{split}
+ \overline K={}&\frac{\lambda+1}{2\lambda}-\frac{c^2}{6\lambda(\lambda+1)}
+ +\frac{1-u}{2}
+ +\frac{(\lambda^2+10\lambda+1)(\lambda+1-2\lambda u)(1-u)}{72\lambda(\lambda+1)},\\
+ P={}&\lambda^2(\lambda+1)^2(1-u^2)+2\lambda+1,\\
+ R_B={}&AP-(\lambda+1)^2(1-u)(1-\lambda u)^2,\qquad
+ K_B=\frac{2\lambda R_B}{\lambda R_B+uBP}.
+\end{split}
+\]
+Then $R_B>0$, and $K_{\rm cap}<\overline K<K_B<2\lambda A/(\lambda A+uB)$.
+The finite coefficient input for the middle inequality is the following. Put
+\[
+ k_n=(2\lambda^3+20\lambda^2+2\lambda)u^2
+ -(3\lambda^3+67\lambda^2+49\lambda+1)u
+ +\lambda^3+71\lambda^2+143\lambda+25
+\]
+and
+\[
+ F_B=\frac{144\lambda^2(\lambda+1)R_B-k_n(\lambda R_B+uBP)}{\lambda+1}.
+\]
+This is a polynomial of degree six in $u$. On $1\le\lambda\le3/2$, its $\lambda$ derivative has positive degree-six Bernstein coefficients on $0\le u\le3/4$. If $f(u)=F_B(2/\sqrt3,u)=\sum_{i=0}^6a_i u^i$ and $J(u)=24a_4+60a_5u+120a_6u^2$, the exact finite comparisons are
+\[
+\begin{gathered}
+ a_3<0,\quad a_6<0,\quad J'(3/4)>0,\quad J(3/4)<0,\\
+ f(1/2)>2,\quad -18<f'(1/2)<0,\quad f''(3/5)>1000,\quad
+ f'(3/5)>0,\quad f'(3/4)>0.
+\end{gathered}
+\]
+The supplement verifies the signs of these Bernstein coefficients and evaluations. Their denominators are products of positive integers and powers of $\sqrt3$.
+\end{lemma}
+\begin{proof}
+Since $a_6<0$, $J'$ decreases to its positive value at $3/4$. Thus $J$ increases and is negative throughout $[0,3/4]$. It follows that $f'''=6a_3+uJ<0$. In particular, $f''>1000$ on $[0,3/5]$, whence
+\[
+ f(u)>2-18|u-1/2|+500(u-1/2)^2\ge919/500.
+\]
+On $[3/5,3/4]$, $f'$ is concave with positive endpoint values, hence $f'>0$. Thus $f>919/500$ there too. Positivity of the Bernstein coefficients gives $F_B(\lambda,u)\ge f(u)>0$. The denominator in
+\[
+ K_B-\overline K=\frac{F_B}{72\lambda(\lambda R_B+uBP)}
+\]
+is positive: indeed
+\[
+ R_B=(\lambda+1)^2(1-u)[A\lambda^2(1+u)-(1-\lambda u)^2]+A(2\lambda+1)>0.
+\]
+The comparisons $K_{\rm cap}<\overline K$ follow from the two finite identities
+\[
+ (1-g^2/3)(1+g^2/3+g^4/5)-1=\frac{g^4(4-3g^2)}{45}>0,
+\]
+\[
+ 1+\frac{g^2}{3(1-g^2)}-\left(1+\frac{g^2}3+\frac{g^4}5+
+                  \frac{g^6}{7(1-g^2)}\right)
+ =\frac{g^4(2/15+2g^2/35)}{1-g^2}>0,
+ \qquad g=\frac c{\lambda+1}.
+\]
+Finally,
+\[
+ \frac{\lambda A}{B}-\frac{\lambda R_B}{BP}
+ =\frac{\lambda(\lambda+1)^2(1-u)(1-\lambda u)^2}{BP}>0.
+\]
+Since $2x/(x+u)$ increases in $x>0$, this gives the last comparison.
+\end{proof}
+
+\begin{lemma}[Positivity of the moment differences]\label{lem:near-condition-f}
+For $(w,a)$ in~\eqref{eq:near-assigned-pair}, let
+\[\begin{gathered}
+ Q_a(U)=-\frac wc+\left[1+\frac{(\lambda+1)w}{c}\right]U
+                  -\left(a+\frac{\lambda w}{c}\right)U^2,\\
+ \Delta_s^{\mathrm{ass}}=\E[U^{s-1}Q_a(U)]-(1-a)a_s.
+\end{gathered}\]
+Then $\Delta_s^{\mathrm{ass}}>0$ for every real $s\ge2$.
+\end{lemma}
+\begin{proof}
+Retain $R,Q$ from the denominator check in Lemma~\ref{lem:near-prefix}, and put $D_f=Q-R$, $D_w=Q-(\lambda+1)uR$. The only remaining scalar inequality is
+\begin{equation}\label{eq:near-W}
+ W:=\lambda D_f-uR(\lambda+1-\lambda z)>0.
+\end{equation}
+Since $a<1$ and $w<h$, the formula for $a$ gives
+\[
+ z>\frac{\lambda u}{1+cu}.
+\]
+If $u\le5/8$, solving $W>0$ for $K_{\rm cap}$ gives $K_{\rm cap}<K_{\rm cal}(z)$, with
+\[
+ K_{\rm cal}(z)=1-u+
+ \frac{(1-u)[\lambda-(\lambda+1)u+\lambda u(2\lambda+1)z+
+                       2\lambda Au z^2/(1-u)]}
+      {A^2z^2[\lambda+(\lambda+1)u-\lambda uz]}.
+\]
+Its derivative has the sign of a cubic with coefficients
+\[
+\begin{split}
+ &2[(\lambda+1)^2u^2-\lambda^2],\\
+ &-2\lambda u[\lambda c+(\lambda+1)(\lambda+2)u],\\
+ &2\lambda^2u^2(2\lambda+1),\qquad 2\lambda^2Au^2/(1-u).
+\end{split}
+\]
+This cubic is negative for $z\le1/A$. To see the sign directly, use $1-u\ge3/8$ to obtain
+\[
+ (\lambda+1)(\lambda+2)-
+ \frac{\lambda[(2\lambda+1)+(1-u)^{-1}]}A
+ \ge\frac{9\lambda^3+3\lambda^2+2\lambda+48}{24+9\lambda}>\frac{15}{8}.
+\]
+The last difference has numerator $72\lambda^3+24\lambda^2-119\lambda+24$, positive at $\lambda=1$ and increasing for $\lambda\ge1$. The cubic is consequently less than
+\[
+ -2\left\{\lambda^2+u^2[\lambda^3-2\lambda^2-2\lambda-1+(15/8)\lambda u]\right\}<0.
+\]
+The expression in braces increases with $\lambda\ge9/8$ and decreases with $0\le u\le5/8$; its value at $(9/8,5/8)$ is $643/8192$. Thus $K_{\rm cal}$ decreases, and its value at $1/A$ is $2\lambda A/(\lambda A+uB)$. Lemma~\ref{lem:near-cap-arithmetic} proves~\eqref{eq:near-W}.
+
+If $u\ge5/8$, the identity
+\[
+ 2R-K_{\rm cap}Q
+ =2(1-Az)[(1-K_{\rm cap})+(A-(\lambda+1)K_{\rm cap})z]<0
+\]
+gives $R/Q<K_{\rm cap}/2$. Also
+\[
+ \lambda+(\lambda+1)u-\lambda uz
+ <\frac{\lambda+(\lambda^2+1)u-u^2}{1+cu}.
+\]
+It therefore suffices that
+\[
+ \overline K<\frac{2\lambda(1+cu)}{\lambda+(\lambda^2+1)u-u^2}.
+\]
+After multiplication by the positive denominator $72\lambda(\lambda+1)$, the difference is a quartic in $u-5/8\in[0,1/8]$. Its constant and linear coefficients are
+\[
+\begin{split}
+ &\frac3{2048}(40\lambda^5+45744\lambda^4+24823\lambda^3
+                     -56694\lambda^2-34745\lambda-3900),\\
+ &\frac1{64}(26\lambda^5+8564\lambda^4-2688\lambda^3
+                     -6539\lambda^2+2572\lambda+405),
+\end{split}
+\]
+and are positive. For the constant coefficient the polynomial increases with $\lambda$ and its left-end value is $(16476-28378/\sqrt3)/9>0$, since $3\cdot16476^2-28378^2=9064844$. The linear coefficient is positive by grouping its negative terms with $8564\lambda^4$. The cubic coefficient is negative, the quartic coefficient is $2\lambda(\lambda^2+10\lambda+1)>0$, and the quadratic coefficient plus one eighth of the cubic coefficient is
+\[
+ \frac{\lambda^4(400-16\lambda)+389\lambda^3+258\lambda^2+1525\lambda+384}{16}>0.
+\]
+This proves the quartic's sign, and hence~\eqref{eq:near-W}, also in this case.
+
+Now let $\theta=a_3/a_2$. The formula for $a$ and~\eqref{eq:near-three-moment-bound} give
+\[
+ \frac{\Delta_2^{\mathrm{ass}}}{a_2}
+ =a(1-\theta)+\frac wc(\lambda+1-\lambda\theta-1/z)
+ >\frac{(1-z)W}{(\lambda+1-\lambda z)zD_w}>0.
+\]
+The direction is correct because the coefficient of $\theta$ is
+$-(a+\lambda w/c)=-D_f/(zD_w)<0$.
+Finally $Q_a(y)-(1-a)y$ is a concave quadratic, negative at zero and positive at $1/\lambda$, where its value is $ac/\lambda^2$. It changes sign from negative to positive at its unique zero $\xi\in(0,1/\lambda)$. For every $s\ge2$,
+\[
+ \Delta_s^{\mathrm{ass}}-\xi^{s-2}\Delta_2^{\mathrm{ass}}
+ =\E\{U[U^{s-2}-\xi^{s-2}][Q_a(U)-(1-a)U]\}\ge0.
+\]
+Thus the bound holds for every real exponent $s\ge2$.
+\end{proof}
+
+\subsubsection{A lower bound before truncating the series}
+We bound each summand with index $s\ge2$ from below by a positive quantity. This allows us to keep only the first four terms in the subsequent estimate.
+
+\begin{lemma}[A series lower bound for $D_\lambda$]\label{lem:near-absorption}
+For the pair $(w,a)$ in~\eqref{eq:near-assigned-pair} and every integer $s\ge2$, put
+\[
+ e_s=1-\lambda r_s,\qquad L_s=\frac1\lambda-r_{s-1},\qquad
+ B_s=\frac{1+w}{\lambda}e_s^2+2(1-a)(r_s-r_{s-1}),\qquad s\ge2.
+\]
+Then $B_s,L_s>0$, and
+\begin{equation}\label{eq:near-root-floor}
+ D_\lambda>
+ \frac{(1+w)(u-\lambda a_2)^2-2(1-a)u(u-\lambda a_2)}\lambda
+ +\sum_{s\ge2}s\lambda^{s-1}
+       [a_s^2B_s+2a_sL_s\Delta_s^{\mathrm{ass}}].
+\end{equation}
+The series converges absolutely.
+\end{lemma}
+\begin{proof}
+Use the integral representation of the moment ratios in Lemma~\ref{lem:canonical-marker} and the series expansion in Lemma~\ref{lem:mellin-floor}. With
+\[\begin{gathered}
+ \delta_s=a_sr_s-a_{s+1},\qquad \varepsilon_s=a_s-\lambda a_{s+1},\\
+ \Theta_s=\frac c{\lambda\log\lambda}\beta_s[-\rho'(s)],\quad
+ C_s=\frac c{\lambda\log\lambda}\frac{1-1/(2s)}{r_s},
+\end{gathered}\]
+they give $\delta_s>0$, $\Theta_s>C_s\delta_s$, and
+\[
+ \gamma_{s-1}=a_s(r_s-r_{s-1})-\delta_s+\Theta_s,
+ \qquad \gamma_{s-1}+\varepsilon_s/\lambda=a_sL_s+\Theta_s>a_sL_s.
+\]
+We claim that
+\begin{equation}\label{eq:near-age-sign}
+ e_s+(1-\lambda^2u)(C_s-1)>0\qquad(s\ge2).
+\end{equation}
+To prove it, set $N_s=cZ_s=\lambda^s(1-u)-1+\lambda u$. The recursion
+$N_{s+1}=\lambda N_s+c(1-\lambda u)$ and $N_1=c$ give
+\[
+ e_s\ge\frac{1-\lambda^2u}{\sum_{j=0}^s\lambda^j}.
+\]
+Indeed, $1-\lambda u\ge1-\lambda^2u$ and $N_{s+1}\le\lambda^{s+1}-1=c\sum_{j=0}^s\lambda^j$. Convexity of $1/x$ on $[1,\lambda]$ gives $c/(\lambda\log\lambda)>2/(\lambda+1)$, while $r_s<1/\lambda$. Finally
+\[
+ s(\lambda+1)-[s-(s-1)\lambda]\sum_{j=0}^s\lambda^j
+ =\lambda\left[(s-1)+c\sum_{j=1}^{s-1}j\lambda^j\right]>0.
+\]
+These three inequalities imply~\eqref{eq:near-age-sign}. If $C_s\ge1$, then $e_s>0$ gives the next inequality directly. If $C_s<1$, use $a>\lambda^2u$ in the same bound. In both cases
+\[
+ (1+w)e_s+(1-a)(C_s-1)>0.
+\]
+Writing $\xi_s=\Theta_s-C_s\delta_s>0$, expansion now gives
+\[
+\begin{split}
+ \frac{1+w}{\lambda}\varepsilon_s^2+2(1-a)a_s\gamma_{s-1}
+ ={}&a_s^2B_s+2a_s\delta_s[(1+w)e_s+(1-a)(C_s-1)]\\
+ &+(1+w)\lambda\delta_s^2+2(1-a)a_s\xi_s>a_s^2B_s.
+\end{split}
+\]
+Here $r_s-r_{s-1}>0$ follows from $Z_s^2-Z_{s-1}Z_{s+1}=(1-u)\lambda^{s-1}(1-\lambda u)>0$.
+
+To identify the term with $s=1$ and bound those with $s\ge2$, write the coefficient $J_{s-1}$ as
+\[
+ J_{s-1}=2ct_{s-1}+c[(1+w)\varepsilon_s-2(1-a)a_s],
+ \qquad t_{s-1}=(1-a)a_s+\Delta_s^{\mathrm{ass}}.
+\]
+For $s\ge2$ the term in the series for $\widetilde F(w)$, before multiplication by $s\lambda^{s-1}$, is therefore
+\[
+ \frac{1+w}{\lambda}\varepsilon_s^2+2(1-a)a_s\gamma_{s-1}
+       +2(\gamma_{s-1}+\varepsilon_s/\lambda)\Delta_s^{\mathrm{ass}}.
+\]
+At $s=1$, $t_0=0$, and the summand is the first term of~\eqref{eq:near-root-floor}. For $s\ge2$, Lemma~\ref{lem:near-condition-f} gives $\Delta_s^{\mathrm{ass}}>0$, so we may bound its coefficient from below by $2a_sL_s$. Lemma~\ref{lem:assigned-floor} gives
+$D_\lambda\ge F_*=\widetilde F(v)>\widetilde F(w)$, proving the strict inequality.
+
+All these rearrangements can first be made in finite sums. At fixed $\lambda>1$, $a_s\le\lambda^{-s}$ and $\beta_s\le C_\lambda\lambda^{-s}$. Moreover $\E[U^s|\log U|]\le C_\lambda\lambda^{-s}$ for all sufficiently large $s$, by maximizing $x^s|\log x|$ on $[0,1/\lambda]$. The same bounds hold for $\Theta_s,\gamma_{s-1},\Delta_s^{\mathrm{ass}}$ up to a fixed factor, and $t_{s-1}=O_\lambda(\lambda^{-s})$. Every term above is thus bounded by $C_\lambda s\lambda^{-s}$. Dominated summation proves the asserted convergence and all passages to the infinite sum.
+\end{proof}
+
+\begin{lemma}[A lower bound using the first four terms]\label{lem:near-four-age}
+Let $T=1-\sqrt{1-\rho}$ and $f_s=T^{s-1}[s-(s-1)T]$. Define
+\[
+ M_s=a(1-r_s)+\frac wc\left[\lambda+1-\lambda r_s-
+                              \frac1{r_{s-1}f_s}\right],\qquad s\ge2,
+\]
+and
+\begin{equation}\label{eq:near-S4}
+ \frac{S_4}{u^2}=
+ \frac{(1+w)(1-\lambda\rho/A)^2-2(1-a)(1-\lambda\rho/A)}\lambda
+ +\sum_{s=2}^4\frac{s\lambda^{s-1}f_s^2}{Z_s^2}[B_s+2L_sM_s].
+\end{equation}
+Then $D_\lambda>S_4$.
+\end{lemma}
+\begin{proof}
+The integral representation of $\rho_s$ with respect to $\sigma$ gives
+\[
+ \rho_s=\E_\sigma[t^{s-1}(s-(s-1)t)],\qquad
+ \E_\sigma(1-t)^2=1-\rho.
+\]
+As a function of $x=(1-t)^2$, the first integrand is
+$(1-\sqrt x)^{s-1}[1+(s-1)\sqrt x]$. Its derivative is
+$-s(s-1)(1-\sqrt x)^{s-2}/2$, an increasing function for integer $s\ge2$.
+Jensen's inequality therefore gives $a_s\ge\beta_sf_s$, with equality at $s=1,2$. Also $a_{s-1}\le\beta_{s-1}$ and $a_{s+1}/a_s<r_s$, so direct substitution in $\Delta_s^{\mathrm{ass}}$ gives $\Delta_s^{\mathrm{ass}}/a_s>M_s$. Lemma~\ref{lem:near-condition-f} gives $\Delta_s^{\mathrm{ass}}>0$. For $s\ge2$ the expression in square brackets in~\eqref{eq:near-root-floor} is therefore bounded below by
+\[
+ (\beta_sf_s)^2[B_s+2L_s\max\{0,M_s\}].
+\]
+Since $B_s,L_s>0$, the bracket is positive when we use $a_s\ge\beta_sf_s$. We can now drop the terms with $s\ge5$ and replace $\max\{0,M_s\}$ by $M_s$ for $s=2,3,4$. This gives~\eqref{eq:near-S4}.
+\end{proof}
+
+\subsubsection{Positivity of \texorpdfstring{$S_4$ for $0<u\le1/2$}{S4 for 0 < u <= 1/2}}
+We prove $S_4>0$ by estimating~\eqref{eq:near-S4} on a larger set of scalar parameters. The comparison $D_\lambda>S_4$ from Lemma~\ref{lem:near-four-age} uses the moments of $U$ under the given escape law.
+
+Temporarily replace $K_{\rm cap}$ in~\eqref{eq:near-assigned-pair} by a scalar $K$. In the variables $\lambda,u,\rho$, put
+\begin{equation}\label{eq:near-finite-calibration}
+ \begin{gathered}
+ R=1-u+\rho^2(K-1+u),\qquad
+ Q=A(1-u)+\lambda u\rho(1-u)+u\rho^2,\\
+ D_K=2Q-(\lambda+1)uAR,\qquad
+ A_0^\mathrm{num}=[1-(\lambda+1)u]A+\lambda u\rho,\\
+ w=\frac{cuAR}{D_K},\qquad
+ a=\frac{A(D_K-RA_0^\mathrm{num})}{\rho D_K},\qquad
+ \Phi(K)=\rho D_K S_4(K)/u^2.
+ \end{gathered}
+\end{equation}
+Define the explicit quadratic bound
+\begin{equation}\label{eq:near-Kb}
+ K_b=\frac{\lambda+1}{2\lambda}+\frac{1-u}{2}
+       +\frac{(\lambda+1)(\lambda+1-2\lambda u)(1-u)}{24\lambda}.
+\end{equation}
+The inequalities for $\ell_L,\ell_U$ give $K_{\rm cap}<K_b$.
+
+\begin{lemma}[Comparison of $\Phi(K_{\rm cap})$ and $\Phi(K_b)$]\label{lem:near-K-affinity}
+For $23/20\le\lambda\le3/2$, $0<u\le1/2$, $0<\rho\le1$, the denominators $D_{K_b}$ and $D_{K_{\rm cap}}$ are positive, and
+\[
+ \Phi(K_{\rm cap})>\Phi(K_b).
+\]
+\end{lemma}
+\begin{proof}
+First $(1+\lambda u)K_b<2$. Indeed this product increases with $u$ on $[0,1/2]$, as follows by differentiating its displayed cubic; its derivative is at least $(-2\lambda^3+9\lambda^2-2\lambda-1)/(24\lambda)>0$. At $u=1/2$ the remaining difference is
+\[
+ 2-(1+\lambda/2)K_b(\lambda,1/2)
+ =\frac{6+c(19-37c)}{96\lambda}>0.
+\]
+Direct subtraction now gives
+\begin{equation}\label{eq:near-positive-D}
+ \frac{D_{K_b}}{A(1-u)}-R
+ =(1-\rho)\left[(1-\lambda u)(1+\rho)+\frac{2\lambda u\rho}{A}\right]
+ +\frac{2-(1+\lambda u)K_b}{1-u}\rho^2>0.
+\end{equation}
+It also proves positivity at the smaller $K_{\rm cap}$.
+
+Here is the full dependence on $K$. Put $E=1-\lambda\rho/A$ and $W_s=s\lambda^{s-1}/Z_s^2$. The cancellation
+$r_s-r_{s-1}=L_s(1-r_s)$ in~\eqref{eq:near-S4} gives
+\[
+ S_4/u^2=F_0+aF_a+wF_w,
+\]
+where
+\[
+\begin{split}
+ F_0&=(E^2-2E)/\lambda+
+       \sum_{s=2}^4W_sf_s^2[e_s^2/\lambda+2(r_s-r_{s-1})],\\
+ F_a&=2E/\lambda,\\
+ F_w&=E^2/\lambda+
+ \sum_{s=2}^4W_s\left\{f_s^2\left[\frac{e_s^2}{\lambda}
+       +\frac{2L_s}{c}(\lambda+1-\lambda r_s)\right]
+       -\frac{2L_sf_s}{cr_{s-1}}\right\}.
+\end{split}
+\]
+Set $\widehat C=\rho F_0+AF_a$. Substitution of~\eqref{eq:near-finite-calibration} gives
+\[
+ \Phi(K)=2Q\widehat C-AR\widehat H,
+ \qquad \widehat H=(\lambda+1)u\widehat C+A_0^\mathrm{num}F_a-cu\rho F_w.
+\]
+Its sign is exposed by the exact cancellation
+\[
+ \widehat H=\frac{2E}{\lambda}\left(A-\frac{\lambda u\rho^2}{A}\right)
+ +2u\rho\sum_{s=2}^4\frac{W_sL_sf_s}{r_{s-1}}
+          [1-\lambda r_{s-1}r_s^2f_s]>0.
+\]
+Here $0<f_s\le1$, $\lambda r_s<1$, and $E>0$. Thus
+$\partial_K\Phi=-A\rho^2\widehat H<0$, proving the claim. Only the scalar argument $K$ of $\Phi$ varies in this comparison.
+\end{proof}
+
+Henceforth $K=K_b$ and $\eta=K_b-1+u$. Define
+\begin{equation}\label{eq:near-complete-finite-profile}
+\begin{gathered}
+ \Phi_R(\rho)=\frac2\lambda\left(1-\frac{\lambda\rho}{A}\right)
+ \left\{Q\left(2A-\rho-\frac{\lambda\rho^2}{A}\right)
+       -AR\left(A-\frac{\lambda u\rho^2}{A}\right)\right\},\\
+ \omega_s=\frac{s\lambda^{s-2}(1-\lambda u)}{Z_s^3},\qquad
+ V_s=\frac{\omega_suAR}{r_{s-1}},\\
+ U_s=\omega_s[Q(2-r_s-\lambda r_s^2)+uAR\lambda r_s^2],\qquad s=2,3,4.
+\end{gathered}
+\end{equation}
+All $U_s,V_s$ are positive. Substituting the formulas for $a,w$ in~\eqref{eq:near-S4} and multiplying both sides by $\rho D_{K_b}$ gives
+\begin{equation}\label{eq:near-complete-Phi}
+ \Phi(K_b)=\Phi_R+2\rho\sum_{s=2}^4(U_sf_s^2-V_sf_s).
+\end{equation}
+Here $\Phi_R$ comes from the term with $s=1$. Since
+$\rho^2-f_3=T^2(1-T)^2$ and $f_3^2-\rho f_4=T^4(1-T)^2$, it also gives
+\begin{equation}\label{eq:near-merge}
+\begin{split}
+ \Phi(K_b)=\Phi_R+2\rho\{&(U_2-V_3)\rho^2-V_2\rho
+ +(\rho U_3-V_4)f_4+U_4f_4^2\\
+ &+T^2(1-T)^2[V_3+U_3T^2]\}.
+\end{split}
+\end{equation}
+
+\begin{lemma}[Bounds on $U_2-V_3$ and $\rho U_3-V_4$]\label{lem:near-age-comparisons}
+In the present range,
+\[
+ U_2-V_3>\frac{(1-\lambda u)Q}{A^3}>0.
+\]
+For $1/2\le\rho\le1$, one also has $\rho U_3-V_4>0$.
+\end{lemma}
+\begin{proof}
+For the first claim, let $x=uAR/Q$. Equation~\eqref{eq:near-positive-D} implies
+$x<2u/(1+\lambda u)\le40/63$. The identities in~\eqref{eq:near-profile-defs} give
+\[
+ U_2-V_3=\frac{2(1-\lambda u)Q}{A^3}
+      [2-r_2-\lambda r_2^2(1+x/2)].
+\]
+The derivative $\partial_u r_2=\lambda^2/Z_3^2$ is positive. At $u=1/2$, direct multiplication gives $r_2<5/7$ and $\lambda r_2^2<7/12$. For the latter sign, the cleared difference is
+\[
+ 7(\lambda^2+\lambda+2)^2-12\lambda(\lambda+2)^2
+ =4-12c+35c^2+30c^3+7c^4>0,
+\]
+because $35c^2-12c+4=35(c-6/35)^2+104/35$. For the former, $5\lambda^2-2\lambda-4>0$ at $23/20$ and increases. The bracket is therefore larger than
+$2-5/7-(7/12)(1+20/63)=391/756>1/2$.
+
+For the second claim, $r_3$ increases with $u$, and at $u=1/2$ its value is
+$(\lambda^2+\lambda+2)/(\lambda^3+\lambda^2+\lambda+2)$. Thus $r_3<3/4$ and $\lambda r_3^2<2/3$: the first cleared difference is $3\lambda^3-\lambda^2-\lambda-2>0$, and the second is
+\[
+ 2+29c^2+47c^3+35c^4+13c^5+2c^6>0.
+\]
+Consequently $2-r_3-\lambda r_3^2>7/12$. The ratio $K_b/(1-u)$ decreases as $1-u$ increases, giving
+\begin{equation}\label{eq:near-K-ratio}
+ \frac{K_b}{1-u}\le\frac{31}{12},\qquad
+ \frac R{1-u}\le1+\frac{19}{12}\rho^2.
+\end{equation}
+At $\rho=1/2$,
+\[
+ \frac{uAR}{Q}\le\frac{67}{16}\frac{u(1-u)}{3-2u}\le\frac{67}{128}.
+\]
+The last inequality is $(2u-1)(4u-3)\ge0$. The exact comparison is
+\[
+ \rho U_3-V_4=\omega_3\left\{\rho Q(2-r_3-\lambda r_3^2)
+             -uA\lambda r_3^2R(4/3-\rho)\right\}.
+\]
+At $1/2$, the expression in braces divided by $Q$ exceeds
+$7/24-(5/6)(67/128)(2/3)=1/1152$. As $\rho$ increases, $\rho Q$ increases, whereas
+\[
+ \frac1{1-u}\frac\dd{\dd\rho}[R(4/3-\rho)]
+ =-1+\frac\eta{1-u}(8\rho/3-3\rho^2)\le-11/144<0.
+\]
+Indeed the quadratic is at most $7/12$ on $[1/2,1]$, and $0<\eta/(1-u)\le19/12$. This proves the claim throughout that interval.
+\end{proof}
+
+\begin{lemma}[The range $0<\rho\le2/3$]\label{lem:near-low-rho}
+One has $\Phi(K_b)>0$ whenever $0<\rho\le2/3$.
+\end{lemma}
+\begin{proof}
+First suppose $\rho\le1/2$. The negative terms in~\eqref{eq:near-complete-Phi} are bounded using $f_s\le\rho^{s-1}$ and
+\begin{equation}\label{eq:near-price-constants}
+ \frac{W_2L_2}{r_1}\le\frac12,\qquad
+ \frac{W_3L_3}{r_2}\le\frac14,\qquad
+ \frac{W_4L_4}{r_3}\le\frac4{25}.
+\end{equation}
+Here $W_s=s\lambda^{s-1}/Z_s^2$. To verify all three bounds, put $k=1-\lambda u$ only in this calculation. Then $A\ge1+k$ and $A\ge2-k$. The first bound is $2k/A^2\le1/2$. For the next two,
+\[
+ Z_3^2-\lambda(A+k)^2=c(\lambda A^2-k^2)>0,
+ \qquad Z_4-\lambda(A+2k)=c(\lambda A-k)>0.
+\]
+They reduce to $3k/[A(A+k)^2]\le1/4$ and $4k/[(A+k)(A+2k)^2]\le4/25$. For $k\le1/2$, use $A\ge2-k$ and monotonicity of the resulting one-variable fractions. For $k\ge1/2$, use $A\ge1+k$ and
+\[
+ (1+2k)^2(1+k)-12k=(2k-1)(2k^2+5k-1),
+\]
+\[
+ (1+3k)^2(1+2k)-25k=(2k-1)(9k^2+15k-1).
+\]
+
+For the term $\Phi_R$ we have
+\[
+ \frac{\Phi_R}{A(1-u)}\ge
+ \frac2\lambda\left[\frac{29}{48}(A-\lambda\rho)-\rho+
+                              \frac{\lambda^2\rho^3}{A^2}\right].
+\]
+This follows from $Q\ge A(1-u)$, $R/(1-u)\le67/48$, and the identity
+$(1-\lambda\rho/A)(AD-\rho-\lambda\rho^2/A)
+=D(A-\lambda\rho)-\rho+\lambda^2\rho^3/A^2$.
+The bracket decreases with $\rho\le1/2$ and, at $\rho=1/2$, increases with $A\ge1+\lambda/2$. Hence
+\[
+ \frac{\Phi_R}{A(1-u)}\ge\frac5{24\lambda}+\frac\lambda{(\lambda+2)^2}
+ \ge\frac{461}{1764}.
+\]
+The last function decreases on $[1,3/2]$, as is seen by differentiation. By~\eqref{eq:near-price-constants}, the sum of the absolute values of the negative terms satisfies
+\[
+ \frac{2\rho\sum_{s=2}^4V_sf_s}{A(1-u)}
+ \le\frac{67}{48}\left(\frac18+\frac1{32}+\frac1{100}\right)
+ =\frac{8911}{38400}.
+\]
+Deleting only the positive squares in~\eqref{eq:near-complete-Phi} gives
+$\Phi/[A(1-u)]>1/40$.
+
+Now suppose $1/2\le\rho\le2/3$. In~\eqref{eq:near-merge}, Lemma~\ref{lem:near-age-comparisons} gives $U_2-V_3>0$ and $\rho U_3-V_4>0$. The only negative term left is $-2\rho^2V_2$, with
+\[
+ \frac{2\rho^2V_2}{A(1-u)}<\frac{322}{1215},
+\]
+because
+\[
+ \frac1{\lambda^2(\lambda+1)}-
+       2u\frac{W_2L_2}{r_1}
+ =\frac{[\lambda-(2\lambda+1)(1-\lambda u)]^2}
+       {\lambda^2(\lambda+1)A^2}\ge0,
+\]
+$1/[\lambda^2(\lambda+1)]<7/20$, and $R/(1-u)\le46/27$.
+
+To bound $\Phi_R$, we retain the positive terms of $Q$ that depend on $u$. The explicit formulas give
+\[
+ \frac Q{A(1-u)}\ge1+\frac u{1-u}\frac{\rho(1+2\rho)}3,
+ \qquad \frac R{1-u}\le1+\rho^2\left(\frac{17}{24}+\frac u{1-u}\right).
+\]
+After substitution in~\eqref{eq:near-complete-finite-profile}, the coefficient of $u/(1-u)$ inside the braces for $\Phi_R/[A(1-u)]$ is at least
+\[
+ \frac\rho3\{A(2+\rho)-\rho(1+2\rho)(1+\rho)\}>\frac7{20}.
+\]
+To check the last bound, set $A=63/40$, where the expression is concave in $\rho\in[1/2,2/3]$ and has endpoint values $13/32$ and $434/1215$. Both exceed $7/20$. Since $E\ge3/7$ and $2/\lambda\ge4/3$, this part contributes at least $u/[5(1-u)]$.
+
+For the other part, use
+\[
+ g(A,\rho)=\frac{37}{54}(A-\lambda\rho)-\rho+\frac{\lambda^2\rho^3}{A^2}.
+\]
+Its $\rho$ derivative is negative and its $A$ derivative exceeds $3/8$. It follows that
+\[
+ \frac{\Phi_R}{A(1-u)}\ge
+ \frac1{27\lambda}-\frac{37}{162}+\frac{64\lambda}{27(\lambda+2)^2}
+ +\frac34(1/2-u)+\frac15\frac u{1-u}.
+\]
+The first three terms increase with $\lambda\in[1,3/2]$ and are at least $35/486$. For the monotonicity, $\lambda^2(2-\lambda)/(\lambda+2)^3$ decreases to $9/343$, so its contribution to the derivative is still larger than the negative term. Finally, with $x=1/2-u$,
+\[
+ \frac34(1/2-u)+\frac15\frac u{1-u}-\frac{199}{1000}
+ =\frac{(3/2)(x-2/125)^2+77/125000}{1+2x}>0.
+\]
+Thus $\Phi/[A(1-u)]>35/486+199/1000-322/1215
+=1457/243000>1/200$.
+\end{proof}
+
+\subsubsection{Bounds for \texorpdfstring{$2/3\le\rho\le5/6$}{2/3 <= rho <= 5/6}}
+Define the finite functions
+\begin{equation}\label{eq:near-intermediate-functions}
+ F(\rho,\lambda,u)=\Phi_R(\rho)-\frac{4\rho^2u(1-\lambda u)R}{A},
+ \qquad g(\rho,\lambda,u)=\frac{(1-\lambda u)Q}{A^3}.
+\end{equation}
+Equation~\eqref{eq:near-merge} and Lemma~\ref{lem:near-age-comparisons} imply
+\begin{equation}\label{eq:near-intermediate-lower}
+ \Phi(K_b)>F(\rho,\lambda,u)+2\rho^3g(\rho,\lambda,u)
+ \qquad(1/2\le\rho<1).
+\end{equation}
+
+\begin{lemma}[Bounds for $F$ and $g$ at $\rho=3/4$ and $\rho=5/6$]\label{lem:near-intermediate-arithmetic}
+On $23/20\le\lambda\le3/2$, $0\le u\le1/2$, the explicitly defined rational functions in~\eqref{eq:near-intermediate-functions} satisfy
+\[
+ -\partial_uF(3/4,\lambda,u)>0,\quad
+ -\partial_uF(5/6,\lambda,u)>0,\quad
+ -\partial_ug(3/4,\lambda,u)>0.
+\]
+Their boundary values satisfy
+\[
+ F(3/4,\lambda,1/2)>1/8,\qquad
+ F(5/6,\lambda,1/4)>0,
+\]
+\[
+ F(5/6,\lambda,1/2)+\frac{27}{32}g(3/4,\lambda,1/2)>1/100.
+\]
+These are finite polynomial signs: the supplement forms each displayed difference from~\eqref{eq:near-intermediate-functions}, clears its positive powers of $\lambda$ and $A$, maps the stated rational rectangle to $[0,1]^2$, and lists its complete Bernstein coefficients. The exact positive factors, degrees and coefficient transform are recorded in Lemma~\ref{lem:near-finite-certificate}; no numerical evaluation is used to infer an interval sign.
+\end{lemma}
+
+\begin{lemma}[The range $2/3\le\rho\le5/6$]\label{lem:near-intermediate-rho}
+One has $\Phi(K_b)>0$ throughout this range.
+\end{lemma}
+\begin{proof}
+We first show that the expression in braces in $\Phi_R$ decreases with $\rho$. The explicit quadratic $K_b$ gives
+\begin{equation}\label{eq:near-eta-bounds}
+ 0<\eta<3/4,\qquad 1<A\eta<4/3.
+\end{equation}
+For details, as $1-u$ increases, $\eta$ decreases, and its value at $u=1/2$ is $(13\lambda+25)/(48\lambda)<3/4$. The derivative of $A\eta$ with respect to $1-u$, multiplied by $24$, is
+\[
+ (11\lambda^2+1)/\lambda
+ -2(\lambda^2+10\lambda-3)(1-u)+6\lambda(\lambda+1)(1-u)^2.
+\]
+Its discriminant is negative because
+$-\lambda^4+46\lambda^3-28\lambda^2+66\lambda-3\ge159/2$.
+Its minimum endpoint value gives
+$A\eta-1\ge(13\lambda^2-45\lambda+50)/(96\lambda)>0$.
+Its maximum endpoint value is
+$(\lambda+1)(\lambda^2+2\lambda+13)/(24\lambda)
+\le(35-3\lambda)/24<4/3$.
+
+The bracket in $\Phi_R$ has exactly the five $\rho$ coefficients
+\[
+\begin{split}
+ &A^2(1-u),\quad A(1-u)(2\lambda u-1),\quad
+ 2Au-\lambda(1-u)-A^2\eta,\\
+ &-u[1+\lambda^2(1-u)/A],\qquad
+ (\lambda u/A)(A\eta-1).
+\end{split}
+\]
+Its derivative is negative on $[2/3,5/6]$. Indeed the quadratic coefficient is less than $-\lambda(1-u)\le-\lambda/2$. If the linear coefficient is positive, it is less than $2/3$, whereas twice $\rho$ times the quadratic coefficient is at most $-23/30$. The cubic and quartic contributions to the derivative sum to
+\[
+ u\rho^2\{-3[1+\lambda^2(1-u)/A]+4\lambda\rho(\eta-1/A)\}\le0,
+\]
+using $\lambda\rho\le5/4$, $1/A\ge2/5$, and~\eqref{eq:near-eta-bounds}. The first pair is already strictly negative, including $u=0$.
+
+For $2/3\le\rho\le3/4$, Lemma~\ref{lem:near-intermediate-arithmetic} gives $F(3/4,\lambda,u)>1/8$. Since $F\le\Phi_R$, the bracket in $\Phi_R$ is positive at $3/4$ and therefore positive to its left. Both that bracket and $1-\lambda\rho/A$ decrease, so $\Phi_R$ decreases. The term $4\rho^2u(1-\lambda u)R/A$ subtracted from $\Phi_R$ increases, so $F$ decreases as well. Thus
+$\Phi>F(\rho)\ge F(3/4)>1/8$.
+
+For $3/4\le\rho\le5/6$, the same finite lemma gives
+\[
+ F(5/6,\lambda,u)+\frac{27}{32}g(3/4,\lambda,u)>1/100.
+\]
+We also need $\Phi_R(5/6)>0$. If $u\le1/4$, this follows from $F(5/6,\lambda,1/4)>0$ and the $u$ derivative. If $u\ge1/4$, concavity of $uA(1-u)$ and its two endpoint values give $uA(1-u)>1/3$. Since $R(5/6)\ge1-u$ and $Q(3/4)\le Q(1)=A$,
+\[
+ \frac{4(5/6)^2u(1-\lambda u)R(5/6)}A
+ >\frac{27}{32}g(3/4).
+\]
+After division by $2(1-\lambda u)/A^3$, this follows from $25/54>27/64$. The preceding mixed bound now gives $\Phi_R(5/6)>0$.
+As before, $\Phi_R(5/6)>0$ implies that $F$ decreases with $\rho$ on $[3/4,5/6]$. The function $g$ increases with $\rho$, since $Q$ does. Equation~\eqref{eq:near-intermediate-lower} therefore gives
+\[
+ \Phi(K_b)>F(5/6)+\frac{27}{32}g(3/4)>1/100.
+\]
+\end{proof}
+
+\subsubsection{Bounds for \texorpdfstring{$5/6\le\rho<1$}{5/6 <= rho < 1}}
+For $5/6\le\rho<1$, we need a lower bound that also applies when the quadratic term in $1-T$ is negative. We estimate it together with the value of $\Phi(K_b)$ at $\rho=1$ and the cubic and quartic terms in $1-T$.
+
+Put $n_s=s(s-1)/2$ and $B_s^{\rm age}=2U_s-V_s$. The following are finite polynomials in $\rho$:
+\begin{equation}\label{eq:near-core-defs}
+\begin{gathered}
+ \Psi(\rho)=\Phi_R(\rho)+2\rho\sum_{s=2}^4(U_s-V_s),\qquad p=\Psi(1),\\
+ L_{\rm core}(\rho)=\frac{\Psi(\rho)-p}{1-\rho}
+                       -2\rho\sum_{s=2}^4n_s B_s^{\rm age}(\rho)
+                   =\sum_{j=0}^4c_j\rho^j,\qquad C_0=L_{\rm core}(1),\\
+ H(\rho)=-c_2-(1+\rho)c_3-(1+\rho+\rho^2)c_4.
+\end{gathered}
+\end{equation}
+The quotient is taken by polynomial division, including at $\rho=1$. In particular,
+\begin{equation}\label{eq:near-core-chord}
+ L_{\rm core}(\rho)=(1-\rho)L_{\rm core}(0)+\rho C_0+
+                         \rho(1-\rho)H(\rho).
+\end{equation}
+Define the three further rational functions
+\begin{equation}\label{eq:near-recovery-defs}
+\begin{gathered}
+ b_{\rm env}=\frac53\left[2B_3^{\rm age}(5/6)+\frac{27}{4}B_4^{\rm age}(5/6)\right],\\
+ j_{\rm env}=\frac53\left[U_2(5/6)+\frac{169}{36}U_3(5/6)
+                                  +\frac{2601}{256}U_4(5/6)\right],\\
+ K_{5/6}=L_{\rm core}(0)-C_0+\frac56H(5/6),\\
+ J_1=\frac{25p+C_0}{(1-\lambda u)A},\qquad
+ J_2=4b_{\rm env}+3C_0,\qquad
+ J_3=K_{5/6}+j_{\rm env}+4C_0.
+\end{gathered}
+\end{equation}
+Here $U_s$ and $V_s$ for $s=2,3,4$ are evaluated at the same $K_b$ and $u$.
+
+The following Bernstein coefficient bounds also give the inequalities of Lemma~\ref{lem:near-intermediate-arithmetic}. To clear the denominators, write
+\[
+ D_{\rm profile}=A^3Z_3^3Z_4^3Z_5^2.
+\]
+For the two $J_1$ boundary derivatives, use
+\[
+\begin{split}
+ D_0&=12\lambda^3 Z_3(\lambda,0)^4Z_4(\lambda,0)^4Z_5(\lambda,0)^3,\\
+ D_{1/2}&=24\lambda^3(2-\lambda)^2(\lambda+2)^5
+ (\lambda^2+\lambda+2)^4(\lambda^3+\lambda^2+\lambda+2)^4
+ (\lambda^4+\lambda^3+\lambda^2+\lambda+2)^3.
+\end{split}
+\]
+Every one of these factors is strictly positive on the intervals below.
+
+\begin{lemma}[Finite coefficient signs]\label{lem:near-finite-certificate}
+For each row of the following table, let $P$ be the function in its first column multiplied by the positive denominator in its second column. Then $P$ is a polynomial of the indicated bidegree, and every Bernstein coefficient of $P$ on the indicated rectangle $[a,b]\times[0,1/2]$ is strictly positive. The functions $F,g$ are exactly~\eqref{eq:near-intermediate-functions}, and $p,c_j,J_i$ are exactly~\eqref{eq:near-core-defs}--\eqref{eq:near-recovery-defs}.
+\begin{center}\small
+\setlength{\tabcolsep}{3pt}
+\begin{tabular}{@{}llll@{}}
+Function & Positive denominator & Bidegree & $[a,b]$\\ \hline
+$-\partial_uF(3/4)$ & $4096\lambda^2A^3$ & $(7,6)$ & $[23/20,3/2]$\\
+$F(3/4,\lambda,1/2)-1/8$ & $8192\lambda^2(\lambda+2)^2$ & $(5,0)$ & $[23/20,3/2]$\\
+$-\partial_uF(5/6)$ & $93312\lambda^2A^3$ & $(7,6)$ & $[23/20,3/2]$\\
+$-\partial_ug(3/4)$ & $16A^4$ & $(3,2)$ & $[23/20,3/2]$\\
+$F(5/6,\lambda,1/4)$ & $497664\lambda^2(3\lambda+4)^2$ & $(6,0)$ & $[23/20,3/2]$\\
+$\begin{gathered}F(5/6,\lambda,1/2)\\+\frac{27}{32}g(3/4,\lambda,1/2)-\frac1{100}\end{gathered}$
+ & $4665600\lambda^2(\lambda+2)^3$ & $(6,0)$ & $[23/20,3/2]$\\
+$-c_2$ & $12\lambda D_{\rm profile}$ & $(29,14)$ & $[23/20,10/7]$\\
+$-(c_3+4c_4)/u$ & $12\lambda D_{\rm profile}$ & $(28,13)$ & $[23/20,10/7]$\\
+$-\partial_u^2J_1$ & $6\lambda(1-\lambda u)^3A^6Z_3^5Z_4^5Z_5^4$ & $(51,23)$ & $[23/20,707/500]$\\
+$\partial_\lambda J_1(\lambda,0)-1/4$ & $D_0$ & $(35,0)$ & $[23/20,707/500]$\\
+$\partial_\lambda J_1(\lambda,1/2)$ & $D_{1/2}$ & $(40,0)$ & $[23/20,707/500]$\\
+$J_2$ & $216\lambda^2D_{\rm profile}$ & $(30,15)$ & $[23/20,3/2]$\\
+$J_3-(1-\lambda u)/20$ & $2488320\lambda^2D_{\rm profile}$ & $(30,15)$ & $[23/20,10/7]$\\
+$p-1/1000$ & $3000\lambda^2D_{\rm profile}/A$ & $(29,14)$ & $[15/13,707/500]$
+\end{tabular}
+\end{center}
+The division by $u$ in the eighth row is exact polynomial cancellation before setting $u=0$. The two additional rational evaluations are
+\[
+ J_1(23/20,0)>57/100,
+ \qquad J_1(23/20,1/2)>21/25.
+\]
+More explicitly, the finite coefficient obligation in each row is as follows. If
+\[
+ P(a+(b-a)x,y/2)=\sum_{k=0}^M\sum_{l=0}^Np_{kl}x^ky^l,
+\]
+then for every $0\le i\le M$, $0\le j\le N$,
+\begin{equation}\label{eq:near-Bernstein-obligation}
+ \sum_{k=0}^i\sum_{l=0}^j
+ p_{kl}\frac{\binom{i}{k}}{\binom{M}{k}}
+        \frac{\binom{j}{l}}{\binom{N}{l}}>0.
+\end{equation}
+The supplement supplies the full coefficients and the exact rational verification of these finite inequalities.
+\end{lemma}
+\begin{proof}
+Only finite addition, multiplication and division by positive integers are needed to generate~\eqref{eq:near-Bernstein-obligation} from the displayed definitions. The complete generated data are provided in the supplement. Once these finite signs are checked, the passage to the entire rectangle is immediate from
+\[
+ P(a+(b-a)x,y/2)=\sum_{i=0}^M\sum_{j=0}^N b_{ij}
+ \binom Mi x^i(1-x)^{M-i}\binom Nj y^j(1-y)^{N-j}.
+\]
+The basis functions are nonnegative and sum to one, including on the boundary. Positivity of all $b_{ij}$ proves every claimed sign. All denominators listed in the table are positive; thus no multiplication changes an inequality's direction.
+\end{proof}
+
+\begin{lemma}[The range $5/6\le\rho<1$]\label{lem:near-high-rho}
+One has $\Phi(K_b)>0$ throughout this range.
+\end{lemma}
+\begin{proof}
+For $s=2,3,4$ and $u>0$, all three coefficients of $B_s^{\rm age}$ as a polynomial in $\rho$ are positive. Dividing them by $\omega_s>0$ gives
+\[
+\begin{split}
+ &[\rho^0]:\ A(1-u)[2(2-r_s-\lambda r_s^2)+u(2\lambda r_s^2-1/r_{s-1})],\\
+ &[\rho^1]:\ 2\lambda u(1-u)(2-r_s-\lambda r_s^2),\\
+ &[\rho^2]:\ u[2(2-r_s-\lambda r_s^2)+A\eta(2\lambda r_s^2-1/r_{s-1})].
+\end{split}
+\]
+Here $r_2<5/7$, $r_3<3/4$, $r_4<5/6$, $1/r_2\le19/10$, $1/r_3\le65/38$, and $r_s>1/2$. These bounds follow from monotonicity in $u$ and $\lambda$ and the finite recursion for $Z_s$; for $r_4<5/6$, the endpoint difference is $c(5\lambda^3+4\lambda^2+3\lambda+2)>0$. The constant brackets are respectively larger than $1/7,1/20,7/114$. The linear coefficients are positive.
+
+For $s=3,4$, if $2\lambda r_s^2-1/r_{s-1}<0$, then~\eqref{eq:near-eta-bounds} bounds the brackets in the quadratic coefficients below by $2/15$ and $1/19$, respectively. If $2\lambda r_s^2-1/r_{s-1}\ge0$, both terms in the bracket are nonnegative and the first is positive. At $s=2$, put $\overline H=(35-3\lambda)/24$. Since $A\eta\le\overline H$, its bracket is at least
+\[
+ f(A)=4-2r_2+2\lambda(\overline H-1)r_2^2-\overline H A,
+ \qquad r_2=\frac A{(\lambda+1)A-\lambda}.
+\]
+This function decreases with $A$, since
+$f'(A)\le2\lambda/Z_3^2-\overline H<3/4-61/48<0$.
+At $A=\lambda+1$, its numerator after multiplication by $24(1+\lambda+\lambda^2)^2$ is
+\[
+ 3c^6-8c^5-85c^4-206c^3-169c^2+14c+64>0.
+\]
+Indeed $0<c\le3/7$, and deleting the positive terms and using
+$c^2<1/5$, $c^3<2/25$, $c^4<7/200$, $c^5<3/200$ leaves $85/8>0$. This proves the claimed signs of the coefficients of $B_s^{\rm age}$.
+
+The coefficient of $\rho^5$ in $\Phi_R$ gives
+\[
+ c_4=-[\rho^5]\Phi_R=\frac{2\lambda u}{A^2}(A\eta-1)>0.
+\]
+Lemma~\ref{lem:near-finite-certificate} gives $c_2<0$ and $c_3+4c_4<0$. Therefore $H$ in~\eqref{eq:near-core-defs} is positive and increases on $[0,1]$. By~\eqref{eq:near-core-chord}, the chord joining the endpoint values of $L_{\rm core}$ is a lower bound for $L_{\rm core}$.
+
+Let $x=1-T$, so $\rho=1-x^2$ and $0\le x\le1/\sqrt6<5/12$. Directly,
+\[
+ f_2=1-x^2,\quad f_3=1-x^2(3-2x),\quad
+ f_4=1-x^2(6-8x+3x^2).
+\]
+Substitution in the complete expression~\eqref{eq:near-complete-Phi} gives the exact identity
+\begin{equation}\label{eq:near-recovery-identity}
+ \Phi=p+x^2[L_{\rm core}(\rho)+xB_*+x^2J_*],
+\end{equation}
+where
+\[
+ B_*=2\rho[2B_3^{\rm age}+(8-3x)B_4^{\rm age}],
+\]
+\[
+ J_*=2\rho[U_2+U_3(3-2x)^2+U_4(6-8x+3x^2)^2].
+\]
+Their coefficients are positive. Since $\rho\ge5/6$ and $x\le5/12$, they satisfy $B_*\ge b_{\rm env}$ and $J_*\ge j_{\rm env}$. Combining~\eqref{eq:near-core-chord} and the increase of $H$ gives
+\begin{equation}\label{eq:near-quartic}
+ \Phi\ge p+C_0x^2+b_{\rm env}x^3+(K_{5/6}+j_{\rm env})x^4.
+\end{equation}
+
+The finite signs now have three distinct roles. First $p>1/1000$; its rectangle begins at $15/13<2/\sqrt3$. Second, $J_1$ is concave in $u$, and both boundary functions increase with $\lambda$. Its two rational endpoint values therefore imply
+\[
+ J_1(\lambda,u)\ge(1-2u)J_1(\lambda,0)+2uJ_1(\lambda,1/2)>57/100.
+\]
+In particular $25p+C_0>0$. Third, $J_2>0$ and $J_3>(1-\lambda u)/20>0$ give
+\[
+ b_{\rm env}>-3C_0/4,\qquad K_{5/6}+j_{\rm env}>-4C_0.
+\]
+The complete bound~\eqref{eq:near-quartic} is consequently larger than
+\[
+ p+C_0(x^2-3x^3/4-4x^4).
+\]
+On $0\le x\le1/\sqrt6$, set $G(x)=x^2-3x^3/4-4x^4$. Then
+\[
+ 0\le G(x)<1/25,\qquad 1-25G(x)\ge37639/640000.
+\]
+Here $G\ge0$ follows from $x<33/80$ and $1-3(33/80)/4-4(33/80)^2=1/100$. For the other bound, $1-25G$ decreases up to $1/4$ and has value $31/256$ there. Above $1/4$ its second derivative exceeds $50$. Its value and first derivative at $3/10$ are $53/800$ and $69/80$; the quadratic Taylor lower bound has minimum $37639/640000$. This proves the two assertions without an extremum assumption for $\Phi$.
+
+If $C_0\ge0$, the preceding bound is at least $p$. If $C_0<0$, $C_0>-25p$ gives
+\[
+ \Phi>p[1-25G(x)]>\frac{37639}{640000000}>0.
+\]
+This proves the remaining moment range.
+\end{proof}
+
+Lemmas~\ref{lem:near-low-rho}, \ref{lem:near-intermediate-rho} and~\ref{lem:near-high-rho} cover $0<\rho<1$. Lemma~\ref{lem:near-K-affinity}, the positivity of its denominator, and Lemma~\ref{lem:near-four-age} therefore prove $D_\lambda>0$ whenever $u\le1/2$ in~\eqref{eq:near-domain}.
+
+\subsubsection{The first two terms for \texorpdfstring{$1/2<u<\lambda^{-2}$}{1/2 < u < lambda^(-2)}}
+It suffices to keep the terms with $s=1,2$ in the lower bound for $D_\lambda$. We begin with $K_{\rm cap}$ on the domain
+\begin{equation}\label{eq:near-high-u-domain}
+ 1/2<u<\lambda^{-2}\le3/4,\qquad uA<\rho<1,\qquad z=\rho/A.
+\end{equation}
+Lemma~\ref{lem:near-absorption}, with the exact second moment $a_2=uz$, and the bound $a_3/a_2<r_2$ imply
+\begin{equation}\label{eq:near-H2}
+ D_\lambda>u^2H_2,
+ \quad H_2=\frac{(1+w)(1-\lambda z)^2-2(1-a)(1-\lambda z)}\lambda
+          +2\lambda z^2[B_2+2L_2M_2],
+\end{equation}
+where
+\[
+ M_2=a(1-r_2)+\frac wc(\lambda+1-\lambda r_2-1/z).
+\]
+All discarded terms, those with $s\ge3$, are positive. The term with $s=1$ and the value $a=a(w)$ are the same as in the full series.
+
+For the polynomial calculations below we use $k$, previously $c/(\lambda\log\lambda)$, for the coordinate $1-\lambda u$. Thus
+\[
+ A=\lambda+k,\qquad B=\lambda^2+(\lambda+1)k,
+ \qquad u=(1-k)/\lambda.
+\]
+Put
+\begin{equation}\label{eq:near-high-denominator}
+ E=\frac{K_{\rm cap}-1+u}{1-u},\qquad
+ D_\rho=2-(\lambda+1)u+\frac{2\lambda u}{A}\rho
+ +\left[\frac{2u}{A(1-u)}-(\lambda+1)uE\right]\rho^2.
+\end{equation}
+Then $w=cu(1+E\rho^2)/D_\rho$. The denominator $D_\rho$ is positive on $uA\le\rho\le1$. More precisely, with
+\[
+ E_+=\frac{2/(1+\lambda u)-(1-u)}{1-u},
+\]
+one has
+\begin{equation}\label{eq:near-high-denominator-gap}
+ D_\rho-(1-u)(1+E\rho^2)
+ =(1-\rho)\left[k(1+\rho)+\frac{2\lambda u\rho}{A}\right]
+ +(1+\lambda u)(E_+-E)\rho^2>0.
+\end{equation}
+Thus $0<w<h$ for $uA\le\rho\le1$.
+
+We first exclude $\lambda\ge11/8$ when $u>1/2$ and $\alpha<1$. Differentiating $w$ with respect to $\rho$ gives
+\[
+ w_\rho=\frac{cu}{D_\rho^2}
+ \left[-\frac{2\lambda u}{A}+4\left(E-\frac{u}{A(1-u)}\right)\rho
+                      +\frac{2\lambda uE}{A}\rho^2\right]>0.
+\]
+Indeed $E\ge u/(1-u)$ and $\rho\ge uA>1/2$ give the positive lower bracket
+$(2\lambda u/A)[-1+2\rho+u\rho^2/(1-u)]$.
+Writing $J=1/u-(\lambda+1)+\lambda z$, we have $a=(1-wJ/c)/z$. Here $J\ge(1-u)k/u>0$ and
+\[
+ a+\lambda w/c=\frac{1+(w/c)(\lambda+1-1/u)}z>0.
+\]
+Consequently
+\[
+ a_\rho=-\frac{a+\lambda w/c+AJw_\rho/c}{\rho}<0.
+\]
+At $\rho=1$ a direct substitution gives
+\[
+ a(1)-1=\frac{(1-u)[2\lambda-(\lambda+1)K_{\rm cap}]}
+                     {2-(\lambda+1)uK_{\rm cap}}.
+\]
+Since $a<\alpha<1$ and $a$ decreases with $\rho$, we must have
+$K_{\rm cap}>2\lambda/(\lambda+1)$. On the other hand $K_{\rm cap}$ decreases with $u>1/2$, and the logarithmic bounds in~\eqref{eq:near-cap} give
+\[
+ K_{\rm cap}<\frac{25(\lambda+1)}{48\lambda}+\frac14.
+\]
+For $\lambda\ge11/8$ this is smaller than $2\lambda/(\lambda+1)$, since
+\[
+ 59\lambda^2-62\lambda-25
+ =59(\lambda-11/8)^2+\frac{401}{4}(\lambda-11/8)+\frac{83}{64}>0.
+\]
+Thus $u>1/2$ and $\alpha<1$ imply $\lambda<11/8$.
+
+It remains to prove $H_2>0$ for $2/\sqrt3\le\lambda\le11/8$. Collecting the terms in~\eqref{eq:near-H2} according to their dependence on $w$ gives
+\[
+ H_2=H_0(z)+wH_v(z),
+\]
+where
+\begin{equation}\label{eq:near-H0-Hv}
+\begin{split}
+ H_0(z)&=\frac2{\lambda z}-2-\frac1\lambda
+       +z^2\left[\lambda+\frac{2k^2}{B^2}
+                       +\frac{4\lambda^2(1-u)k}{AB}\right],\\
+ H_v(z)&=\frac{(1-\lambda z)^2}{\lambda}
+  -\frac{2(1-\lambda z)J}{\lambda cz}+\frac{2z^2k^2}{B^2}
+  +\frac{4kz^2}{Ac}(\lambda+1-\lambda A/B-1/z).
+\end{split}
+\end{equation}
+In particular $N(\rho)=\rho D_\rho H_2(\rho)$ is a polynomial of degree five. Its coefficients $N=\sum_{j=0}^5n_j\rho^j$ are
+\begin{equation}\label{eq:near-N-coefficients}
+\begin{gathered}
+ P=\lambda+2k^2/B^2+4\lambda^2(1-u)k/(AB),\\
+ C_2=\lambda+2k^2/B^2+4k(\lambda+1-\lambda A/B)/(Ac),\\
+ W=\lambda-2k/B+2k^2/B^2,\qquad
+ S_0=[2-(\lambda+1)u]P+cuC_2,\\
+ n_0=2A/\lambda,\qquad n_1=4u-2-2/\lambda,\\
+ n_2=-2AE/\lambda+4u/[\lambda(1-u)]-4uB/A^2,\\
+ n_3=2E+S_0/A^2-2u(2\lambda+1)/[\lambda A(1-u)],\\
+ n_4=(2u/A^3)[\lambda P+EA(A-2k)],\qquad
+ n_5=(2u/A^2)[P/(A(1-u))-EW].
+\end{gathered}
+\end{equation}
+These are obtained by multiplying the quadratic $D_\rho$ by $\rho H_0$ and the quadratic $cu(1+E\rho^2)$ by $\rho H_v$; thus the displayed six coefficients include all terms.
+
+\begin{lemma}[Positivity of $N'''(\rho)$]\label{lem:near-high-curvature}
+For $2/\sqrt3\le\lambda\le11/8$ and~\eqref{eq:near-high-u-domain}, $N'''(\rho)>0$ on $uA\le\rho\le1$.
+\end{lemma}
+\begin{proof}
+First $n_4>0$, since $A-2k=c+\lambda u>0$. Also $0<W\le\lambda$. Put $G=1+\lambda u$ and $C=A(2/G-1+u)$. The exact identities
+\[
+ P-W=\frac{2k}{B}\left(1+\frac{2\lambda^2(1-u)}A\right),\quad
+ C-1=\frac{k[\lambda(1-u)^2+u]}G
+\]
+give
+\[
+ P-CW=\frac kG\left\{\frac{2G}{B}
+       \left(1+\frac{2\lambda^2(1-u)}A\right)
+       -[\lambda(1-u)^2+u]W\right\}>0.
+\]
+Indeed $u\le3/4$, $1/4\le1-u\le1/2$, $A\le27/16$, $B\le337/128$, $G>3/2$, and $\lambda^2\ge4/3$. The first term in braces is at least $(384/337)(113/81)>385/256$, whereas the second is at most $385/256$. Since $E<E_+$, this proves $n_5>0$.
+
+Using $P,C_2\ge\lambda$, $S_0\ge2\lambda(1-u)$, and $\rho\ge uA$ in~\eqref{eq:near-N-coefficients}, we obtain
+\begin{equation}\label{eq:near-third-derivative-bound}
+ N'''>\frac{12u}{1-u}\frac{R_0}{\lambda A}
+              +\frac{12\lambda(1-u+4\lambda u^2)}{A^2},
+\end{equation}
+where
+\[
+ R_0=\lambda^2-\lambda-1+\lambda^2(4u^3-u)+4\lambda cu^2.
+\]
+In obtaining this bound, replace $E$ by $u/(1-u)$ before combining it with the negative term: its coefficient is $12[1+4u^2(A-2k)/A]>0$. The sign of $R_0$ is not used in this replacement.
+
+The function $R_0$ increases with both variables, since
+\[
+ (R_0)_u=\lambda^2(12u^2-1)+8\lambda cu>0,
+\]
+\[
+ (R_0)_\lambda=2\lambda(1-u+4u^2+4u^3)-(1+4u^2)
+ \ge1-2u+4u^2+8u^3\ge2.
+\]
+On $1/2\le u\le3/5$, $R_0\ge(5-4\sqrt3)/3>-2/3$, $u/(1-u)\le3/2$ and $\lambda A>5/3$. The first term of~\eqref{eq:near-third-derivative-bound} is therefore greater than $-36/5$; the second is at least
+$12(23/20)(23/20+2/5)/(27/16)^2>36/5$.
+On $3/5\le u\le2/3$, use $R_0\ge-5749/25000>-1/4$, $u/(1-u)\le2$ and $\lambda A>3/2$. The two terms are respectively greater than $-4$ and $4$. Finally, on $u\ge2/3$,
+$R_0\ge(275-150\sqrt3)/81>0$. This proves the result in every case.
+\end{proof}
+
+The next lemma gives the signs needed to bound $N'(1)$ and $N(1)$. It verifies inequalities on a rectangle in $\lambda,k$, with $u=(1-k)/\lambda$, which also includes parameter values outside~\eqref{eq:near-high-u-domain}.
+
+\begin{lemma}[Polynomial inequalities for $N'(1)$ and $N(1)$]\label{lem:near-high-arithmetic}
+Let $23/20\le\lambda\le11/8$, $0\le k\le1/2$, $u=(1-k)/\lambda$, $A=\lambda+k$, $B=\lambda^2+(\lambda+1)k$, and let $n_j(E)$ be exactly~\eqref{eq:near-N-coefficients}. Define
+\[
+ Y(E)=\sum_{j=1}^5j n_j(E),\qquad
+ D=\lambda A^4(c+k)B^2>0,
+\]
+\[
+ P_-=-\tfrac12D\,Y\left(\frac u{1-u}\right),\qquad
+ P_+=-\tfrac12(2-k)D\,Y\left(\frac{2/(2-k)-(1-u)}{1-u}\right).
+\]
+These are polynomials in $(\lambda,k)$ of bidegrees $(10,7)$ and $(10,8)$, respectively, and both are strictly positive. Also define
+\begin{equation}\label{eq:near-upper-S}
+\begin{split}
+ S(K)={}&k(1-uK)(1+2\lambda/B^2)-A(1-u)[(\lambda+1)K-2\lambda]\\
+ &+\frac{2\lambda^2(1-u)}{AB}[2\lambda-(\lambda+1)uKA].
+\end{split}
+\end{equation}
+The polynomial $24\lambda^2AB^2S(K_b)$ has bidegree $(10,7)$ and is strictly positive on the same rectangle.
+
+The exact finite obligations are positivity of all Bernstein coefficients of $P_-$ and $24\lambda^2AB^2S(K_b)$ on that rectangle, and positivity of all Bernstein coefficients of $P_+$ on the three rectangles
+\[
+ [23/20,101/80]\times[0,1/4],\quad
+ [23/20,101/80]\times[1/4,1/2],\quad
+ [101/80,11/8]\times[0,1/2].
+\]
+The coefficients are generated by~\eqref{eq:near-Bernstein-obligation} with the corresponding affine substitution in each coordinate. They and their exact verification are in the supplement. Every clearing factor here is positive, including $2-k$, $c+k$, and $1-u=(c+k)/\lambda$.
+\end{lemma}
+
+Because $Y$ is affine in $E$, Lemma~\ref{lem:near-high-arithmetic} and
+$u/(1-u)<E<E_+$ give $N'(1)=Y(E)<0$. Combined with Lemma~\ref{lem:near-high-curvature}, this reduces the sign of $N$ to its two endpoints. Indeed $N'$ is strictly convex, and its nonpositive set is an interval containing the right endpoint. Thus $N'$ is either nonpositive throughout or is positive first and nonpositive afterwards; $N$ cannot have an interior minimum. Consequently
+\begin{equation}\label{eq:near-high-endpoint-reduction}
+ \min_{uA\le\rho\le1}N(\rho)=\min\{N(uA),N(1)\}.
+\end{equation}
+
+At the lower endpoint $z=u$, the expression $H_2$ is affine in $w$. Its values at $w=0$ and $w=h$ are, respectively,
+\[
+ H_0(u)=\frac{k^2}{\lambda}+\frac{2(1-u)k}{\lambda u}
+       +2\lambda u^2\left[\frac{k^2}{\lambda B^2}
+                              +\frac{2\lambda(1-u)k}{AB}\right]>0,
+\]
+\[
+ H_h(u)=\frac k\lambda\left\{(1+h)k(1+2\lambda u^2/B^2)+2c
+       +\frac{4\lambda u^2[\lambda c-(\lambda^2+1)k]}{AB}\right\}.
+\]
+We verify the latter sign. The positive function
+\[
+ R(\lambda,k)=\frac{\lambda^2+1}{\lambda(\lambda+k)[\lambda^2+(\lambda+1)k]}
+\]
+decreases with $\lambda$: its logarithmic derivative is
+\[
+ \frac{2\lambda}{\lambda^2+1}-\frac1\lambda-\frac1{\lambda+k}
+                        -\frac{2\lambda+k}{\lambda^2+(\lambda+1)k}<0,
+\]
+since $\lambda k<1$. Also $h=c(1-k)/(c+k)$ increases with $c$. Dropping two positive terms gives
+\[
+ \frac{\lambda H_h(u)}k>
+ 2c+(1+h)k-4k(1-k)^2R(\lambda,k)
+\]
+\[
+ \ge\frac3{10}+\left[1+\frac{(3/20)(1-k)}{3/20+k}\right]k
+       -4k(1-k)^2R(23/20,k).
+\]
+After multiplication by the positive denominator
+$(23/20)(23/20+k)[(23/20)^2+(43/20)k](3/20+k)$, the last expression equals
+\[
+ Q(k)=\frac{2518569}{32000000}-\frac{29541}{200000}k
+ -\frac{7316903}{3200000}k^2+\frac{1790369}{80000}k^3-\frac{57507}{8000}k^4.
+\]
+For $0\le k\le1/2$, coefficient comparison and $k^4\le k^3/2$ give
+\[
+ Q(k)>\frac3{40}-\frac3{20}k-\frac52k^2+18k^3
+ =18(k+1/9)(k-1/8)^2+\frac{11}{160}k+\frac7{160}>0.
+\]
+Hence $H_h(u)>0$. Equation~\eqref{eq:near-high-denominator-gap} gives $0<w<h$, so at $z=u$ the value of $H_2$ is a convex combination of $H_0(u)$ and $H_h(u)$ with positive weights. Thus $N(uA)>0$.
+
+At the upper endpoint, direct substitution in~\eqref{eq:near-H2} gives
+\[
+ N(1)=\frac{2k}{\lambda A^2(1-u)}S(K_{\rm cap}),
+\]
+with $S$ from~\eqref{eq:near-upper-S}. Its coefficient of $K$ is negative. More explicitly, if $\delta=(\lambda+1)K-2\lambda$, then $S=P-\delta Q$ with
+\[
+ P=k\left[\frac{c+2k}{\lambda+1}(1+2\lambda/B^2)
+                     +\frac{4\lambda^3(1-u)^2}{AB}\right]>0,
+\]
+\[
+ Q=A(1-u)+\frac{uk}{\lambda+1}(1+2\lambda/B^2)
+                          +\frac{2\lambda^2u(1-u)}B>0.
+\]
+The specific logarithmic bound $K_{\rm cap}<K_b$ therefore gives
+$S(K_{\rm cap})>S(K_b)>0$, the latter sign being Lemma~\ref{lem:near-high-arithmetic}. Thus $N(1)>0$.
+Equation~\eqref{eq:near-high-endpoint-reduction} proves $H_2>0$ and, by~\eqref{eq:near-H2}, $D_\lambda>0$ for $1/2<u<\lambda^{-2}$.
+
+The bounds for $u\le1/2$ and $u>1/2$ cover $0<\alpha<1$ under~\eqref{eq:near-domain}. Lemma~\ref{lem:calibration} covers $\alpha=1$. Thus $D_\lambda>0$ throughout~\eqref{eq:near-domain}, and Lemma~\ref{lem:full-response} gives $v'(\lambda)<0$ there.

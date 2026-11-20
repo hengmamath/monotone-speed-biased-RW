@@ -1,0 +1,1699 @@
+\subsection{Series estimates for \texorpdfstring{$1<\lambda<2/\sqrt3$}{1 < lambda < 2/sqrt(3)}}
+\label{subsec:low-computer-region}
+Fix $1<\lambda<\min(m,2/\sqrt3)$. Lemma~\ref{lem:calibration}
+gives $D_\lambda>0$ when $\alpha=1$. For $0<\alpha<1$, put
+\[\begin{gathered}
+ q=\frac{u}{1-u}=\frac hc,\qquad R_* =\frac vc,\qquad
+ w_i=\lambda^{i-1}\beta_i^2,\\
+ T_p=\sum_{i\ge1}w_i,\qquad Z_p=2q-(\lambda+1)T_p,\qquad
+ R=\frac{T_p}{Z_p},\quad \theta=\frac Rq.
+\end{gathered}\]
+The denominator $Z_p$ is positive by
+Lemma~\ref{lem:harmonic-speed}, which also gives $R_*<R<q$.
+Write
+\begin{equation}\label{eq:low-reference-calibration}
+ \alpha_p=\frac{u-R\{1-(\lambda+1)u+\lambda\beta_2\}}{\beta_2}
+ =\frac{\lambda^2q+(1-\theta)d(\lambda+1)}{q+1},
+ \qquad C_\alpha=\alpha_p+\lambda R.
+\end{equation}
+Thus $\lambda^2u<\alpha_p<a(cR)<\alpha<1$.  In particular,
+$0<h<1/(\lambda+1)<1/2$. Throughout the comparison, the offspring
+law is fixed.
+
+\subsubsection{A lower bound for \texorpdfstring{$F_{\rm floor}(v)$}{the moment series at v}}
+We bound the series for $F_{\rm floor}(v)$ in terms of
+$e=1-\rho_2$. We keep the term at $i=1$, the boundary terms from
+summation by parts, and the contribution of $R-R_*$.
+For $i\ge1$ define
+\begin{align}
+ L_i&=\frac1\lambda-r_{i-1}
+       =\frac{cd}{\lambda(\lambda^i-d)},\nonumber\\
+ W_i^0&=\frac{ci}{\lambda}-1+2iL_i,\nonumber\\
+ W_i^p&=cW_i^0+4iL_i
+       -2r_i\{iL_i+(i+1)\lambda L_{i+1}\},
+ \nonumber\\
+ W_i(R)&=W_i^0+RW_i^p,\label{eq:low-W}\\
+ V_i&=\sum_{s>i}w_sW_s(R),
+ \nonumber\\
+ F_{\rm pipe}&=-2RuL_1+u^2W_1(R)+V_1,\nonumber\\
+ \tau_i&=1-C_\alpha r_i+(\lambda+1)R-R/r_{i-1},\nonumber\\
+ B_i&=w_i\left\{\frac{2i(\alpha_p+cR)}\lambda
+       +2iRr_iL_i+2(i+1)R\lambda r_i^2L_i
+       +k(2i-1)\tau_i\right\},
+ \nonumber\\
+ S_i&=B_i-2V_i.\label{eq:low-B-S}
+\end{align}
+Set $W_1^Y=0$, $W_i^Y=k w_i(2i-1)R/r_{i-1}$ for $i\ge2$, and
+\begin{equation}\label{eq:low-J}
+ J_i=V_i+k w_i(2i-1)C_\alpha r_i
+                         -\frac{W_i^Y+W_{i+1}^Y}{2},\qquad i\ge2.
+\end{equation}
+Here $J_i$ is the coefficient of $\Delta_i^2$ in the bound below.
+The polynomial $J_{s-1}(w)$ in~\eqref{eq:assigned-J} carries the
+argument $w$.
+
+\begin{lemma}[A bound in terms of the differences $\Delta_i$]\label{lem:calibrated-head}
+Suppose $0<\alpha<1$. Then $V_i>0$ for every
+$i\ge1$, $\tau_1=0$, and $0<\tau_i<1$ for $i\ge2$.  Put
+\[
+ \kappa=\frac{(1-u)T_p}{u^2},
+\]
+\[\begin{split}
+ C_{\rm head}={}&2A_0u\{-k\log(a_2/u)-1+a_2/u\}\\
+ &+\frac{(u-\lambda a_2)
+       \{2-(3\lambda+1)u+\lambda(\lambda+1)a_2\}}\lambda.
+\end{split}\]
+Then $C_{\rm head}>0$, $\kappa>1$, and
+\begin{align}
+ F_{\rm floor}(v)>{}&F_{\rm pipe}
+ +\sum_{i\ge1}\Delta_i\rho_i S_i
+ +e^2\left\{V_1+\frac{2u^2 C_\alpha}{\lambda(1-e)}
+                         -\frac{W_2^Y}{2}\right\}
+ +\sum_{i\ge2}\Delta_i^2J_i+C_{\rm cal}e,
+ \label{eq:low-master}\\
+ C_{\rm cal}&=\frac{C_{\rm head}u^2(\kappa-1)(2-e)}{Z_p}>0.
+ \nonumber
+\end{align}
+The coefficient in braces in~\eqref{eq:low-master} is positive.  Also
+\begin{equation}\label{eq:low-e-caps}
+ \begin{gathered}
+ 0<e< E_{\rm hard}=\frac{1-\alpha_p}{1+\lambda R},\qquad
+ e\le E_{\rm var}=\frac{d}{(q+1)^2},\\
+ e q^2<\frac{\{1-(\lambda+1)h\}u^2}{1+cu},\qquad
+ \sqrt e<\frac{d}{q+1}.
+ \end{gathered}
+\end{equation}
+Every series in~\eqref{eq:low-master} converges absolutely.
+\end{lemma}
+\begin{proof}
+First compare $F_{\rm floor}(v)$ with $F_{\rm floor}(cR)$.
+With the moments fixed, differentiate $t_n(cR)$ in~\eqref{eq:assigned-t}
+with respect to $R$. If the law of $U$ is weighted by $U^2/a_2$, then
+\[\begin{aligned}
+ \frac{\dd}{\dd R}t_n(cR)
+ &=\frac{A_0}{a_2}a_{n+2}
+       -\E[U^n(1-U)(1-\lambda U)]\\
+ &=-a_2\operatorname{Cov}_{U^2/a_2}
+       \left(U^n,\frac{(1-U)(1-\lambda U)}{U^2}\right)>0
+\end{aligned}\]
+for $n\ge1$.  The second function is strictly decreasing on
+$(0,1/\lambda)$; all its weighted expectations are finite.  The
+derivative is also bounded above by $(A_0/a_2)a_{n+2}$.
+Thus the difference $\widetilde F(cR)-F_{\rm floor}(cR)$ in~\eqref{eq:strict-Mellin-gap} increases with
+$R$, and the geometric bounds in Lemma~\ref{lem:mellin-floor}
+justify termwise differentiation.
+
+The first two terms in $-c\widetilde F'(w)$ have the lower bounds
+\begin{align*}
+ 2c^2\E[g\cJ(1-y)]&\ge2A_0\gamma_0,\\
+ c\E[b\cJ((1-y)(2-y))]&\ge
+ \frac{(u-\lambda a_2)
+       \{2-(3\lambda+1)u+\lambda(\lambda+1)a_2\}}\lambda.
+\end{align*}
+They follow by the $U,V$ substitution and
+$(1-\lambda UV)^{-2}\ge1$; the remaining factors are positive.
+Jensen's inequality under the probability weighted by $U/u$ gives
+$\gamma_0\ge u\{-k\log(a_2/u)-1+a_2/u\}$.
+The expression in braces is positive: the function
+$-k\log z-1+z$ vanishes at $z=1/\lambda$ and has negative derivative
+for $0<z<1/\lambda<k$. The term involving $\Gamma$ in
+$-c\widetilde F'(w)$ makes the bound strict. Consequently
+\begin{equation}\label{eq:low-slope-credit}
+ F_{\rm floor}(v)>F_{\rm floor}(cR)+C_{\rm head}(R-R_*).
+\end{equation}
+
+We next bound $R-R_*$ for the same offspring law. The identity
+$\lambda^{s-1}\beta_s\beta_{s-1}=q(\beta_{s-1}-\beta_s)$,
+finite summation by parts, and the vanishing last endpoint give
+\begin{align*}
+ q-Q&=q\sum_{i\ge1}\Delta_i(a_i+a_{i+1}),\\
+ T_p-T&=\sum_{i\ge1}\Delta_i(\rho_i+\rho_{i+1})
+                              \sum_{s>i}w_s,\\
+ R-R_*&=\frac{2q}{Z_p Z}\sum_{i\ge1}\Delta_i
+ \left\{(\rho_i+\rho_{i+1})\sum_{s>i}w_s-T_p(a_i+a_{i+1})\right\}.
+\end{align*}
+All tail terms in the first two formulas are nonnegative.  The ratios
+$r_i$ increase strictly.  With $f_i=(\sum_{s>i}w_s)/\beta_i$, the same
+telescoping sum gives
+\[
+ f_i-f_{i+1}=\lambda^i
+ \left\{\frac{\beta_{i+1}^2}{\beta_i}
+               -\frac1q\sum_{s>i+1}w_s\right\}<0.
+\]
+Indeed, each term of the last tail is strictly larger than $r_i$
+times the corresponding term $\lambda^{s-1}\beta_s\beta_{s-1}$.
+Summing the latter over $s>i+1$ gives $q\beta_{i+1}$. Therefore
+$f_i\ge f_1=T_p/u-u=T_p+u(\kappa-1)$.
+Solving $\alpha_p<1$ in terms of $\kappa$ gives
+$\kappa>2\lambda/(\lambda+1)>1$.  It follows that every expression
+in braces in the speed-difference formula is strictly larger than
+$u(\kappa-1)\beta_i(\rho_i+\rho_{i+1})$.
+Since $0<Z<2q$ and
+\[
+ \sum_{i\ge1}\beta_i(\rho_i^2-\rho_{i+1}^2)
+ \ge u(1-\rho_2^2)=ue(2-e),
+\]
+we conclude that
+\begin{equation}\label{eq:low-speed-deficit}
+ R-R_*>\frac{u^2(\kappa-1)e(2-e)}{Z_p}.
+\end{equation}
+
+To identify the coefficients of $\Delta_i^2$, put
+$\bar\alpha=a(cR)$. The definitions of $a(cR)$ and $\alpha_p$ give
+\[
+ \bar\alpha-\alpha_p=\frac{C_\alpha e}{1-e}.
+\]
+For $n_i=a_{i+1}/a_i$ define
+$c_i=2i/\lambda-k(2i-1)n_i>1/\lambda$.
+Substitute $a_i=\beta_i\rho_i$ and
+$\delta_i=\beta_{i+1}\Delta_i$ in the series
+\eqref{eq:complete-mellin-floor}.  Use
+$(1+L_i)r_i=1/\lambda$ and sum the diagonal terms by parts.  The
+result, with every end term displayed, is
+\begin{align}
+ F_{\rm floor}(cR)={}&F_{\rm pipe}
+ +\sum_{i\ge1}\Delta_i\rho_i S_i+\sum_{i\ge1}\Delta_i^2V_i
+ +(\bar\alpha-\alpha_p)\sum_{i\ge1}w_i\rho_i\Delta_i c_i
+ \nonumber\\[-2pt]
+ &+k\sum_{i\ge1}w_i(2i-1)
+ \left\{C_\alpha r_i\Delta_i^2
+                  -\frac{R\Delta_i\Delta_{i-1}}{r_{i-1}}\right\},
+ \qquad\Delta_0=0.\label{eq:low-square-identity}
+\end{align}
+One may check the local expansion before summation by noting that its
+coefficient of $\Delta_i$ differs from $\rho_i B_i$ by
+\[
+ w_i\rho_i(\bar\alpha-\alpha_p)c_i
+ +k w_i(2i-1)\left\{C_\alpha r_i\Delta_i
+                         -R\Delta_{i-1}/r_{i-1}\right\}.
+\]
+More explicitly, before replacing the diagonal terms by the $V_i$
+tails, the difference between the $i$th summand of $F_{\rm floor}(cR)$ and these local
+terms is
+\begin{align*}
+ &-(i-1)(1+cR)w_i\rho_i^2
+       +i(1+cR)w_{i+1}\rho_{i+1}^2\\
+ &\hspace{5mm}
+ -\frac{2iRw_iL_i}{r_{i-1}}\rho_{i-1}\rho_i
+       +2(i+1)Rw_{i+1}L_i\rho_i\rho_{i+1}.
+\end{align*}
+The first pair telescopes to zero.  The second pair telescopes because
+$L_{i+1}/r_i=L_i$, leaving exactly
+$-2Rw_1L_1/r_0=-2RuL_1$.  Its upper endpoint tends to zero
+geometrically.  Finally the diagonal telescope uses
+$1-\rho_s^2=\sum_{i<s}\Delta_i(\rho_i+\rho_{i+1})$.
+This verifies~\eqref{eq:low-square-identity}, including the boundary
+term at $i=1$ and the limit at infinity.
+
+At $i=1$ the two $k$ contributions cancel exactly, leaving
+$e^2\{V_1+2u^2C_\alpha/[\lambda(1-e)]\}$.
+For each $i\ge2$ apply
+$2\Delta_i\Delta_{i-1}\le\Delta_i^2+\Delta_{i-1}^2$ to the
+remaining adjacent product. The term at $i=2$ contributes
+$-W_2^Y e^2/2$, and the other squares have
+the coefficients~\eqref{eq:low-J}.  The other terms involving
+$\bar\alpha-\alpha_p$ are positive and may be dropped.
+Equations~\eqref{eq:low-slope-credit} and
+\eqref{eq:low-speed-deficit} now prove~\eqref{eq:low-master}.
+The tail positivity $V_i>0$ is proved in the next lemma.  Also
+$C_\alpha/(\lambda R)>1$ and $k\lambda r_1<1$, so
+\[
+ \frac{2u^2C_\alpha}{\lambda(1-e)}>2u^2R,
+ \qquad \frac{W_2^Y}{2}<\frac32u^2R.
+\]
+This proves positivity of the coefficient in braces in~\eqref{eq:low-master}.
+Under the distribution $\PP(U_p=\lambda^{-j})=hd^{j-1}$, the quadratic
+$Q_{\alpha_p}$ has zero mean and changes sign once from negative
+to positive. The proof of Lemma~\ref{lem:mellin-floor} applied to this
+scalar distribution gives $\tau_1=0$ and $\tau_i>0$ for $i\ge2$.
+Furthermore
+\[
+ (\lambda+1)-\lambda r_i-1/r_{i-1}
+ =-\frac{(\lambda+1)L_i(c+\lambda L_i)}
+          {(1+L_i)(1-\lambda L_i)}<0,
+\]
+so $\tau_i<1$.
+
+Substituting $\bar\alpha-\alpha_p=C_\alpha e/(1-e)$ into $\bar\alpha<1$
+gives $e<E_{\rm hard}$. Jensen's inequality $a_2\ge u^2$ gives
+$e\le1-u^2/\beta_2=(1-u)(1-\lambda u)=d/(q+1)^2$.
+Writing
+\[
+ E_{\rm hard}=\frac{\theta d(\lambda+1)-\lambda}
+                   {(q+1)(1+\lambda\theta q)}
+\]
+shows that it increases with $\theta$.  Use $\theta<1$ to obtain
+the third bound in~\eqref{eq:low-e-caps}.
+Finally, $d^2-\{1-(\lambda+1)h\}=h^2+ch>0$ gives the stated
+bound on $\sqrt e$.  Absolute convergence follows from
+$\beta_i,a_i\le\lambda^{-i}$ and the polynomial factors in $i$;
+finite summation followed by geometric domination justifies all
+signed rearrangements in this proof.
+\end{proof}
+
+\subsubsection{\texorpdfstring{Bounds for the tails $V_i$ and $\sum_{s>i}w_s$}{Bounds for V(i) and the tail sum of w(s)}}
+We record the estimates that turn the infinite sums into finite rational
+expressions.  Let $\delta=\log\lambda$ and $a=c/\delta$.  Taylor's
+formula with integral remainder applied to
+$a=\int_0^1(1+c)^s\dd s$ gives
+\begin{equation}\label{eq:low-log-enclosure}
+ a_L=1+c/2-c^2/12\le a\le
+ a_U=1+c/2-c^2/12+c^3/24\le1+c/2.
+\end{equation}
+For every $z>0$,
+\begin{align}
+ 1+z/2+z^2/12-z^4/720
+ &\le\frac{z}{1-e^{-z}}\le1+z/2+z^2/12,\label{eq:low-global-F}\\
+ 1-z^2/12&\le\frac{z^2}{2(\cosh z-1)}
+                       \le1-z^2/12+z^4/240.\label{eq:low-global-C}
+\end{align}
+For example, multiply the two inequalities in~\eqref{eq:low-global-F}
+by the positive exponential denominator.  Beyond the vanishing low
+powers, their coefficients, with the indicated sign, are respectively
+$(n-3)(n-5)(n-6)(n+8)/(720n!)$ for $n\ge7$ and
+$(n-3)(n-4)/(12n!)$ for $n\ge5$.  For~\eqref{eq:low-global-C},
+the corresponding even coefficients are
+$\{n(n-1)-12\}/(6n!)$ for $n\ge6$ and
+$(n-6)(n^3-9n-40)/(120n!)$ for $n\ge8$.
+All omitted lower coefficients vanish.  Absolute convergence of the
+exponential series proves the inequalities on the entire positive axis.
+
+\begin{lemma}[Bounds for the tails of the Lambert series]\label{lem:low-Lambert-tails}
+For every $i\ge1$, $V_i>0$.  If $b=\lambda L_i$, put
+\[
+ r=\frac1{\lambda+b}=r_i,\qquad
+ A=c+br,\quad B=br,\quad t=\frac r{b+c},
+\]
+and define the five polynomials
+\begin{align*}
+ P_1&=A,\qquad P_2=A(A+B),\qquad P_3=A(A^2+4AB+B^2),\\
+ P_4&=A(A^3+11A^2B+11AB^2+B^3),\\
+ P_5&=A(A^4+26A^3B+66A^2B^2+26AB^3+B^4).
+\end{align*}
+Define the following explicit rational functions of an argument $a>0$:
+\begin{align}
+ T_L(a)&=t\{a+A/2+P_2/(12a)-P_4/(720a^3)\},\nonumber\\
+ T_U(a)&=t\{a+A/2+P_2/(12a)\},\nonumber\\
+ P_U(a)&=\frac t\lambda
+ \{(i+1)(aA+P_2/2+P_3/(12a))+a^2-P_2/12+P_4/(240a^2)\},\nonumber\\
+ P_L(a)&=\frac t\lambda
+ \{(i+1)(aA+P_2/2+P_3/(12a)-P_5/(720a^3))
+                          +a^2-P_2/12\}.\label{eq:low-tail-rationals}
+\end{align}
+At $a=c/\log\lambda$,
+\begin{align}
+ V_i/w_i&\le V_U(a)
+ :=-(1+cR)T_L(a)+\{1+(\lambda+1)R\}P_U(a)
+                   -2R(i+1)\lambda r^2-2Rt,\nonumber\\
+ V_i/w_i&\ge-(1+cR)T_U(a)+\{1+(\lambda+1)R\}P_L(a)
+                   -2R(i+1)\lambda r^2-2Rt.\label{eq:low-V-bound}
+\end{align}
+For $q\le10$, $c\le1/6$, and every integer $i\ge1$, these imply the rational
+bounds
+\begin{equation}\label{eq:low-V-rational-bound}
+ V_L\le V_i/w_i\le V_U,
+\end{equation}
+where
+\[\begin{aligned}
+ V_U&=V_U(a_U),\\
+ V_L&=-(1+cR)T_U(a_U)+\{1+(\lambda+1)R\}P_L(a_L)\\
+ &\quad-2R(i+1)\lambda r^2-2Rt.
+\end{aligned}\]
+The tail $\sum_{s>i}w_s$ lies between $w_iT_L(a_L)$ and
+$w_iT_U(a_U)$ on this domain.
+\end{lemma}
+\begin{proof}
+Geometric expansion of $\beta_s^2$ and summation over every $s>i$ give
+\[
+ \sum_{s>i}w_s=\frac{h^2}{\lambda\delta}
+ \sum_{N\ge1}d^{N-1}\lambda^{-N(i+1)}
+                         \frac{N\delta}{1-e^{-N\delta}}.
+\]
+Hold $h,d$ fixed while differentiating this deterministic series with
+respect to $\lambda$.  A direct derivative of its $N$th summand gives
+the identity
+\begin{align}
+ V_i={}&-(1+cR)\sum_{s>i}w_s-2R(i+1)w_{i+1}-\frac{2Rq\beta_{i+1}}\lambda
+ \nonumber\\
+ &+\{1+(\lambda+1)R\}\frac{ch^2}{\lambda^2}
+ \Biggl\{\frac{i+1}{\delta}\sum_{N\ge1}N d^{N-1}\lambda^{-N(i+1)}
+                                      \frac{N\delta}{1-e^{-N\delta}}
+ \nonumber\\[-2pt]
+ &\hspace{39mm}+\frac1{\delta^2}
+ \sum_{N\ge1}d^{N-1}\lambda^{-N(i+1)}
+                          \frac{(N\delta)^2}{2(\cosh(N\delta)-1)}\Biggr\}.
+ \label{eq:low-full-tail-identity}
+\end{align}
+The terms $-2R(i+1)w_{i+1}$ and $-2Rq\beta_{i+1}/\lambda$ come from
+shifting the summation indices in the terms involving $W_i^p$.
+For a direct check of the differentiation, write
+$y=\lambda^{-N}$ and
+$T_N=h^2N d^{N-1}y^{i+1}/[\lambda(1-y)]$.  Then
+\[
+ T_N'=-T_N/\lambda-
+ \frac{h^2N^2d^{N-1}y^{i+1}}{\lambda^2}
+ \left\{\frac{i+1}{1-y}+\frac{y}{(1-y)^2}\right\}.
+\]
+Substitution proves~\eqref{eq:low-full-tail-identity} term by term.
+On a compact neighborhood of a fixed $\lambda>1$, the summands and
+their derivatives are bounded by a geometric sequence times a fixed
+polynomial in $N$.  This justifies the derivative and both summations.
+
+For $p=\lambda^{i+1}$, the geometric moments are
+$M_j=\sum_{N\ge1}N^j d^{N-1}p^{-N}$, where
+$M_0=(p-d)^{-1}$ and $M_{j+1}=-p\partial_p M_j$.
+Applying this recurrence up to $j=5$ gives
+\[
+ \frac{hM_0}{w_i}=\frac{\lambda r}{q(b+c)},\qquad
+ \frac{h^{j+1}M_j}{w_i}
+    =\frac{q^{j-1}\lambda rP_j}{b+c}\quad(1\le j\le5).
+\]
+Use~\eqref{eq:low-global-F}--\eqref{eq:low-global-C} in every
+$N$ summand of~\eqref{eq:low-full-tail-identity}.  The sign of the
+tail coefficient is negative and those of the two derivative kernels
+are positive.  The resulting inequalities are precisely
+\eqref{eq:low-tail-rationals}--\eqref{eq:low-V-bound}.
+
+For $q\le10$ we have $c\le1/6$ and
+$b\le d/(q+i)$.  Hence $A\le2/3$, $0\le B\le A$,
+$P_2\le8/9$, $P_3/A\le8/3$, and $P_4\le128/27$.
+Differentiation of the explicit rational functions gives
+\[
+ 0<T_L'(a)\le\frac{11t}{10},\qquad
+ P_U'(a)\ge\frac{9t}{5\lambda},\qquad
+ T_U'(a)>0,\quad P_L'(a)>0\qquad(a\ge1).
+\]
+For instance, $T_L'/t=1-P_2/(12a^2)+P_4/(240a^4)$,
+and $\lambda P_U'/t=(i+1)(A-P_3/(12a^2))+2a-P_4/(120a^3)$;
+the displayed polynomial bounds prove these estimates.
+The derivative of $V_U(a)$ is positive since
+\[
+ \frac95\{1+(\lambda+1)R\}-\frac{11}{10}\lambda(1+cR)>0
+ \qquad(1<\lambda\le7/6, R\ge0).
+\]
+Now~\eqref{eq:low-log-enclosure} proves
+\eqref{eq:low-V-rational-bound} and the tail enclosure.
+
+To prove positivity, put $z=d\lambda^{-i}$ and
+$\Pi(N)=N(1-z)^2z^{N-1}$ for $N\ge1$.  This is a probability
+distribution.  The same geometric summation, including the two
+endpoints, gives
+\begin{equation}\label{eq:low-positive-mixture}
+ \frac{V_i}{w_i}=\frac1\lambda\E_\Pi
+       [i(A_N+RP_N)+B_N+RC_N],
+\end{equation}
+where, writing $Q_N=1+\lambda+\cdots+\lambda^{N-1}$,
+\[\begin{gathered}
+ A_N=\frac{N}{Q_N},\quad B_N=\frac{\lambda Q_N'}{Q_N^2},\quad
+ P_N=(\lambda+1)A_N-2\lambda^{1-N},\\
+ C_N=(\lambda+1)B_N-
+          \frac{2\lambda(1-A_N)}{cN\lambda^N}.
+\end{gathered}\]
+Here $A_N>0$, $B_N\ge0$, and
+$P_N\ge cN\lambda^{-N}>0$: the latter is the convex-chord
+inequality $N(\lambda^{N+1}+1)\ge2\sum_{j=1}^N\lambda^j$.
+Also $Q_N-N\le cQ_N'$ term by term, and hence
+\[
+ C_N\ge B_N\left\{(\lambda+1)-\frac{2Q_N}{N\lambda^N}\right\}\ge0.
+\]
+This proves $V_i>0$ and completes the proof.
+\end{proof}
+
+The tail estimates also provide power-sum enclosures used below.  For
+$A=q+2$ and every integer $j\ge2$, put
+\begin{equation}\label{eq:low-power-enclosures}
+ U_j=\frac{A^{1-j}}{j-1}+\frac1{2A^j}+\frac{j}{12A^{j+1}},\qquad
+ L_j=U_j-\frac{j(j+1)(j+2)}{720A^{j+3}}.
+\end{equation}
+Then $L_j\le\sum_{i\ge2}(q+i)^{-j}\le U_j$.
+Indeed, write the sum as
+\[
+ \frac1{(j-1)!}\int_0^\infty
+       \frac{z^{j-1}e^{-Az}}{1-e^{-z}}\dd z
+\]
+and insert the global bounds~\eqref{eq:low-global-F}; Tonelli and
+the gamma integral evaluate every term.  Thus~\eqref{eq:low-power-enclosures}
+includes the entire infinite tail.
+
+\subsubsection{The range \texorpdfstring{$0<q\le1/15$}{0 < q <= 1/15}}
+Here $u\le1/16$. For the logarithmic term we retain the first two
+terms in the definition of $\overline\gamma_{s-1}$. Define
+$F_{\rm cap}$ by the right side of~\eqref{eq:complete-mellin-floor},
+with $w=v$ and with $\overline\gamma_{s-1}$ replaced by
+$a_s(r_s-r_{s-1})-\delta_s$.
+The exact logarithmic identity in Lemma~\ref{lem:mellin-floor} gives
+$D_\lambda\ge F_*\ge F_{\rm cap}$.
+For this paragraph only put
+\begin{align*}
+ B_s&=\frac{c}{\lambda^s-1},& f_s&=\lambda^{s-1}B_s^2,&
+ R_s&=1-u+uB_s,& \frac{\beta_s}{u}&=\frac{B_s}{R_s},\\
+ t&=T/u^2,&q_a&=Q/u,&t_\pi&=\sum_{s\ge1}f_s/R_s^2,\\
+ H&=\sum_{s\ge1}s f_s^2\rho_s^2/R_s^3,&
+ H_\pi&=\sum_{s\ge1}s f_s^2/R_s^3,\\
+ p_s&=\frac{cs}{\lambda}\frac{\lambda^s+1}{\lambda^s-1}
+                 -\frac{\lambda+1}\lambda,&
+ P&=\sum_{s\ge1}f_sp_s\rho_s^2/R_s^2,&
+ M&=\frac{2q_a}{2q_a-(\lambda+1)ut}.
+\end{align*}
+The function $x\coth x$ increases on $(0,\infty)$, because its
+derivative has numerator $\sinh(2x)-2x>0$.  Hence $p_s\ge0$.
+Finally set
+\[
+ G_s=\frac{s\lambda^{s-1}(1+L_s)a_s\delta_s}{u^2},\quad
+ G=\sum_{s\ge1}G_s,\quad
+ G_+=\sum_{s\ge1}G_s\left\{\lambda+
+ \frac{(s+1)\lambda a_{s+1}}{s a_s(1+L_s)}\right\}\ge\lambda G.
+\]
+
+Separating the term at $s=1$ gives
+\begin{equation}\label{eq:low-small-raw}
+ \frac{F_{\rm cap}}{u^2}
+ =M\left\{P+u\left(\frac{t^2}{q_a}-2H\right)
+                 +\frac{ut}{q_a}G_+\right\}+2\alpha G.
+\end{equation}
+Here is a verification that also specifies the endpoint in this
+identity.  Put $H_s^{\rm loc}=s-(s+1)\lambda L_{s+1}$ and
+$D_s^{\rm loc}=2sL_s-s/\lambda+H_s^{\rm loc}r_s$. Expanding
+$F_{\rm cap}$ gives
+\begin{align*}
+ F_{\rm cap}={}&-2R_*uL_1
+ +\sum_{s\ge1}\lambda^{s-1}a_s^2
+             \{(1+v)W_s^0+2R_*D_s^{\rm loc}\}\\
+ &+2\sum_{s\ge1}s\lambda^{s-1}a_s\delta_s
+ \left\{\alpha(1+L_s)+R_*\left(c+\lambda L_s
+                         +\frac{(s+1)\lambda L_{s+1}}s\right)\right\}.
+\end{align*}
+The elementary identities
+\[
+ W_s^0-1/\lambda=p_s-2us f_s/R_s
+\]
+and, writing $t_N=u^{-2}\sum_{s=1}^N\lambda^{s-1}a_s^2$ and
+$Q_N=\sum_{s=1}^N\lambda^{s-1}a_sa_{s-1}$,
+\begin{align*}
+ \sum_{s=1}^N\frac{\lambda^{s-1}a_s^2}{u^2}
+                  (D_s^{\rm loc}-W_s^0)
+ ={}&t_N-1-\frac{Q_{N+1}-u}{\lambda u^2}\\
+ &+\frac1{u^2}\sum_{s=1}^N\lambda^{s-1}a_s\delta_s
+           \left\{H_s^{\rm loc}+(s+1)\lambda\frac{a_{s+1}}{a_s}\right\}\\
+ &+\frac{(N+1)\lambda^Na_{N+1}^2}{u^2}
+\end{align*}
+give~\eqref{eq:low-small-raw} after substitution of
+$R_*=ut/[2q_a-(\lambda+1)ut]$.  The last endpoint tends to zero
+geometrically. The middle sum involving $\delta_s$ combines with
+the other terms proportional to $R_*$ to give the term containing $G_+$.
+
+We next bound the loss $t_\pi-t$ by $G$.  With
+$g_i=i\lambda^{i-2}\beta_i^2$,
+$u^2G=\sum_i g_i\rho_i\Delta_i$. For the reference moments $\beta_i$,
+\[
+ \sum_{n>i}\lambda^{n-1}\beta_n\beta_{n-1}=q\beta_i,
+ \qquad \sum_{n>i}w_n<q\beta_i/\lambda,
+ \qquad \frac{q\beta_i}{g_i}
+ =\frac{\lambda^2(1-d\lambda^{-i})}{ci}
+ \le\frac{\lambda^2}{1-u}.
+\]
+The last bound follows by Bernoulli's inequality and
+$h=cu/(1-u)$. Summing $1-\rho_s^2=\sum_{i<s}\Delta_i(\rho_i+\rho_{i+1})$
+against $w_s/u^2$ and using the tail bounds gives
+\begin{equation}\label{eq:low-small-relative-loss}
+ t_\pi-t\le\frac{2\lambda G}{1-u}.
+\end{equation}
+Also $1\le q_a\le(1-u)^{-1}$ and $t\ge1$.
+Writing $f_s=[\sinh(\log\lambda/2)/\sinh(s\log\lambda/2)]^2$
+shows that $f_s\le s^{-2}$.  Five terms and an integral give
+$\sum s^{-2}<5989/3600<5/3$.  Since $f_1=R_1=1$,
+\[
+ t_\pi\le1+\frac{2}{3(1-u)^2}<\frac{16}9,\qquad
+ \kappa=(1-u)t_\pi\le\frac53,\qquad
+ M\le\frac{90}{79},\qquad t/q_a\ge\frac{15}{16}.
+\]
+The comparison $R_*<R$ and $a_2<\beta_2$ gives
+\[
+ \alpha>\alpha_p
+ =\frac{(\lambda+1)(2-\kappa)-2\lambda u}
+              {2-(\lambda+1)u\kappa}
+ \ge\frac{2/3-(12/5)u}{2-2u(1-u)}\ge\frac{992}{3615}
+ \quad(\lambda\le6/5, u\le1/16).
+\]
+For the middle inequality the numerator is positive, $\kappa\le5/3$,
+and $\kappa\ge1-u$; the last rational function decreases on the
+stated interval, since its derivative numerator is a positive constant
+times $18u^2-10u-13<0$.
+
+Put $B=(1-u)t_\pi^2-2H_\pi$.
+Equation~\eqref{eq:low-small-relative-loss} gives
+$t^2/q_a-2H\ge B-4\lambda t_\pi G$.
+Retaining $G_+$ in~\eqref{eq:low-small-raw} now yields
+\begin{equation}\label{eq:low-small-budget}
+ \frac{D_\lambda}{u^2}\ge M(P+uB)+C_*G,\qquad
+ C_* =\frac{1984}{3615}
+ -\frac{90}{79}\frac65\frac1{16}
+       \left(\frac{64}{9}-\frac{15}{16}\right)
+ =\frac{389899}{18277440}>0.
+\end{equation}
+The $s=2$ term in $P$ and the $s=1$ term in $G$ give
+\[
+ P\ge\frac{c^2\rho_2^2}{(\lambda+1)^3},\qquad
+ G\ge\frac{1-\rho_2}\lambda.
+\]
+Thus~\eqref{eq:low-small-budget} also holds in the form
+\begin{equation}\label{eq:low-small-root-budget}
+ \frac{D_\lambda}{u^2}\ge
+ M\{P+uB+K_0(1-\rho_2)\},\qquad
+ K_0=\frac{389899}{24986880}.
+\end{equation}
+
+For clarity, the finite rational input to the remaining scalar estimate
+is stated separately.  For $\ell>1$ let $c_\ell=\ell-1$,
+$f_s(\ell)=\ell^{s-1}c_\ell^2/(\ell^s-1)^2$,
+$B_s(\ell)=c_\ell/(\ell^s-1)$, and put
+\begin{align*}
+ \tau(\ell)&=\frac{c_\ell^2}
+ {\ell(c_\ell-c_\ell^2/2+c_\ell^3/3)(\ell^9-1)}
+                         +\frac{f_9(\ell)}2,\\
+ E(\ell)&=\frac{c_\ell^4\ell^{-16}}{6\ell^2}
+ \left\{\frac{8}{2c_\ell/(\ell+1)}
+                     \frac{3-\ell^{-8}}{(1-\ell^{-8})^3}
+ +\frac1{(2c_\ell/(\ell+1))^2}
+       \left(\frac{2-\ell^{-8}}{(1-\ell^{-8})^2}-\frac12\right)\right\}.
+\end{align*}
+\begin{lemma}[Six rational bounds used for $0<u\le1/16$]\label{lem:low-Q0-arithmetic}
+The following rational inequalities hold:
+\begin{align*}
+ \sum_{s=1}^8 f_s(6/5)+\tau(6/5)&>1559/1000,\\
+ \sum_{s=1}^8 f_s(23/20)+\tau(23/20)&>63/40,\\
+ \sum_{s=1}^8 f_s(11/10)+\tau(11/10)&>19/12,\\
+ \sum_{s=1}^8 f_s(6/5)(1-1/s)+\tfrac89\tau(6/5)&>9/25,\\
+ \sum_{s=1}^8s^{-3}\{1-B_s(6/5)\}+1/128&<2/15,\\
+ \sum_{s=1}^8s f_s(23/20)^2+E(23/20)&<239/200.
+\end{align*}
+All denominators in these six finite expressions are positive.
+\end{lemma}
+
+We now estimate the tails starting at $s=9$. Both $f_s$ and
+$B_s$ decrease with $\lambda$; the assertion for $f_s$ follows from
+the increasing function $x\coth x$, and that for $B_s$ from its finite
+geometric denominator.  As a function of real $x>0$, $f(x)$ is
+decreasing and convex, with
+\[\begin{aligned}
+ f'&=-\log\lambda\, f\coth(x\log\lambda/2),\\
+ f''&=(\log\lambda)^2f
+       \{\coth^2(x\log\lambda/2)+\tfrac12\operatorname{csch}^2(x\log\lambda/2)\}.
+\end{aligned}\]
+Convex trapezoid comparison and
+$\log\lambda\le c-c^2/2+c^3/3$ imply
+$\sum_{s\ge9}f_s\ge\tau(\lambda)$.
+The function $xf(x)^2$ decreases; its logarithmic derivative is less
+than $-3/x$.  Expand its integral tail using the positive series for
+$(1-e^{-x\log\lambda})^{-4}$.  The identities
+\[
+ \frac{\binom{j+3}{3}}{j+2}=\frac{(j+1)(j+3)}6,\qquad
+ \frac{\binom{j+3}{3}}{(j+2)^2}
+       =\frac{j+2-1/(j+2)}6
+\]
+sum the two geometric parts.  Keeping the $j=0$ negative subtraction
+and using $\log\lambda\ge2c/(\lambda+1)$ gives
+$\sum_{s\ge9}s f_s^2\le E(\lambda)$.
+Every remaining coefficient is positive, so this substitution has the
+stated direction.  Consequently, with
+\[
+ T_0=\sum f_s,\quad H_0=\sum s f_s^2,\quad
+ A=\sum f_s(1-B_s),\quad C_{\rm tail}=\sum s f_s^2(1-B_s),
+\]
+Lemma~\ref{lem:low-Q0-arithmetic}, $B_s\le1/s$, and
+$\sum_{s\ge9}s^{-3}\le1/128$ prove
+\[
+ A>9/25,\quad C_{\rm tail}<2/15,\quad H_0<241/200,
+ \quad H_0<239/200\ \hbox{if }\lambda\ge23/20,
+\]
+together with the three lower bounds for $T_0$ on the respective
+intervals of $\lambda$ specified below. The general bound for $H_0$ is
+$\sum_{s=1}^6s^{-3}+\int_6^\infty x^{-3}\dd x=86701/72000<241/200$.
+
+The positive geometric expansion and the convex chord for
+$(1-uz)^{-3}$ on $0\le z\le1$ give
+\[
+ B>(1-u)(L+18u/25)^2
+       -2\{\overline H+(2/15)((1-u)^{-3}-1)\}.
+\]
+Use $(L,\overline H)=(19/12,241/200)$,
+$(63/40,241/200)$, and $(1559/1000,239/200)$ on
+$(1,11/10]$, $[11/10,23/20]$, and $[23/20,6/5]$, respectively.
+The right side decreases in $u\le1/16$; its derivative is
+\[
+ (L+18u/25)(36/25-L-54u/25)-(4/5)(1-u)^{-4}<0.
+\]
+At $u=1/16$ the three values are
+$973799/51840000$, $-21361/3240000$, and
+$-566237/16200000$.
+The first is positive.  On the other intervals put
+$A_1=10/9261$, $A_2=180/79507$, and let $d_1,d_2$ be the absolute
+values of the last two displayed fractions.  Since
+$c^2/(\lambda+1)^3$ increases for $1<\lambda\le6/5$,
+\[\begin{gathered}
+ P\ge A_j\rho_2^2,\qquad K_0>2A_2>2A_1,\\
+ A_1-d_1/16=\frac{11873177}{17781120000}>0,\qquad
+ A_2-d_2/16=\frac{1636194841}{20608214400000}>0.
+\end{gathered}\]
+For $0<\rho<1$,
+$A_j\rho^2+K_0(1-\rho)\ge A_j$.
+Equation~\eqref{eq:low-small-root-budget} proves $D_\lambda>0$.
+This covers $q\le1/15$, since $2/\sqrt3<6/5$.
+
+\subsubsection{Rational bounds for \texorpdfstring{$1/15<q\le10$}{1/15 < q <= 10}}
+We use the tail bounds in Lemma~\ref{lem:low-Lambert-tails} to
+form a finite set of rational sign tests.  Their definitions are given
+here so that the arithmetic supplement contains only polynomial
+expansion and exact coefficient checks.
+
+For $q,c>0$ set $\lambda=1+c$, $d=1-cq$, $u=q/(q+1)$ and
+$\theta_g=1-1/[6(q+1)]$. At $i=1$, use
+$b=d/(q+1)$ in~\eqref{eq:low-tail-rationals}, and define
+\begin{equation}\label{eq:low-theta-enclosures}
+ T_{\rm lo}=u^2\{1+T_L(a_L)\},\quad
+ T_{\rm up}=u^2\{1+T_U(a_U)\},\qquad
+ \theta_{\rm lo,up}=
+ \frac{T_{\rm lo,up}}{q\{2q-(\lambda+1)T_{\rm lo,up}\}}.
+\end{equation}
+In the rational expressions that follow, $R=q\theta$ and
+$\alpha_p$ is given by~\eqref{eq:low-reference-calibration}, with
+$\theta$ treated as a variable. For variables $b$ and $i$, put
+\begin{align}
+ r&=(\lambda+b)^{-1},\qquad r_{\rm prev}=(1-b)/\lambda,\nonumber\\
+ \tau&=1-(\alpha_p+\lambda R)r+(\lambda+1)R-R/r_{\rm prev},
+ \nonumber\\
+ \mathcal B(i,b,\theta)&=\frac{2i(\alpha_p+cR)}\lambda
+       +\frac{2iRrb}\lambda+2(i+1)Rr^2b
+                              +\frac{a_L}{\lambda}(2i-1)\tau,\nonumber\\
+ K_H(i,b,\theta)&=\mathcal B(i,b,\theta)-2V_U,\nonumber\\
+ K_J(i,b,\theta)&=V_L+\frac{a_L}{\lambda}(2i-1)\alpha_pr
+ -\frac{a_U R}{2\lambda}
+       \{(2i-1)(1/r_{\rm prev}-\lambda r)+2\lambda r\},
+ \label{eq:low-age-rational-tests}\\
+ i_{\rm lo}(b)&=\frac{2(d-qb)}{2b+c(d-qb)}.\nonumber
+\end{align}
+Here $V_U,V_L$ are exactly~\eqref{eq:low-V-rational-bound}, evaluated
+at the free $i,b,\theta$.  Both $K_H$ and $K_J$ are affine in $i$
+and in $\theta$ separately.
+
+We also need a lower bound for the terms at $i=1$ and the term
+$C_{\rm cal}e$ in~\eqref{eq:low-master}. In the next display all tail
+functions are at $i=1$, $b=d/(q+1)$, and
+$r=(q+1)/(q+2+c)$.  Put
+\begin{align*}
+ V_0&=-T_U(a_U)+P_L(a_L),\\
+ V_R&=-cT_U(a_U)+(\lambda+1)P_L(a_L)-4\lambda r^2-2r/(b+c),\\
+ W_0&=c/\lambda-1+2b/\lambda,\qquad
+ W_p=cW_0+4b/\lambda
+          -2r\{b/\lambda+2d/(q+2+c)\},\\
+ \alpha_0&=\{\lambda^2q+d(\lambda+1)\}/(q+1),\qquad
+ \alpha_1=-d(\lambda+1)/(q+1),\\
+ B_{10}&=2\alpha_0/\lambda,\qquad
+ B_{11}=2(\alpha_1+cq)/\lambda+2qrb/\lambda+4qr^2b,\\
+ E_v&=d/(q+1)^2,\qquad
+ \varepsilon=u-\lambda\beta_2,\qquad
+ \phi=\frac{d-c^2(q+2+c)/6}{(q+2+c)(2q+3+c)},\\
+ C_0&=\frac{E_v(2-E_v)}{2q}
+                 \{2u\phi+(2-h)\varepsilon/\lambda\}.
+\end{align*}
+Define, for $0\le e<1$,
+\begin{align}
+ \mathcal A(e,\theta)={}&(1-e)^2(V_0+q\theta V_R)
+ +W_0+q\theta W_p-2\theta d/\lambda+e(B_{10}+\theta B_{11})
+ \nonumber\\
+ &+e^2\left\{\frac{2\{\alpha_0+\theta(\alpha_1+\lambda q)\}}
+                     {\lambda(1-e)}
+                         -\frac32a_Uq\theta r\right\}
+       +C_0\{\theta(2-h)-1\}e.\label{eq:low-root-rational}
+\end{align}
+Use $U_j,L_j$ from~\eqref{eq:low-power-enclosures} to define
+\begin{align}
+ K_4={}&\frac{q^2(q+1)^2}\lambda
+       \{U_3-qL_4+c(U_2-2qL_3+q^2U_4)\},\nonumber\\
+ K_6={}&\frac{q^4(q+1)^2}\lambda
+       \{U_5-qL_6+c(U_4-2qL_5+q^2U_6)\},\nonumber\\
+ K_7={}&\frac{q^5(q+1)^2}\lambda
+       \{U_6-qL_7+c(U_5-2qL_6+q^2U_7)\},\nonumber\\
+ K_{\rm sq}={}&\frac{q^4(q+1)^2}\lambda
+       \{U_4-2qL_5+q^2U_6+c(U_3-3qL_4+3q^2U_5-q^3L_6)\}.
+ \label{eq:low-rational-costs}
+\end{align}
+For $s=dz/(q+1)$, $e=s^2$, $0\le z\le1$, define
+\begin{align}
+ \mathcal G_1(\theta)&=\mathcal A(e,\theta)
+                     -\tfrac32e(1-e)(1-s)K_4,\nonumber\\
+ \mathcal G_2(\theta)&=\mathcal A(e,\theta)
+       -4e(1+s)\left\{\left(1-\frac{qs}{1-s}\right)K_6
+                            +\frac{qs}{1-s}K_7\right\}
+       -8e^2K_{\rm sq}.\label{eq:low-finite-budgets}
+\end{align}
+The factor $1-s$ in the denominator of $\mathcal G_2$ is strictly
+positive throughout the specified domain.
+
+\begin{lemma}[Rational sign tests for $0<q\le3$ and $3\le q\le10$]
+\label{lem:low-Q12-arithmetic}
+The following finite assertions hold.
+\begin{enumerate}
+\item On $0<q\le3$, $0\le c\le1/6$, and also on
+$q=1/x$, $c=hx$, $1/10\le x\le1/3$, $0\le h\le1/2$,
+\[
+ 0<T_{\rm lo}\le T_{\rm up}
+ <\frac{2q^2(6q+5)}{6(q+1)+(\lambda+1)q(6q+5)}.
+\]
+The tail expressions at $c=0$ mean their rational continuous
+extensions.
+\item For $0<q\le3$, $0\le c\le1/6$, $0\le v_0\le1$, and
+$i=2+j$, $j\ge0$, put $b=dv_0/(q+i)$, $r=(\lambda+b)^{-1}$ and
+\[
+ K_R=icr^2+2ibr^3-\frac{(2i-1)\lambda}{2(1-b)}
+                         +\frac{(2i-3)\lambda r}{2}.
+\]
+Then $K_R<0$ and
+\[
+ i\lambda r^2+(2i-1)\lambda u r+qK_R>0.
+\]
+For $b=dv_0/(q+2)$ and $\theta\in\{0,\theta_g\}$ one also has
+\[
+ \partial_iK_H>0,\qquad
+ K_H(i_{\rm lo}(b),b,\theta)+\tfrac32(qb/d)^2>0.
+\]
+The latter rational expressions are used when $c>0,v_0>0$;
+their cleared polynomials include the closed boundary.
+\item On $q=1/x$, $c=hx$, $1/10\le x\le1/3$,
+$0\le h\le1/2$, $b=dv_0/(q+2)$, $0\le v_0\le1$,
+at each $\theta\in\{0,\theta_g\}$,
+\[
+ \partial_iK_H\ge0,\quad K_H(i_{\rm lo},b,\theta)+4(qb/d)^4\ge0,
+ \qquad
+ \partial_iK_J\ge0,\quad K_J(i_{\rm lo},b,\theta)+8(qb/d)^4\ge0.
+\]
+\item For $1/29\le q\le3$, $0\le c\le1/6$, $0\le z\le1$,
+both $\mathcal G_1(\theta_{\rm lo})$ and
+$\mathcal G_1(\theta_{\rm up})$ are strictly positive.
+For $q=1/x$, $c=hx$, $1/10\le x\le1/3$,
+$0\le h\le1/2$, $0\le z\le1$, both
+$\mathcal G_2(\theta_{\rm lo})$ and
+$\mathcal G_2(\theta_{\rm up})$ are strictly positive.
+\end{enumerate}
+\end{lemma}
+
+All the tests are on rational functions explicitly defined above.
+Their denominators are products of positive numerical constants and
+$\lambda$, $q$, $q+1$, $q+2$, $q+2+c$, $2q+3+c$, $a_L$, $a_U$,
+$1-b$, $\lambda+b$, $b+c$, $2b+c(d-qb)$, $1-e$, and $1-s$.
+The speed endpoint denominators are positive by part~(i).
+After substituting $b=dv_0/(q+2)$, the only additional vanishing
+boundary factors are $dv_0+c(q+2)$ and
+$(2-cq)v_0+c(q+2)$. Both are strictly positive when
+$c>0$ and $v_0>0$, as required for clearing denominators.
+
+For specificity, the finite coefficient operation used to check this
+lemma is as follows.  Map each bounded variable to $y\in[0,1]$ by
+the affine maps in the lemma.  If
+$P(y_1,\ldots,y_d)=\sum_\nu p_\nu y^\nu$ has coordinate degrees
+$D_1,\ldots,D_d$, its tensor Bernstein coefficients are
+\begin{equation}\label{eq:low-Bernstein-transform}
+ b_\kappa=\sum_{\nu\le\kappa}p_\nu
+             \prod_{j=1}^d\frac{\binom{\kappa_j}{\nu_j}}
+                                  {\binom{D_j}{\nu_j}}.
+\end{equation}
+The unbounded variable $j=i-2$ in part~(ii) stays in the ordinary
+power basis.  Positive coefficients in those variables imply the
+claimed sign because their basis functions are nonnegative and sum
+to one in each bounded variable.  For the exceptional one-variable
+groups, the arithmetic supplement gives the polynomial and its
+Euclidean Sturm sequence: positive endpoint values and equal numbers
+of endpoint sign variations imply positivity throughout $[0,1]$.
+There are fifteen degree-seven groups in part~(iv) for
+$\mathcal G_1$, and twenty-five degree-ten groups in part~(iii) for
+$K_H$.  Vanishing factors at zero or one are removed explicitly
+before applying Sturm's theorem.  The remaining part~(iv) tests have
+$10150$ and $10850$ positive tensor coefficients.
+
+We now prove that this finite lemma suffices.  Part~(i) and the
+tail bounds for $\sum_{s>1}w_s$ imply
+\[
+ 0<\theta_{\rm lo}\le\theta\le\theta_{\rm up}<\theta_g<1.
+\]
+For every integer $i\ge2$, Bernoulli's inequality gives
+$b=cd/(\lambda^i-d)\le d/(q+i)$.  Also
+$\lambda^i=d(1+c/b)$ and
+$\log\lambda\le c$, $\log z\ge2(z-1)/(z+1)$ for $z\ge1$
+give $i\ge i_{\rm lo}(b)$.  In the definition of $B_i$ its
+$k$ coefficient is nonnegative, because $\tau_i>0$.
+Hence $S_i/w_i\ge K_H(i,b,\theta)$.
+For the square coefficient, expand~\eqref{eq:low-J} as
+\[
+ J_i/w_i=V_i/w_i+k(2i-1)\alpha_pr
+       -\frac{kR}{2}\{(2i-1)(1/r_{\rm prev}-\lambda r)+2\lambda r\}.
+\]
+The bracket is positive.  Since $a_L/\lambda\le k\le a_U/\lambda$,
+$J_i/w_i\ge K_J(i,b,\theta)$. Affinity in $\theta$ and the
+nonnegative derivatives with respect to $i$ in the lemma give
+\begin{equation}\label{eq:low-all-age-prices}
+ \begin{cases}
+ S_i\ge-\tfrac32w_i\beta_i^2,\quad J_i>0,&q\le3,\\
+ S_i\ge-4w_i\beta_i^4,\quad J_i\ge-8w_i\beta_i^4,&3\le q\le10,
+ \end{cases}\qquad i\ge2.
+\end{equation}
+For $q\le3$, positivity of $J_i$ follows from the lower bound in
+\eqref{eq:low-positive-mixture},
+\[
+ V_i/w_i>i\lambda r_i^2
+                      \{1+R(c/\lambda+2L_{i+1})\}.
+\]
+Indeed $A_N\ge\lambda^{1-N}$ and
+$P_N\ge cN\lambda^{-N}$, and summing these two geometric
+expectations gives the display.  Use $k\ge1/\lambda$ on the
+positive $\alpha_p$ term and $k\le1$ on its negative bracket.
+The result is greater than
+$i\lambda r^2+(2i-1)\lambda ur+qK_R$, since
+$\alpha_p>\lambda^2u$, $R<q$, and $K_R<0$.
+Part~(ii) proves positivity.
+
+To bound the negative terms in~\eqref{eq:low-master}, we use
+the representation of all the $\Delta_i$ by the same measure $\sigma$. For
+$p=2$ or $4$, the sequence
+$m_i=w_i\beta_i^p$ is a positive mixture of powers:
+\[
+ m_i=\frac{h^{p+2}}\lambda
+       \sum_{N\ge p+1}\binom{N}{p+1}d^{N-p-1}\lambda^{-Ni}.
+\]
+For $0\le t<1$, the function
+$f_t(z)=z/(1-t+t\sqrt z)^2$ is concave on $[0,1]$, since
+\[
+ f_t''(z)=-\frac{3(1-t)t}
+                       {2\sqrt z(1-t+t\sqrt z)^4}\le0
+ \quad(z>0).
+\]
+In the integral representation of $\Delta_i$ take $\xi$ to be the
+integration variable and set $z=(1-\xi)^2$. Sum over $i\ge1$ and
+apply Jensen's inequality under $\sigma$ to each term of the mixture.
+Subtracting the $i=1$ term gives
+\begin{equation}\label{eq:low-marker-damping}
+ \sum_{i\ge2}m_i\Delta_i
+ \le e\sum_{i\ge2}i m_i(1-\sqrt e)^{i-1}.
+\end{equation}
+The sums are finite or positively dominated geometric sums, so
+Tonelli justifies both operations.  Since $\rho_i\le1-e$ for
+$i\ge2$, this bounds the negative part of the linear terms with $i\ge2$ in
+\eqref{eq:low-master}.
+
+For $q\le3$, discard $(1-s)^{i-2}\le1$ in
+\eqref{eq:low-marker-damping}.  Bernoulli and monotonicity of
+$y/(y-d)^{p+2}$ give
+\[
+ w_i\beta_i^p\le
+        \frac{q^{p+2}(1+ci)}{\lambda(q+i)^{p+2}}.
+\]
+Expand $i=(q+i)-q$ and use~\eqref{eq:low-power-enclosures}, with
+upper bounds on positive coefficients and lower bounds on negative
+coefficients.  For $p=2$ this gives
+$u^{-2}\sum_{i\ge2}i w_i\beta_i^2\le K_4$.
+Thus the sum of the negative parts of $\Delta_i\rho_i S_i/u^2$ for $i\ge2$ is at most
+$\tfrac32e(1-e)(1-s)K_4$.
+
+For $3\le q\le10$, put $t_*=qs/(1-s)\le qd/(q+h)\le1$,
+using~\eqref{eq:low-e-caps}.  Bernoulli and the convex chord
+\[
+ (1-t)+\frac{t}{1+y}-\frac1{1+ty}
+       =\frac{t(1-t)y^2}{(1+y)(1+ty)}\ge0
+\]
+give
+\[
+ (1-s)^{i-1}\le\frac1{1-s}
+       \left\{(1-t_*)+\frac{t_*q}{q+i}\right\}.
+\]
+Use the preceding Bernoulli weight bound with $p=4$.
+Expanding $i$ and $i^2$ in powers of $q+i$, and applying
+\eqref{eq:low-power-enclosures} term by term, gives the
+bounds
+\[
+ \frac1{u^2}\sum_{i\ge2}i w_i\beta_i^4\le K_6,
+ \quad\frac1{u^2}\sum_{i\ge2}\frac{qi w_i\beta_i^4}{q+i}\le K_7,
+ \quad\frac1{u^2}\sum_{i\ge2}i^2w_i\beta_i^4\le K_{\rm sq}.
+\]
+Equation~\eqref{eq:low-marker-damping}, $\Delta_i\le i e$, and
+\eqref{eq:low-all-age-prices} now bound the sums of the negative parts
+of $\Delta_i\rho_i S_i/u^2$ and $\Delta_i^2J_i/u^2$, for $i\ge2$, by
+$4e(1+s)\{(1-t_*)K_6+t_*K_7\}$ and $8e^2K_{\rm sq}$,
+respectively.
+
+It remains to bound the terms at $i=1$ and the term $C_{\rm cal}e$.
+Combine the terms $F_{\rm pipe}+eS_1+e^2V_1$ before estimating:
+\[
+ F_{\rm pipe}+eS_1+e^2V_1
+ =(1-e)^2V_1+u^2W_1(R)-2RuL_1+eB_1.
+\]
+The lower bound for the tail $V_1$ gives
+$V_1/u^2\ge V_0+q\theta V_R$, and
+$W_2^Y/(2u^2)=3k\lambda Rr_1/2\le3a_U Rr_1/2$.
+To estimate $C_{\rm cal}$, replace $e$ by $E_v$ only in a
+componentwise lower bound for the positive coefficient
+$C_{\rm head}(2-e)$.  At $a_2=\beta_2(1-E_v)$,
+\[
+ A_0=E_v,\qquad
+ 2-(3\lambda+1)u+\lambda(\lambda+1)a_2=(2-h)E_v.
+\]
+The remaining factors are bounded below by
+$u-\lambda\beta_2$ and
+\[
+ -k\log(\beta_2/u)-1+\beta_2/u\ge\phi>0.
+\]
+For the last inequality use
+$-\log z\ge2(1-z)/(1+z)$ and $k\ge a_L/\lambda$, then insert
+$\beta_2/u=(q+1)/(q+2+c)$.  This yields exactly the displayed
+$\phi$. Its numerator is positive in both ranges of $q$:
+for $q\le3$ this follows from $c\le1/6$, while for
+$3\le q\le10$, $c=h/q$ gives
+$c^2(q+2+c)\le31/216<6d$.
+Finally, the identity
+\[
+ \frac{\kappa-1}{Z_p}=\frac{\theta(2-h)-1}{2q}>0
+\]
+gives $C_{\rm cal}/u^2\ge C_0\{\theta(2-h)-1\}$.
+Thus~\eqref{eq:low-master} proves
+\[
+ F_{\rm floor}(v)/u^2>\mathcal G_1(\theta)\quad(q\le3),
+ \qquad
+ F_{\rm floor}(v)/u^2>\mathcal G_2(\theta)\quad(3\le q\le10).
+\]
+Both $\mathcal G_1$ and $\mathcal G_2$ are affine in $\theta$, so
+part~(iv) of Lemma~\ref{lem:low-Q12-arithmetic} gives positivity
+throughout $[\theta_{\rm lo},\theta_{\rm up}]$ in the respective
+ranges of $q$. Since $1/15>1/29$, this covers $1/15<q\le10$
+when $0<\alpha<1$.
+
+\subsubsection{\texorpdfstring{Bounds for $F_{\rm pipe}$, $S_i$, and $J_i$ when $q\ge10$}{Bounds for F\_pipe, S(i), and J(i) when q >= 10}}
+For $q\ge10$ we use the simpler bound
+\begin{equation}\label{eq:low-large-master}
+ F_{\rm floor}(v)>F_{\rm pipe}-eH_{\rm head}-e^2J_{\rm minus},
+ \quad
+ H_{\rm head}=\sum_{i\ge1}i[-S_i]_+,\quad
+ J_{\rm minus}=\sum_{i\ge2}i^2[-J_i]_+.
+\end{equation}
+This follows from~\eqref{eq:low-master}, $\rho_i\le1$,
+$\Delta_i\le ie$, and positivity of the coefficient of $e^2$ in braces
+and of $C_{\rm cal}e$.
+The next estimates will in particular show that the two negative-part
+sums have finite support.
+
+Put $x=1/q$, $c=hx$, $\lambda=1+hx$ and $g=q-R$.
+We have $0<g<1$. Indeed, summing the lower
+bound $z/(e^z-1)\ge1-z/2$ over the geometric series gives
+\[
+ T_p\ge\frac{h}{\lambda\log\lambda}-\frac1{2\lambda}
+       >\frac{2q}{\lambda+1}-\frac1{2\lambda}.
+\]
+Here $k>2/(\lambda+1)$ follows by strict trapezoid comparison for
+$\int_1^\lambda t^{-1}\dd t$.
+Subtract the value $2q(q-1)/[(\lambda+1)q-\lambda]$ corresponding
+to $R=q-1$.  The difference is
+\[
+ \frac{\lambda(\lambda+1)-qc^2}
+ {2\lambda(\lambda+1)((\lambda+1)q-\lambda)}>0,
+\]
+since $qc^2=h^2/q\le1/40$.  The quotient is increasing in $T_p$,
+so $R>q-1$; the upper bound $R<q$ was already proved.
+
+We express $F_{\rm pipe}$ in terms of $T_p$ and its derivative,
+\begin{equation}\label{eq:low-whole-source}
+ F_{\rm pipe}=\frac{2q}{Z_p}\{-cT_p'-2T_p+T_p^2/q\},
+ \qquad
+ T_p=\frac{h^2}\lambda
+                  \sum_{N\ge1}\frac{N d^{N-1}}{\lambda^N-1}.
+\end{equation}
+The derivative holds $h,d$ fixed.  To verify the identity, sum
+$W_i^0$ to obtain $F_0=-cT_p'-(1+c/\lambda)T_p$.
+Shifting the $W_i^p$ terms, retaining their first terms, gives
+\[
+ \sum_iw_iW_i^p=(\lambda+1)F_0+2T_p-2u^2-2(q-u)/\lambda.
+\]
+Insert this into the definition of $F_{\rm pipe}$ and use
+$L_1=1/\lambda-u$.  The result is~\eqref{eq:low-whole-source}.
+The same geometric majorants used in Lemma~\ref{lem:low-Lambert-tails}
+justify the derivative and the summations.
+
+Define
+\begin{equation}\label{eq:low-source-rationals}
+ \begin{gathered}
+ f(h)=\frac{(1-h)(2h+1)}6,\quad
+ s(a)=a-x/2+\frac{x^2(2-h)}{12a},\\
+ s_l(a)=s(a)-\frac{x^4(24-36h+14h^2-h^3)}{720a^3},\\
+ \begin{aligned}
+ P_M(a)={}&2\{s(a)^2-(\lambda+1)s(a)+a^2-x^2(2-h)/12\}\\
+ &-Mx\lambda\{2\lambda-(\lambda+1)s_l(a)\}.
+ \end{aligned}
+ \end{gathered}
+\end{equation}
+Applying~\eqref{eq:low-global-F}--\eqref{eq:low-global-C}
+for each $N\ge1$ gives
+\[
+ \frac{s_l(a)}\lambda\le\frac{T_p}{q}\le\frac{s(a)}\lambda,
+ \qquad
+ K_{\rm actual}:=\frac{ch^2}{\lambda^2\delta^2}
+       \sum_{N\ge1}d^{N-1}
+         \frac{(N\delta)^2}{2(\cosh(N\delta)-1)}
+ \ge\frac{a^2}{x\lambda^2}-\frac{x(2-h)}{12\lambda^2}.
+\]
+Writing $t_T=T_p/q$, equation~\eqref{eq:low-whole-source} becomes
+\[
+ F_{\rm pipe}=
+ \frac{2\{t_T^2/x-(1+1/\lambda)t_T/x+K_{\rm actual}\}}
+                 {2-(\lambda+1)t_T}.
+\]
+Since $s(a)\le1-x/4+x^2/6<1$, the quadratic in $t_T$ decreases
+on the whole required interval.  Its lower bound uses $s(a)/\lambda$,
+and its denominator is at most $2-(\lambda+1)s_l(a)/\lambda$.
+For either positive target $M=f(h)-2x/5$ or $M=69/500$,
+$P_M(a)>0$ therefore implies $F_{\rm pipe}>M$: the inequality
+first proves positivity of the lower numerator, so replacing the
+denominator preserves the lower bound. For $a_L\le a\le a_U$,
+$s\ge19/20$, $\lambda+1\le41/20$, $0<s'<1$, and $s_l'>0$.
+Consequently $P_M'(a)>37/10$.  It suffices to check $P_M(a_L)>0$.
+
+To bound $S_i=B_i-2V_i$, set $t=i/q$, let
+$z=d\lambda^{-i}$, and put $w=hz/(1-z)$.  Bernoulli gives
+$0<w\le d/(1+t)$.  For a free point in this larger domain define
+\begin{align}
+ b&=xw,\quad r=(\lambda+b)^{-1},\quad r_{\rm prev}=(1-b)/\lambda,
+ \nonumber\\
+ R&=1/x-g,\qquad
+ \alpha_p=\frac{\lambda^2+gd(\lambda+1)x^2}{1+x},
+ \nonumber\\
+ A&=1-b+(cb+b^2)/2,\nonumber\\
+ P&=c+2b-4cb-5b^2+\tfrac92c^2b+\tfrac{25}2cb^2+8b^3,\nonumber\\
+ C&=5b/3+cz/3,\nonumber\\
+ U&=\{i(A+RP)+z/2+RC\}/\lambda,\nonumber\\
+ \mathcal B&=2i(\alpha_p+cR)/\lambda+2iRrb/\lambda
+             +2(i+1)Rr^2b\nonumber\\
+ &\quad+\frac2{\lambda+1}(2i-1)
+                \{1-(\alpha_p+\lambda R)r+(\lambda+1)R-R/r_{\rm prev}\},
+ \nonumber\\
+ \operatorname{shape}&=2ht+4(t-1/3)w-(2h+3)z/3,
+ \qquad z=w/(h+w).\label{eq:low-large-price-rationals}
+\end{align}
+At $t=i/q$, $z=d\lambda^{-i}$ and $w=hz/(1-z)$, we have
+$B_i/w_i\ge\mathcal B$ and $V_i/w_i\le U$.
+The first follows from $k\ge2/(\lambda+1)$ and $\tau_i\ge0$.
+For the second bound, the coefficients in
+\eqref{eq:low-positive-mixture} satisfy, for every integer $N\ge1$,
+\begin{align*}
+ A_N&\le1-(N-1)c/2+(N^2-1)c^2/12,\\
+ P_N&\le Nc-(N-1)(5N+2)c^2/6+(N^2-1)(4N+1)c^3/12,\\
+ B_N&\le(N-1)/(2N),\qquad
+ C_N\le c(N-1)(5N+2)/(6N).
+\end{align*}
+For the first bound, multiplication by $(1+c)^N-1$ leaves, at
+power $c^j$, $j\ge4$, the nonnegative coefficient
+\[
+ \binom{N}{j-2}
+ \frac{(j-3)(N+1)\{(j-4)N+5j-8\}}{12j(j-1)};
+\]
+the lower powers cancel.  The second bound follows by inserting the
+first in $P_N$ and using the global third-order Taylor lower bound
+for $(1+c)^{1-N}$, whose fourth derivative is nonnegative.
+For the third, put
+$D_N=(N-1)Q_N^2-2N\sum_{j=1}^{N-1}j\lambda^j$.
+One has $D_N(1)=0$,
+$D_N'(1)=N^2(N-1)(N-2)/3\ge0$.
+The coefficients of $D_N'$ are negative only at degrees at most
+$N-2$ and positive above that degree: the coefficient at degree
+$j-1$ is
+$j\{(N-1)\min(j+1,2N-1-j)-2Nj\mathbf1_{j<N}\}$.
+Thus $D_N'/\lambda^{N-2}$ increases on $[1,\infty)$ and
+$D_N\ge0$, proving the $B_N$ bound.
+For the last bound we use the polynomial identity
+\begin{align*}
+ &(\lambda+1)N^2\lambda^{2N-1}-cN\lambda^NQ_N-(2+2Nc)Q_N^2
+       =c^2\sum_{j=0}^{2N-2}a_j\lambda^j,\\
+ &a_j=(j+1)(j+2)(N-1-j/3)\quad(0\le j\le N-2),\\
+ &a_{2N-2-r}=(N-r-1)\{(2r+1)N+r(r+1)\}+2r(r+1)(r+2)/3,\\
+ &\hspace{48mm}0\le r\le N-1.
+\end{align*}
+For $N=1$ both sides vanish.  For $N\ge2$ all $a_j\ge0$;
+finite second differences, with the four joining coefficients,
+verify the identity.  Their sum is
+$N^2(N-1)(5N+2)/6$.  Since
+$C_N=c\lambda^{1-N}\sum_j a_j\lambda^j/(NQ_N^2)$ and
+$Q_N\ge N\lambda^{(N-1)/2}$, the required upper bound follows.
+Summing all four inequalities under $\Pi$ gives exactly the
+$A,P,z/2,C$ in~\eqref{eq:low-large-price-rationals} for every $i\ge1$.
+
+To estimate the negative parts of $J_i$, we use one further rational function. For
+$q\ge10$, $0<h\le1/2$ define
+\begin{equation}\label{eq:low-AJ-rational}
+ \begin{gathered}
+ a_m=\frac{d}{\lambda(q+2)},\qquad
+ r_m=\frac1{\lambda+d/(q+2)},\\
+ N_m=\frac{(\lambda a_m+c)
+       \{2\lambda^2a_m^2+(3\lambda^2+2\lambda+1)a_m+\lambda^2-1\}}
+                 {\lambda^2(1-\lambda a_m)},\\
+ A_J^{\rm lo}=\lambda r_m^2+
+                   \frac{4\lambda^2u r_m}{\lambda+1}-qN_m.
+ \end{gathered}
+\end{equation}
+
+\begin{lemma}[Rational inequalities for $q\ge10$]
+\label{lem:low-Q3-arithmetic}
+For $0<x\le1/10$, $0\le h\le1/2$,
+$P_{f(h)-2x/5}(a_L)>0$.
+For the domain
+\[
+ 0<x\le1/10,\quad0<h\le1/2,\quad t\ge0,\quad
+ 0<w\le(1-h)/(1+t),\quad0\le g\le1,
+\]
+the rational functions in~\eqref{eq:low-large-price-rationals} satisfy
+\begin{equation}\label{eq:low-Q3-price-check}
+ \mathcal B-2U\ge\operatorname{shape}-\frac{28}{5}x(1+ht).
+\end{equation}
+Finally, $A_J^{\rm lo}>3-12/q$ for $q,h>0$ with $h\le1/2$.
+\end{lemma}
+
+These checks have the following finite specifications.
+Put $A=12a_L$.  The polynomial
+$1800A^3P_{f(h)-2x/5}(a_L)/x^3$ has constant coefficient $380160$;
+the sum of the absolute values of its negative coefficients, weighted
+by $10^{-j}2^{-k}$ for $x^jh^k$, is
+$65345524702337817/204800000000<320000$.
+For~\eqref{eq:low-Q3-price-check}, multiply
+$[\mathcal B-2U-\operatorname{shape}]/x+28(1+ht)/5$ by the
+positive denominator
+\[
+ 3(h+w)(1+x)\lambda(\lambda+1)(1-xw)(\lambda+xw)^2.
+\]
+Substitute $w=(1-h)v_0/(1+t)$ and multiply by $(1+t)^7$.
+The result is a polynomial of degrees $(6,8,8,7)$ in
+$(x,h,t,v_0)$, affine in $g$.  At $g=0,1$, transform only
+$x,h,v_0$ by~\eqref{eq:low-Bernstein-transform} on
+$[0,1/10]\times[0,1/2]\times[0,1]$, keeping ordinary powers of
+$t\ge0$.  Each endpoint has $4319$ nonzero positive coefficients,
+with minimum $69/280$; the remaining coefficients are zero.
+For~\eqref{eq:low-AJ-rational}, the numerator of
+$A_J^{\rm lo}-(3-12/q)$ over
+\[
+ q(q+h)^3(2q+h)(q+1)(q+2)^2(q+h+1)(q^2+3q+2h)^2
+\]
+has $60$ nonnegative nonzero coefficients in $q,h$, including
+$66q^{11}$.  These specifications prove the three statements by
+finite rational arithmetic, with every denominator positive.
+
+The first assertion gives
+\begin{equation}\label{eq:low-Q3-source}
+ F_{\rm pipe}>f(h)-2/(5q).
+\end{equation}
+To apply~\eqref{eq:low-Q3-price-check} to $S_i/w_i$, we first
+show that for $t=i/q$, $z=d\lambda^{-i}$ and $w=hz/(1-z)$,
+\begin{equation}\label{eq:low-Q3-shape}
+ \operatorname{shape}\ge\frac{9t-7}{3(1+t)}+\frac34ht.
+\end{equation}
+For $t\le1/3$, use $w\le d/(1+t)$ and $z\le d$; the difference
+in~\eqref{eq:low-Q3-shape} is at least
+$h\{5t/4-4(t-1/3)/(1+t)+1/3\}+2h^2/3\ge0$.
+For $t\ge1/3$ and $y=ht<3$, the exponential series, using
+$n!\ge2\cdot3^{n-2}$ for $n\ge2$, gives
+$e^y\le1+y+y^2/[2(1-y/3)]$.
+Since $\lambda^i\le e^y$ and $\lambda^i\ge1+y$,
+\[
+ w\ge\frac{d(1-y/3)}{1+t-y/3+yt/6},\qquad z\le\frac d{1+y}.
+\]
+After insertion, the difference is at least
+\[\begin{aligned}
+ &\frac{h}{12(t+1)(y+1)((y+6)t+6-2y)}\\
+ &\quad\times\Bigl\{t^3(15y^2-27y+18)+t^2(81y^2+13y+108)\\
+ &\hspace{19mm}+t(42y^2-48y+18)+120+152y-40y^2
+                  +\frac{48y-16y^2}{t}\Bigr\}>0.
+\end{aligned}\]
+The first and third quadratic factors have negative discriminants,
+the second has positive coefficients, the constant quadratic has
+positive endpoint values on $[0,3]$, and the last term is
+nonnegative.  The case $y=3$ follows by continuity.
+For $y\ge3$, $t\ge6$; drop the nonnegative $w$ term and use
+$(2h+3)d\le3$ to get
+$\operatorname{shape}\ge2y-1/(1+y)>3+3y/4$.
+This proves~\eqref{eq:low-Q3-shape} in every case.  Thus, with
+$\eta=28/(5q)$,
+\begin{equation}\label{eq:low-Q3-head-envelope}
+ \frac{S_i}{w_i}\ge\frac{9t-7}{3(1+t)}-\eta
+                                  +ht(3/4-\eta).
+\end{equation}
+Since $\eta\le14/25<3/4$, $S_i<0$ is possible only if
+$t<(7+3\eta)/(9-3\eta)$.
+
+For $i\ge2$, the lower bound from the mixture and the expression
+for $J_i$ give
+\[
+ J_i/w_i>iA_J-B_J,
+ \quad A_J=\lambda r_i^2+2k\alpha_pr_i
+ +R\{cr_i^2+2\lambda r_i^3L_i+k(\lambda r_i-1/r_{i-1})\},
+\]
+where $B_J=k\{C_\alpha r_i-R(1/r_{i-1}-\lambda r_i)/2\}<q+1$.
+To bound $A_J$, set $a=L_i$.  At $k=1$ its bracket is exactly
+\[
+ -\frac{(\lambda a+c)
+       \{2\lambda^2a^2+(3\lambda^2+2\lambda+1)a+\lambda^2-1\}}
+       {\lambda^2(1+a)^3(1-\lambda a)}.
+\]
+Since $k\le1$, this is a lower bound for that bracket.
+Bernoulli gives $a\le a_m$, $r_i\ge r_m$ for $i\ge2$.
+Increase every positive numerator factor to $a_m$, omit the factor
+$(1+a)^3\ge1$, and use $k\ge2/(\lambda+1)$,
+$\alpha_p>\lambda^2u$, and $R<q$.  The result is
+$A_J\ge A_J^{\rm lo}>3-12/q$ by Lemma~\ref{lem:low-Q3-arithmetic}.
+Also $w_i\le w_1=u^2<1$, since
+$y/(1-dy)^2$ increases in $y=\lambda^{-i}$.
+Hence a finite sum bounds $J_{\rm minus}$. For $T\ge2$, writing
+$n=\lfloor T\rfloor$ and $r=T-n$,
+Faulhaber's formulas give
+\begin{align*}
+ \sum_{i=1}^n i^2(T-i)
+ ={}&T^4/12+T^2(-r^2/2+r/2-1/12)\\
+ &+T(2r^3/3-r^2+r/3)-r^2(1-r)^2/4
+ \le(T^4+T^2)/12.
+\end{align*}
+The coefficient of $T^2$ is at most $1/24$, that of $T$ is at most
+$1/12$ in absolute value, and $T/12\le T^2/24$ for $T\ge2$.
+Taking $T=(q+1)/(3-12/q)$ gives
+\begin{equation}\label{eq:low-Q3-square-cost}
+ J_{\rm minus}<q^4J(q),\qquad
+ J(q)=\frac{(q+1)^4}{324q(q-4)^3}
+                       +\frac{(q+1)^2}{36q^3(q-4)}.
+\end{equation}
+For every integer $i>T$ the bound on $J_i/w_i$ gives $J_i>0$.
+
+\subsubsection{Bounds for \texorpdfstring{$q\ge21$ and for $q\ge10$ with $h\ge1/4$}{q >= 21 and for q >= 10 with h >= 1/4}}
+We first give a quadrature bound that includes a support endpoint
+lying inside a mesh interval.  If $G$ is continuous, compactly
+supported in $[0,\infty)$, $G(0)=0$, and $G'$ has bounded variation
+on $(0,\infty)$, then
+\begin{equation}\label{eq:low-BV-quadrature}
+ \left|\Delta\sum_{i\ge1}G(i\Delta)-\int_0^\infty G(t)\dd t\right|
+ \le\frac{\Delta^2}{8}\operatorname{TV}(G').
+\end{equation}
+On a mesh interval $[a,b]$ use $K(s)=(s-a)(b-s)/2$ and integrate
+twice by parts:
+\[
+ \frac{\Delta}{2}\{G(a)+G(b)\}-\int_a^bG(s)\dd s
+                  =\int_{(a,b)}K(s)\dd G'(s).
+\]
+Derivative jumps contribute their point masses; $K$ vanishes at
+both mesh endpoints.  Since $0\le K\le\Delta^2/8$, summing proves
+\eqref{eq:low-BV-quadrature}.  The first and last values of $G$ are
+zero, so the complete trapezoid sum equals the right-endpoint sum.
+
+For $t=i/q$, $i\ge1$, monotonicity of $s/(s-d)^2$ and
+$\lambda^i\ge1+ht$ give
+\begin{equation}\label{eq:low-Bernoulli-weight}
+ w_i\le\frac{1+ht}{\lambda(1+t)^2}.
+\end{equation}
+If $q\ge21$, use $\eta_A=4/15$, $A=39/5$, $B=41/5$ in
+\eqref{eq:low-Q3-head-envelope}. Every index for which $S_i<0$ satisfies
+$t<A/B=39/41<1$.
+Put $D_h=1-(\lambda+1)h$.
+On that support $D_h(1+ht)\le(1-2h)(1+ht)\le1$.
+The bound on $eq^2$ in~\eqref{eq:low-e-caps} and
+\eqref{eq:low-Bernoulli-weight} imply
+\[
+ eH_{\rm head}\le\frac1q\sum_{i\ge1}G_A(i/q),\qquad
+ G_A(t)=\left[\frac{t(A-Bt)}{3(1+t)^3}\right]_+.
+\]
+Inside its support,
+\[
+ G_A'=\frac{A-32t+Bt^2}{3(1+t)^4},\qquad
+ G_A''=\frac{-32-4A+(96+2B)t-2Bt^2}{3(1+t)^5}.
+\]
+The numerator of $G_A''$ increases across the support, is negative
+at zero and positive at its end.  Thus $G_A'$ has one minimum,
+then jumps from a negative value to zero at the end.
+Moreover $G_A'>-1/2$: after multiplying by $6(1+t)^4$ the
+required inequality is
+\[
+ 17-52t+36t^2+12t^3+3t^4+6\eta_A(1-t^2)>0.
+\]
+For $t\le1/3$ its first three terms are at least $11/3$; for
+$t\ge1/3$, use $12t^3\ge4t^2$ and
+$17-52t+40t^2>0$, whose discriminant is $-16$.
+The last group is nonnegative because $t<1$.
+Consequently $\operatorname{TV}(G_A')<13/5+1<4$.
+An elementary antiderivative gives
+\[
+ I_A:=\int G_A=\frac83-\frac{B^2}{96}-\frac B3\log(16/B).
+\]
+For $0<s<1$ the exact geometric remainder in
+$\int_0^s(1-r^2)^{-1}\dd r$ gives
+\begin{equation}\label{eq:low-log-four}
+ \log\frac{1+s}{1-s}>\ell(s):=2(s+s^3/3+s^5/5+s^7/7).
+\end{equation}
+Thus, with
+\[
+ I_A^{\rm up}=175/96+(9/16)\eta_A-(3/32)\eta_A^2
+                    -(3-\eta_A)\ell(39/121),
+\]
+equation~\eqref{eq:low-BV-quadrature} gives
+$eH_{\rm head}<I_A^{\rm up}+1/(2q^2)$.
+The same bound for $J_{\rm minus}$, with $3-12/q\ge17/7$, yields
+\[
+ e^2J_{\rm minus}<
+ J_A:=\frac{(22/21)^4}{12(17/7)^3}
+               +\frac{(22/21)^2}{12(17/7)21^2}
+       =\frac{2904605}{409493637},
+\]
+because $e^2q^4<1$.
+Combining these bounds with $f(h)\ge1/6$ in~\eqref{eq:low-Q3-source}
+gives
+\[
+ F_{\rm floor}(v)>
+ \frac16-\frac2{105}-I_A^{\rm up}-\frac1{882}-J_A
+ =\frac{28155382207511429143103}{124404112403316879470013600}
+ >\frac1{5000}.
+\]
+
+Next let $q\ge10$ and $h\ge1/4$.  Use $\eta_B=14/25$,
+$A=217/25$, $B=183/25$. When $S_i<0$ we have $t<A/B<2$.
+Retain the factor $D_h$ in the bound on $eq^2$ in~\eqref{eq:low-e-caps}. Equations
+\eqref{eq:low-Q3-head-envelope} and~\eqref{eq:low-Bernoulli-weight} give
+\[
+ eH_{\rm head}\le\frac{D_h}{q}\sum_{i\ge1}G_B(i/q),\qquad
+ G_B(t)=\left[\frac{t(A-Bt)(1+t/2)}{3(1+t)^3}\right]_+.
+\]
+Inside the support,
+\[\begin{aligned}
+ G_B'&=\frac{2A-(2A+4B)t-(A+B)t^2}{6(1+t)^4},\\
+ G_B''&=\frac{-10A-4B+(4A+10B)t+2(A+B)t^2}{6(1+t)^5}.
+\end{aligned}\]
+The second derivative changes sign once from negative to positive
+before $t=1$, so $G_B'$ again has one minimum and its last jump is
+to zero.  The inequality $G_B'>-1$ reduces to
+\[
+ 584/25-(566/25)t+20t^2+24t^3+6t^4>0;
+\]
+the quadratic part has discriminant $-847644/625<0$.
+Therefore $\operatorname{TV}(G_B')<217/75+2<5$.
+The exact integral is $I_B=(8/3)\log(400/183)-73563/40000$.
+For $s_B=217/583$ the remainder of the geometric series gives
+\[
+ \log(400/183)<2\{s_B+s_B^3/3+s_B^5/[5(1-s_B^2)]\}.
+\]
+Together with~\eqref{eq:low-BV-quadrature} and $q\ge10$, this proves
+\[
+ eH_{\rm head}<D_h C_B,\qquad
+ C_B=\frac{122243248244149}{483498900280000}>\frac1{12}.
+\]
+The bound for $J_{\rm minus}$ with $3-12/q\ge9/5$ gives
+\[
+ e^2J_{\rm minus}<D_h^2J_B,\qquad
+ J_B=\frac{(11/10)^4}{12(9/5)^3}
+       +\frac{(11/10)^2}{12(9/5)10^2}
+       =\frac{187913}{8748000}.
+\]
+Since $D_h\le1-2h$, equations~\eqref{eq:low-large-master} and
+\eqref{eq:low-Q3-source} imply
+\[
+ F_{\rm floor}(v)>f(h)-\frac1{25}-(1-2h)C_B-(1-2h)^2J_B.
+\]
+The right side has derivative
+$(1-4h)/6+2C_B+4(1-2h)J_B>-1/6+2C_B>0$ on $[1/4,1/2]$.
+At $h=1/4$ it equals
+\[
+ \frac{16616808991576441}{1057412094912360000}>\frac1{100}.
+\]
+This proves positivity for $q\ge10$ and $h\ge1/4$, using the same
+$e$ in the bounds for $eH_{\rm head}$ and $e^2J_{\rm minus}$.
+
+\subsubsection{\texorpdfstring{The coefficients $S_1,\ldots,S_{24}$ for $10\le q\le21$ and $h\le1/4$}{The first 24 coefficients S(i) for 10 <= q <= 21 and h <= 1/4}}
+Put $x=1/q\in[1/21,1/10]$. Since $25/21>217/183$,
+\eqref{eq:low-Q3-head-envelope} gives $S_i\ge0$ for $i\ge25$.
+It remains to bound $S_i$ for $1\le i\le24$.
+
+We first bound $g$ and $F_{\rm pipe}$. With
+$s,s_l,P_M$ as in~\eqref{eq:low-source-rationals}, let
+\[
+ t_g(\gamma)=\frac{2(1-\gamma x)}{x+(\lambda+1)(1-\gamma x)}.
+\]
+For $0<x\le1/10$, $0\le h\le1/4$, the finite inequalities
+needed are
+\begin{equation}\label{eq:low-Q3c-source-checks}
+ s_l(a_L)/\lambda>t_g(1/4),\qquad
+ t_g(1/8)>s(a_U)/\lambda,\qquad P_{69/500}(a_L)>0.
+\end{equation}
+They imply $1/8<g<1/4$ and $F_{\rm pipe}>69/500$ by monotonicity
+of $R$ in $T_p$ and the bound using $P_M$ preceding
+Lemma~\ref{lem:low-Q3-arithmetic}.
+
+We next define a polynomial for each of the remaining indices.
+To form $F_i(c,x,g)$ take $\lambda=1+c$, $d=1-c/x$ and
+$a_U=1+c/2-c^2/12+c^3/24$; substitute $c=hx$ at the end.  For each
+integer $0\le n\le25$ put
+\begin{equation}\label{eq:low-Q3c-Dn}
+ D_n(c,x)=1+x\sum_{j=1}^n\binom nj c^{j-1}.
+\end{equation}
+The empty sum is zero.  When $c=hx$ this is
+$(\lambda^n-d)/h=\beta_n^{-1}$, with its continuous value at
+$h=0$.  For $1\le i\le24$ let $n=i+1$, $p=\lambda^n$,
+$b_0=1/D_n$, and set
+\begin{align*}
+ m_0&=b_0,\qquad m_1=pb_0^2,\qquad m_2=p(p+d)b_0^3,\\
+ m_3&=p(p^2+4dp+d^2)b_0^4,\\
+ m_4&=p(p^3+11dp^2+11d^2p+d^3)b_0^5,\\
+ r&=D_i/D_{i+1},\qquad r_{\rm prev}=D_{i-1}/D_i,\\
+ L_i&=dx/(\lambda D_i),\qquad w_i=\lambda^{i-1}/D_i^2.
+\end{align*}
+For a free $a\ge1$, use the same $R=1/x-g$ and $\alpha_p$ as in
+\eqref{eq:low-large-price-rationals} and define
+\begin{align}
+ \operatorname{TL}_i(a)&=
+       \{am_0/x+m_1/2+x m_2/(12a)-x^3m_4/(720a^3)\}/\lambda,
+ \nonumber\\
+ \operatorname{PU}_i(a)&=\lambda^{-2}
+ \Bigl\{n(am_1+x m_2/2+x^2m_3/(12a))+a^2m_0/x\nonumber\\
+ &\hspace{30mm}-xm_2/12+x^3m_4/(240a^2)\Bigr\},
+ \nonumber\\
+ \operatorname{VU}_i(a)&=-(1+cR)\operatorname{TL}_i(a)
+              +\{1+(\lambda+1)R\}\operatorname{PU}_i(a)\nonumber\\
+ &\quad-2Rn\lambda^i/D_{i+1}^2-2R/(x\lambda D_{i+1}),
+ \nonumber\\
+ \operatorname{BB}_i(a)&=2i(\alpha_p+cR)/\lambda+2iRrL_i
+       +2nR\lambda r^2L_i\nonumber\\
+ &\quad+(a/\lambda)(2i-1)
+              \{1-(\alpha_p+\lambda R)r+(\lambda+1)R-R/r_{\rm prev}\},
+ \nonumber\\
+ K(t,x)&=\frac{(3-9x)t-7/3+3x}{1+t},\nonumber\\
+ F_i(c,x,g)&=\operatorname{BB}_i(a_U)
+                   -2\operatorname{VU}_i(a_U)/w_i-K(ix,x).
+ \label{eq:low-Q3c-head-rational}
+\end{align}
+Each $F_i$ is an explicit rational function. To clear its denominators, set
+\begin{equation}\label{eq:low-Q3c-head-denominator}
+ \mathcal D_i=720\lambda^{i+1}x^2a_U^3D_{i+1}^5
+                                (1+x)D_{i-1}(1+ix).
+\end{equation}
+For $\gamma\in\{1/8,1/4\}$ define the polynomial
+\begin{equation}\label{eq:low-Q3c-head-polynomial}
+ \mathcal P_{i,\gamma}(x,h)
+ =x^{-2}\left.\{\mathcal D_i F_i(c,x,\gamma)\}\right|_{c=hx}.
+\end{equation}
+For each $1\le i\le24$, the arithmetic lemma checks that the numerator
+formed using~\eqref{eq:low-Q3c-Dn} is divisible by $x^2$.
+
+\begin{lemma}[Rational inequalities for $0<x\le1/10$ and $0\le h\le1/4$]
+\label{lem:low-Q3c-arithmetic}
+The three inequalities~\eqref{eq:low-Q3c-source-checks} hold on
+$0<x\le1/10$, $0\le h\le1/4$.
+Each of the $48$ polynomials~\eqref{eq:low-Q3c-head-polynomial}
+has nonnegative tensor Bernstein coefficients on
+$[0,1/10]\times[0,1/4]$, and is strictly positive when $x>0$.
+Consequently $F_i(hx,x,g)>0$ for $1\le i\le24$,
+$0<x\le1/10$, $0\le h\le1/4$, and $1/8\le g\le1/4$.
+\end{lemma}
+
+To specify the three smaller checks by positive denominators, put
+$A=12a_L$, $A_u=24a_U$,
+$F_4=4x+(\lambda+1)(4-x)$ and
+$F_8=8x+(\lambda+1)(8-x)$.
+The cleared polynomials are
+\[
+ \frac{60\lambda A^3F_4}{x^2}\{s_l(a_L)/\lambda-t_g(1/4)\},\quad
+ \frac{24\lambda A_uF_8}{x^2}\{t_g(1/8)-s(a_U)/\lambda\},\quad
+ \frac{90000A^3}{x^2}P_{69/500}(a_L).
+\]
+Their degrees in $(x,h)$ are $(8,9)$, $(6,7)$, $(9,10)$; all
+$90$, $56$, and $110$ Bernstein coefficients are positive.  Their
+respective minima are $25920$, $672/5$, and $9325152/125$.
+For $\mathcal P_{i,\gamma}$, the degrees are $(27,20)$ at $i=1$ and
+$(7i+20,7i+12)$ at $2\le i\le24$.
+The coefficient operation is~\eqref{eq:low-Bernstein-transform};
+the $636112$ nonzero coefficients are positive. In each array the
+only zero coefficient is the one at index $(0,0)$, which proves
+strict positivity for $x>0$. Checking the
+identities~\eqref{eq:low-Q3c-head-rational}--\eqref{eq:low-Q3c-head-polynomial}
+and these finite arrays is the entire arithmetic obligation for this
+lemma.  Positivity of $D_n$, $a_U$, $\lambda$, $x$ and $1+ix$
+proves the sign of~\eqref{eq:low-Q3c-head-denominator}. The factor
+$x^2$ is positive for $x>0$. Affinity of $F_i$ in $g$
+then covers the whole interval between the two checked endpoints.
+
+We now use the polynomial inequalities to bound $S_i/w_i$. At
+$a=c/\log\lambda$, Lemma~\ref{lem:low-Lambert-tails} gives
+$V_i\le\operatorname{VU}_i(a)$ and
+$B_i/w_i=\operatorname{BB}_i(a)$.
+We must change this one common $a$ in both terms together.
+For $i\le24$, $c\le1/40$, and $n=i+1\le25$,
+\[
+ p=\lambda^n<e^{5/8}
+ \le1+5/8+\frac{(5/8)^2}{2(1-5/24)}=\frac{569}{304}<2.
+\]
+The exponential estimate includes the full tail, by the factorial
+bound used in~\eqref{eq:low-Q3-shape}.  Moreover
+$p-1<2nc$, so $b_0>1/(1+2n/q)\ge1/6$, while $b_0\le1$.
+The displayed moments then give $m_3/m_1\le13$ and
+$m_4/m_0\le150$.
+Differentiating only the explicit rational functions yields, for all
+$a\ge1$,
+\[
+ \operatorname{TL}_i'(a)<\frac{101m_0}{100x\lambda},\qquad
+ \operatorname{PU}_i'(a)>\frac{19m_0}{10x\lambda^2}.
+\]
+Indeed, the derivative of the first has numerator
+$m_0/x-xm_2/(12a^2)+x^3m_4/(240a^4)$; in the second its
+$n$ term is positive since $x^2m_3/(12a^2m_1)\le13/1200<1$.
+The remaining fourth-order ratios are at most $1/16000$ and
+$1/8000$, respectively.  As $R>q-1/4$, $cR\le1/4$ and
+$\lambda\le41/40$, it follows that
+\[
+ \operatorname{VU}_i'(a)>
+ \frac{m_0}{x\lambda^2}
+ \left\{\frac{19}{10}(2q+1/2)
+                 -\frac{101}{100}\frac{41}{40}\frac54\right\}
+ >3q^2m_0.
+\]
+For the last inequality, subtract $3q(41/40)^2$ from the bracket;
+the result is $(1037/1600)q-1101/3200\ge19639/3200>0$.
+We proved $\tau_i<1$ and $w_i<1$.  Hence
+\[
+ \frac{\dd}{\dd a}
+       \{\operatorname{BB}_i(a)-2\operatorname{VU}_i(a)/w_i\}
+ <47-6q^2b_0/w_i\le47-q^2<0.
+\]
+Now $a\le a_U$ and Lemma~\ref{lem:low-Q3c-arithmetic} imply
+\begin{equation}\label{eq:low-Q3c-actual-head}
+ \begin{split}
+ S_i/w_i&\ge\operatorname{BB}_i(a)-2\operatorname{VU}_i(a)/w_i\\
+ &\ge\operatorname{BB}_i(a_U)-2\operatorname{VU}_i(a_U)/w_i
+ >K(ix,x),\qquad1\le i\le24.
+ \end{split}
+\end{equation}
+This bounds $S_i/w_i$ at every index where $S_i$ can be negative.
+For $i\ge25$ we already have $S_i\ge0$ by~\eqref{eq:low-Q3-head-envelope}.
+
+To bound $H_{\rm head}$, we sharpen the estimate for $w_i$. Let
+$y=i\log\lambda$ and $\rho=(1-h/2)/a\le1$.  Directly,
+\[
+ w_i=\frac{h^2}{\lambda
+       \{h\cosh(y/2)+(2-h)\sinh(y/2)\}^2}
+ \le\frac1{\lambda(1+\rho i/q)^2}.
+\]
+Also
+\[
+ \lambda(1-h/2)^2-d(1+c/2)^2
+                  =\frac{h^2}{4}(\lambda-dx^2)>0.
+\]
+Since $a\le1+c/2$, this proves $\lambda\rho^2>d$ and
+$\lambda\rho>d$.  All coefficients of
+$\lambda(1+\rho t)^2-d(1+t)^2$ are therefore positive, so
+\begin{equation}\label{eq:low-Q3c-weight}
+ d w_i\le(1+i/q)^{-2}\qquad(i\ge1).
+\end{equation}
+Apply $e\le d/(q+1)^2$ to~\eqref{eq:low-Q3c-actual-head}.
+Since $S_i\ge0$ for $i\ge25$, this gives
+\[
+ eH_{\rm head}\le\frac{u^2}{q}\sum_{i\ge1}G_x(i/q),\qquad
+ G_x(t)=\left[\frac{t\{(7-9x)-(9-27x)t\}}{3(1+t)^3}\right]_+.
+\]
+For $0\le x\le1/10$ the support ends at
+$T=(7-9x)/(9-27x)<1$.  With $A=7-9x$, $B=9-27x$,
+\[
+ G_x'=\frac{A-2(A+B)t+Bt^2}{3(1+t)^4},\qquad
+ G_x''=\frac{-6A-2B+(6A+8B)t-2Bt^2}{3(1+t)^5}.
+\]
+The second derivative changes sign exactly once on the support.
+Furthermore $G_x'>-1/2$.  The required numerator is
+\[
+ 17-52t+36t^2+12t^3+3t^4+18x(-1+8t-3t^2).
+\]
+For $t\le1/4$, the quadratic part is at least $25/4$ and the
+last term at least $-9/5$.  For $1/4\le t\le1$, the last
+term is nonnegative; the same split at $1/3$ used for $G_A$
+proves positivity.  Including the jump at $T$ gives
+$\operatorname{TV}(G_x')\le7/3+1=10/3$.
+Thus~\eqref{eq:low-BV-quadrature} gives
+\[
+ q^{-1}\sum_{i\ge1}G_x(i/q)\le I(x)+1/240,\qquad
+ I(x)=\frac{A(A+2B)}{6(A+B)}-\frac B3\log\frac{A+B}{B}.
+\]
+For each fixed $t$, $G_x(t)$ is the positive part of an affine
+function of $x$, so its integral is convex on $[0,1/10]$.
+Its maximum is bounded by its two endpoint values.  Use
+\eqref{eq:low-log-four} at $s=7/25$ and $61/187$ to obtain
+\begin{align*}
+ I(0)&<175/96-3\ell(7/25)=\frac{56737364551}{585937500000},\\
+ I(1/10)&<11407/7440-(21/10)\ell(61/187)
+              =\frac{33081533096174793233}{297463843858303887600}.
+\end{align*}
+The second rational bound exceeds the first by
+\[
+ \frac{696221180224885514072002509}{48415339169645815039062500000}>0.
+\]
+Consequently
+\[
+ eH_{\rm head}<u^2C_H,\qquad
+ C_H=\frac{17160482889458863049}{148731921929151943800}.
+\]
+The same bound on $e$ and~\eqref{eq:low-Q3-square-cost} give
+$e^2J_{\rm minus}<d^2u^4J(q)\le u^4J(q)$.
+Together with $F_{\rm pipe}>69/500$, equation~\eqref{eq:low-large-master}
+therefore proves
+\[
+ F_{\rm floor}(v)>L(q):=69/500-u^2C_H-u^4J(q).
+\]
+For the last continuous comparison, ordinary differentiation yields
+\[
+ \frac{(q+1)^3}{q}L'(q)
+ =-2C_H+\frac{q(q+1)^3}{27(q-4)^4}
+              +\frac{q^2-2q+2}{18q(q-4)^2}.
+\]
+Both nonconstant terms decrease strictly for $q\ge10$.
+For the first, its logarithmic derivative is
+$1/q+3/(q+1)-4/(q-4)<0$; the derivative of the second is
+$(-q^3-6q+8)/[18q^2(q-4)^3]<0$.
+Thus $L'$ can change sign only from positive to negative, and
+$L$ has no interior minimum on $[10,21]$.  Its two endpoint
+margins are
+\[\begin{gathered}
+ L(10)-1/40=\frac{195098675960795601986623}{65597470507242819053271000}>0,
+ \\
+ L(21)-1/40=\frac{713805528405149594753}{359931251068547703996000}>0.
+\end{gathered}\]
+This proves $F_{\rm floor}(v)>1/40$ for $10\le q\le21$ and $h\le1/4$.
+
+\begin{proposition}[Negativity of $v'(\lambda)$ for $1<\lambda<\min(m,2/\sqrt3)$]\label{prop:entire-low-region}
+For every fixed offspring law satisfying the assumptions of Theorem~\ref{thm:computer},
+$v'(\lambda)<0$ for $1<\lambda<\min(m,2/\sqrt3)$.
+\end{proposition}
+\begin{proof}
+Lemma~\ref{lem:calibration} covers $\alpha=1$. When $0<\alpha<1$,
+we have $q>0$ and $0<h<1/2$. The six ranges
+\[\begin{gathered}
+ q\le1/15;\qquad1/15<q\le3;\qquad3<q\le10;\qquad q\ge21;\\
+ 10<q<21,\ h\ge1/4;\qquad10<q<21,\ 0<h<1/4
+\end{gathered}\]
+exhaust these parameters.  The preceding arguments give
+$F_{\rm floor}(v)>0$ in the last five, and directly $D_\lambda>0$
+in the first.  Lemma~\ref{lem:mellin-floor} gives
+$D_\lambda\ge F_*>F_{\rm floor}(v)$ in all remaining cases.
+Since $Z>0$, the derivative formula~\eqref{eq:full-sign} gives
+$v'(\lambda)<0$. The finite arithmetic inputs are
+exactly Lemmas~\ref{lem:low-Q0-arithmetic},
+\ref{lem:low-Q12-arithmetic}, \ref{lem:low-Q3-arithmetic}, and
+\ref{lem:low-Q3c-arithmetic}; their expressions, domains, positive
+denominators, and uses in the proof have all been specified above.
+\end{proof}

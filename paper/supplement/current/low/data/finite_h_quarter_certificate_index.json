@@ -1,0 +1,2246 @@
+[
+  {
+    "file": "finite_h_quarter_certificate_001_power.jsonl.gz",
+    "kind": "power",
+    "entries": 36,
+    "bytes": 448,
+    "sha256": "e5b81878ab933b2585e9bc5837d1aff86399dc69409998b6794cbc7eb8f74af0",
+    "metadata": {
+      "check": "Q3c source/gap or head",
+      "age": "i",
+      "g_endpoint": "",
+      "domain": [
+        [
+          "0",
+          "1/10"
+        ],
+        [
+          "0",
+          "1/4"
+        ]
+      ]
+    }
+  },
+  {
+    "file": "finite_h_quarter_certificate_002_bernstein.jsonl.gz",
+    "kind": "bernstein",
+    "entries": 90,
+    "bytes": 1306,
+    "sha256": "ada3e13dab415cc34d94997728c1cad568a790ddd305cbbb1870c325df5acddd",
+    "metadata": {
+      "check": "Q3c source/gap or head",
+      "age": "i",
+      "g_endpoint": "",
+      "domain": [
+        [
+          "0",
+          "1/10"
+        ],
+        [
+          "0",
+          "1/4"
+        ]
+      ]
+    }
+  },
+  {
+    "file": "finite_h_quarter_certificate_003_power.jsonl.gz",
+    "kind": "power",
+    "entries": 20,
+    "bytes": 348,
+    "sha256": "1f9e312975e77036cdfc2939bd73884ed7c105c8edbcbd67acac1a428bcd6a74",
+    "metadata": {
+      "check": "Q3c source/gap or head",
+      "age": "i",
+      "g_endpoint": "",
+      "domain": [
+        [
+          "0",
+          "1/10"
+        ],
+        [
+          "0",
+          "1/4"
+        ]
+      ]
+    }
+  },
+  {
+    "file": "finite_h_quarter_certificate_004_bernstein.jsonl.gz",
+    "kind": "bernstein",
+    "entries": 56,
+    "bytes": 788,
+    "sha256": "30d9a87d198faa8e7d2499851c020cb32ea2fbf64270710608726cfce74ec9da",
+    "metadata": {
+      "check": "Q3c source/gap or head",
+      "age": "i",
+      "g_endpoint": "",
+      "domain": [
+        [
+          "0",
+          "1/10"
+        ],
+        [
+          "0",
+          "1/4"
+        ]
+      ]
+    }
+  },
+  {
+    "file": "finite_h_quarter_certificate_005_power.jsonl.gz",
+    "kind": "power",
+    "entries": 40,
+    "bytes": 536,
+    "sha256": "521249925a26031251f0d938398f978599d8d2a711299eda7712d06a5bae943b",
+    "metadata": {
+      "check": "Q3c source/gap or head",
+      "age": "i",
+      "g_endpoint": "",
+      "domain": [
+        [
+          "0",
+          "1/10"
+        ],
+        [
+          "0",
+          "1/4"
+        ]
+      ]
+    }
+  },
+  {
+    "file": "finite_h_quarter_certificate_006_bernstein.jsonl.gz",
+    "kind": "bernstein",
+    "entries": 110,
+    "bytes": 1704,
+    "sha256": "764f934271ec02283a6637120ae7efe8655490f6663852a3a79ab3de30324172",
+    "metadata": {
+      "check": "Q3c source/gap or head",
+      "age": "i",
+      "g_endpoint": "",
+      "domain": [
+        [
+          "0",
+          "1/10"
+        ],
+        [
+          "0",
+          "1/4"
+        ]
+      ]
+    }
+  },
+  {
+    "file": "finite_h_quarter_certificate_007_power.jsonl.gz",
+    "kind": "power",
+    "entries": 213,
+    "bytes": 1922,
+    "sha256": "6ad1eaee3925c33cea0e1be4179ff7272be014306ea9a9f3df280273a473499d",
+    "metadata": {
+      "check": "Q3c source/gap or head",
+      "age": "1",
+      "g_endpoint": "1/8",
+      "domain": [
+        [
+          "0",
+          "1/10"
+        ],
+        [
+          "0",
+          "1/4"
+        ]
+      ]
+    }
+  },
+  {
+    "file": "finite_h_quarter_certificate_008_bernstein.jsonl.gz",
+    "kind": "bernstein",
+    "entries": 587,
+    "bytes": 15945,
+    "sha256": "e94983e4864db4ff84e42dc87d1edd0c3002d03d6d078f990760ea30bd4dde33",
+    "metadata": {
+      "check": "Q3c source/gap or head",
+      "age": "1",
+      "g_endpoint": "1/8",
+      "domain": [
+        [
+          "0",
+          "1/10"
+        ],
+        [
+          "0",
+          "1/4"
+        ]
+      ]
+    }
+  },
+  {
+    "file": "finite_h_quarter_certificate_009_power.jsonl.gz",
+    "kind": "power",
+    "entries": 212,
+    "bytes": 1871,
+    "sha256": "45905f9a4074b857be80254e7392518be86f14583b96f8d750ccb2b2273db93e",
+    "metadata": {
+      "check": "Q3c source/gap or head",
+      "age": "1",
+      "g_endpoint": "1/4",
+      "domain": [
+        [
+          "0",
+          "1/10"
+        ],
+        [
+          "0",
+          "1/4"
+        ]
+      ]
+    }
+  },
+  {
+    "file": "finite_h_quarter_certificate_010_bernstein.jsonl.gz",
+    "kind": "bernstein",
+    "entries": 587,
+    "bytes": 15864,
+    "sha256": "885d91d31bbc754003b193f7ed1c2e81aecf8628274f22eaa7d6383ad7a6b176",
+    "metadata": {
+      "check": "Q3c source/gap or head",
+      "age": "1",
+      "g_endpoint": "1/4",
+      "domain": [
+        [
+          "0",
+          "1/10"
+        ],
+        [
+          "0",
+          "1/4"
+        ]
+      ]
+    }
+  },
+  {
+    "file": "finite_h_quarter_certificate_011_power.jsonl.gz",
+    "kind": "power",
+    "entries": 287,
+    "bytes": 2863,
+    "sha256": "58745d3c5b7a45edd9348760a054e9a002d17393ce033b451a50e6afcf706702",
+    "metadata": {
+      "check": "Q3c source/gap or head",
+      "age": "2",
+      "g_endpoint": "1/8",
+      "domain": [
+        [
+          "0",
+          "1/10"
+        ],
+        [
+          "0",
+          "1/4"
+        ]
+      ]
+    }
+  },
+  {
+    "file": "finite_h_quarter_certificate_012_bernstein.jsonl.gz",
+    "kind": "bernstein",
+    "entries": 944,
+    "bytes": 30806,
+    "sha256": "0c269f072fc2fc01bebb2b9faf8ddd30c0f2f1b6c18d5f0db5f7121503d51d87",
+    "metadata": {
+      "check": "Q3c source/gap or head",
+      "age": "2",
+      "g_endpoint": "1/8",
+      "domain": [
+        [
+          "0",
+          "1/10"
+        ],
+        [
+          "0",
+          "1/4"
+        ]
+      ]
+    }
+  },
+  {
+    "file": "finite_h_quarter_certificate_013_power.jsonl.gz",
+    "kind": "power",
+    "entries": 287,
+    "bytes": 2798,
+    "sha256": "2f298a55824fd080d43f82c69be641a7b1e3bc2432a0bb7a264152797342fa23",
+    "metadata": {
+      "check": "Q3c source/gap or head",
+      "age": "2",
+      "g_endpoint": "1/4",
+      "domain": [
+        [
+          "0",
+          "1/10"
+        ],
+        [
+          "0",
+          "1/4"
+        ]
+      ]
+    }
+  },
+  {
+    "file": "finite_h_quarter_certificate_014_bernstein.jsonl.gz",
+    "kind": "bernstein",
+    "entries": 944,
+    "bytes": 30407,
+    "sha256": "dae4e27f5aacd8ba0ce252b994c9e922799267748cbcf506b9ab84c30c4b458a",
+    "metadata": {
+      "check": "Q3c source/gap or head",
+      "age": "2",
+      "g_endpoint": "1/4",
+      "domain": [
+        [
+          "0",
+          "1/10"
+        ],
+        [
+          "0",
+          "1/4"
+        ]
+      ]
+    }
+  },
+  {
+    "file": "finite_h_quarter_certificate_015_power.jsonl.gz",
+    "kind": "power",
+    "entries": 343,
+    "bytes": 3730,
+    "sha256": "aa734e613fd6589852f9213e30146fcf90ed775a06d9fb654a1098b22bde2991",
+    "metadata": {
+      "check": "Q3c source/gap or head",
+      "age": "3",
+      "g_endpoint": "1/8",
+      "domain": [
+        [
+          "0",
+          "1/10"
+        ],
+        [
+          "0",
+          "1/4"
+        ]
+      ]
+    }
+  },
+  {
+    "file": "finite_h_quarter_certificate_016_bernstein.jsonl.gz",
+    "kind": "bernstein",
+    "entries": 1427,
+    "bytes": 53879,
+    "sha256": "a0d5ce39f64a964ebaf251a4cb396be969f6cf5ad435f4dfac54e7f90c74be03",
+    "metadata": {
+      "check": "Q3c source/gap or head",
+      "age": "3",
+      "g_endpoint": "1/8",
+      "domain": [
+        [
+          "0",
+          "1/10"
+        ],
+        [
+          "0",
+          "1/4"
+        ]
+      ]
+    }
+  },
+  {
+    "file": "finite_h_quarter_certificate_017_power.jsonl.gz",
+    "kind": "power",
+    "entries": 343,
+    "bytes": 3656,
+    "sha256": "df41cea30a0907c8f43addbc0b4740d08b74b2c9e9b02be77f4b04279bf6e2bd",
+    "metadata": {
+      "check": "Q3c source/gap or head",
+      "age": "3",
+      "g_endpoint": "1/4",
+      "domain": [
+        [
+          "0",
+          "1/10"
+        ],
+        [
+          "0",
+          "1/4"
+        ]
+      ]
+    }
+  },
+  {
+    "file": "finite_h_quarter_certificate_018_bernstein.jsonl.gz",
+    "kind": "bernstein",
+    "entries": 1427,
+    "bytes": 53588,
+    "sha256": "75b213e9a6d9f0508e39d666a9b97d0eb74ff05ebc3a732bac8ae6f92dd5613e",
+    "metadata": {
+      "check": "Q3c source/gap or head",
+      "age": "3",
+      "g_endpoint": "1/4",
+      "domain": [
+        [
+          "0",
+          "1/10"
+        ],
+        [
+          "0",
+          "1/4"
+        ]
+      ]
+    }
+  },
+  {
+    "file": "finite_h_quarter_certificate_019_power.jsonl.gz",
+    "kind": "power",
+    "entries": 399,
+    "bytes": 4744,
+    "sha256": "d235cdf29685a5b276c5db98947b8ded311960f4aae120ee256842451e6ed7c7",
+    "metadata": {
+      "check": "Q3c source/gap or head",
+      "age": "4",
+      "g_endpoint": "1/8",
+      "domain": [
+        [
+          "0",
+          "1/10"
+        ],
+        [
+          "0",
+          "1/4"
+        ]
+      ]
+    }
+  },
+  {
+    "file": "finite_h_quarter_certificate_020_bernstein.jsonl.gz",
+    "kind": "bernstein",
+    "entries": 2008,
+    "bytes": 86376,
+    "sha256": "38d7db8119e810b44e204bb5693d00180d0d40b2b1724b0ecdb93deec0cc4b83",
+    "metadata": {
+      "check": "Q3c source/gap or head",
+      "age": "4",
+      "g_endpoint": "1/8",
+      "domain": [
+        [
+          "0",
+          "1/10"
+        ],
+        [
+          "0",
+          "1/4"
+        ]
+      ]
+    }
+  },
+  {
+    "file": "finite_h_quarter_certificate_021_power.jsonl.gz",
+    "kind": "power",
+    "entries": 399,
+    "bytes": 4678,
+    "sha256": "783718db221dc493649184fd186d51ac82921b4a3842f961097619666a89a8db",
+    "metadata": {
+      "check": "Q3c source/gap or head",
+      "age": "4",
+      "g_endpoint": "1/4",
+      "domain": [
+        [
+          "0",
+          "1/10"
+        ],
+        [
+          "0",
+          "1/4"
+        ]
+      ]
+    }
+  },
+  {
+    "file": "finite_h_quarter_certificate_022_bernstein.jsonl.gz",
+    "kind": "bernstein",
+    "entries": 2008,
+    "bytes": 85963,
+    "sha256": "ad3e3b8f785e9f689cff6d12a07672661423f5c3d93373e8022b7d5cb9754d49",
+    "metadata": {
+      "check": "Q3c source/gap or head",
+      "age": "4",
+      "g_endpoint": "1/4",
+      "domain": [
+        [
+          "0",
+          "1/10"
+        ],
+        [
+          "0",
+          "1/4"
+        ]
+      ]
+    }
+  },
+  {
+    "file": "finite_h_quarter_certificate_023_power.jsonl.gz",
+    "kind": "power",
+    "entries": 455,
+    "bytes": 5748,
+    "sha256": "2110f071583e6b6b757670677ecb28347ae567c1a4bb38652fe5e84a8bafe5a3",
+    "metadata": {
+      "check": "Q3c source/gap or head",
+      "age": "5",
+      "g_endpoint": "1/8",
+      "domain": [
+        [
+          "0",
+          "1/10"
+        ],
+        [
+          "0",
+          "1/4"
+        ]
+      ]
+    }
+  },
+  {
+    "file": "finite_h_quarter_certificate_024_bernstein.jsonl.gz",
+    "kind": "bernstein",
+    "entries": 2687,
+    "bytes": 128243,
+    "sha256": "eb484b13bb090758fa3679eea066f942ebb7726aebd0cb3d73a2765a145b6fe5",
+    "metadata": {
+      "check": "Q3c source/gap or head",
+      "age": "5",
+      "g_endpoint": "1/8",
+      "domain": [
+        [
+          "0",
+          "1/10"
+        ],
+        [
+          "0",
+          "1/4"
+        ]
+      ]
+    }
+  },
+  {
+    "file": "finite_h_quarter_certificate_025_power.jsonl.gz",
+    "kind": "power",
+    "entries": 455,
+    "bytes": 5681,
+    "sha256": "f4cbba708317c5e6ad097e3b0e035365fae207ec12d4e3b23a1575ca1a48edc4",
+    "metadata": {
+      "check": "Q3c source/gap or head",
+      "age": "5",
+      "g_endpoint": "1/4",
+      "domain": [
+        [
+          "0",
+          "1/10"
+        ],
+        [
+          "0",
+          "1/4"
+        ]
+      ]
+    }
+  },
+  {
+    "file": "finite_h_quarter_certificate_026_bernstein.jsonl.gz",
+    "kind": "bernstein",
+    "entries": 2687,
+    "bytes": 127773,
+    "sha256": "79031512889cf291f9d448b25c315514c8e41b614a709e9a6377c522d6462e80",
+    "metadata": {
+      "check": "Q3c source/gap or head",
+      "age": "5",
+      "g_endpoint": "1/4",
+      "domain": [
+        [
+          "0",
+          "1/10"
+        ],
+        [
+          "0",
+          "1/4"
+        ]
+      ]
+    }
+  },
+  {
+    "file": "finite_h_quarter_certificate_027_power.jsonl.gz",
+    "kind": "power",
+    "entries": 511,
+    "bytes": 6946,
+    "sha256": "6225d46f6a145db02fb2f9de9e3052b3571710d1985a452bb6a11bfb342191a8",
+    "metadata": {
+      "check": "Q3c source/gap or head",
+      "age": "6",
+      "g_endpoint": "1/8",
+      "domain": [
+        [
+          "0",
+          "1/10"
+        ],
+        [
+          "0",
+          "1/4"
+        ]
+      ]
+    }
+  },
+  {
+    "file": "finite_h_quarter_certificate_028_bernstein.jsonl.gz",
+    "kind": "bernstein",
+    "entries": 3464,
+    "bytes": 183880,
+    "sha256": "f625126e1a91fb3085cd4e7ffc2c370c4aa562af77715eeab7d298f9acc769c0",
+    "metadata": {
+      "check": "Q3c source/gap or head",
+      "age": "6",
+      "g_endpoint": "1/8",
+      "domain": [
+        [
+          "0",
+          "1/10"
+        ],
+        [
+          "0",
+          "1/4"
+        ]
+      ]
+    }
+  },
+  {
+    "file": "finite_h_quarter_certificate_029_power.jsonl.gz",
+    "kind": "power",
+    "entries": 511,
+    "bytes": 6821,
+    "sha256": "3c9df9de7f645966f6f81dbf9ebe7dd2dfcbc281ddb2eade25526ec41e948c8f",
+    "metadata": {
+      "check": "Q3c source/gap or head",
+      "age": "6",
+      "g_endpoint": "1/4",
+      "domain": [
+        [
+          "0",
+          "1/10"
+        ],
+        [
+          "0",
+          "1/4"
+        ]
+      ]
+    }
+  },
+  {
+    "file": "finite_h_quarter_certificate_030_bernstein.jsonl.gz",
+    "kind": "bernstein",
+    "entries": 3464,
+    "bytes": 183187,
+    "sha256": "66b263c2656b7ac0292016183e2b14ae0e4fcc5e3d5d58a4c774e5e26f2301a2",
+    "metadata": {
+      "check": "Q3c source/gap or head",
+      "age": "6",
+      "g_endpoint": "1/4",
+      "domain": [
+        [
+          "0",
+          "1/10"
+        ],
+        [
+          "0",
+          "1/4"
+        ]
+      ]
+    }
+  },
+  {
+    "file": "finite_h_quarter_certificate_031_power.jsonl.gz",
+    "kind": "power",
+    "entries": 567,
+    "bytes": 8077,
+    "sha256": "7fe23bbff89152017ae57725824647c727e1985dd468173a9695a9e10224e430",
+    "metadata": {
+      "check": "Q3c source/gap or head",
+      "age": "7",
+      "g_endpoint": "1/8",
+      "domain": [
+        [
+          "0",
+          "1/10"
+        ],
+        [
+          "0",
+          "1/4"
+        ]
+      ]
+    }
+  },
+  {
+    "file": "finite_h_quarter_certificate_032_bernstein.jsonl.gz",
+    "kind": "bernstein",
+    "entries": 4339,
+    "bytes": 252829,
+    "sha256": "d23dfd58481b905565a0e4263f3ba857f6df86129b888f173931d1cba02d7399",
+    "metadata": {
+      "check": "Q3c source/gap or head",
+      "age": "7",
+      "g_endpoint": "1/8",
+      "domain": [
+        [
+          "0",
+          "1/10"
+        ],
+        [
+          "0",
+          "1/4"
+        ]
+      ]
+    }
+  },
+  {
+    "file": "finite_h_quarter_certificate_033_power.jsonl.gz",
+    "kind": "power",
+    "entries": 567,
+    "bytes": 7994,
+    "sha256": "c072aa8803afa8f7ab401b7d8a3439e61e3110a32d1a79bb428bc1e405ac83bb",
+    "metadata": {
+      "check": "Q3c source/gap or head",
+      "age": "7",
+      "g_endpoint": "1/4",
+      "domain": [
+        [
+          "0",
+          "1/10"
+        ],
+        [
+          "0",
+          "1/4"
+        ]
+      ]
+    }
+  },
+  {
+    "file": "finite_h_quarter_certificate_034_bernstein.jsonl.gz",
+    "kind": "bernstein",
+    "entries": 4339,
+    "bytes": 251579,
+    "sha256": "c5c225b8fed05e42acdb954d8bbe494fc817cb4180c8f253a17a9980a833924f",
+    "metadata": {
+      "check": "Q3c source/gap or head",
+      "age": "7",
+      "g_endpoint": "1/4",
+      "domain": [
+        [
+          "0",
+          "1/10"
+        ],
+        [
+          "0",
+          "1/4"
+        ]
+      ]
+    }
+  },
+  {
+    "file": "finite_h_quarter_certificate_035_power.jsonl.gz",
+    "kind": "power",
+    "entries": 623,
+    "bytes": 9362,
+    "sha256": "bf543fa37015e1bca6cf3dc5e01cc2649439738b249686aab1ab09b8d32e704b",
+    "metadata": {
+      "check": "Q3c source/gap or head",
+      "age": "8",
+      "g_endpoint": "1/8",
+      "domain": [
+        [
+          "0",
+          "1/10"
+        ],
+        [
+          "0",
+          "1/4"
+        ]
+      ]
+    }
+  },
+  {
+    "file": "finite_h_quarter_certificate_036_bernstein.jsonl.gz",
+    "kind": "bernstein",
+    "entries": 5312,
+    "bytes": 335443,
+    "sha256": "168e32d37a6b07710d38cf309a62eb78596a038fd97308bc233dfad6bb01e763",
+    "metadata": {
+      "check": "Q3c source/gap or head",
+      "age": "8",
+      "g_endpoint": "1/8",
+      "domain": [
+        [
+          "0",
+          "1/10"
+        ],
+        [
+          "0",
+          "1/4"
+        ]
+      ]
+    }
+  },
+  {
+    "file": "finite_h_quarter_certificate_037_power.jsonl.gz",
+    "kind": "power",
+    "entries": 623,
+    "bytes": 9279,
+    "sha256": "5215e2d22c47b7c4b107a47bd1989ae459c26bbde7966f13067c592e3d351959",
+    "metadata": {
+      "check": "Q3c source/gap or head",
+      "age": "8",
+      "g_endpoint": "1/4",
+      "domain": [
+        [
+          "0",
+          "1/10"
+        ],
+        [
+          "0",
+          "1/4"
+        ]
+      ]
+    }
+  },
+  {
+    "file": "finite_h_quarter_certificate_038_bernstein.jsonl.gz",
+    "kind": "bernstein",
+    "entries": 5312,
+    "bytes": 334256,
+    "sha256": "d921c77ac7b2c81133a39cc8e35b877a42373357f8268cdee88c9b7c04bc70ae",
+    "metadata": {
+      "check": "Q3c source/gap or head",
+      "age": "8",
+      "g_endpoint": "1/4",
+      "domain": [
+        [
+          "0",
+          "1/10"
+        ],
+        [
+          "0",
+          "1/4"
+        ]
+      ]
+    }
+  },
+  {
+    "file": "finite_h_quarter_certificate_039_power.jsonl.gz",
+    "kind": "power",
+    "entries": 679,
+    "bytes": 10667,
+    "sha256": "7fbb21729f9619bf4fd999150b81e5b97e93d618e540633b450f842b14a17f82",
+    "metadata": {
+      "check": "Q3c source/gap or head",
+      "age": "9",
+      "g_endpoint": "1/8",
+      "domain": [
+        [
+          "0",
+          "1/10"
+        ],
+        [
+          "0",
+          "1/4"
+        ]
+      ]
+    }
+  },
+  {
+    "file": "finite_h_quarter_certificate_040_bernstein.jsonl.gz",
+    "kind": "bernstein",
+    "entries": 6383,
+    "bytes": 433055,
+    "sha256": "e9bfcfb3c1b763a9cd15dc6041f88c1d3bd53239a708b2c649975d140b6e8d05",
+    "metadata": {
+      "check": "Q3c source/gap or head",
+      "age": "9",
+      "g_endpoint": "1/8",
+      "domain": [
+        [
+          "0",
+          "1/10"
+        ],
+        [
+          "0",
+          "1/4"
+        ]
+      ]
+    }
+  },
+  {
+    "file": "finite_h_quarter_certificate_041_power.jsonl.gz",
+    "kind": "power",
+    "entries": 679,
+    "bytes": 10549,
+    "sha256": "2b69145d3032f339d3036524648f0a603083366989186affc9873f640d3ac11a",
+    "metadata": {
+      "check": "Q3c source/gap or head",
+      "age": "9",
+      "g_endpoint": "1/4",
+      "domain": [
+        [
+          "0",
+          "1/10"
+        ],
+        [
+          "0",
+          "1/4"
+        ]
+      ]
+    }
+  },
+  {
+    "file": "finite_h_quarter_certificate_042_bernstein.jsonl.gz",
+    "kind": "bernstein",
+    "entries": 6383,
+    "bytes": 431611,
+    "sha256": "9e6447215ee2d8867d98e8607be88acd7eaddcf4c80ef8cf827a32c1a3208494",
+    "metadata": {
+      "check": "Q3c source/gap or head",
+      "age": "9",
+      "g_endpoint": "1/4",
+      "domain": [
+        [
+          "0",
+          "1/10"
+        ],
+        [
+          "0",
+          "1/4"
+        ]
+      ]
+    }
+  },
+  {
+    "file": "finite_h_quarter_certificate_043_power.jsonl.gz",
+    "kind": "power",
+    "entries": 735,
+    "bytes": 12136,
+    "sha256": "34112c509077de9baf436a513e66f9709d949d1dbeae6ab628baae985f12fc2d",
+    "metadata": {
+      "check": "Q3c source/gap or head",
+      "age": "10",
+      "g_endpoint": "1/8",
+      "domain": [
+        [
+          "0",
+          "1/10"
+        ],
+        [
+          "0",
+          "1/4"
+        ]
+      ]
+    }
+  },
+  {
+    "file": "finite_h_quarter_certificate_044_bernstein.jsonl.gz",
+    "kind": "bernstein",
+    "entries": 7552,
+    "bytes": 554499,
+    "sha256": "66fa3d86c21fb9652f849d61941de9bdc05f983776bb8d122b2515942eeff10e",
+    "metadata": {
+      "check": "Q3c source/gap or head",
+      "age": "10",
+      "g_endpoint": "1/8",
+      "domain": [
+        [
+          "0",
+          "1/10"
+        ],
+        [
+          "0",
+          "1/4"
+        ]
+      ]
+    }
+  },
+  {
+    "file": "finite_h_quarter_certificate_045_power.jsonl.gz",
+    "kind": "power",
+    "entries": 735,
+    "bytes": 12057,
+    "sha256": "3bdda143668ec6ed49599257814fd0605b0a0d1295bb0ff989c036f019d6ef04",
+    "metadata": {
+      "check": "Q3c source/gap or head",
+      "age": "10",
+      "g_endpoint": "1/4",
+      "domain": [
+        [
+          "0",
+          "1/10"
+        ],
+        [
+          "0",
+          "1/4"
+        ]
+      ]
+    }
+  },
+  {
+    "file": "finite_h_quarter_certificate_046_bernstein.jsonl.gz",
+    "kind": "bernstein",
+    "entries": 7552,
+    "bytes": 553258,
+    "sha256": "69de468000f9676331f3fa903a6e2ff6ee345dfa3879321c0adfd6ee1a528a4a",
+    "metadata": {
+      "check": "Q3c source/gap or head",
+      "age": "10",
+      "g_endpoint": "1/4",
+      "domain": [
+        [
+          "0",
+          "1/10"
+        ],
+        [
+          "0",
+          "1/4"
+        ]
+      ]
+    }
+  },
+  {
+    "file": "finite_h_quarter_certificate_047_power.jsonl.gz",
+    "kind": "power",
+    "entries": 791,
+    "bytes": 13630,
+    "sha256": "922d8e2c17bc98fc45de46e2945b14987f3008610dd4eea10304e4909d45d4cd",
+    "metadata": {
+      "check": "Q3c source/gap or head",
+      "age": "11",
+      "g_endpoint": "1/8",
+      "domain": [
+        [
+          "0",
+          "1/10"
+        ],
+        [
+          "0",
+          "1/4"
+        ]
+      ]
+    }
+  },
+  {
+    "file": "finite_h_quarter_certificate_048_bernstein.jsonl.gz",
+    "kind": "bernstein",
+    "entries": 8819,
+    "bytes": 693856,
+    "sha256": "00b058c0a82f3613772b0c19e27ad8dce0f127f9fa249c42f8f3839563152716",
+    "metadata": {
+      "check": "Q3c source/gap or head",
+      "age": "11",
+      "g_endpoint": "1/8",
+      "domain": [
+        [
+          "0",
+          "1/10"
+        ],
+        [
+          "0",
+          "1/4"
+        ]
+      ]
+    }
+  },
+  {
+    "file": "finite_h_quarter_certificate_049_power.jsonl.gz",
+    "kind": "power",
+    "entries": 791,
+    "bytes": 13455,
+    "sha256": "ebb9863b507292e873db18e9c349a08a5b13ab4c28e02b1f467b9d24257386eb",
+    "metadata": {
+      "check": "Q3c source/gap or head",
+      "age": "11",
+      "g_endpoint": "1/4",
+      "domain": [
+        [
+          "0",
+          "1/10"
+        ],
+        [
+          "0",
+          "1/4"
+        ]
+      ]
+    }
+  },
+  {
+    "file": "finite_h_quarter_certificate_050_bernstein.jsonl.gz",
+    "kind": "bernstein",
+    "entries": 8819,
+    "bytes": 692543,
+    "sha256": "74f43a7331eacc4c16d88b0867387bed124bdf5be2604c8ff841b8ccec196dc2",
+    "metadata": {
+      "check": "Q3c source/gap or head",
+      "age": "11",
+      "g_endpoint": "1/4",
+      "domain": [
+        [
+          "0",
+          "1/10"
+        ],
+        [
+          "0",
+          "1/4"
+        ]
+      ]
+    }
+  },
+  {
+    "file": "finite_h_quarter_certificate_051_power.jsonl.gz",
+    "kind": "power",
+    "entries": 847,
+    "bytes": 15200,
+    "sha256": "f11ad734c6bea86e274c826fab18f11093efb807290d01fcc87cd4d125d05a76",
+    "metadata": {
+      "check": "Q3c source/gap or head",
+      "age": "12",
+      "g_endpoint": "1/8",
+      "domain": [
+        [
+          "0",
+          "1/10"
+        ],
+        [
+          "0",
+          "1/4"
+        ]
+      ]
+    }
+  },
+  {
+    "file": "finite_h_quarter_certificate_052_bernstein.jsonl.gz",
+    "kind": "bernstein",
+    "entries": 10184,
+    "bytes": 853548,
+    "sha256": "043bdfa1d0fbd69f92a68b223be8e6b8cb0e46f918fb027d38cfce000da197ba",
+    "metadata": {
+      "check": "Q3c source/gap or head",
+      "age": "12",
+      "g_endpoint": "1/8",
+      "domain": [
+        [
+          "0",
+          "1/10"
+        ],
+        [
+          "0",
+          "1/4"
+        ]
+      ]
+    }
+  },
+  {
+    "file": "finite_h_quarter_certificate_053_power.jsonl.gz",
+    "kind": "power",
+    "entries": 847,
+    "bytes": 15102,
+    "sha256": "b3d59ff2367ded080a9d397d0de29dd7053238d5ec1ae310b7aedf7c10e93534",
+    "metadata": {
+      "check": "Q3c source/gap or head",
+      "age": "12",
+      "g_endpoint": "1/4",
+      "domain": [
+        [
+          "0",
+          "1/10"
+        ],
+        [
+          "0",
+          "1/4"
+        ]
+      ]
+    }
+  },
+  {
+    "file": "finite_h_quarter_certificate_054_bernstein.jsonl.gz",
+    "kind": "bernstein",
+    "entries": 10184,
+    "bytes": 850391,
+    "sha256": "75f7194a38779405ce69a540fad270c0489dceefe47586468471baa1639e1360",
+    "metadata": {
+      "check": "Q3c source/gap or head",
+      "age": "12",
+      "g_endpoint": "1/4",
+      "domain": [
+        [
+          "0",
+          "1/10"
+        ],
+        [
+          "0",
+          "1/4"
+        ]
+      ]
+    }
+  },
+  {
+    "file": "finite_h_quarter_certificate_055_power.jsonl.gz",
+    "kind": "power",
+    "entries": 903,
+    "bytes": 16882,
+    "sha256": "069522c95acee3e9e88083862c526969545a5115da1d2cd468812126de80b2ef",
+    "metadata": {
+      "check": "Q3c source/gap or head",
+      "age": "13",
+      "g_endpoint": "1/8",
+      "domain": [
+        [
+          "0",
+          "1/10"
+        ],
+        [
+          "0",
+          "1/4"
+        ]
+      ]
+    }
+  },
+  {
+    "file": "finite_h_quarter_certificate_056_bernstein.jsonl.gz",
+    "kind": "bernstein",
+    "entries": 11647,
+    "bytes": 1031674,
+    "sha256": "d21a9cde4511d87a52d856a4541a0214cb1106e0fd01bc6384d84cb87f97dbba",
+    "metadata": {
+      "check": "Q3c source/gap or head",
+      "age": "13",
+      "g_endpoint": "1/8",
+      "domain": [
+        [
+          "0",
+          "1/10"
+        ],
+        [
+          "0",
+          "1/4"
+        ]
+      ]
+    }
+  },
+  {
+    "file": "finite_h_quarter_certificate_057_power.jsonl.gz",
+    "kind": "power",
+    "entries": 903,
+    "bytes": 16733,
+    "sha256": "a2d78b1a5821d145267d2299898bd635e214effc64e327ce3badf7e538d7f44a",
+    "metadata": {
+      "check": "Q3c source/gap or head",
+      "age": "13",
+      "g_endpoint": "1/4",
+      "domain": [
+        [
+          "0",
+          "1/10"
+        ],
+        [
+          "0",
+          "1/4"
+        ]
+      ]
+    }
+  },
+  {
+    "file": "finite_h_quarter_certificate_058_bernstein.jsonl.gz",
+    "kind": "bernstein",
+    "entries": 11647,
+    "bytes": 1028776,
+    "sha256": "718bb5fe03ac3fe639679ac08233c42bddad68046acf1933675d1301f4d907ca",
+    "metadata": {
+      "check": "Q3c source/gap or head",
+      "age": "13",
+      "g_endpoint": "1/4",
+      "domain": [
+        [
+          "0",
+          "1/10"
+        ],
+        [
+          "0",
+          "1/4"
+        ]
+      ]
+    }
+  },
+  {
+    "file": "finite_h_quarter_certificate_059_power.jsonl.gz",
+    "kind": "power",
+    "entries": 959,
+    "bytes": 18598,
+    "sha256": "5daba1e50ac6765cd479c199bfda76f31bc46dda69c801f1ec044b2b276d86b1",
+    "metadata": {
+      "check": "Q3c source/gap or head",
+      "age": "14",
+      "g_endpoint": "1/8",
+      "domain": [
+        [
+          "0",
+          "1/10"
+        ],
+        [
+          "0",
+          "1/4"
+        ]
+      ]
+    }
+  },
+  {
+    "file": "finite_h_quarter_certificate_060_bernstein.jsonl.gz",
+    "kind": "bernstein",
+    "entries": 13208,
+    "bytes": 1240062,
+    "sha256": "b3f13408190c65a49e44ae690de6318466f619f19683d555cd450316da42a84d",
+    "metadata": {
+      "check": "Q3c source/gap or head",
+      "age": "14",
+      "g_endpoint": "1/8",
+      "domain": [
+        [
+          "0",
+          "1/10"
+        ],
+        [
+          "0",
+          "1/4"
+        ]
+      ]
+    }
+  },
+  {
+    "file": "finite_h_quarter_certificate_061_power.jsonl.gz",
+    "kind": "power",
+    "entries": 959,
+    "bytes": 18359,
+    "sha256": "2ba70fd8a7463e51d84bd729757fcf51b128ebf9fc743add74199107b7b3c526",
+    "metadata": {
+      "check": "Q3c source/gap or head",
+      "age": "14",
+      "g_endpoint": "1/4",
+      "domain": [
+        [
+          "0",
+          "1/10"
+        ],
+        [
+          "0",
+          "1/4"
+        ]
+      ]
+    }
+  },
+  {
+    "file": "finite_h_quarter_certificate_062_bernstein.jsonl.gz",
+    "kind": "bernstein",
+    "entries": 13208,
+    "bytes": 1236525,
+    "sha256": "2bb07188a8c7b62a2102f0b67449c0a29b493398cd1f439e8d22ceb093047aa3",
+    "metadata": {
+      "check": "Q3c source/gap or head",
+      "age": "14",
+      "g_endpoint": "1/4",
+      "domain": [
+        [
+          "0",
+          "1/10"
+        ],
+        [
+          "0",
+          "1/4"
+        ]
+      ]
+    }
+  },
+  {
+    "file": "finite_h_quarter_certificate_063_power.jsonl.gz",
+    "kind": "power",
+    "entries": 1015,
+    "bytes": 20203,
+    "sha256": "087eaf9c5be47a6840126bc86aef2b5804c20ed58dce82afd7fceb6eaca07fde",
+    "metadata": {
+      "check": "Q3c source/gap or head",
+      "age": "15",
+      "g_endpoint": "1/8",
+      "domain": [
+        [
+          "0",
+          "1/10"
+        ],
+        [
+          "0",
+          "1/4"
+        ]
+      ]
+    }
+  },
+  {
+    "file": "finite_h_quarter_certificate_064_bernstein.jsonl.gz",
+    "kind": "bernstein",
+    "entries": 14867,
+    "bytes": 1457203,
+    "sha256": "7ff5372b3dd0a214cceca30ea1e391bc788fda2cdd7b19cff4bb591da7a0bf38",
+    "metadata": {
+      "check": "Q3c source/gap or head",
+      "age": "15",
+      "g_endpoint": "1/8",
+      "domain": [
+        [
+          "0",
+          "1/10"
+        ],
+        [
+          "0",
+          "1/4"
+        ]
+      ]
+    }
+  },
+  {
+    "file": "finite_h_quarter_certificate_065_power.jsonl.gz",
+    "kind": "power",
+    "entries": 1015,
+    "bytes": 19954,
+    "sha256": "c4ba5b2702838b4e02e961cf4aafb75a6a99f84fbb424d5b4227180b3698ac61",
+    "metadata": {
+      "check": "Q3c source/gap or head",
+      "age": "15",
+      "g_endpoint": "1/4",
+      "domain": [
+        [
+          "0",
+          "1/10"
+        ],
+        [
+          "0",
+          "1/4"
+        ]
+      ]
+    }
+  },
+  {
+    "file": "finite_h_quarter_certificate_066_bernstein.jsonl.gz",
+    "kind": "bernstein",
+    "entries": 14867,
+    "bytes": 1454084,
+    "sha256": "d9d49ffbee6ed6c8ec6fbe8e42c191a42b54d11b895d3230446850aaf102df98",
+    "metadata": {
+      "check": "Q3c source/gap or head",
+      "age": "15",
+      "g_endpoint": "1/4",
+      "domain": [
+        [
+          "0",
+          "1/10"
+        ],
+        [
+          "0",
+          "1/4"
+        ]
+      ]
+    }
+  },
+  {
+    "file": "finite_h_quarter_certificate_067_power.jsonl.gz",
+    "kind": "power",
+    "entries": 1071,
+    "bytes": 22111,
+    "sha256": "b4f4f5cea11e2aa103a48cc1175268fc46be5bad43e4f116d6098e53794e0064",
+    "metadata": {
+      "check": "Q3c source/gap or head",
+      "age": "16",
+      "g_endpoint": "1/8",
+      "domain": [
+        [
+          "0",
+          "1/10"
+        ],
+        [
+          "0",
+          "1/4"
+        ]
+      ]
+    }
+  },
+  {
+    "file": "finite_h_quarter_certificate_068_bernstein.jsonl.gz",
+    "kind": "bernstein",
+    "entries": 16624,
+    "bytes": 1727689,
+    "sha256": "459460701fe218c496d62d8e4a3bb103cc339b04b90e519fa80c1a755fd4c08a",
+    "metadata": {
+      "check": "Q3c source/gap or head",
+      "age": "16",
+      "g_endpoint": "1/8",
+      "domain": [
+        [
+          "0",
+          "1/10"
+        ],
+        [
+          "0",
+          "1/4"
+        ]
+      ]
+    }
+  },
+  {
+    "file": "finite_h_quarter_certificate_069_power.jsonl.gz",
+    "kind": "power",
+    "entries": 1071,
+    "bytes": 21956,
+    "sha256": "db2181ed9b32a37fe13aa6197b7f153e2355124acc8b6c3f8c768b57b7822973",
+    "metadata": {
+      "check": "Q3c source/gap or head",
+      "age": "16",
+      "g_endpoint": "1/4",
+      "domain": [
+        [
+          "0",
+          "1/10"
+        ],
+        [
+          "0",
+          "1/4"
+        ]
+      ]
+    }
+  },
+  {
+    "file": "finite_h_quarter_certificate_070_bernstein.jsonl.gz",
+    "kind": "bernstein",
+    "entries": 16624,
+    "bytes": 1724117,
+    "sha256": "f02dc51e52e6dbe2f4ae09f0d4e1471e11a4092f77eb5d7c1d0c2d4c24ba2e0b",
+    "metadata": {
+      "check": "Q3c source/gap or head",
+      "age": "16",
+      "g_endpoint": "1/4",
+      "domain": [
+        [
+          "0",
+          "1/10"
+        ],
+        [
+          "0",
+          "1/4"
+        ]
+      ]
+    }
+  },
+  {
+    "file": "finite_h_quarter_certificate_071_power.jsonl.gz",
+    "kind": "power",
+    "entries": 1127,
+    "bytes": 23859,
+    "sha256": "de22ff7474d1812ba90b190388a24b1df5fdb700e9bfd20924b186bd57a1ce2b",
+    "metadata": {
+      "check": "Q3c source/gap or head",
+      "age": "17",
+      "g_endpoint": "1/8",
+      "domain": [
+        [
+          "0",
+          "1/10"
+        ],
+        [
+          "0",
+          "1/4"
+        ]
+      ]
+    }
+  },
+  {
+    "file": "finite_h_quarter_certificate_072_bernstein.jsonl.gz",
+    "kind": "bernstein",
+    "entries": 18479,
+    "bytes": 1998681,
+    "sha256": "b5b8259e2277b96a080a3275f5e22cfc0ad02a1ac3d4b85a8703d81ec1961b3b",
+    "metadata": {
+      "check": "Q3c source/gap or head",
+      "age": "17",
+      "g_endpoint": "1/8",
+      "domain": [
+        [
+          "0",
+          "1/10"
+        ],
+        [
+          "0",
+          "1/4"
+        ]
+      ]
+    }
+  },
+  {
+    "file": "finite_h_quarter_certificate_073_power.jsonl.gz",
+    "kind": "power",
+    "entries": 1127,
+    "bytes": 23723,
+    "sha256": "0926dfe6578cae73da815fdacfbd77ced667ddcee5c6bedfbb9b3896de9961b2",
+    "metadata": {
+      "check": "Q3c source/gap or head",
+      "age": "17",
+      "g_endpoint": "1/4",
+      "domain": [
+        [
+          "0",
+          "1/10"
+        ],
+        [
+          "0",
+          "1/4"
+        ]
+      ]
+    }
+  },
+  {
+    "file": "finite_h_quarter_certificate_074_bernstein.jsonl.gz",
+    "kind": "bernstein",
+    "entries": 18479,
+    "bytes": 1995286,
+    "sha256": "f85d2f3c28a1fdfb2d8931bc473475b36f6bf254fe4cc637cc2c75505eab4e10",
+    "metadata": {
+      "check": "Q3c source/gap or head",
+      "age": "17",
+      "g_endpoint": "1/4",
+      "domain": [
+        [
+          "0",
+          "1/10"
+        ],
+        [
+          "0",
+          "1/4"
+        ]
+      ]
+    }
+  },
+  {
+    "file": "finite_h_quarter_certificate_075_power.jsonl.gz",
+    "kind": "power",
+    "entries": 1183,
+    "bytes": 25993,
+    "sha256": "c6cd2be139b1769e909d883c662e525a71a2d02fce22e52b969207a513e041db",
+    "metadata": {
+      "check": "Q3c source/gap or head",
+      "age": "18",
+      "g_endpoint": "1/8",
+      "domain": [
+        [
+          "0",
+          "1/10"
+        ],
+        [
+          "0",
+          "1/4"
+        ]
+      ]
+    }
+  },
+  {
+    "file": "finite_h_quarter_certificate_076_bernstein.jsonl.gz",
+    "kind": "bernstein",
+    "entries": 20432,
+    "bytes": 2328077,
+    "sha256": "a29cd5b4dd57c91a90ea75f04adf2c3f8dd9e290d6c0e24b0b450da3eed8ede6",
+    "metadata": {
+      "check": "Q3c source/gap or head",
+      "age": "18",
+      "g_endpoint": "1/8",
+      "domain": [
+        [
+          "0",
+          "1/10"
+        ],
+        [
+          "0",
+          "1/4"
+        ]
+      ]
+    }
+  },
+  {
+    "file": "finite_h_quarter_certificate_077_power.jsonl.gz",
+    "kind": "power",
+    "entries": 1183,
+    "bytes": 25792,
+    "sha256": "7207fe640bbf65bb772cd5f34e7d3d525c24a3af962ff8fb9d12c45459daa884",
+    "metadata": {
+      "check": "Q3c source/gap or head",
+      "age": "18",
+      "g_endpoint": "1/4",
+      "domain": [
+        [
+          "0",
+          "1/10"
+        ],
+        [
+          "0",
+          "1/4"
+        ]
+      ]
+    }
+  },
+  {
+    "file": "finite_h_quarter_certificate_078_bernstein.jsonl.gz",
+    "kind": "bernstein",
+    "entries": 20432,
+    "bytes": 2322822,
+    "sha256": "9de08ac600af2a41b83ab6410e5599124b0bfd16b4a971f813fd0793084eeb32",
+    "metadata": {
+      "check": "Q3c source/gap or head",
+      "age": "18",
+      "g_endpoint": "1/4",
+      "domain": [
+        [
+          "0",
+          "1/10"
+        ],
+        [
+          "0",
+          "1/4"
+        ]
+      ]
+    }
+  },
+  {
+    "file": "finite_h_quarter_certificate_079_power.jsonl.gz",
+    "kind": "power",
+    "entries": 1239,
+    "bytes": 28014,
+    "sha256": "0f8cc066532d313673ac887036e6d8773491a5434780577eafcf3500e3b4ec6f",
+    "metadata": {
+      "check": "Q3c source/gap or head",
+      "age": "19",
+      "g_endpoint": "1/8",
+      "domain": [
+        [
+          "0",
+          "1/10"
+        ],
+        [
+          "0",
+          "1/4"
+        ]
+      ]
+    }
+  },
+  {
+    "file": "finite_h_quarter_certificate_080_bernstein.jsonl.gz",
+    "kind": "bernstein",
+    "entries": 22483,
+    "bytes": 2669073,
+    "sha256": "d5320c7ffb2441ec71f4c75e25e997f819b926248cb3617ed1c30558914a9b21",
+    "metadata": {
+      "check": "Q3c source/gap or head",
+      "age": "19",
+      "g_endpoint": "1/8",
+      "domain": [
+        [
+          "0",
+          "1/10"
+        ],
+        [
+          "0",
+          "1/4"
+        ]
+      ]
+    }
+  },
+  {
+    "file": "finite_h_quarter_certificate_081_power.jsonl.gz",
+    "kind": "power",
+    "entries": 1239,
+    "bytes": 27799,
+    "sha256": "b71b72417d8451a508170ed11da20e7fac6aa7823e69464304b1acd148c6fceb",
+    "metadata": {
+      "check": "Q3c source/gap or head",
+      "age": "19",
+      "g_endpoint": "1/4",
+      "domain": [
+        [
+          "0",
+          "1/10"
+        ],
+        [
+          "0",
+          "1/4"
+        ]
+      ]
+    }
+  },
+  {
+    "file": "finite_h_quarter_certificate_082_bernstein.jsonl.gz",
+    "kind": "bernstein",
+    "entries": 22483,
+    "bytes": 2666000,
+    "sha256": "047a3721371ca49a462a655170947611f478d0007e13bf1ba5b277b9b77b4cab",
+    "metadata": {
+      "check": "Q3c source/gap or head",
+      "age": "19",
+      "g_endpoint": "1/4",
+      "domain": [
+        [
+          "0",
+          "1/10"
+        ],
+        [
+          "0",
+          "1/4"
+        ]
+      ]
+    }
+  },
+  {
+    "file": "finite_h_quarter_certificate_083_power.jsonl.gz",
+    "kind": "power",
+    "entries": 1295,
+    "bytes": 30161,
+    "sha256": "03270fb662ec4072d2925680cd739516d01204352557dac83f7454a7b304bff3",
+    "metadata": {
+      "check": "Q3c source/gap or head",
+      "age": "20",
+      "g_endpoint": "1/8",
+      "domain": [
+        [
+          "0",
+          "1/10"
+        ],
+        [
+          "0",
+          "1/4"
+        ]
+      ]
+    }
+  },
+  {
+    "file": "finite_h_quarter_certificate_084_bernstein.jsonl.gz",
+    "kind": "bernstein",
+    "entries": 24632,
+    "bytes": 3043188,
+    "sha256": "ff99445bd937fd87e55839f55878a6e35c7d58f82dba8f6f7444319f4f0cc897",
+    "metadata": {
+      "check": "Q3c source/gap or head",
+      "age": "20",
+      "g_endpoint": "1/8",
+      "domain": [
+        [
+          "0",
+          "1/10"
+        ],
+        [
+          "0",
+          "1/4"
+        ]
+      ]
+    }
+  },
+  {
+    "file": "finite_h_quarter_certificate_085_power.jsonl.gz",
+    "kind": "power",
+    "entries": 1295,
+    "bytes": 29992,
+    "sha256": "ef3a60d0b474166258bd2d2fc0b1388a62027b1257b6edc6e8dd1d15a2648376",
+    "metadata": {
+      "check": "Q3c source/gap or head",
+      "age": "20",
+      "g_endpoint": "1/4",
+      "domain": [
+        [
+          "0",
+          "1/10"
+        ],
+        [
+          "0",
+          "1/4"
+        ]
+      ]
+    }
+  },
+  {
+    "file": "finite_h_quarter_certificate_086_bernstein.jsonl.gz",
+    "kind": "bernstein",
+    "entries": 24632,
+    "bytes": 3036740,
+    "sha256": "bf912d27731765f1c1111498bf1a9b0bf18db458e19f6cc24dd9a33c59d4655b",
+    "metadata": {
+      "check": "Q3c source/gap or head",
+      "age": "20",
+      "g_endpoint": "1/4",
+      "domain": [
+        [
+          "0",
+          "1/10"
+        ],
+        [
+          "0",
+          "1/4"
+        ]
+      ]
+    }
+  },
+  {
+    "file": "finite_h_quarter_certificate_087_power.jsonl.gz",
+    "kind": "power",
+    "entries": 1351,
+    "bytes": 32401,
+    "sha256": "d96dcff974f08fc093c834d7c306c492e545c816f1dc17592467d4d8aab54612",
+    "metadata": {
+      "check": "Q3c source/gap or head",
+      "age": "21",
+      "g_endpoint": "1/8",
+      "domain": [
+        [
+          "0",
+          "1/10"
+        ],
+        [
+          "0",
+          "1/4"
+        ]
+      ]
+    }
+  },
+  {
+    "file": "finite_h_quarter_certificate_088_bernstein.jsonl.gz",
+    "kind": "bernstein",
+    "entries": 26879,
+    "bytes": 3477321,
+    "sha256": "4b9d2222d0240c6f8a7177389aaf98db9b27c7dc7296f33b1cf7dfa7a92b9f17",
+    "metadata": {
+      "check": "Q3c source/gap or head",
+      "age": "21",
+      "g_endpoint": "1/8",
+      "domain": [
+        [
+          "0",
+          "1/10"
+        ],
+        [
+          "0",
+          "1/4"
+        ]
+      ]
+    }
+  },
+  {
+    "file": "finite_h_quarter_certificate_089_power.jsonl.gz",
+    "kind": "power",
+    "entries": 1351,
+    "bytes": 32147,
+    "sha256": "a3a3ebc3d2532856e085d1147298d3f245353815933c648743d8200032c08120",
+    "metadata": {
+      "check": "Q3c source/gap or head",
+      "age": "21",
+      "g_endpoint": "1/4",
+      "domain": [
+        [
+          "0",
+          "1/10"
+        ],
+        [
+          "0",
+          "1/4"
+        ]
+      ]
+    }
+  },
+  {
+    "file": "finite_h_quarter_certificate_090_bernstein.jsonl.gz",
+    "kind": "bernstein",
+    "entries": 26879,
+    "bytes": 3472241,
+    "sha256": "4a27d696a6b1b301422fdfd44024fc5ce4b30dde51fadb4b786dcfbb8543329c",
+    "metadata": {
+      "check": "Q3c source/gap or head",
+      "age": "21",
+      "g_endpoint": "1/4",
+      "domain": [
+        [
+          "0",
+          "1/10"
+        ],
+        [
+          "0",
+          "1/4"
+        ]
+      ]
+    }
+  },
+  {
+    "file": "finite_h_quarter_certificate_091_power.jsonl.gz",
+    "kind": "power",
+    "entries": 1407,
+    "bytes": 34672,
+    "sha256": "49ee5f20c9d16be0edb364585d7244d885dab11ec777b106ec8066f0f3ebe413",
+    "metadata": {
+      "check": "Q3c source/gap or head",
+      "age": "22",
+      "g_endpoint": "1/8",
+      "domain": [
+        [
+          "0",
+          "1/10"
+        ],
+        [
+          "0",
+          "1/4"
+        ]
+      ]
+    }
+  },
+  {
+    "file": "finite_h_quarter_certificate_092_bernstein.jsonl.gz",
+    "kind": "bernstein",
+    "entries": 29224,
+    "bytes": 3935431,
+    "sha256": "319bd561a885987b5d61f170bfa9db7b65307a9e1168ff5b91b207f7f23665b2",
+    "metadata": {
+      "check": "Q3c source/gap or head",
+      "age": "22",
+      "g_endpoint": "1/8",
+      "domain": [
+        [
+          "0",
+          "1/10"
+        ],
+        [
+          "0",
+          "1/4"
+        ]
+      ]
+    }
+  },
+  {
+    "file": "finite_h_quarter_certificate_093_power.jsonl.gz",
+    "kind": "power",
+    "entries": 1407,
+    "bytes": 34451,
+    "sha256": "292066911309239fc4da77e95dbc978c2e43300fd66e6c0c6af400e5bc793730",
+    "metadata": {
+      "check": "Q3c source/gap or head",
+      "age": "22",
+      "g_endpoint": "1/4",
+      "domain": [
+        [
+          "0",
+          "1/10"
+        ],
+        [
+          "0",
+          "1/4"
+        ]
+      ]
+    }
+  },
+  {
+    "file": "finite_h_quarter_certificate_094_bernstein.jsonl.gz",
+    "kind": "bernstein",
+    "entries": 29224,
+    "bytes": 3928119,
+    "sha256": "1e5444690a72602f865b7a9be96c78c87a0b06a8d408d04faad363a97b183d7a",
+    "metadata": {
+      "check": "Q3c source/gap or head",
+      "age": "22",
+      "g_endpoint": "1/4",
+      "domain": [
+        [
+          "0",
+          "1/10"
+        ],
+        [
+          "0",
+          "1/4"
+        ]
+      ]
+    }
+  },
+  {
+    "file": "finite_h_quarter_certificate_095_power.jsonl.gz",
+    "kind": "power",
+    "entries": 1463,
+    "bytes": 36884,
+    "sha256": "c59745621db971cec14cd08f173a134302f703e325b283993f1ca34131e2f21a",
+    "metadata": {
+      "check": "Q3c source/gap or head",
+      "age": "23",
+      "g_endpoint": "1/8",
+      "domain": [
+        [
+          "0",
+          "1/10"
+        ],
+        [
+          "0",
+          "1/4"
+        ]
+      ]
+    }
+  },
+  {
+    "file": "finite_h_quarter_certificate_096_bernstein.jsonl.gz",
+    "kind": "bernstein",
+    "entries": 31667,
+    "bytes": 4414737,
+    "sha256": "2d1a22194090d260d3f0eacbcdd524b09a36fb2397a288750d97070a4b398f1f",
+    "metadata": {
+      "check": "Q3c source/gap or head",
+      "age": "23",
+      "g_endpoint": "1/8",
+      "domain": [
+        [
+          "0",
+          "1/10"
+        ],
+        [
+          "0",
+          "1/4"
+        ]
+      ]
+    }
+  },
+  {
+    "file": "finite_h_quarter_certificate_097_power.jsonl.gz",
+    "kind": "power",
+    "entries": 1463,
+    "bytes": 36594,
+    "sha256": "345ddfb5635c1ddb4802a1a86a461ae9580bdb60a7615569498682f645f8b4aa",
+    "metadata": {
+      "check": "Q3c source/gap or head",
+      "age": "23",
+      "g_endpoint": "1/4",
+      "domain": [
+        [
+          "0",
+          "1/10"
+        ],
+        [
+          "0",
+          "1/4"
+        ]
+      ]
+    }
+  },
+  {
+    "file": "finite_h_quarter_certificate_098_bernstein.jsonl.gz",
+    "kind": "bernstein",
+    "entries": 31667,
+    "bytes": 4408927,
+    "sha256": "8025504280b16feb35762fab6c418622cc4fd6d05a6140750ee790b81c734ee9",
+    "metadata": {
+      "check": "Q3c source/gap or head",
+      "age": "23",
+      "g_endpoint": "1/4",
+      "domain": [
+        [
+          "0",
+          "1/10"
+        ],
+        [
+          "0",
+          "1/4"
+        ]
+      ]
+    }
+  },
+  {
+    "file": "finite_h_quarter_certificate_099_power.jsonl.gz",
+    "kind": "power",
+    "entries": 1519,
+    "bytes": 39314,
+    "sha256": "00b28737c892153161de87c645de66e202c32abc7d08a763dff3ac32a6e70d97",
+    "metadata": {
+      "check": "Q3c source/gap or head",
+      "age": "24",
+      "g_endpoint": "1/8",
+      "domain": [
+        [
+          "0",
+          "1/10"
+        ],
+        [
+          "0",
+          "1/4"
+        ]
+      ]
+    }
+  },
+  {
+    "file": "finite_h_quarter_certificate_100_bernstein.jsonl.gz",
+    "kind": "bernstein",
+    "entries": 34208,
+    "bytes": 4936119,
+    "sha256": "be71c063aafc591287f52113cebe9c3a6ccda29ceb50f672ddf7ed2ee16095c4",
+    "metadata": {
+      "check": "Q3c source/gap or head",
+      "age": "24",
+      "g_endpoint": "1/8",
+      "domain": [
+        [
+          "0",
+          "1/10"
+        ],
+        [
+          "0",
+          "1/4"
+        ]
+      ]
+    }
+  },
+  {
+    "file": "finite_h_quarter_certificate_101_power.jsonl.gz",
+    "kind": "power",
+    "entries": 1519,
+    "bytes": 39017,
+    "sha256": "8fe3a94c871b03a64eda63da2897202b2c4d20332d634f9a7f7d3b46c4fa4e5a",
+    "metadata": {
+      "check": "Q3c source/gap or head",
+      "age": "24",
+      "g_endpoint": "1/4",
+      "domain": [
+        [
+          "0",
+          "1/10"
+        ],
+        [
+          "0",
+          "1/4"
+        ]
+      ]
+    }
+  },
+  {
+    "file": "finite_h_quarter_certificate_102_bernstein.jsonl.gz",
+    "kind": "bernstein",
+    "entries": 34208,
+    "bytes": 4927692,
+    "sha256": "41386ebcb933becaf8bd14826e7a8fc758d924db0db076f8687d1dd7393e0fa8",
+    "metadata": {
+      "check": "Q3c source/gap or head",
+      "age": "24",
+      "g_endpoint": "1/4",
+      "domain": [
+        [
+          "0",
+          "1/10"
+        ],
+        [
+          "0",
+          "1/4"
+        ]
+      ]
+    }
+  }
+]

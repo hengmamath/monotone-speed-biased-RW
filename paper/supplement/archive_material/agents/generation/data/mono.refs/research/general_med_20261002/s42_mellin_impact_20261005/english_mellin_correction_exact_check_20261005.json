@@ -1,0 +1,41 @@
+{
+  "status": "LOCAL exact editorial diff PASS; corrected text/diff independent review PENDING",
+  "source": {
+    "file": "speed_monotonicity_english_proof_20261004.md",
+    "bytes": 34924,
+    "sha256": "50de39e9440d427e7f4764b192221f4113c22e4c53948d2d986d61d88c529882"
+  },
+  "corrected": {
+    "file": "speed_monotonicity_english_proof_20261005_corrected.md",
+    "bytes": 36337,
+    "sha256": "b9353b0699366f69d8a11a99b560fcde7490b5e546e086c82fa7d99b458c79eb"
+  },
+  "diff": {
+    "file": "english_mellin_correction_20261005.diff",
+    "bytes": 4079,
+    "sha256": "3efda22ffc6d22e6e27a21780b04b93db3eafb9c365896d69d9a2edcb8c765c7",
+    "unicode": 4077
+  },
+  "editorial_changes": [
+    "correction notice",
+    "explicit Mellin index convention",
+    "Mellin first factor",
+    "explicit floor from the corrected series",
+    "equation 15 actual argument",
+    "actual-floor shorthand",
+    "equation 17 input binding",
+    "equation 17 actual argument",
+    "fixed-law free-parameter floor binding",
+    "explicit floor slope argument"
+  ],
+  "preserved": [
+    "J_n polynomial",
+    "RHS (15)",
+    "RHS (17)",
+    "complete blocks T/16/18/19",
+    "all numbered tags",
+    "source/v1/ZIP fingerprints"
+  ],
+  "large_certificate_replays": 0,
+  "scope": "Editorial exact-diff checks only; mathematical safety uses the separately recorded necessary-chain audit and prior certificate PASS."
+}

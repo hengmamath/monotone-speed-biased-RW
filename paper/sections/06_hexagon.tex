@@ -1,0 +1,205 @@
+\section{Computer-assisted proof for \texorpdfstring{$1<\lambda<m$ (sketch)}{1 < lambda < m}}\label{sec:computer}
+
+We outline the proof for laws with single-child vertices. All bias intervals in this section are restricted to $\lambda<m$. Section~6 of the companion GitHub version~\cite{FullVersion} gives the complete proof. The coefficient tables and verification programs are in~\cite{Supplement}.
+
+\begin{theorem}[Computer-assisted monotonicity]\label{thm:computer}
+Fix an offspring law $\mu$ with $\mu(0)=0$, $\mu(1)>0$ and
+$1<m=\E_\mu\nu<\infty$. With the root and transition conventions of
+Section~\ref{sec:introduction},
+\begin{equation}\label{eq:computer-result}
+ v_\mu\in C^1((1,m)),\qquad v_\mu'(\lambda)<0\quad(1<\lambda<m).
+\end{equation}
+\end{theorem}
+
+\subsection{The speed derivative}
+Fix $1<\lambda<m$, put $c=\lambda-1$, and let $X,Y$ be independent with law $\pi_\lambda$. We retain the notation of Sections~\ref{sec:kernel-identities}--\ref{sec:linear-response}, with $v=v(\lambda)$ and $Z=Z_\lambda(\pi_\lambda)$. Lemma~\ref{lem:full-response} proves $v\in C^1((1,m))$ and gives
+\begin{equation}\label{eq:hex-response}
+ v'(\lambda)=-\frac{D_\lambda}{Z},\qquad
+ D_\lambda=2\E[b(X)(\mathcal R\Psi)(X)]-C,\qquad Z>0,
+\end{equation}
+where $\Psi=\cJ(y^2+c h_v)$ and $\mathcal R=(I-\cL)^{-1}$ is positive. It remains to prove $D_\lambda>0$ for laws allowing single-child vertices.
+
+\subsection{Bounds from the escape recursion}
+To estimate $D_\lambda$, we use the restrictions that the recursion places on moments of the escape probability. Put
+\[
+ \begin{gathered}
+ U=\frac{X}{c+X},\quad u=\E U,\quad h=\frac{cu}{1-u},\quad d=1-h,\\
+ a_n=\E U^n,\quad
+ \beta_n=\frac{h}{\lambda^n-d},\quad \rho_n=\frac{a_n}{\beta_n}.
+ \end{gathered}
+\]
+Here $0<U<1/\lambda$ and $0<h<1$. The numbers $\beta_n$ form a comparison sequence. Applying the recursion and a covariance inequality to one child and the sum of its siblings gives
+\begin{equation}\label{eq:hex-moments}
+ \rho_0=\rho_1=1,\qquad
+ \rho_n>\rho_{n+1}>0\ (n\ge1),\qquad \rho_n\longrightarrow0.
+\end{equation}
+Expanding the pair denominator gives absolutely convergent sums
+\[
+ T=\sum_{n\ge1}\lambda^{n-1}a_n^2,\qquad
+ Q=\sum_{n\ge1}\lambda^{n-1}a_na_{n-1},\qquad
+ v=\frac{cT}{2Q-(\lambda+1)T}.
+\]
+Comparison with the sequence $\beta_n$ yields $v<h$ and
+$\inf_{[0,1]}\Psi>0$; see \cite[Lemmas~6.2--6.3]{FullVersion}.
+
+We next bound the positive measure $\eta(f)=\E[b(X)(\mathcal Rf)(X)]$ without truncating the series for $\mathcal R$. The required comparison follows from an identity for the function
+\[
+ \begin{gathered}
+ g(x)=\frac{x(c+x)\log(1+c/x)}{\lambda c\log\lambda}-\frac{x}{c}
+ \quad(x>0),\qquad g(0)=0.
+ \end{gathered}
+\]
+The function $g$ is strictly concave on $[0,\infty)$ and nonnegative on $[0,1]$. For independent child escapes and $S=\sum_{i=1}^{\nu}X_i$, define
+\[
+ \delta_g=F_\lambda'(S)\left(\sum_{i=1}^{\nu}g(X_i)-g(S)\right).
+\]
+Concavity and $g(0)=0$ give $\delta_g\ge0$, with strict inequality on $\{\nu\ge2\}$. Moreover, $\delta_g$ is bounded by a constant times $\nu$. The identity satisfied by $g$ under the recursion yields, for $f\in C([0,1])$,
+\begin{equation}\label{eq:hex-entropy}
+ \eta(f)=\E[g(X)f(X)]
+ +\E[\delta_g(\mathcal Rf)(F_\lambda(S))].
+\end{equation}
+For $f\ge0$ this implies $\eta\ge g\pi_\lambda$; the Neumann series
+also gives $\eta\ge b\pi_\lambda$, hence
+$\eta\ge\max(g,b)\pi_\lambda$.
+
+To use this measure bound, subtract a multiple of $\cJ(y^2)$ from $\Psi$ so that the remainder is nonnegative:
+\[
+ \alpha=\min\left\{1,\frac{\Psi(0)}{\cJ(y^2)(0)}\right\},\qquad
+ H_* =\Psi-\alpha\cJ(y^2)\ge0,\qquad
+ F_*=2\alpha\E[br]-C+2\E[gH_*].
+\]
+Since $(I-\cL)r=\cJ(y^2)$, we have $\mathcal R\Psi=\alpha r+\mathcal RH_*$. Substitution in~\eqref{eq:hex-entropy} gives
+\begin{equation}\label{eq:hex-calibration}
+ D_\lambda=F_*+2\E[\delta_g(\mathcal RH_*)(F_\lambda(S))]\ge F_*.
+\end{equation}
+The case $\alpha=1$ already gives $D_\lambda>0$. Otherwise
+$0<\alpha<1$, $\alpha>\lambda^2u$, $u<\lambda^{-2}$ and
+$h<1/(\lambda+1)$. These inequalities specify the parameter range left to consider. Their proofs are in~\cite[Lemmas~6.4--6.5]{FullVersion}.
+
+\newpage
+\subsection{Moment estimates for \texorpdfstring{$1<\lambda\le707/500$}{1 < lambda <= 707/500}}
+We need a bound on the differences between successive moment ratios in addition to~\eqref{eq:hex-moments}. Extending $a_s,\beta_s$ to real
+$s\ge1$ and putting $\rho(s)=a_s/\beta_s$, the escape recursion gives a probability measure $\sigma$ on $(0,1)$ such that
+\begin{align*}
+ \rho(s)&=\int_0^1 t^{s-1}\{s-(s-1)t\}\,\sigma(\dd t),\\
+ \Delta_s:=\rho(s)-\rho(s+1)
+ &=s\int_0^1t^{s-1}(1-t)^2\,\sigma(\dd t),\\
+ -\rho'(s)&>\left(1-\frac1{2s}\right)\Delta_s.
+\end{align*}
+This representation, proved in~\cite[Lemma~6.6]{FullVersion}, uses the same measure for every order, so the differences $\Delta_s$ are constrained together. Expanding the kernels containing $g$ produces the terms $\E[U^s\log(1/U)]$. The bound on $-\rho'(s)$ therefore gives a strict lower bound for their contribution in terms of $a_s$ and $\Delta_s$.
+
+When using an upper bound on $v$, we keep the law $\pi_\lambda$ fixed. This distinction matters because the identity
+\[
+ C=\E\left[b(X)\cJ\bigl((1-y)\{2v-(1+v)y\}\bigr)(X)\right]
+\]
+uses $N-vZ=0$, which need not hold after replacing $v$ by an upper bound. Lemmas~6.7--6.8 of~\cite{FullVersion} keep the resulting remainder and justify the substitution. They give an absolutely convergent series in the moments and their differences that is strictly smaller than $F_*$. It therefore suffices to prove that this series is nonnegative.
+
+For $1<\lambda<2/\sqrt3$, the series estimate uses positive square terms to control the negative terms containing the differences $\Delta_s$. The comparison sequence $\beta_s$ bounds the entire tail. The proof splits the parameters $q=h/c$ and $h$ into six ranges:
+\[
+ \begin{gathered}
+ q\le1/15;\quad 1/15<q\le3;\quad 3<q\le10;\quad q\ge21;\\
+ 10<q<21,\ h\ge1/4;\qquad 10<q<21,\ h<1/4.
+ \end{gathered}
+\]
+In the last range, an analytic estimate treats all terms with index at least $25$. The remaining indices require $48$ polynomials, one for each index $1,\ldots,24$ at two parameter endpoints. The other ranges use rational tail bounds, finite
+coefficient tests and, where needed, exact Sturm sequences. The estimates give a strictly positive lower bound in each range, and hence $D_\lambda>0$;
+see \cite[Lemmas~6.9--6.14 and Proposition~6.15]{FullVersion}.
+
+For $2/\sqrt3\le\lambda\le707/500$, a bound on the comparison series gives an upper bound on $v$ that retains the first two moments; see~\cite[Lemma~6.16]{FullVersion}. To use it in the series estimate, the proof also needs the recursion inequality
+\begin{equation*}
+ \frac{a_3}{a_2}<\frac1{\lambda+1-\lambda a_2/u};
+\end{equation*}
+see~\cite[Lemma~6.17]{FullVersion}. The proof estimates the whole series before discarding a nonnegative tail. For $u\le1/2$, the retained terms have indices $1,\ldots,4$ and are estimated together using the moment constraints. For $u>1/2$, the first two terms suffice. In this case $\alpha<1$ is impossible for $\lambda\ge11/8$, while for $\lambda<11/8$ a curvature argument reduces the bound to two positive endpoint values. Exact polynomial checks on rational rectangles give $D_\lambda>0$ at both endpoints and throughout the interval~\cite[Section~6.5, especially Lemmas~6.20, 6.27 and 6.30]{FullVersion}.
+
+\newpage
+\subsection{Kernel and integral bounds for \texorpdfstring{$707/500\le\lambda<(3+\sqrt5)/2$}{707/500 <= lambda < (3+sqrt(5))/2}}
+We use the formula for $D_\lambda$ in~\eqref{eq:hex-response} and the measure bound from~\eqref{eq:hex-entropy}. Define
+\[
+ P_c(y)=(1-y)\{2v-(1+v)y\}.
+\]
+The identity $C=\E[b\cJ P_c]$, positivity of $\Psi$, and
+$\eta\ge\max(g,b)\pi_\lambda$ imply
+\begin{equation}\label{eq:hex-kernel-bound}
+ D_\lambda\ge
+ \E\left[2\max\{g(X),b(X)\}\Psi(X)-b(X)(\cJ P_c)(X)\right].
+\end{equation}
+Here $g(x)\ge b(x)$ for $x\le1/(\lambda+1)$ and $b(x)\ge g(x)$ for $x\ge1/(\lambda+1)$. On
+$707/500\le\lambda\le39/20$, the full proof establishes
+\begin{align*}
+ 2\frac{g(x)}{b(x)}\Psi(x)-(\cJ P_c)(x)&>0,
+       &&0<x\le1/(\lambda+1),\\
+ 2\Psi(x)-(\cJ P_c)(x)&>0,
+       &&1/(\lambda+1)\le x<1.
+\end{align*}
+Multiplying by $b(x)>0$ and using \eqref{eq:hex-kernel-bound} gives
+$D_\lambda>0$. The products inside the expectation in~\eqref{eq:hex-kernel-bound} are bounded. The kernel estimates use the first four moments and a geometric bound on all remaining terms. Concavity reduces one moment variable to its two endpoints; two integrations of rational functions then extend the endpoint bounds to the required parameter range. Exact coefficient signs establish the required boundary
+values and derivative signs. These steps are developed in
+\cite[Section~6.6, Lemmas~6.31--6.35]{FullVersion}.
+
+For $39/20\le\lambda<(3+\sqrt5)/2$, a different representation of $D_\lambda$ keeps the dependence on the root offspring number $\nu$. With $S=\sum_{i=1}^{\nu}X_i$, put
+\begin{equation}\label{eq:hex-root-integral}
+ I=\E\frac{2S^2+2\{c-(\lambda+1)v\}S
+       +(1+v)\sum_{i=1}^{\nu}X_i^2+2v(\nu-\lambda^2)}{(c+S)^2}.
+\end{equation}
+The moment bounds give $c-(\lambda+1)v\ge0$. A Laplace representation of the reciprocal square expresses $D_\lambda$ using two factors: $\eta(e^{-t\cdot})$ and the expectation of the numerator in~\eqref{eq:hex-root-integral} under the weight $e^{-tS}/\E e^{-tS}$. Both factors decrease with $t>0$. The covariance inequality, applied with respect to the finite measure $t e^{-ct}\E[e^{-tS}]\dd t$, gives
+\[
+ D_\lambda\ge\frac I\lambda
+ \frac{\displaystyle\int_0^\infty t e^{-ct}\E[e^{-tS}]\eta(e^{-t\cdot})\dd t}
+ {\displaystyle\int_0^\infty t e^{-ct}\E[e^{-tS}]\dd t}.
+\]
+The quotient is finite and strictly positive. It therefore remains to prove $I>0$.
+
+The recursion and two comparisons of affine functions at their endpoints reduce $I>0$ to the $63$ coefficient inequalities in~\cite[Lemma~6.36]{FullVersion}. The tail estimates and the reduction to these inequalities are proved analytically. The denominator in
+\eqref{eq:hex-root-integral} is positive because $c>0$; moreover
+$S^2/(c+S)^2\le1$, $\sum_iX_i^2\le S$, and $\E\nu<\infty$ justify
+the signed integral under the stated first-moment assumption.
+This argument includes $\lambda=39/20$.
+
+For $(3+\sqrt5)/2\le\lambda<m$, Theorem~\ref{thm:high} gives $\Dplus v(\lambda)<0$.
+Differentiability from \eqref{eq:hex-response} identifies this with
+$v'(\lambda)$, so no computer-assisted estimate is needed there.
+
+\newpage
+\subsection{Exact arithmetic and completion of the proof}
+Each remaining inequality concerns an explicit rational function on a specified domain. The full version proves positivity of the denominators before multiplying by them. An affine change of the bounded variables to unit intervals then gives a polynomial with rational coefficients. For example, in two variables write
+\[
+ P(x,y)=\sum_{i=0}^{M}\sum_{j=0}^{N}b_{ij}
+       \binom Mi x^i(1-x)^{M-i}\binom Nj y^j(1-y)^{N-j}.
+\]
+If all $b_{ij}>0$, then $P>0$ on the closed unit square. If some
+coefficients vanish, the proof checks that a positive basis term
+remains at every point arising from the escape law where strictness is required. For an unbounded nonnegative variable, the proof uses nonnegative coefficients in the ordinary power basis. The exceptional univariate polynomials
+are handled by exact Sturm sequences with positive endpoint values
+and no interior zero. Rational subdivisions are recorded explicitly.
+The algebraic endpoint tests at $2/\sqrt3$ reduce to exact rational
+comparisons by checking signs and comparing squares. None of these
+arguments infers a sign from a numerical mesh.
+
+The table lists the finite inequalities used in each bias interval.
+\begin{center}
+\small
+\begin{tabular}{@{}p{.32\linewidth}p{.59\linewidth}@{}}
+\toprule
+Bias interval & Proof and finite inequalities in the full version\\
+\midrule
+$(1,2/\sqrt3)$ & Section~6.4; Lemmas~6.11--6.14; Proposition~6.15.\\[3pt]
+$[2/\sqrt3,707/500]$ & Section~6.5; Lemmas~6.18, 6.25, 6.27 and~6.30.\\[3pt]
+$[707/500,39/20]$ & Section~6.6; Lemmas~6.31--6.35.\\[3pt]
+$[39/20,(3+\sqrt5)/2)$ & Section~6.6; Lemma~6.36.\\
+\bottomrule
+\end{tabular}
+\end{center}
+The references in this table are to the November~20, 2026 GitHub
+version~\cite{FullVersion}. Its supplement supplies the input
+polynomials, exact coefficient arrays, complete exceptional Sturm
+sequences and programs that reconstruct the expressions. The
+supplementary guide maps each finite lemma to its data and executable
+check. Its verification uses integer and rational arithmetic.
+The full manuscript also proves that these domains contain the parameters of the escape law and that the infinite tails satisfy the stated bounds.
+
+To finish Theorem~\ref{thm:computer}, fix $1<\lambda<m$.
+Equation~\eqref{eq:hex-response} reduces the conclusion to
+$D_\lambda>0$. The case $\alpha=1$ following~\eqref{eq:hex-calibration} gives this sign directly. If $\alpha<1$, the four intervals in the table together with $(3+\sqrt5)/2\le\lambda<m$ in Theorem~\ref{thm:high} cover $(1,m)$, including their shared endpoints.
+Hence $v'(\lambda)<0$ everywhere on $(1,m)$. The mean value theorem
+on each compact subinterval gives strict decrease on $(1,m)$. Lemma~\ref{lem:continuity-one} gives continuity at $\lambda=1$. Together with Theorem~\ref{thm:low}, these conclusions yield strict decrease throughout $(0,m)$.
+

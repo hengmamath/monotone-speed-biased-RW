@@ -1,0 +1,85 @@
+[
+  {
+    "path": "archive_material/agents/generation/data/mono.refs/research/general_med_20261002/CHAIN45HAND_CONTINUATION_EFFECTIVE_45_NODE_EVIDENCE_AND_ARITHMETIC_LEDGER_LOCAL_V3_20261008.md",
+    "sha256": "79b38f65bbaabc86368f6f0983bd9607c4811b49ced6e9f39d41c874e0ed8bba"
+  },
+  {
+    "path": "archive_material/agents/generation/data/mono.refs/research/general_med_20261002/CHAIN45HAND_CONTINUATION_EFFECTIVE_45_NODE_EVIDENCE_AND_ARITHMETIC_LEDGER_LOCAL_V3_20261008.json",
+    "sha256": "abcf4a8aa3bc571b949385e4659087ed1867b8588780242eab7458dc958bda46"
+  },
+  {
+    "path": "archive_material/agents/generation/data/mono.refs/research/general_med_20261002/uniform_high_q_coupled_comparison.md",
+    "sha256": "f6f499d1d47a1f26cce023d4790f6a2ca9846368e5e99c1ce26f05a3fd10b2cb",
+    "bytes": 9389
+  },
+  {
+    "path": "archive_material/agents/generation/data/mono.refs/research/general_med_20261002/mid_q_full_same_e_certificate.py",
+    "sha256": "c72954ceacddd215ca65a87135f96ff0bf6c7b10f43ad947097ff880ebe3e072",
+    "bytes": 6846
+  },
+  {
+    "path": "archive_material/agents/generation/data/mono.refs/research/general_med_20261002/mid_q_full_same_e_proof_20261004.md",
+    "sha256": "e15dfcc7436c07185295a9a101ae959e3e9150c8981b7259c25de43e1b9dbd0f",
+    "bytes": 5883
+  },
+  {
+    "path": "archive_material/agents/generation/data/mono.refs/research/general_med_20261002/audit_receipt_mid_q_full_same_e_20261004.md",
+    "sha256": "81bbc2baf5bcf15cc3340f4e78ce0eb4f1a853d07b282a15403c78fbf522f88b",
+    "bytes": 1846
+  },
+  {
+    "path": "archive_material/agents/generation/data/mono.refs/research/general_med_20261002/low_u_selfcontained_fixed_arithmetic_20261006.py",
+    "sha256": "7a9979169135a44abad9fdb2e618b859469f7d5c0c3ad08bf6cb66035d72ad28",
+    "bytes": 2038
+  },
+  {
+    "path": "archive_material/agents/generation/data/mono.refs/research/general_med_20261002/calibrated_response_positive_measure.md",
+    "sha256": "d4c400e3db67023429601573fef9950b64a5997ea8f08f868851c426e0db33d8",
+    "bytes": 11945
+  },
+  {
+    "path": "archive_material/agents/generation/data/mono.refs/research/general_med_20261002/middle_q_coupled_certificate.py",
+    "sha256": "eea534a7e52c605325a410f286f94f434e42a8fcba8543fc8c34fa1201fb3a47",
+    "bytes": 3908
+  },
+  {
+    "path": "archive_material/agents/generation/data/mono.refs/research/general_med_20261002/hard_d_coupled_certificate.py",
+    "sha256": "2977dfe0a3a9b8d648012149d9b09d23a825ae2abfd1352d390bb767a0e7563f",
+    "bytes": 2142
+  },
+  {
+    "path": "archive_material/agents/generation/data/mono.refs/research/general_med_20261002/critical_boundary_coupled_certificate.py",
+    "sha256": "b245c5f11a9710971e1085df723ab67c0dba8caeac07017aceed80b318b13b63",
+    "bytes": 3352
+  },
+  {
+    "path": "archive_material/agents/generation/data/mono.refs/research/general_med_20261002/finite_h_quarter_certificate.py",
+    "sha256": "920f8234a2f6e0282819b88a42ff731265435aeec04f5ce301e677ef61cabef8",
+    "bytes": 5031
+  },
+  {
+    "path": "archive_material/agents/generation/data/mono.refs/research/general_med_20261002/finite_h_quarter_coupled_comparison.md",
+    "sha256": "3a240742f4ec0b9c929ededa6ec15b66564cb16aac72c8d487ef43b7cdd06b8b",
+    "bytes": 6894
+  },
+  {
+    "path": "archive_material/agents/generation/data/mono.refs/research/general_med_20261002/audit_receipt_finite_h_quarter_20261004.md",
+    "sha256": "0e8c2f38317644803c8459ab3e504d8f7e7ecf23c854d9855f6099c1b35cb5ff",
+    "bytes": 904
+  },
+  {
+    "path": "archive_material/agents/generation/data/mono.refs/research/general_med_20261002/lambert_head_scale_identities.py",
+    "sha256": "c82c83fd0f7b47f39a954123209407050330a52ca0c8ef105ec5ead40c2bea92",
+    "bytes": 5790
+  },
+  {
+    "path": "archive_material/agents/generation/data/mono.refs/research/general_med_20261002/calibrated_cumulative_head_identities.py",
+    "sha256": "546cfce1252df27d6a87a5f2f38ccd71456f02f9db5f4d4670c80e2ee4c54eb9",
+    "bytes": 3133
+  },
+  {
+    "path": "archive_material/agents/generation/data/mono.refs/research/general_med_20261002/CHAIN45HAND_CONTINUATION_FINAL_ACCEPTED_THEOREM_AND_CURRENT_45_SOURCE_SELECTION_20261008.json",
+    "sha256": "c41954e828d74c7559785578f1c685c6cf8fdb8b7195038876328e05b8ba8f85",
+    "bytes": 93393
+  }
+]

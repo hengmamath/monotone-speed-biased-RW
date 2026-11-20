@@ -1,0 +1,43 @@
+\section{Strict decrease for \texorpdfstring{$(3+\sqrt5)/2\le\lambda<m$}{(3+sqrt(5))/2 <= lambda < m}}\label{sec:high}
+
+When $\PP(\nu=1)>0$, the change of measure from Section~\ref{sec:twochildren} gives $\E_QS\ge k$ in place of $\E_QS\ge2k$. We show that this still implies $\E X<2k$ for $\lambda\ge(3+\sqrt5)/2$, so Proposition~\ref{prop:criterion} applies.
+
+\begin{lemma}\label{lem:one-child}
+Let $\lambda\ge(3+\sqrt5)/2$, $c=\lambda-1$, and let $X\in(0,1)$ satisfy~\eqref{eq:rde} with $\nu\ge1$. Then the weighted mean~\eqref{eq:weighted-mean} satisfies $\E X<2k$.
+\end{lemma}
+
+\begin{proof}
+Use the probability measure $M$ obtained by weighting the law of $X$ with $(c+X)^{-2}$, and let $k=\E_M X$, $j=\E_M X^2$, $\ell=\E_M X^3$. As in Lemma~\ref{lem:two-child}, weight the joint law of $\nu,X_1,X_2,\ldots$ by $(c+S)^{-2}$ to obtain $Q$. These normalizing constants are finite and positive because $c>0$ and $X,S>0$.
+
+The comparison of marginal densities in Lemma~\ref{lem:two-child} still applies when $\nu=1$: the remainder $H=\sum_{i=2}^{\nu}X_i$, which is independent of $X_1$ under the original law, is then zero, and $((c+x)/(c+x+H))^2$ is the constant one. For all $H\ge0$ this ratio is nondecreasing in $x$. Thus $\E_QX_1\ge k$. Conditional exchangeability gives $\E_QS=\E_Q[\nu X_1]\ge\E_QX_1\ge k$. The recursion transforms this expectation into
+\[
+ \E_QS=\frac{\E[\lambda X(1-X)/(c+X)^2]}
+ {\E[(1-X)^2/(c+X)^2]}
+ =\lambda\frac{k-j}{1-2k+j}.
+\]
+Here $1-2k+j=\E_M(1-X)^2>0$. Rearranging $\E_QS\ge k$, with $\lambda=c+1$, gives
+\begin{equation}\label{eq:one-j-bound}
+ \lambda\frac{k-j}{1-2k+j}\ge k,
+ \qquad j\le\frac{k(c+2k)}{c+1+k}.
+\end{equation}
+Undoing the change of measure gives exactly~\eqref{eq:untilted-mean}, with positive denominator $c^2+2ck+j=\E_M(c+X)^2$. If $k\ge1/2$, then $\E X<1\le2k$. Suppose $k<1/2$. Since $0<X<1$, we have $\ell\le j$, and therefore
+\[
+ (2k-\E X)(c^2+2ck+j)
+ =c^2k+4ck^2+(2k-2c)j-\ell
+ \ge c^2k+4ck^2+(2k-2c-1)j.
+\]
+The coefficient $2k-2c-1$ is negative. Substituting the upper bound for $j$ from~\eqref{eq:one-j-bound} consequently gives the lower bound
+\begin{align}\label{eq:one-child-polynomial}
+ &(2k-\E X)(c^2+2ck+j)\notag\\
+ &\quad\ge c^2k+4ck^2+(2k-2c-1)\frac{k(c+2k)}{c+1+k}\notag\\
+ &\quad=\frac{k}{c+1+k}
+ \left[c(c^2-c-1)+(5c^2+2c-2)k+4(c+1)k^2\right]>0.
+\end{align}
+Indeed $c\ge(1+\sqrt5)/2$, so $c^2-c-1\ge0$ and $5c^2+2c-2>0$. Since $k>0$, strictness holds even at the threshold.
+\end{proof}
+
+\begin{proof}[Proof of Theorem~\ref{thm:high}]
+For each $(3+\sqrt5)/2\le\lambda<m$, Lemma~\ref{lem:one-child} verifies the hypothesis of Proposition~\ref{prop:criterion}. Thus $\Dplus v(\lambda)<0$, including at the left endpoint. Continuity and the Dini criterion in Section~\ref{sec:direct-comparison} give strict decrease on $[(3+\sqrt5)/2,m)$.
+\end{proof}
+
+For $1<\lambda<(3+\sqrt5)/2$, the constant term in the brackets in~\eqref{eq:one-child-polynomial} is negative, so this estimate no longer proves $\E X<2k$. The computer-assisted argument in Section~\ref{sec:computer} treats the remaining interval.

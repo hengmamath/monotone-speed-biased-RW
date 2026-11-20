@@ -1,0 +1,40 @@
+\subsection{Completion of the proof and the finite computations}
+\label{subsec:completion}
+\begin{proof}[Proof of Theorem~\ref{thm:computer}]
+Lemma~\ref{lem:full-response} gives $v\in C^1((1,m))$ and
+$v'(\lambda)=-D_\lambda/Z$, with $Z>0$. Fix $1<\lambda<m$.
+If $\alpha=1$, Lemma~\ref{lem:calibration} gives $D_\lambda>0$.
+If $0<\alpha<1$, the moments of $U$ satisfy
+\eqref{eq:hard-calibration}. Proposition~\ref{prop:entire-low-region}
+covers $1<\lambda<2/\sqrt3$,
+Section~\ref{sec:near-region} covers $2/\sqrt3\le\lambda\le707/500$,
+and Section~\ref{sec:middle-high} covers
+$707/500\le\lambda<(3+\sqrt5)/2$.
+Each proof evaluates $D_\lambda$ under the escape law $\pi_\lambda$.
+Together they give $D_\lambda>0$, including at the shared endpoints
+$2/\sqrt3$, $707/500$ and $39/20$.
+
+For $(3+\sqrt5)/2\le\lambda<m$, Theorem~\ref{thm:high} gives
+$\Dplus v(\lambda)<0$. Differentiability, already proved by
+Lemma~\ref{lem:full-response}, identifies this Dini derivative with
+$v'(\lambda)$. Thus $v'(\lambda)<0$ at every point of $(1,m)$.
+For any $1<\lambda_1<\lambda_2<m$, the mean value theorem on
+$[\lambda_1,\lambda_2]$ now gives $v(\lambda_2)<v(\lambda_1)$.
+Lemma~\ref{lem:continuity-one} gives continuity at $\lambda=1$.
+Together with Theorem~\ref{thm:low}, this proves strict decrease
+throughout $(0,m)$.
+\end{proof}
+
+The accompanying computations~\cite{Supplement} are organized by the
+three regional proofs, with a reading guide that maps each finite
+arithmetic lemma to its executable verification and exact data.
+The programs reconstruct the rational expressions stated here, check
+their polynomial identities and coefficient inequalities using exact
+integer or rational arithmetic, and provide the resulting coefficient
+arrays. Rational interval decompositions are recorded explicitly when
+needed. The programs do not infer signs from floating-point samples.
+
+The preceding proofs show that the denominators are positive on the stated domains and that the coefficient signs imply the required inequalities there. They also bound the infinite tails, verify that the parameters of the escape law lie in those domains, and deduce $D_\lambda>0$ from the resulting bounds.
+The supplementary historical source records document the provenance of
+the arguments. Their file-identity and dependency checks are separate
+from the exact arithmetic verification used for this manuscript.

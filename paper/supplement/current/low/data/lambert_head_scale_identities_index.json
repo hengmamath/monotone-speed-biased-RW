@@ -1,0 +1,13 @@
+[
+  {
+    "file": "lambert_head_scale_identities_001_power.jsonl.gz",
+    "kind": "power",
+    "entries": 60,
+    "bytes": 582,
+    "sha256": "11033f92305e9dea6f08feb4876d74d36ff2e8880c178f40d1e8a5092a84362f",
+    "metadata": {
+      "check": "A_J lower numerator",
+      "domain": "q,h>0; positive denominator displayed in manuscript"
+    }
+  }
+]

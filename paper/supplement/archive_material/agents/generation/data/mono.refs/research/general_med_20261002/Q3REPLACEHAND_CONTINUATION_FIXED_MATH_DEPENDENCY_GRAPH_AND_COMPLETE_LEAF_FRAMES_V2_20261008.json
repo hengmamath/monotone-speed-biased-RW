@@ -1,0 +1,383 @@
+{
+  "status": "fixed proposed math DAG, pending independent whole-chain acceptance",
+  "nodes": {
+    "actual_speed_interface": {
+      "uses": [
+        "canonical terminal-one actual-response and entropy imports",
+        "same-defect calibrated complete floor (214)-(222)"
+      ],
+      "scope": "original hard law; D>=Fstar>Ffloor and vprime=-D/Zact"
+    },
+    "source_and_gap": {
+      "uses": [
+        "complete Lambert source",
+        "same actual reference T/Zp"
+      ],
+      "result": "Zp>0,1/8<g<1/4,Fpipe>69/500"
+    },
+    "same_a_extension": {
+      "uses": [
+        "original full tail and moments",
+        "source_and_gap",
+        "new assembly §3 all a>=1 proof"
+      ],
+      "result": "S_i/w_i>=D_i(alin)"
+    },
+    "Fzero_derivative": {
+      "uses": [
+        "new complete rawG ->f0 bypass",
+        "old F0h paper §§2–5 sign proof,19 ordinary terms/48 controls"
+      ],
+      "historical_old_N_xzero_identity_used": false
+    },
+    "U": {
+      "uses": [
+        "Fzero_derivative",
+        "true complete Wx geometric",
+        "original f0"
+      ],
+      "result": "U>3/4"
+    },
+    "H": {
+      "uses": [
+        "independent original BB/TL/PU six-part identity",
+        "true geometric corridor",
+        "complete once-charged pole credit",
+        "746 identity terms",
+        "24 corners108chains600slots",
+        "20negative groups60payments"
+      ],
+      "result": "H/x>-15/2+m_j"
+    },
+    "F": {
+      "uses": [
+        "U",
+        "H",
+        "same original hzero F positive",
+        "continuous true-h integration"
+      ],
+      "result": "Fh>mstar*x;F>F0+h*mstar*x>0"
+    },
+    "head": {
+      "uses": [
+        "same_a_extension",
+        "F"
+      ],
+      "result": "all i1..24 S_i/w_i>K"
+    },
+    "tail": {
+      "uses": [
+        "shared source/price/shape only"
+      ],
+      "result": "all i>=25 negative head zero"
+    },
+    "linear_budget": {
+      "uses": [
+        "head",
+        "tail",
+        "full-age weight",
+        "same actual e",
+        "complete BV/log Gx bound"
+      ],
+      "result": "eHhead<u²CH"
+    },
+    "square_budget": {
+      "uses": [
+        "complete shared AJ all ages",
+        "same actual e"
+      ],
+      "result": "e²Jminus<u⁴J"
+    },
+    "Q3c": {
+      "uses": [
+        "actual_speed_interface",
+        "source_and_gap",
+        "linear_budget",
+        "square_budget",
+        "single derivative change and two exact endpoint payments"
+      ],
+      "result": "Ffloor>1/40;original Q3c speed branch"
+    }
+  },
+  "excluded_as_math_premises": [
+    "old40706 N/M sign proof and66payments",
+    "old same-e §3 head theorem",
+    "old whole same-e PASS"
+  ],
+  "history_pins_may_reference_old40706": true,
+  "history_pins_are_not_math_edges": true,
+  "currently_retained_dependencies": [
+    13904,
+    40706,
+    3852
+  ],
+  "new_H_finite_counts": {
+    "ordinary_identity_terms": 746,
+    "leading_terms": 18,
+    "remainder_terms": 728,
+    "negative_remainder_terms": 362,
+    "corner_polynomials": 24,
+    "nonzero_corner_terms": 431,
+    "Horner_chains": 108,
+    "complete_Horner_slots": 600,
+    "negative_groups": 20,
+    "rounded_caps": 20,
+    "partition_payments": 60
+  },
+  "auxiliary_finite_counts": {
+    "hzero_F_slots": 128,
+    "hzero_F_nonzero": 82,
+    "hzero_F_controls": 32,
+    "Fzero_h_ordinary": 19,
+    "Fzero_h_controls": 48,
+    "shared_sourcegap_slots": 256,
+    "shared_sourcegap_nonzero": 96,
+    "shared_AJ_slots": 112,
+    "shared_AJ_nonzero": 60
+  },
+  "counts_overlap_and_are_not_a_total_operation_count": true,
+  "whole_speed_theorem_complete": false,
+  "packet": {
+    "path": "agents/generation/data/mono.refs/research/general_med_20261002/Q3REPLACEHAND_CONTINUATION_FIXED_COMPLETE_MATH_LEAF_TEXTS_AND_PRIOR_RECEIPTS_20261008.md",
+    "bytes": 364529,
+    "sha256": "93eca5571342eb740e69449abfba0c885d0ef5a1efe369acd4a3d15ac0ca4f01"
+  },
+  "full_text_frames": [
+    {
+      "path": "agents/generation/data/mono.refs/research/general_med_20261002/Q3REPLACEHAND_CONTINUATION_COMPLETE_NO40706_Q3C_ASSEMBLY_CANDIDATE_20261008.md",
+      "bytes": 13461,
+      "sha256": "5c071666ac41c9e4810a699319591a0ab0489723bb049b8f64b6f712dc5ceb0e",
+      "start_byte": 533
+    },
+    {
+      "path": "agents/generation/data/mono.refs/research/general_med_20261002/Q3REPLACEHAND_CONTINUATION_FZERO_BYPASS_AND_ACTUAL_E_CAP_SUPPLEMENT_V2_20261008.md",
+      "bytes": 3822,
+      "sha256": "eb7bf08d4cb140542c2595806f9a07288eb17787ec506e406dbe83c735ab0ebe",
+      "start_byte": 14209
+    },
+    {
+      "path": "agents/generation/data/mono.refs/research/general_med_20261002/assembly_review_packet_01a_actual_response_floor_20261004.md",
+      "bytes": 8125,
+      "sha256": "2e73df3d2d7dab9c068084b51717f8b64af9dfcd1ebaac6cf61d8721a97d4a21",
+      "start_byte": 18228
+    },
+    {
+      "path": "agents/generation/data/mono.refs/research/general_med_20261002/calibrated_cumulative_head_payment.md",
+      "bytes": 10278,
+      "sha256": "376d760f249813d115869a2a161d9f18bb799e0b134ff2e08d4f6341cb7f933d",
+      "start_byte": 26505
+    },
+    {
+      "path": "agents/generation/data/mono.refs/research/general_med_20261002/calibrated_cumulative_head_portable_proof_20261004.md",
+      "bytes": 5218,
+      "sha256": "43b87e4681f2f929c7f656236738a1b945ff3f6a9f1201252d11c2db7cdc052d",
+      "start_byte": 36928
+    },
+    {
+      "path": "agents/generation/data/mono.refs/research/general_med_20261002/audit_receipt_calibrated_cumulative_head_20261004.md",
+      "bytes": 1170,
+      "sha256": "b3b6ff0702e025dd9b355f3125af8718f889ef85c897d3499fea8413ea29ca23",
+      "start_byte": 42306
+    },
+    {
+      "path": "agents/generation/data/mono.refs/research/general_med_20261002/Q2HAND_CONTINUATION_COMPLETE_LAMBERT_BOUNDARY_IDENTITY_SUPPLEMENT_MANUAL_20261008.md",
+      "bytes": 3967,
+      "sha256": "c53f76cab2ea810cfd0c884999d96ffa7bbdc1b3aec2ff3e85206181368173fc",
+      "start_byte": 43667
+    },
+    {
+      "path": "agents/generation/data/mono.refs/research/general_med_20261002/Q2HAND_CONTINUATION_INDEPENDENT_LAMBERT_SUPPLEMENT_MANUAL_AUDIT_20261008_PASS.md",
+      "bytes": 3139,
+      "sha256": "60599485fd3b419cb0dc8d60add192e59faec9deb3c059e82ba208ffbd8ff0f3",
+      "start_byte": 47853
+    },
+    {
+      "path": "agents/generation/data/mono.refs/research/general_med_20261002/Q3HAND_CONTINUATION_COMPLETE_SHARED_SOURCE_MANUAL_PROOF_LOCAL_20261008.md",
+      "bytes": 10124,
+      "sha256": "30a47f6e4f61e3f5cedc566c953865e295192ddfbb1582a9bb0b3d921ef70f19",
+      "start_byte": 51200
+    },
+    {
+      "path": "agents/generation/data/mono.refs/research/general_med_20261002/Q3HAND_CONTINUATION_INDEPENDENT_SHARED_SOURCE_MANUAL_AUDIT_20261008_PASS.md",
+      "bytes": 9468,
+      "sha256": "084fef361b79531ad5069d4f57fc623d698a6db63d245fc2834a560c9de9eb49",
+      "start_byte": 61527
+    },
+    {
+      "path": "agents/generation/data/mono.refs/research/general_med_20261002/Q3HAND_CONTINUATION_COMPLETE_SHARED_PRICE_MANUAL_PROOF_LOCAL_20261008.md",
+      "bytes": 25125,
+      "sha256": "405254b09dc5ed0a15bd03861f52431cc4c7e0516a7dd4059d2a29aa2f5a6b8f",
+      "start_byte": 71197
+    },
+    {
+      "path": "agents/generation/data/mono.refs/research/general_med_20261002/Q3HAND_CONTINUATION_INDEPENDENT_SHARED_PRICE_MANUAL_AUDIT_20261008_PASS.md",
+      "bytes": 8704,
+      "sha256": "a740e4e6ac23ba9f369284f344f585cd279b4f4692692a1b1004d00711eed477",
+      "start_byte": 96523
+    },
+    {
+      "path": "agents/generation/data/mono.refs/research/general_med_20261002/Q3HAND_CONTINUATION_COMPLETE_SHARED_AJ_MANUAL_PROOF_LOCAL_20261008.md",
+      "bytes": 10041,
+      "sha256": "e5d560b471de21117d3db68acd4fc104a2a2b81ff5c666668ad4a7f6cfe8a366",
+      "start_byte": 105425
+    },
+    {
+      "path": "agents/generation/data/mono.refs/research/general_med_20261002/Q3HAND_CONTINUATION_INDEPENDENT_SHARED_AJ_MANUAL_AUDIT_20261008_PASS.md",
+      "bytes": 7659,
+      "sha256": "4b9655943d7449ea2936a75cdb90153f26f17204f558d64ab59ee9f186eee02b",
+      "start_byte": 115661
+    },
+    {
+      "path": "agents/generation/data/mono.refs/research/general_med_20261002/Q3HAND_CONTINUATION_COMPLETE_SHARED_SHAPE_AND_AB_ASSEMBLY_MANUAL_PROOF_LOCAL_20261008.md",
+      "bytes": 10838,
+      "sha256": "cda2f51164a4c04b288a471f4ecd8080867a5c6f150468e994e615a50003076b",
+      "start_byte": 123534
+    },
+    {
+      "path": "agents/generation/data/mono.refs/research/general_med_20261002/Q3HAND_CONTINUATION_INDEPENDENT_SHARED_SHAPE_AND_AB_ASSEMBLY_MANUAL_AUDIT_20261008_PASS.md",
+      "bytes": 10210,
+      "sha256": "5a828fc0a97832ab0e4924f33ba5e5417e4151a50243bee34bfbe42029b7c823",
+      "start_byte": 134605
+    },
+    {
+      "path": "agents/generation/data/mono.refs/research/general_med_20261002/Q3CHAND_CONTINUATION_COMPLETE_SOURCE_AND_GAP_MANUAL_PROOF_LOCAL_20261008.md",
+      "bytes": 11661,
+      "sha256": "1f91a87ac6bcb1b190d2601c3f45fa16c91459d809a535aceeb9b7868f641f65",
+      "start_byte": 145035
+    },
+    {
+      "path": "agents/generation/data/mono.refs/research/general_med_20261002/Q3CHAND_CONTINUATION_INDEPENDENT_SOURCE_AND_GAP_MANUAL_AUDIT_20261008_PASS.md",
+      "bytes": 10008,
+      "sha256": "ef9047c1f9a94fe140fd8ba94bd443e2f0ebf3410121456a0b4c5e4baf32e01c",
+      "start_byte": 156903
+    },
+    {
+      "path": "agents/generation/data/mono.refs/research/general_med_20261002/Q3CHAND_CONTINUATION_COMPLETE_WEIGHT_TAIL_AND_SAME_A_INTERFACE_MANUAL_PROOF_LOCAL_20261008.md",
+      "bytes": 9460,
+      "sha256": "dae46ada8c39d5e8e6bfac64b126f1157e26df99f53e31c5e6a759ce552f9bef",
+      "start_byte": 167136
+    },
+    {
+      "path": "agents/generation/data/mono.refs/research/general_med_20261002/Q3CHAND_CONTINUATION_INDEPENDENT_WEIGHT_TAIL_AND_SAME_A_INTERFACE_MANUAL_AUDIT_20261008_PASS.md",
+      "bytes": 10875,
+      "sha256": "613edb8748fe0d7b4d9d55b859703822552c06dcda8882dc56889d3bbbf86d82",
+      "start_byte": 176839
+    },
+    {
+      "path": "agents/generation/data/mono.refs/research/general_med_20261002/Q3CHAND_CONTINUATION_COMPLETE_HZERO_UNIFORM_HEAD_MANUAL_PROOF_LOCAL_20261008.md",
+      "bytes": 7547,
+      "sha256": "e78124c2d8c5371fe3b269b7ff22b17772079ce20ca7a6a594bcf9811c295b6d",
+      "start_byte": 187943
+    },
+    {
+      "path": "agents/generation/data/mono.refs/research/general_med_20261002/Q3CHAND_CONTINUATION_INDEPENDENT_HZERO_UNIFORM_HEAD_MANUAL_AUDIT_20261008_PASS.md",
+      "bytes": 8274,
+      "sha256": "a5f2eeba72e0ddb92164fac0a91814a1e74150d5066bbaf1f717211b96a65ff3",
+      "start_byte": 195705
+    },
+    {
+      "path": "agents/generation/data/mono.refs/research/general_med_20261002/Q3CXHAND_CONTINUATION_COMPLETE_XZERO_FH_THREE_QUARTERS_MANUAL_PROOF_LOCAL_20261008.md",
+      "bytes": 7042,
+      "sha256": "d5018be78950446ae34459089fe63f2527e2312e4cadf9105598e90775ff6a08",
+      "start_byte": 204200
+    },
+    {
+      "path": "agents/generation/data/mono.refs/research/general_med_20261002/Q3CXHAND_CONTINUATION_INDEPENDENT_XZERO_FH_THREE_QUARTERS_MANUAL_AUDIT_20261008_PASS_V2.md",
+      "bytes": 9367,
+      "sha256": "e71116d60834e4f5115aab2eb23988fb5558dcba66c45b2c20638e92bc97ae11",
+      "start_byte": 211472
+    },
+    {
+      "path": "agents/generation/data/mono.refs/research/general_med_20261002/Q3DXHAND_CONTINUATION_INDEPENDENT_TRUE_WX_NEGATIVE_GEOMETRIC_PROOF_LOCAL_20261008.md",
+      "bytes": 5387,
+      "sha256": "9ab385e9615d523ff78f53acedad019be4dd83c0e023364484fbc7fcaafa3ccf",
+      "start_byte": 221068
+    },
+    {
+      "path": "agents/generation/data/mono.refs/research/general_med_20261002/Q3DXHAND_CONTINUATION_ROOT_INDEPENDENT_TRUE_WX_NEGATIVE_GEOMETRIC_MANUAL_AUDIT_20261008_PASS.md",
+      "bytes": 3751,
+      "sha256": "980d9aabd81eb933a0d55ddf5d180215f24a6ed65e3afdfe5a7876a5926f36a4",
+      "start_byte": 226689
+    },
+    {
+      "path": "agents/generation/data/mono.refs/research/general_med_20261002/Q3DXHAND_CONTINUATION_COMPLETE_TRUE_BOUNDARY_H_COMPARE_THREE_PARTITION_PROOF_LOCAL_20261008.md",
+      "bytes": 5480,
+      "sha256": "a8159f663de7696036a04e8611d4bd41cc50eb7655a05267178e21740f66d180",
+      "start_byte": 230684
+    },
+    {
+      "path": "agents/generation/data/mono.refs/research/general_med_20261002/Q3DXHAND_CONTINUATION_INDEPENDENT_TRUE_U_THREE_PARTITION_MANUAL_AUDIT_20261008_PASS.md",
+      "bytes": 7375,
+      "sha256": "dcb50adb4a3d2611a81bff5633684b16f7111329ac02acdd5aea96bdcd7e4267",
+      "start_byte": 236399
+    },
+    {
+      "path": "agents/generation/data/mono.refs/research/general_med_20261002/Q3HHAND_CONTINUATION_COMPLETE_GLOBAL_H_THREE_PARTITION_MANUAL_PROOF_CANDIDATE_V2_20261008.md",
+      "bytes": 81492,
+      "sha256": "b32f8da235a11ea21368b1631696c0db79498faf9d70127c2f3d65df30c09be6",
+      "start_byte": 244007
+    },
+    {
+      "path": "agents/generation/data/mono.refs/research/general_med_20261002/Q3HHAND_CONTINUATION_INDEPENDENT_GLOBAL_H_THREE_PARTITION_MANUAL_AUDIT_20261008_PASS.md",
+      "bytes": 10615,
+      "sha256": "ad845c90e4db5fbf0e4e72ba9073debbfe71c68332996a6c438e911cc1c9f917",
+      "start_byte": 325733
+    },
+    {
+      "path": "agents/generation/data/mono.refs/research/general_med_20261002/Q3HHAND_CONTINUATION_COMPLETE_GLOBAL_FH_AND_F_INTEGRATION_ASSEMBLY_CANDIDATE_20261008.md",
+      "bytes": 5110,
+      "sha256": "39598fb04db2518f42a0787f79333dba3806f609ff2777611c6580e395afcb7a",
+      "start_byte": 336578
+    },
+    {
+      "path": "agents/generation/data/mono.refs/research/general_med_20261002/Q3HHAND_CONTINUATION_INDEPENDENT_GLOBAL_FH_AND_F_INTEGRATION_MANUAL_AUDIT_20261008_PASS.md",
+      "bytes": 6812,
+      "sha256": "66591570da3021f186cf8565e458912eaf3a51663fd5fac36fd141fc2044fef2",
+      "start_byte": 341921
+    },
+    {
+      "path": "agents/generation/data/mono.refs/research/general_med_20261002/Q3CHAND_CONTINUATION_COMPLETE_HEAD_QUADRATURE_AND_ENDPOINT_BUDGET_MANUAL_PROOF_LOCAL_20261008.md",
+      "bytes": 6900,
+      "sha256": "5f3ef23ab6ab78ce720eba2daa8d472e33eaa75ca55019ff44d4a889f9cece1f",
+      "start_byte": 348974
+    },
+    {
+      "path": "agents/generation/data/mono.refs/research/general_med_20261002/Q3CHAND_CONTINUATION_INDEPENDENT_HEAD_QUADRATURE_AND_ENDPOINT_BUDGET_MANUAL_AUDIT_20261008_PASS.md",
+      "bytes": 8282,
+      "sha256": "8dd6b634bf2c33334fea083e264849587f20dd68ecfbbc7055ab81142a0a1a07",
+      "start_byte": 356123
+    }
+  ],
+  "selected_original_baselines_not_directly_listed_in_old2551": [
+    {
+      "path": "agents/generation/data/mono.refs/research/general_med_20261002/assembly_review_packet_01a_actual_response_floor_20261004.md",
+      "bytes": 8125,
+      "sha256": "2e73df3d2d7dab9c068084b51717f8b64af9dfcd1ebaac6cf61d8721a97d4a21",
+      "start_byte": 18228
+    },
+    {
+      "path": "agents/generation/data/mono.refs/research/general_med_20261002/calibrated_cumulative_head_payment.md",
+      "bytes": 10278,
+      "sha256": "376d760f249813d115869a2a161d9f18bb799e0b134ff2e08d4f6341cb7f933d",
+      "start_byte": 26505
+    },
+    {
+      "path": "agents/generation/data/mono.refs/research/general_med_20261002/calibrated_cumulative_head_portable_proof_20261004.md",
+      "bytes": 5218,
+      "sha256": "43b87e4681f2f929c7f656236738a1b945ff3f6a9f1201252d11c2db7cdc052d",
+      "start_byte": 36928
+    },
+    {
+      "path": "agents/generation/data/mono.refs/research/general_med_20261002/audit_receipt_calibrated_cumulative_head_20261004.md",
+      "bytes": 1170,
+      "sha256": "b3b6ff0702e025dd9b355f3125af8718f889ef85c897d3499fea8413ea29ca23",
+      "start_byte": 42306
+    }
+  ],
+  "previous_graph_pointer_only_correction": {
+    "path": "agents/generation/data/mono.refs/research/general_med_20261002/Q3REPLACEHAND_CONTINUATION_FIXED_MATH_DEPENDENCY_GRAPH_AND_COMPLETE_LEAF_FRAMES_20261008.json",
+    "bytes": 15509,
+    "sha256": "72a2ba07815b3959d9098d83981cfc2e657cd3e3cd184eee9f7935d7e1087bac",
+    "change": "F0h paper sections2–5 contains full48 controls; supplementV2 already fixed; no mathematical formula or edge changed"
+  }
+}

@@ -1,0 +1,21 @@
+PASS: complete calibrated t derivative
+PASS: same-e full calibration
+PASS: same-law ratio correction
+PASS: full B correction including previous defect
+PASS: square price positive correction
+PASS: exact i1 k cancellation
+PASS: ALL-index adjacent cap normalization
+PASS: complete adjacent-square coefficient
+PASS: EXACT Lprev cutoff boundary
+PASS: ALL-index cap L recurrence
+PASS: complete Young endpoint N=2
+PASS: complete Young endpoint N=3
+PASS: complete Young endpoint N=4
+PASS: complete Young endpoint N=5
+PASS: EXACT cap leading margin
+PASS: ALL-index cap response error
+PASS: hard variance bound
+PASS: complete D at variance endpoint
+PASS: hard alpha defect denominator
+PASS: complete Ehard parameter derivative
+20 generic exact identities PASS; signs/full tails require manuscript proof.

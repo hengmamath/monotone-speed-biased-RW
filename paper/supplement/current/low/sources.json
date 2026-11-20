@@ -1,0 +1,95 @@
+[
+  {
+    "script": "checks/low_u_selfcontained_fixed_arithmetic_20261006.py",
+    "source_archive": "archive_material/agents/generation/data/mono.refs/research/general_med_20261002/low_u_selfcontained_fixed_arithmetic_20261006.py",
+    "sha256": "033ba14522178d9ef47bea2f1d3420cedb55b7076f805225a46d59608e872aef",
+    "bytes": 2471,
+    "adaptation": "Added lossless export of the exact input polynomials and coefficient arrays/Sturm chains actually checked; arithmetic assertions unchanged.",
+    "source_sha256": "7a9979169135a44abad9fdb2e618b859469f7d5c0c3ad08bf6cb66035d72ad28",
+    "source_bytes": 2038
+  },
+  {
+    "script": "checks/low_q_full_coupled_certificate.py",
+    "source_archive": "archive_material/agents/generation/data/mono.refs/research/general_med_20261002/low_q_full_coupled_certificate.py",
+    "sha256": "3c9bff9cc0254ec7abb790c6917892300dbb54599a17b5349c0a715bb0015a63",
+    "bytes": 8883,
+    "adaptation": "Added lossless export of the exact input polynomials and coefficient arrays/Sturm chains actually checked; arithmetic assertions unchanged.",
+    "source_sha256": "bd550a1cd159bbc108d4c5c3d589bb884d2ee5ace058e04886ec19431137981c",
+    "source_bytes": 8107
+  },
+  {
+    "script": "checks/mid_q_full_same_e_certificate.py",
+    "source_archive": "archive_material/agents/generation/data/mono.refs/research/general_med_20261002/mid_q_full_same_e_certificate.py",
+    "sha256": "7fd00976ead3faa01c9830841dda18ab29103648d958ac570d442b163cb6d4b2",
+    "bytes": 7728,
+    "adaptation": "Added lossless export of the exact input polynomials and coefficient arrays/Sturm chains actually checked; arithmetic assertions unchanged.",
+    "source_sha256": "c72954ceacddd215ca65a87135f96ff0bf6c7b10f43ad947097ff880ebe3e072",
+    "source_bytes": 6846
+  },
+  {
+    "script": "checks/lambert_head_scale_identities.py",
+    "source_archive": "archive_material/agents/generation/data/mono.refs/research/general_med_20261002/lambert_head_scale_identities.py",
+    "sha256": "09b1a5acd283fd527332d822c3043dbcdf3649f98062cab815a700f1b102caaf",
+    "bytes": 5939,
+    "adaptation": "Added lossless export of the exact input polynomials and coefficient arrays/Sturm chains actually checked; arithmetic assertions unchanged.",
+    "source_sha256": "c82c83fd0f7b47f39a954123209407050330a52ca0c8ef105ec5ead40c2bea92",
+    "source_bytes": 5790
+  },
+  {
+    "script": "checks/calibrated_cumulative_head_identities.py",
+    "source_archive": "archive_material/agents/generation/data/mono.refs/research/general_med_20261002/calibrated_cumulative_head_identities.py",
+    "sha256": "546cfce1252df27d6a87a5f2f38ccd71456f02f9db5f4d4670c80e2ee4c54eb9",
+    "bytes": 3133,
+    "adaptation": "none; byte-preserved standalone arithmetic program",
+    "source_sha256": "546cfce1252df27d6a87a5f2f38ccd71456f02f9db5f4d4670c80e2ee4c54eb9",
+    "source_bytes": 3133
+  },
+  {
+    "script": "checks/middle_q_coupled_certificate.py",
+    "source_archive": "archive_material/agents/generation/data/mono.refs/research/general_med_20261002/middle_q_coupled_certificate.py",
+    "sha256": "d827e3fc0e2d9f0f6a8f88299ded519872706f22eacb6556aa8aee2b09cb3d98",
+    "bytes": 4369,
+    "adaptation": "Added lossless export of the exact input polynomials and coefficient arrays/Sturm chains actually checked; arithmetic assertions unchanged.",
+    "source_sha256": "eea534a7e52c605325a410f286f94f434e42a8fcba8543fc8c34fa1201fb3a47",
+    "source_bytes": 3908
+  },
+  {
+    "script": "checks/hard_d_coupled_certificate.py",
+    "source_archive": "archive_material/agents/generation/data/mono.refs/research/general_med_20261002/hard_d_coupled_certificate.py",
+    "sha256": "2977dfe0a3a9b8d648012149d9b09d23a825ae2abfd1352d390bb767a0e7563f",
+    "bytes": 2142,
+    "adaptation": "none; byte-preserved standalone arithmetic program",
+    "source_sha256": "2977dfe0a3a9b8d648012149d9b09d23a825ae2abfd1352d390bb767a0e7563f",
+    "source_bytes": 2142
+  },
+  {
+    "script": "checks/finite_h_quarter_certificate.py",
+    "source_archive": "archive_material/agents/generation/data/mono.refs/research/general_med_20261002/finite_h_quarter_certificate.py",
+    "bytes": 5422,
+    "adaptation": "Added assertion: every head Bernstein array has exactly one zero, at (0,0), proving strict positivity for x>0. Added lossless export of the exact input polynomials and coefficient arrays/Sturm chains actually checked; arithmetic assertions unchanged.",
+    "source_sha256": "920f8234a2f6e0282819b88a42ff731265435aeec04f5ce301e677ef61cabef8",
+    "sha256": "49c52b45f3fd0cedfdf488e3f636a42db8059a39963bbfa00e1d7b5845f946dd",
+    "source_bytes": 5031
+  },
+  {
+    "script": "checks/marker_and_local_identities.py",
+    "source_archive": null,
+    "sha256": "85b01188ce64d0d9f1a5d69e114f050286373ecae2f440a4beb7a05cb069bae6",
+    "bytes": 4102,
+    "adaptation": "New independent reconstruction of three transformed kernels, corrected Mellin first factor and assigned calibration; direct six Q0 inequalities and final Q3c budget derivatives/margins."
+  },
+  {
+    "script": "checks/master_local_identity.py",
+    "source_archive": null,
+    "sha256": "f9752399f347a5e3cfdcfc1d4f337bc42dbdf71cea80245eb1642b10de314e9f",
+    "bytes": 2051,
+    "adaptation": "Independent reviewer reconstruction of the complete local floor identity and both telescoping pairs."
+  },
+  {
+    "script": "checks/export_exact.py",
+    "source_archive": null,
+    "sha256": "4bb30cc92b1f5466ead06638eefa4dc98fe68fbb054ee6d5e1ffb2f7c1f35528",
+    "bytes": 3039,
+    "adaptation": "New lossless sparse rational gzip writer. It records exact coefficient tables and Sturm sequences; no sign computation is performed here."
+  }
+]

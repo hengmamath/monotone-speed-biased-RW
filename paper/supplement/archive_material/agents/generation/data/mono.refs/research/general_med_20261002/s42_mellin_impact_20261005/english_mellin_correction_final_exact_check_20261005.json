@@ -1,0 +1,514 @@
+{
+  "status": "LOCAL editorial savepoint PASS; prior independent text review limited to displayed diff and accompanying texts",
+  "review_scope": "No independent reconstruction of the complete preserved base or every corrected English byte; final status/package edits are LOCAL only.",
+  "reviewed_before_fingerprints": [
+    {
+      "file": "speed_monotonicity_english_proof_20261005_corrected.md",
+      "bytes": 36337,
+      "sha256": "b9353b0699366f69d8a11a99b560fcde7490b5e546e086c82fa7d99b458c79eb"
+    },
+    {
+      "file": "mellin_index_errata_and_dependency_impact_20261005.md",
+      "bytes": 5220,
+      "sha256": "bfaf6360d76f78e266847c6a6a405bd0f527c6a69df794a4691caf10bba25cc9"
+    },
+    {
+      "file": "CURRENT_RESEARCH_STATUS_20261005.md",
+      "bytes": 1839,
+      "sha256": "49f64b533a4f852d019c1b197700dbc1d1c2b7efbe941fb8f2c83f1d91f921e7"
+    }
+  ],
+  "final_current_files": [
+    {
+      "file": "speed_monotonicity_english_proof_20261005_corrected.md",
+      "bytes": 36477,
+      "sha256": "754a53d1a68e2f8153ceb5f6380c3ead68e27fe6002a85a56580e84ffeb614b0"
+    },
+    {
+      "file": "mellin_index_errata_and_dependency_impact_20261005.md",
+      "bytes": 6129,
+      "sha256": "f451d5ebc37a61745560bf2547899d8687d1550b5234e82af58ff19c4fc40111"
+    },
+    {
+      "file": "CURRENT_RESEARCH_STATUS_20261005.md",
+      "bytes": 2353,
+      "sha256": "7ebb6e011ab7aa70f56b9b0de2ac16a0a165e74c5f9d0014ec3fc8b268e950e0"
+    }
+  ],
+  "diffs": [
+    {
+      "file": "s42_mellin_impact_20261005/english_mellin_correction_20261005_final.diff",
+      "bytes": 4221,
+      "sha256": "7aec63e750eb7e9fefb9fe47edaa84ce30e559587a2ef2b6309fbd39390e8d12"
+    },
+    {
+      "file": "s42_mellin_impact_20261005/reviewed_text_status_update_20261005.diff",
+      "bytes": 8914,
+      "sha256": "5ca277442f8e8a430fe6459b16455000694c6ce8074a700f31fdbaaae52324ce"
+    }
+  ],
+  "preserved_frozen_files": [
+    {
+      "file": "speed_monotonicity_english_proof_20261004.md",
+      "bytes": 34924,
+      "sha256": "50de39e9440d427e7f4764b192221f4113c22e4c53948d2d986d61d88c529882"
+    },
+    {
+      "file": "speed_monotonicity_english_proof_20261004_v1.md",
+      "bytes": 34290,
+      "sha256": "8d7f2355e2a7558562cf86c766d5cea9475ffe189c511ac70bda163c0561242f"
+    },
+    {
+      "file": "galton_watson_speed_20261004_v3_complete.zip",
+      "bytes": 543059,
+      "sha256": "8860422a20991c21041ca2274c65e8fc267aaeee831db88e8288d483008d9ef9"
+    }
+  ],
+  "checks": [
+    "reviewed mathematical body byte-identical after assembly-date anchor",
+    "wrong Mellin factor absent, correct factor unique",
+    "J_n unchanged",
+    "complete RHS (15)/(17) unchanged",
+    "complete blocks T/16/18/19 unchanged",
+    "all numbered tags unchanged",
+    "exact ndiff old/final roundtrip",
+    "historical reviewed diff and original/v1/V3 hashes unchanged",
+    "all local Markdown links in supplement documents exist"
+  ],
+  "markdown_links": [
+    {
+      "source": "speed_monotonicity_english_proof_20261005_corrected.md",
+      "label": "the erratum and dependency-impact record",
+      "target": "mellin_index_errata_and_dependency_impact_20261005.md",
+      "resolved": "mellin_index_errata_and_dependency_impact_20261005.md",
+      "exists": true,
+      "included_in_supplement": true
+    },
+    {
+      "source": "speed_monotonicity_english_proof_20261005_corrected.md",
+      "label": "source boundary",
+      "target": "../../evidence/imported_speed_formula.md",
+      "resolved": "/Users/heng/Desktop/10-AI-Workspace/Rethlas_local/agents/generation/data/mono.refs/evidence/imported_speed_formula.md",
+      "exists": true,
+      "included_in_supplement": false
+    },
+    {
+      "source": "speed_monotonicity_english_proof_20261005_corrected.md",
+      "label": "response_interface.md",
+      "target": "response_interface.md",
+      "resolved": "response_interface.md",
+      "exists": true,
+      "included_in_supplement": false
+    },
+    {
+      "source": "speed_monotonicity_english_proof_20261005_corrected.md",
+      "label": "canonical_entropy.md",
+      "target": "canonical_entropy.md",
+      "resolved": "canonical_entropy.md",
+      "exists": true,
+      "included_in_supplement": false
+    },
+    {
+      "source": "speed_monotonicity_english_proof_20261005_corrected.md",
+      "label": "scaled_r0_adjacent_defect_payment.md",
+      "target": "scaled_r0_adjacent_defect_payment.md",
+      "resolved": "scaled_r0_adjacent_defect_payment.md",
+      "exists": true,
+      "included_in_supplement": false
+    },
+    {
+      "source": "speed_monotonicity_english_proof_20261005_corrected.md",
+      "label": "calibrated_cumulative_head_payment.md",
+      "target": "calibrated_cumulative_head_payment.md",
+      "resolved": "calibrated_cumulative_head_payment.md",
+      "exists": true,
+      "included_in_supplement": false
+    },
+    {
+      "source": "speed_monotonicity_english_proof_20261005_corrected.md",
+      "label": "final receipt",
+      "target": "audit_receipt_mid_q_full_same_e_20261004.md",
+      "resolved": "audit_receipt_mid_q_full_same_e_20261004.md",
+      "exists": true,
+      "included_in_supplement": false
+    },
+    {
+      "source": "speed_monotonicity_english_proof_20261005_corrected.md",
+      "label": "portable proof and code",
+      "target": "audit_packet_mid_q_full_same_e_20261004.md",
+      "resolved": "audit_packet_mid_q_full_same_e_20261004.md",
+      "exists": true,
+      "included_in_supplement": false
+    },
+    {
+      "source": "speed_monotonicity_english_proof_20261005_corrected.md",
+      "label": "complete proof",
+      "target": "actual_defect_relative_finite_lift.md",
+      "resolved": "actual_defect_relative_finite_lift.md",
+      "exists": true,
+      "included_in_supplement": false
+    },
+    {
+      "source": "speed_monotonicity_english_proof_20261005_corrected.md",
+      "label": "receipt",
+      "target": "audit_receipt_actual_defect_relative_20261004.md",
+      "resolved": "audit_receipt_actual_defect_relative_20261004.md",
+      "exists": true,
+      "included_in_supplement": false
+    },
+    {
+      "source": "speed_monotonicity_english_proof_20261005_corrected.md",
+      "label": "proof packet",
+      "target": "audit_packet_low_q_full_coupled_20261004.md",
+      "resolved": "audit_packet_low_q_full_coupled_20261004.md",
+      "exists": true,
+      "included_in_supplement": false
+    },
+    {
+      "source": "speed_monotonicity_english_proof_20261005_corrected.md",
+      "label": "receipt",
+      "target": "audit_receipt_low_q_full_coupled_20261004.md",
+      "resolved": "audit_receipt_low_q_full_coupled_20261004.md",
+      "exists": true,
+      "included_in_supplement": false
+    },
+    {
+      "source": "speed_monotonicity_english_proof_20261005_corrected.md",
+      "label": "general_two_over_sqrt3_verified_20261004.md",
+      "target": "general_two_over_sqrt3_verified_20261004.md",
+      "resolved": "general_two_over_sqrt3_verified_20261004.md",
+      "exists": true,
+      "included_in_supplement": false
+    },
+    {
+      "source": "speed_monotonicity_english_proof_20261005_corrected.md",
+      "label": "receipt",
+      "target": "audit_receipt_general_two_over_sqrt3_20261004.md",
+      "resolved": "audit_receipt_general_two_over_sqrt3_20261004.md",
+      "exists": true,
+      "included_in_supplement": false
+    },
+    {
+      "source": "speed_monotonicity_english_proof_20261005_corrected.md",
+      "label": "final_dependency_dag_20261004.md",
+      "target": "final_dependency_dag_20261004.md",
+      "resolved": "final_dependency_dag_20261004.md",
+      "exists": true,
+      "included_in_supplement": false
+    },
+    {
+      "source": "mellin_index_errata_and_dependency_impact_20261005.md",
+      "label": "speed_monotonicity_english_proof_20261004.md",
+      "target": "speed_monotonicity_english_proof_20261004.md",
+      "resolved": "speed_monotonicity_english_proof_20261004.md",
+      "exists": true,
+      "included_in_supplement": false
+    },
+    {
+      "source": "mellin_index_errata_and_dependency_impact_20261005.md",
+      "label": "speed_monotonicity_english_proof_20261005_corrected.md",
+      "target": "speed_monotonicity_english_proof_20261005_corrected.md",
+      "resolved": "speed_monotonicity_english_proof_20261005_corrected.md",
+      "exists": true,
+      "included_in_supplement": true
+    },
+    {
+      "source": "mellin_index_errata_and_dependency_impact_20261005.md",
+      "label": "F转录勘误",
+      "target": "s42_mellin_impact_20261005/F_Q1_first_term_erratum_20261005.md",
+      "resolved": "s42_mellin_impact_20261005/F_Q1_first_term_erratum_20261005.md",
+      "exists": true,
+      "included_in_supplement": false
+    },
+    {
+      "source": "mellin_index_errata_and_dependency_impact_20261005.md",
+      "label": "审核点初始diff（保留）",
+      "target": "s42_mellin_impact_20261005/english_mellin_correction_20261005.diff",
+      "resolved": "s42_mellin_impact_20261005/english_mellin_correction_20261005.diff",
+      "exists": true,
+      "included_in_supplement": true
+    },
+    {
+      "source": "mellin_index_errata_and_dependency_impact_20261005.md",
+      "label": "审核点本地exact检查（保留）",
+      "target": "s42_mellin_impact_20261005/english_mellin_correction_exact_check_20261005.json",
+      "resolved": "s42_mellin_impact_20261005/english_mellin_correction_exact_check_20261005.json",
+      "exists": true,
+      "included_in_supplement": true
+    },
+    {
+      "source": "mellin_index_errata_and_dependency_impact_20261005.md",
+      "label": "必要链闭合回执",
+      "target": "s42_mellin_impact_20261005/audit_receipt_mellin_necessary_chain_closed_20261005.md",
+      "resolved": "s42_mellin_impact_20261005/audit_receipt_mellin_necessary_chain_closed_20261005.md",
+      "exists": true,
+      "included_in_supplement": true
+    },
+    {
+      "source": "mellin_index_errata_and_dependency_impact_20261005.md",
+      "label": "当前研究状态",
+      "target": "CURRENT_RESEARCH_STATUS_20261005.md",
+      "resolved": "CURRENT_RESEARCH_STATUS_20261005.md",
+      "exists": true,
+      "included_in_supplement": true
+    },
+    {
+      "source": "mellin_index_errata_and_dependency_impact_20261005.md",
+      "label": "文字审核回执",
+      "target": "s42_mellin_impact_20261005/audit_receipt_corrected_english_text_20261005.md",
+      "resolved": "s42_mellin_impact_20261005/audit_receipt_corrected_english_text_20261005.md",
+      "exists": true,
+      "included_in_supplement": true
+    },
+    {
+      "source": "mellin_index_errata_and_dependency_impact_20261005.md",
+      "label": "最终原稿→更正版diff",
+      "target": "s42_mellin_impact_20261005/english_mellin_correction_20261005_final.diff",
+      "resolved": "s42_mellin_impact_20261005/english_mellin_correction_20261005_final.diff",
+      "exists": true,
+      "included_in_supplement": true
+    },
+    {
+      "source": "mellin_index_errata_and_dependency_impact_20261005.md",
+      "label": "本次状态回写diff",
+      "target": "s42_mellin_impact_20261005/reviewed_text_status_update_20261005.diff",
+      "resolved": "s42_mellin_impact_20261005/reviewed_text_status_update_20261005.diff",
+      "exists": true,
+      "included_in_supplement": true
+    },
+    {
+      "source": "mellin_index_errata_and_dependency_impact_20261005.md",
+      "label": "最终本地exact检查",
+      "target": "s42_mellin_impact_20261005/english_mellin_correction_final_exact_check_20261005.json",
+      "resolved": "s42_mellin_impact_20261005/english_mellin_correction_final_exact_check_20261005.json",
+      "exists": true,
+      "included_in_supplement": true
+    },
+    {
+      "source": "CURRENT_RESEARCH_STATUS_20261005.md",
+      "label": "独立更正版",
+      "target": "speed_monotonicity_english_proof_20261005_corrected.md",
+      "resolved": "speed_monotonicity_english_proof_20261005_corrected.md",
+      "exists": true,
+      "included_in_supplement": true
+    },
+    {
+      "source": "CURRENT_RESEARCH_STATUS_20261005.md",
+      "label": "勘误及依赖说明",
+      "target": "mellin_index_errata_and_dependency_impact_20261005.md",
+      "resolved": "mellin_index_errata_and_dependency_impact_20261005.md",
+      "exists": true,
+      "included_in_supplement": true
+    },
+    {
+      "source": "CURRENT_RESEARCH_STATUS_20261005.md",
+      "label": "文字审核回执",
+      "target": "s42_mellin_impact_20261005/audit_receipt_corrected_english_text_20261005.md",
+      "resolved": "s42_mellin_impact_20261005/audit_receipt_corrected_english_text_20261005.md",
+      "exists": true,
+      "included_in_supplement": true
+    },
+    {
+      "source": "CURRENT_RESEARCH_STATUS_20261005.md",
+      "label": "S42精简接续说明",
+      "target": "S42_COMPACT_CONTINUATION_20261005.md",
+      "resolved": "S42_COMPACT_CONTINUATION_20261005.md",
+      "exists": true,
+      "included_in_supplement": true
+    },
+    {
+      "source": "s42_mellin_impact_20261005/audit_receipt_corrected_english_text_20261005.md",
+      "label": "另一回执",
+      "target": "audit_receipt_mellin_necessary_chain_closed_20261005.md",
+      "resolved": "s42_mellin_impact_20261005/audit_receipt_mellin_necessary_chain_closed_20261005.md",
+      "exists": true,
+      "included_in_supplement": true
+    },
+    {
+      "source": "s42_mellin_impact_20261005/audit_receipt_corrected_english_text_20261005.md",
+      "label": "初始diff",
+      "target": "english_mellin_correction_20261005.diff",
+      "resolved": "s42_mellin_impact_20261005/english_mellin_correction_20261005.diff",
+      "exists": true,
+      "included_in_supplement": true
+    },
+    {
+      "source": "S42_COMPACT_CONTINUATION_20261005.md",
+      "label": "当前状态",
+      "target": "CURRENT_RESEARCH_STATUS_20261005.md",
+      "resolved": "CURRENT_RESEARCH_STATUS_20261005.md",
+      "exists": true,
+      "included_in_supplement": true
+    },
+    {
+      "source": "S42_COMPACT_CONTINUATION_20261005.md",
+      "label": "数学必要链闭合回执",
+      "target": "s42_mellin_impact_20261005/audit_receipt_mellin_necessary_chain_closed_20261005.md",
+      "resolved": "s42_mellin_impact_20261005/audit_receipt_mellin_necessary_chain_closed_20261005.md",
+      "exists": true,
+      "included_in_supplement": true
+    },
+    {
+      "source": "S42_COMPACT_CONTINUATION_20261005.md",
+      "label": "文字审核回执",
+      "target": "s42_mellin_impact_20261005/audit_receipt_corrected_english_text_20261005.md",
+      "resolved": "s42_mellin_impact_20261005/audit_receipt_corrected_english_text_20261005.md",
+      "exists": true,
+      "included_in_supplement": true
+    },
+    {
+      "source": "S42_COMPACT_CONTINUATION_20261005.md",
+      "label": "单一路线",
+      "target": "s42_canonical_whole_floor_route_20261005.md",
+      "resolved": "s42_canonical_whole_floor_route_20261005.md",
+      "exists": true,
+      "included_in_supplement": false
+    },
+    {
+      "source": "S42_COMPACT_CONTINUATION_20261005.md",
+      "label": "已证指定族切向手稿",
+      "target": "s42_canonical_reset_tangent_hand_20261005.md",
+      "resolved": "s42_canonical_reset_tangent_hand_20261005.md",
+      "exists": true,
+      "included_in_supplement": false
+    },
+    {
+      "source": "S42_COMPACT_CONTINUATION_20261005.md",
+      "label": "独立回执",
+      "target": "audit_receipt_s42_canonical_reset_tangent_20261005.md",
+      "resolved": "audit_receipt_s42_canonical_reset_tangent_20261005.md",
+      "exists": true,
+      "included_in_supplement": false
+    },
+    {
+      "source": "S42_COMPACT_CONTINUATION_20261005.md",
+      "label": "更正版",
+      "target": "speed_monotonicity_english_proof_20261005_corrected.md",
+      "resolved": "speed_monotonicity_english_proof_20261005_corrected.md",
+      "exists": true,
+      "included_in_supplement": true
+    },
+    {
+      "source": "S42_COMPACT_CONTINUATION_20261005.md",
+      "label": "原assigned核",
+      "target": "assigned_polynomial_extension.md",
+      "resolved": "assigned_polynomial_extension.md",
+      "exists": true,
+      "included_in_supplement": false
+    },
+    {
+      "source": "S42_COMPACT_CONTINUATION_20261005.md",
+      "label": "med_bias历史表",
+      "target": "../../med_bias.md",
+      "resolved": "/Users/heng/Desktop/10-AI-Workspace/Rethlas_local/agents/generation/data/mono.refs/med_bias.md",
+      "exists": true,
+      "included_in_supplement": false
+    },
+    {
+      "source": "S42_COMPACT_CONTINUATION_20261005.md",
+      "label": "真实canonical反例",
+      "target": "below_two_over_sqrt3_actual_F_obstruction.md",
+      "resolved": "below_two_over_sqrt3_actual_F_obstruction.md",
+      "exists": true,
+      "included_in_supplement": false
+    },
+    {
+      "source": "S42_COMPACT_CONTINUATION_20261005.md",
+      "label": "实际同族反例/修复",
+      "target": "low_bias_joint_profile_counter_and_repair.md",
+      "resolved": "low_bias_joint_profile_counter_and_repair.md",
+      "exists": true,
+      "included_in_supplement": false
+    },
+    {
+      "source": "S42_COMPACT_CONTINUATION_20261005.md",
+      "label": "实际分枝反例",
+      "target": "unary_debt_branch_pairing.md",
+      "resolved": "unary_debt_branch_pairing.md",
+      "exists": true,
+      "included_in_supplement": false
+    },
+    {
+      "source": "S42_COMPACT_CONTINUATION_20261005.md",
+      "label": "q6精确反例",
+      "target": "zero_J_q6_countercertificate_20261004.md",
+      "resolved": "zero_J_q6_countercertificate_20261004.md",
+      "exists": true,
+      "included_in_supplement": false
+    },
+    {
+      "source": "english_mellin_correction_supplement_README_20261005.md",
+      "label": "更正英文",
+      "target": "speed_monotonicity_english_proof_20261005_corrected.md",
+      "resolved": "speed_monotonicity_english_proof_20261005_corrected.md",
+      "exists": true,
+      "included_in_supplement": true
+    },
+    {
+      "source": "english_mellin_correction_supplement_README_20261005.md",
+      "label": "勘误",
+      "target": "mellin_index_errata_and_dependency_impact_20261005.md",
+      "resolved": "mellin_index_errata_and_dependency_impact_20261005.md",
+      "exists": true,
+      "included_in_supplement": true
+    },
+    {
+      "source": "english_mellin_correction_supplement_README_20261005.md",
+      "label": "当前状态",
+      "target": "CURRENT_RESEARCH_STATUS_20261005.md",
+      "resolved": "CURRENT_RESEARCH_STATUS_20261005.md",
+      "exists": true,
+      "included_in_supplement": true
+    },
+    {
+      "source": "english_mellin_correction_supplement_README_20261005.md",
+      "label": "文字审核回执",
+      "target": "s42_mellin_impact_20261005/audit_receipt_corrected_english_text_20261005.md",
+      "resolved": "s42_mellin_impact_20261005/audit_receipt_corrected_english_text_20261005.md",
+      "exists": true,
+      "included_in_supplement": true
+    },
+    {
+      "source": "english_mellin_correction_supplement_README_20261005.md",
+      "label": "数学必要链回执",
+      "target": "s42_mellin_impact_20261005/audit_receipt_mellin_necessary_chain_closed_20261005.md",
+      "resolved": "s42_mellin_impact_20261005/audit_receipt_mellin_necessary_chain_closed_20261005.md",
+      "exists": true,
+      "included_in_supplement": true
+    },
+    {
+      "source": "english_mellin_correction_supplement_README_20261005.md",
+      "label": "S42接续",
+      "target": "S42_COMPACT_CONTINUATION_20261005.md",
+      "resolved": "S42_COMPACT_CONTINUATION_20261005.md",
+      "exists": true,
+      "included_in_supplement": true
+    },
+    {
+      "source": "english_mellin_correction_supplement_README_20261005.md",
+      "label": "最终diff",
+      "target": "s42_mellin_impact_20261005/english_mellin_correction_20261005_final.diff",
+      "resolved": "s42_mellin_impact_20261005/english_mellin_correction_20261005_final.diff",
+      "exists": true,
+      "included_in_supplement": true
+    },
+    {
+      "source": "english_mellin_correction_supplement_README_20261005.md",
+      "label": "状态回写diff",
+      "target": "s42_mellin_impact_20261005/reviewed_text_status_update_20261005.diff",
+      "resolved": "s42_mellin_impact_20261005/reviewed_text_status_update_20261005.diff",
+      "exists": true,
+      "included_in_supplement": true
+    },
+    {
+      "source": "english_mellin_correction_supplement_README_20261005.md",
+      "label": "LOCAL exact报告",
+      "target": "s42_mellin_impact_20261005/english_mellin_correction_final_exact_check_20261005.json",
+      "resolved": "s42_mellin_impact_20261005/english_mellin_correction_final_exact_check_20261005.json",
+      "exists": true,
+      "included_in_supplement": true
+    }
+  ],
+  "large_certificate_replays": 0,
+  "new_mathematical_exploration": false
+}

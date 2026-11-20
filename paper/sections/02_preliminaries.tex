@@ -1,0 +1,288 @@
+\section{Preliminaries}\label{sec:preliminaries}
+
+Throughout the paper the offspring variable satisfies $\PP(\nu\ge1)=1$ and $1<m=\E\nu<\infty$. The offspring law is fixed when the bias changes. We first express the speed through two independent escape probabilities. For $\lambda>1$, we establish the kernel identities and linear-response formula used in the two proofs in Section~\ref{sec:twochildren} and in the later estimates.
+
+\subsection{The escape law and the speed formula}
+Attach an artificial parent to the root of a descendant tree $T$, and let $\beta_\lambda(T)$ be the quenched probability, starting from that root, of never visiting its parent. For $0<\lambda<m$, transience gives $0<\beta_\lambda(T)<1$ almost surely. Write $\pi_\lambda=\Law(\beta_\lambda)$ and
+\begin{equation}\label{eq:rde}
+ F_\lambda(s)=\frac{s}{\lambda+s},\qquad
+ X\overset{\mathrm d}=F_\lambda(S),\qquad S=\sum_{i=1}^{\nu}X_i,
+\end{equation}
+where the $X_i$ have law $\pi_\lambda$, independently of one another and of $\nu$. To obtain the recursion, condition on the child subtrees. A step to child $i$ leads to escape before returning to the present vertex with probability $X_i$; after a return the same experiment restarts. The first-step equation is
+\[
+ X=\frac1{\lambda+\nu}\sum_{i=1}^{\nu}
+ \{X_i+(1-X_i)X\},
+\]
+which rearranges to~\eqref{eq:rde}. At finite depth, terminal escape value one is the boundary condition for reaching that generation before the artificial parent. Those events decrease with the terminal depth, and their probabilities tend to the probability of never hitting the parent. Since $F_\lambda$ increases in its argument and decreases in $\lambda$, induction on the finite recursion followed by this limit gives the same-tree order
+\begin{equation}\label{eq:same-tree}
+ \beta_\alpha(T)\ge\beta_\gamma(T),\qquad 0<\alpha<\gamma<m.
+\end{equation}
+
+Set
+\begin{equation}\label{eq:kernels}
+ t(x,y)=x+y-xy,\qquad A_\lambda(x,y)=\lambda-1+t(x,y).
+\end{equation}
+For independent $X,Y$ with common probability law $\rho$ on $[0,1]$, define
+\begin{equation}\label{eq:NZ}
+ N_\lambda(\rho)=\E_\rho\frac{XY}{A_\lambda(X,Y)},\qquad
+ Z_\lambda(\rho)=\E_\rho\frac{t(X,Y)}{A_\lambda(X,Y)},\qquad
+ \mathcal V_\lambda(\rho)=\frac{N_\lambda(\rho)}{Z_\lambda(\rho)}
+\end{equation}
+whenever the integrals are finite and the denominator is positive. If $\lambda>1$, then $\lambda-1\le A_\lambda\le\lambda$ on $[0,1]^2$. If $0<\lambda<1$, the finite recursion gives $X\ge1-\lambda$ under $\pi_\lambda$, and
+\begin{equation}\label{eq:low-denominator}
+ A_\lambda(x,y)\ge\lambda(1-\lambda)>0
+ \quad\text{for }x,y\in[1-\lambda,1].
+\end{equation}
+
+\begin{proposition}[Symmetric speed formula]\label{prop:symmetric}
+For $0<\lambda<m$, $\lambda\ne1$, the speed satisfies
+\begin{equation}\label{eq:pair-speed}
+ v(\lambda)=\mathcal V_\lambda(\pi_\lambda).
+\end{equation}
+\end{proposition}
+
+\begin{proof}
+We use A\"id\'ekon's speed formula~\cite[Theorem~1.1]{Aidekon}, in the leafless form stated in~\cite[(2.1)]{SWX}:
+\begin{equation}\label{eq:degree-speed}
+ v(\lambda)=
+ \frac{\E[(\nu-\lambda)X_0/(\lambda-1+\sum_{i=0}^{\nu}X_i)]}
+ {\E[(\nu+\lambda)X_0/(\lambda-1+\sum_{i=0}^{\nu}X_i)]}.
+\end{equation}
+The $X_i$ are independent with law $\pi_\lambda$, independently of $\nu$. The speed is unchanged by attaching an artificial parent at the root; see~\cite[Lemma~2.1]{SWX}. Conditional exchangeability yields
+\begin{equation*}
+ \E\frac{\nu X_0}{\lambda-1+X_0+S}
+ =\E\frac{S}{\lambda-1+X_0+S}.
+\end{equation*}
+Put $X=X_0$ and $Y=F_\lambda(S)$. Then $X,Y$ are independent with law $\pi_\lambda$ and $S=\lambda Y/(1-Y)$. Multiplication of the denominator by $1-Y$ gives $A_\lambda(X,Y)$. The numerator of~\eqref{eq:degree-speed} becomes
+\begin{equation*}
+ \lambda\E\frac{Y-X+XY}{A_\lambda(X,Y)}
+ =\lambda N_\lambda(\pi_\lambda),
+\end{equation*}
+because $A_\lambda$ is symmetric and $X,Y$ have the same law. The denominator of~\eqref{eq:degree-speed} becomes $\lambda Z_\lambda(\pi_\lambda)$. The bounds preceding the proposition and $\E\nu<\infty$ justify these operations.
+\end{proof}
+
+The following lemma will join the strict comparisons on either side of bias one.
+
+\begin{lemma}[Continuity at bias one]\label{lem:continuity-one}
+Suppose that $\PP(\nu\ge1)=1$ and $1<m=\E\nu<\infty$. Then
+\begin{equation*}
+ \lim_{\lambda\to1}v(\lambda)
+ =v(1)=\E\left[\frac{\nu-1}{\nu+1}\right].
+\end{equation*}
+\end{lemma}
+
+\begin{proof}
+For each bias $\lambda$ near one, let $X_0,X_1,\ldots$ be independent with law $\pi_\lambda$, independently of $\nu$. Couple these variables for different biases by using the same independent trees, with $X_0=\beta_\lambda(T)$.
+
+A\"id\'ekon's formula~\eqref{eq:degree-speed} holds under the stated assumptions for all $\lambda$ in a neighborhood of one, including $\lambda=1$~\cite[Theorem~1.1]{Aidekon}. Conditional on $\nu$, the common denominator inside the expectations is symmetric in $X_0,\ldots,X_\nu$. Averaging the distinguished variable $X_0$ over these $\nu+1$ variables therefore gives
+\begin{equation}\label{eq:speed-exchangeable}
+ v(\lambda)=
+ \frac{
+  \displaystyle\E\left[
+   \frac{\nu-\lambda}{\nu+1}
+   \frac{\sum_{i=0}^{\nu}X_i}
+        {\lambda-1+\sum_{i=0}^{\nu}X_i}
+  \right]
+ }{
+  \displaystyle\E\left[
+   \frac{\nu+\lambda}{\nu+1}
+   \frac{\sum_{i=0}^{\nu}X_i}
+        {\lambda-1+\sum_{i=0}^{\nu}X_i}
+  \right]
+ }.
+\end{equation}
+
+Fix $\Lambda\in(1,m)$. By~\eqref{eq:same-tree} and transience at bias $\Lambda$, almost surely,
+\begin{equation*}
+ \sum_{i=0}^{\nu}X_i
+ \ge X_0=\beta_\lambda(T)
+ \ge\beta_\Lambda(T)>0,
+ \qquad 0<\lambda<\Lambda.
+\end{equation*}
+Consequently, whenever $|\lambda-1|<\beta_\Lambda(T)/2$,
+\begin{equation*}
+ \left|
+ \frac{\sum_{i=0}^{\nu}X_i}
+      {\lambda-1+\sum_{i=0}^{\nu}X_i}-1
+ \right|
+ \le\frac{2|\lambda-1|}{\beta_\Lambda(T)}
+ \longrightarrow0.
+\end{equation*}
+
+We next bound the integrands in~\eqref{eq:speed-exchangeable} uniformly near one. For $\lambda\ge1$,
+\begin{equation*}
+ 0<\frac{\sum_{i=0}^{\nu}X_i}
+        {\lambda-1+\sum_{i=0}^{\nu}X_i}\le1.
+\end{equation*}
+For $0<\lambda<1$, the escape recursion with terminal value one gives $X_i\ge1-\lambda$. Indeed, if every child value is at least $1-\lambda$, then their sum $S$ is at least $1-\lambda$, and
+\begin{equation*}
+ \frac{S}{\lambda+S}
+ \ge\frac{1-\lambda}{\lambda+1-\lambda}=1-\lambda.
+\end{equation*}
+Induction followed by the limit in depth proves the bound. Since $\nu\ge1$, it follows that
+\begin{equation*}
+ 0<\frac{\sum_{i=0}^{\nu}X_i}
+        {\lambda-1+\sum_{i=0}^{\nu}X_i}
+ =1+\frac{1-\lambda}{\sum_{i=0}^{\nu}X_i-(1-\lambda)}
+ \le1+\frac1\nu\le2.
+\end{equation*}
+Also, for $0<\lambda<\Lambda$,
+\begin{equation*}
+ \frac{|\nu-\lambda|}{\nu+1}\le1+\Lambda,
+ \qquad
+ \frac{\nu+\lambda}{\nu+1}\le1+\Lambda.
+\end{equation*}
+Thus both integrands in~\eqref{eq:speed-exchangeable} are bounded in absolute value by $2(1+\Lambda)$. Dominated convergence shows that the numerator tends to $\E[(\nu-1)/(\nu+1)]$ and the denominator tends to one. Evaluating~\eqref{eq:speed-exchangeable} at $\lambda=1$ gives
+\begin{equation*}
+ \lim_{\lambda\to1}v(\lambda)
+ =\E\left[\frac{\nu-1}{\nu+1}\right]
+ =v(1).\qedhere
+\end{equation*}
+\end{proof}
+
+\subsection{Continuity of the escape law and speed for \texorpdfstring{$1<\lambda<m$}{1 < lambda < m}}
+The comparison of nearby biases requires continuity of $\pi_\lambda$. We prove it from the recursion using only $\E\nu<\infty$.
+
+\begin{lemma}\label{lem:continuity}
+The escape law $\pi_\lambda$ is continuous in the $1$-Wasserstein metric on $(1,m)$. Consequently, $v$ is continuous on $(1,m)$.
+\end{lemma}
+
+\begin{proof}
+By~\eqref{eq:same-tree}, the one-sided limits of the escape probabilities exist. We will identify their laws by proving uniqueness of the nonzero fixed law of~\eqref{eq:rde}. To distinguish two ordered fixed laws, we choose a test function whose expected change under one recursion step is strictly monotone along their linear interpolation if the laws differ. That change vanishes at both fixed laws, forcing the laws to agree.
+
+Fix $1<\lambda<m$ and write $c=\lambda-1$. For a nonzero fixed law $\rho$, define
+\begin{equation*}
+ r_\rho(x)=\E_\rho\frac{Y}{A_\lambda(x,Y)^2},\qquad
+ u_\rho(x)=\int_0^x r_\rho(s)\dd s.
+\end{equation*}
+To differentiate expectations after one step of the recursion, we use the following operator. If the children have law $\sigma$, let
+\begin{equation}\label{eq:linear-operator}
+ (\cL_{\lambda,\sigma}r)(x)=
+ \E_{\nu,\sigma}\left[
+ \frac{\nu\lambda}{(\lambda+x+\sum_{i=2}^{\nu}X_i)^2}
+ r\left(F_\lambda\left(x+\sum_{i=2}^{\nu}X_i\right)\right)\right].
+\end{equation}
+The denominator identity
+\begin{equation}\label{eq:denominator-cancellation}
+ A_\lambda(F_\lambda(s),y)=\frac{\lambda(c+s+y)}{\lambda+s}
+\end{equation}
+gives
+\begin{equation*}
+ \frac{\lambda}{(\lambda+s)^2}r_\rho(F_\lambda(s))
+ =\frac1\lambda\E_\rho\frac{Y}{(c+s+Y)^2}.
+\end{equation*}
+The right-hand side decreases in $s$. If $\sigma$ stochastically dominates $\rho$, take independent copies of an ordered coupling, with the $\sigma$ variable above the $\rho$ variable. This gives $\cL_{\lambda,\sigma}r_\rho\le\cL_{\lambda,\rho}r_\rho$. At $\sigma=\rho$, the variable $Y$ and the remaining children form $\nu$ independent variables with law $\rho$. Conditional exchangeability and then the fixed-point equation give
+\[
+ (\cL_{\lambda,\rho}r_\rho)(x)
+ =\frac1\lambda\E_\rho\frac{\nu Y}{(c+x+\sum_{i=2}^{\nu}X_i+Y)^2}
+ =\frac1\lambda\E_\rho\frac{S}{(c+x+S)^2}
+ =\E_\rho\frac{Y(1-Y)}{A_\lambda(x,Y)^2}.
+\]
+Subtracting this identity from the definition of $r_\rho$ proves
+\begin{equation}\label{eq:positive-gap}
+ r_\rho(x)-(\cL_{\lambda,\rho}r_\rho)(x)
+ =\E_\rho\frac{Y^2}{A_\lambda(x,Y)^2}
+ \ge\frac{\E_\rho Y^2}{\lambda^2}>0.
+\end{equation}
+
+To compare two ordered fixed laws, couple $X_0\le X_1$ with laws $\rho,\sigma$ and interpolate $X_s=(1-s)X_0+sX_1$. For the recursion residual
+\begin{equation*}
+ \res_{u_\rho}(\lambda,\sigma)
+ =\E_\sigma u_\rho(X)
+ -\E_{\nu,\sigma}u_\rho\left(F_\lambda\left(\sum_{i=1}^{\nu}X_i\right)\right),
+\end{equation*}
+the chain rule along independent copies of this coupling yields
+\begin{align*}
+ \frac{\dd}{\dd s}\res_{u_\rho}(\lambda,\Law(X_s))
+ &=\E\left[(X_1-X_0)
+ \{r_\rho-\cL_{\lambda,\Law(X_s)}r_\rho\}(X_s)\right]\\
+ &\ge\frac{\E_\rho Y^2}{\lambda^2}\E(X_1-X_0).
+\end{align*}
+For a fixed number of children, this is the ordinary chain rule: the derivative of the sum is the sum of the coupled increments, and their contributions agree by exchangeability. The recursion term is bounded by $\nu\|r_\rho\|_\infty/\lambda$, since each increment is at most one; the direct term is bounded by $\|r_\rho\|_\infty$. These bounds justify differentiation under the offspring expectation. The residual vanishes at both $s=0$ and $s=1$, because both endpoint laws satisfy the recursion. Integration in $s$ therefore forces $\E(X_1-X_0)=0$ and hence $\rho=\sigma$. Iteration from terminal value one dominates every fixed law: couple its terminal ones above independent samples of that fixed law and iterate. Its limit has law $\pi_\lambda$, so the preceding ordered comparison proves uniqueness of the nonzero fixed law.
+
+At any $\lambda\in(1,m)$, each one-sided same-tree limit of $\beta_\alpha$ as $\alpha\to\lambda$ satisfies~\eqref{eq:rde}. This follows by bounded convergence, since the number of children is finite almost surely. Choose $\Lambda\in(\lambda,m)$. The one-sided limits dominate $\beta_\Lambda>0$, and hence their laws are nonzero. Uniqueness identifies both with $\pi_\lambda$. The order~\eqref{eq:same-tree} then gives
+\begin{equation*}
+ W_1(\pi_\alpha,\pi_\lambda)
+ =\E|\beta_\alpha-\beta_\lambda|\longrightarrow0.
+\end{equation*}
+The kernels in~\eqref{eq:NZ} are bounded and continuous for biases near $\lambda>1$. Since $Z_\lambda(\pi_\lambda)>0$, the speed formula gives continuity of $v$.
+\end{proof}
+
+\subsection{Kernel identities and the weighted mean}\label{sec:kernel-identities}
+Fix $1<\lambda<m$, put $c=\lambda-1$, and let $X,Y$ be independent with law $\pi_\lambda$. In the rest of this subsection, $v=v(\lambda)$, $A=A_\lambda$, $N=N_\lambda(\pi_\lambda)$ and $Z=Z_\lambda(\pi_\lambda)$ are fixed. Define the mean with weight $(c+X)^{-2}$ by
+\begin{equation}\label{eq:weighted-mean}
+ k=\frac{\E[X/(c+X)^2]}{\E[1/(c+X)^2]}.
+\end{equation}
+Define
+\begin{equation}\label{eq:J-h}
+ h_v(y)=(1+v)y-v,\qquad
+ (\cJ f)(x)=\E\frac{f(Y)}{A(x,Y)^2}.
+\end{equation}
+
+The derivative of the integrand of $N-vZ$ in its first coordinate is
+\begin{equation}\label{eq:variation-kernel}
+ \partial_x\frac{xy-vt(x,y)}{A(x,y)}
+ =\frac{y^2+c h_v(y)}{A(x,y)^2}.
+\end{equation}
+With $\cL=\cL_{\lambda,\pi_\lambda}$ from~\eqref{eq:linear-operator}, set
+\begin{equation}\label{eq:correction}
+ r(x)=\E\frac{Y}{A(x,Y)^2},\qquad u(x)=\int_0^x r(s)\dd s.
+\end{equation}
+Identity~\eqref{eq:denominator-cancellation}, exchangeability of the children, and~\eqref{eq:rde} yield
+\begin{align}\label{eq:Lr}
+ (\cL r)(x)
+ &=\frac1\lambda\E\frac{\nu Y}{(c+x+\sum_{i=2}^{\nu}X_i+Y)^2}
+ =\frac1\lambda\E\frac{S}{(c+x+S)^2}\notag\\
+ &=\E\frac{Y(1-Y)}{A(x,Y)^2}.
+\end{align}
+Thus $(I-\cL)r=\cJ(y^2)$. This identity will both cancel a term in the direct comparison and give a positive inverse of $I-\cL$.
+
+The explicit bias dependence of the speed formula and of the recursion will be expressed through
+\begin{equation}\label{eq:parameter-margin}
+ b(x)=\frac{x(1-x)}{\lambda},\qquad
+ C=\E\frac{v\,t(X,Y)-XY}{A(X,Y)^2},\qquad
+ K=2\E[b(X)r(X)]-C.
+\end{equation}
+By symmetry,
+\begin{equation*}
+ \lambda K=\E\frac{XY(2-X-Y)+\lambda\{XY-vt(X,Y)\}}{A(X,Y)^2}.
+\end{equation*}
+Use $\lambda-A(x,y)=(1-x)(1-y)$ and $N-vZ=0$ to remove the term with a single power of $A$ in the denominator. The remaining numerator satisfies
+\begin{align*}
+ &(1-x)(1-y)\{xy-vt(x,y)\}+xy(2-x-y)\\
+ &\qquad=x(1-x)h_v(y)+y(1-y)h_v(x)
+ +(1+v)xy(1-x)(1-y).
+\end{align*}
+After division by $A(x,y)^2$ and averaging, this gives
+\begin{equation}\label{eq:positive-K}
+ \lambda K=2\E[X(1-X)(\cJ h_v)(X)]
+ +(1+v)\E\frac{XY(1-X)(1-Y)}{A(X,Y)^2}.
+\end{equation}
+
+\begin{lemma}[Positivity from the weighted mean]\label{lem:weighted-positivity}
+If $\E X<2k$, then
+\begin{equation*}
+ \inf_{0\le x\le1}(\cJ h_v)(x)>0,\qquad K>0.
+\end{equation*}
+\end{lemma}
+
+\begin{proof}
+We first show that $\cJ h_v$ is uniformly positive. Put $W=\E[X/A(X,Y)]$. Symmetry gives $N+Z=2W$. For fixed $x$, the function $y\mapsto A(x,y)^{-1}$ is decreasing; its covariance with $Y$ is nonpositive. Hence $N\le(\E X)W$ and
+\begin{equation}\label{eq:weighted-speed}
+ \frac{v}{1+v}=\frac{N}{2W}\le\frac{\E X}{2}<k.
+\end{equation}
+Relative to the law weighted by $(c+y)^{-2}$, the law weighted by $A(x,y)^{-2}$ has density proportional to $\{(c+y)/A(x,y)\}^2$. This density increases in $y$, because
+\begin{equation*}
+ \frac{\partial}{\partial y}\frac{c+y}{A(x,y)}
+ =\frac{\lambda x}{A(x,y)^2}\ge0.
+\end{equation*}
+The mean of $Y$ under this weight is therefore at least $k$. Since $A\le\lambda$,
+\begin{equation}\label{eq:J-positive}
+ (\cJ h_v)(x)\ge\frac{(1+v)k-v}{\lambda^2}>0,
+ \qquad 0\le x\le1.
+\end{equation}
+
+By~\eqref{eq:positive-K}, this positivity and $0<X,Y<1$ give $K>0$.
+\end{proof}
+
+\input{sections/02_response}

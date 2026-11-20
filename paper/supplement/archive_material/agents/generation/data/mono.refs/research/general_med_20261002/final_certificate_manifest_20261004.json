@@ -1,0 +1,713 @@
+{
+  "format_version": 1,
+  "date": "2026-10-04",
+  "proof_status": "All1<lambda<m strictvprime: computation-assisted modular proof; independent regional PASS; final assembly locally reviewed; no external peer review; cross1 untreated",
+  "environment": {
+    "python": "3.14.7",
+    "sympy": "1.14.0"
+  },
+  "external_probability_inputs": [
+    "Aidekon Theorem1.1 arXiv1111.4313v4",
+    "Song-Wang-Xiang Eq2.1 and Lemma2.1 arXiv1610.08151v1",
+    "Canonical transience/positive actual escape and artificial/ordinary speed agreement"
+  ],
+  "groups": [
+    {
+      "id": "interfaces",
+      "scope": "Canonical Mellin/floor generic identities; manual response and entropy required",
+      "scripts": [
+        "scaled_r0_mellin_identities.py",
+        "scaled_r0_adjacent_defect_identities.py",
+        "calibrated_cumulative_head_identities.py",
+        "lambert_head_scale_identities.py",
+        "marker_complete_tail_derivative_identities.py",
+        "marker_actual_speed_deficit_balances.py",
+        "marker_tail_ratio_size_identities.py"
+      ],
+      "expected": "8 Mellin identities; complete adjacent and calibrated floor identities; 42 Lambert checks; complete scalar tail positivity and actual loss/coercivity identities",
+      "audit": "INDEPENDENT_PASS"
+    },
+    {
+      "id": "small_u",
+      "scope": "lambda<=6/5,u<=1/30",
+      "scripts": [
+        "actual_defect_relative_finite_lift_identities.py"
+      ],
+      "expected": "18 identities, six rational prefix/tail checks, two scalar margins and payment constants",
+      "audit": "INDEPENDENT_PASS"
+    },
+    {
+      "id": "low_q",
+      "scope": "Actual hard low lambda,1/29<=q<=3",
+      "scripts": [
+        "low_q_full_coupled_certificate.py"
+      ],
+      "expected": "70 theta;840 J;6710 head;1738 groups/15 degree7 Sturm exceptions",
+      "audit": "INDEPENDENT_PASS"
+    },
+    {
+      "id": "middle_q",
+      "scope": "Actual hard low lambda,3<=q<=10",
+      "scripts": [
+        "mid_q_full_same_e_certificate.py"
+      ],
+      "expected": "160 theta;head735/1207/7719/9768;J1980/2975/8288/10745;25 degree10 Sturm;10150+10850 full budgets",
+      "audit": "INDEPENDENT_PASS"
+    },
+    {
+      "id": "high_q",
+      "scope": "All actual hard q>=10 by complete subcover",
+      "scripts": [
+        "middle_q_coupled_certificate.py",
+        "hard_d_coupled_certificate.py",
+        "critical_boundary_coupled_certificate.py",
+        "finite_h_quarter_certificate.py"
+      ],
+      "expected": "q21 margin>1/5000;q10,h1/4 margin>1/100;degree5 budget;48 whole-box head certificates/636112 entries",
+      "audit": "INDEPENDENT_PASS"
+    },
+    {
+      "id": "high_lambda",
+      "scope": "Corrected general2/sqrt3<=lambda<m including older>=707/500 glue",
+      "scripts": [
+        "general_two_over_sqrt3_certificates.py",
+        "general_zero_identity.py",
+        "hybrid_rational_sign_certificate.py",
+        "first_generation_moment_certificate.py",
+        "bias195_coarse_certificate.py",
+        "bias2_bernstein_certificate.py"
+      ],
+      "expected": "288;9744x2;9600 corrected;5076;5400/7344/36 hybrid;6348 first generation;older high-bias exact signs",
+      "audit": "INDEPENDENT_PASS"
+    },
+    {
+      "id": "final_self_audit",
+      "scope": "273 original-floor normalization and same-e secant/whole-price identities",
+      "scripts": [
+        "same_e_final_normalization_checks_20261004.py"
+      ],
+      "expected": "all generic identities and affine complete-budget reconstruction",
+      "audit": "LOCAL_PASS_FINAL_RECEIPT_CONFIRMS_SAME_INTERFACES"
+    }
+  ],
+  "reviewed_files": [
+    {
+      "path": "../../evidence/imported_speed_formula.md",
+      "sha256": "0a9470ba4eb584337b8b97a3d2819999678c3041abf3353504af5f2c93b3215b",
+      "bytes": 3889
+    },
+    {
+      "path": "actual_defect_paid_subdomain.md",
+      "sha256": "e82d0104561c3676a7f6f1e6eb1ee66c4409914cff6bd47650008acc0bff0786",
+      "bytes": 7708
+    },
+    {
+      "path": "actual_defect_relative_finite_lift.md",
+      "sha256": "f130b75eeb94a5c367d896622b08d7412cbe4bd15a607a9d30c0de0c171af3f3",
+      "bytes": 9986
+    },
+    {
+      "path": "actual_defect_relative_finite_lift_identities.py",
+      "sha256": "0a19757d14281a1bd45072814f12e268c2120ffd0d0b2c0b87a5cdffad030c2f",
+      "bytes": 3497
+    },
+    {
+      "path": "actual_square_shape_high_age_payment.md",
+      "sha256": "e26ac4c94a47eb0f0c65c031e6765ce3cddc39ce1ad45c45be459194663e502d",
+      "bytes": 11043
+    },
+    {
+      "path": "assigned_polynomial_extension.md",
+      "sha256": "f87b4967ae6b613af744fe476fbfb3b7c833831ce4a2ead302b6ecbfbb6659f1",
+      "bytes": 4622
+    },
+    {
+      "path": "assigned_polynomial_extension.py",
+      "sha256": "6fb083594822e1110e1b8a6a16113b9106d216586249f0e05e5be5e3dc0c93a5",
+      "bytes": 766
+    },
+    {
+      "path": "audit_packet_actual_defect_relative_finite_lift_20261004.md",
+      "sha256": "89e32d7e6a0210e971be7d0a22c52f66a0a3f839e25baef394fa3545043c0d54",
+      "bytes": 11215
+    },
+    {
+      "path": "audit_packet_calibrated_cumulative_head_20261004.md",
+      "sha256": "5f7afd6a03bd36ec6d65116097de4d324bf97a5ef72b444c9d4afbc3dab1d63a",
+      "bytes": 12071
+    },
+    {
+      "path": "audit_packet_critical_boundary_20261004.md",
+      "sha256": "085f16ba1c7727faced29d91f0386682ada3827e9d48e6701c09863adf8fd0ba",
+      "bytes": 12024
+    },
+    {
+      "path": "audit_packet_finite_h_quarter_20261004.md",
+      "sha256": "c0b453932a43df6f8f4069ca3cb571ee49d14f884d768a4cdec3d1762c8e15d1",
+      "bytes": 11940
+    },
+    {
+      "path": "audit_packet_hard_d_coupled_20261004.md",
+      "sha256": "ccf22bbaebefcc42750d6042a1420c85b325af6731c9e2058333f0292dc11614",
+      "bytes": 7714
+    },
+    {
+      "path": "audit_packet_lambert_head_scale_20261004.md",
+      "sha256": "f8d9491c54b71345ba802d3dbfc3d785cdf563cbeb4ddefed11f261963632fc3",
+      "bytes": 11545
+    },
+    {
+      "path": "audit_packet_low_q_full_coupled_20261004.md",
+      "sha256": "8b767f584e04b70cb7e6ce1daac567334e825cc46fb563cbebb4b2786f52a407",
+      "bytes": 13914
+    },
+    {
+      "path": "audit_packet_mid_q_full_same_e_20261004.md",
+      "sha256": "bd8393f6e236e7875eaa59805716a5968e773ba4f4c5887462186642e633b0d2",
+      "bytes": 12829
+    },
+    {
+      "path": "audit_packet_middle_q_20261004.md",
+      "sha256": "9f3eb9e12e8445d8d04056910f75c97b2c6d45580a266306c098aecb8d63e59b",
+      "bytes": 11236
+    },
+    {
+      "path": "audit_receipt_actual_defect_paid_subdomain_20261004.md",
+      "sha256": "5072a2d5e587450e08088f297c24d7ddac894e92fdfa223130c9437d34b5055e",
+      "bytes": 907
+    },
+    {
+      "path": "audit_receipt_actual_defect_relative_20261004.md",
+      "sha256": "d195321307ee6075e1ed18fad6e356421ac6d6ffd8358888951f79d65ed43742",
+      "bytes": 1137
+    },
+    {
+      "path": "audit_receipt_calibrated_cumulative_head_20261004.md",
+      "sha256": "b3b6ff0702e025dd9b355f3125af8718f889ef85c897d3499fea8413ea29ca23",
+      "bytes": 1170
+    },
+    {
+      "path": "audit_receipt_critical_boundary_20261004.md",
+      "sha256": "e54743406d8982ae501ab2e383e421b3ebbeb0dbe5d3e921df542a01faa02517",
+      "bytes": 797
+    },
+    {
+      "path": "audit_receipt_finite_h_quarter_20261004.md",
+      "sha256": "0e8c2f38317644803c8459ab3e504d8f7e7ecf23c854d9855f6099c1b35cb5ff",
+      "bytes": 904
+    },
+    {
+      "path": "audit_receipt_general_two_over_sqrt3_20261004.md",
+      "sha256": "5d46b9dd95f1f7f9dbd8f1b96e4174814bbfa8110642dd17e78520d5af76e917",
+      "bytes": 1457
+    },
+    {
+      "path": "audit_receipt_hard_d_coupled_20261004.md",
+      "sha256": "d3a7c7db875a5295ac49765fc9dee855d55b98cf8b2400de48d69639b21c52f6",
+      "bytes": 625
+    },
+    {
+      "path": "audit_receipt_lambert_head_scale_20261004.md",
+      "sha256": "a42e15bb1aef7c64b1649cd97a8daefa2a07e03d1ec9f8ed2a954a69b23fc828",
+      "bytes": 861
+    },
+    {
+      "path": "audit_receipt_low_q_full_coupled_20261004.md",
+      "sha256": "96e8e51cdf132962d7613770501deb640b16658daa40cbea1643542fca3079c4",
+      "bytes": 1283
+    },
+    {
+      "path": "audit_receipt_marker_cumulative_payment_20261004.md",
+      "sha256": "8a053f22bd729c3d0dd47fdfe11513a3030aac48b5dd992bd592322b172f2be8",
+      "bytes": 1026
+    },
+    {
+      "path": "audit_receipt_marker_whole_signed_payment_20261004.md",
+      "sha256": "c829ab978323c37aa8c2b256b78adeceaaac3ca17d77b2583d708819cea2113c",
+      "bytes": 991
+    },
+    {
+      "path": "audit_receipt_mid_q_full_same_e_20261004.md",
+      "sha256": "81bbc2baf5bcf15cc3340f4e78ce0eb4f1a853d07b282a15403c78fbf522f88b",
+      "bytes": 1846
+    },
+    {
+      "path": "audit_receipt_middle_q_20261004.md",
+      "sha256": "72ffd1258971a5216a91ce298d3ba56ae73360ad4b3a069499c3d94f796451a6",
+      "bytes": 832
+    },
+    {
+      "path": "audit_receipt_speed_deficit_20261004.md",
+      "sha256": "b2b39f91a285f9538f4292cc8c1fba481195870c06a6a2e0bb2719b4f20fa423",
+      "bytes": 1600
+    },
+    {
+      "path": "audit_receipt_square_shape_high_age_20261004.md",
+      "sha256": "fe12a49a2486782541266e2cea4bd5cd2ae3ffaf27479c9d7eb011d22c9046dd",
+      "bytes": 941
+    },
+    {
+      "path": "below2_source_boundary_lemma.md",
+      "sha256": "01de255ae232142a02231694c70e77d9d39d5e44a3bb2a9d5a667b468018ad8e",
+      "bytes": 2762
+    },
+    {
+      "path": "bias195_coarse_certificate.py",
+      "sha256": "736557295655d8e0a2124157ef761a69eef3581650642cfeb298c887d3ddeffb",
+      "bytes": 4610
+    },
+    {
+      "path": "bias195_proof_draft.md",
+      "sha256": "f1b5718e4361f37232a90b5258a1a54f4451cf9054e758e196c9ea92cc278e6f",
+      "bytes": 5427
+    },
+    {
+      "path": "bias2_bernstein_certificate.py",
+      "sha256": "385fc176817fab31e56915f77214e30d648f0685d2f0ab31c84a4f1a5e5aff1d",
+      "bytes": 5699
+    },
+    {
+      "path": "bias2_proof_draft.md",
+      "sha256": "8d36a2bd818e24f2f1db997bf50f3eefc7905be5bfa45bdf5b459753f90b87ae",
+      "bytes": 11582
+    },
+    {
+      "path": "calibrated_cumulative_head_identities.py",
+      "sha256": "546cfce1252df27d6a87a5f2f38ccd71456f02f9db5f4d4670c80e2ee4c54eb9",
+      "bytes": 3133
+    },
+    {
+      "path": "calibrated_cumulative_head_payment.md",
+      "sha256": "376d760f249813d115869a2a161d9f18bb799e0b134ff2e08d4f6341cb7f933d",
+      "bytes": 10278
+    },
+    {
+      "path": "canonical_entropy.md",
+      "sha256": "469519d14bedb8d527774a999136b4b0a7fd8a3e36d8fa4536a3125a0d66649d",
+      "bytes": 10388
+    },
+    {
+      "path": "condition_F_global_gram_certificate.py",
+      "sha256": "5851f22436da359191a3dd09fd109886ce0aeca4ae0ad4951e1decdc7ea9bcdd",
+      "bytes": 3133
+    },
+    {
+      "path": "condition_F_global_gram_payment.md",
+      "sha256": "92dcdbe4842b4562a9dbde7883fc63f42a9151fe5f13ed1f9c729d60a68f9c50",
+      "bytes": 8548
+    },
+    {
+      "path": "condition_F_joint_prefix_identities.py",
+      "sha256": "80d13d54490ca7bc1d2f43a0764eb111ebbd65c869e01a74966207dccdc726cf",
+      "bytes": 1819
+    },
+    {
+      "path": "continuous_age_bundle_input_20261004.md",
+      "sha256": "e6df4f21197de175850bc05d4c084b352b6f4354b2f4a0d44ae529d1d5959d71",
+      "bytes": 4456
+    },
+    {
+      "path": "corrected_small_u_root_result.md",
+      "sha256": "084b802d46b3a78be1f003d7ba5e74c3ec5146fb2909ac606050d0ca7e124ed0",
+      "bytes": 2975
+    },
+    {
+      "path": "critical_boundary_coupled_certificate.py",
+      "sha256": "b245c5f11a9710971e1085df723ab67c0dba8caeac07017aceed80b318b13b63",
+      "bytes": 3352
+    },
+    {
+      "path": "critical_boundary_coupled_comparison.md",
+      "sha256": "6e04ada0e019b25f588217f31dc8d631455672973e3deb882738e7b2934098ea",
+      "bytes": 8892
+    },
+    {
+      "path": "critical_boundary_coupled_verification_20261004.txt",
+      "sha256": "c30a84293de81c43c18d6ff9bb1a4aa52796bd98f5c825f09f01f4a20bc407a3",
+      "bytes": 391
+    },
+    {
+      "path": "curvature_dependency_repair.md",
+      "sha256": "b494cf428ad5b9e8f4e71782bb9b961c2a24ac3901ade35abb5b5180669d2a41",
+      "bytes": 1632
+    },
+    {
+      "path": "endpoint_signs.md",
+      "sha256": "482c7e602975ecc81dd7086d0804262f9956950030c8f791e2a6f5a8809760a3",
+      "bytes": 5921
+    },
+    {
+      "path": "exact_qsqrt3.py",
+      "sha256": "aec6de40c4be5033f41cfbfece09c5d711b315cf8a511aa324a9b3e73a12130a",
+      "bytes": 1553
+    },
+    {
+      "path": "final_certificate_manifest_20261004.md",
+      "sha256": "7311fc60598abac120c288d35397bb4806c2893e94830eb15e9d83ee2c96938b",
+      "bytes": 6246
+    },
+    {
+      "path": "final_certificate_runner_20261004.py",
+      "sha256": "6f15a4b8570ad1efb151c182d353013ab1f79d4700a0ca7bb308f62882de0b75",
+      "bytes": 4866
+    },
+    {
+      "path": "final_dependency_dag_20261004.md",
+      "sha256": "7e09ea19dadf5ed75c7b2fe37b08a8ac9ac9bc26721ed38c9921c46830bfe2fc",
+      "bytes": 10858
+    },
+    {
+      "path": "final_integrated_review_20261004.md",
+      "sha256": "fc3a11c08c4912ffca98abd6351ec746de2368e096eab9874b956cc6277fce0f",
+      "bytes": 5088
+    },
+    {
+      "path": "final_status_20261004.md",
+      "sha256": "4705f746e00263600610c317757c7d0dac914b79abec4e36ae83e631eddd7a83",
+      "bytes": 3379
+    },
+    {
+      "path": "finite_h_quarter_certificate.py",
+      "sha256": "920f8234a2f6e0282819b88a42ff731265435aeec04f5ce301e677ef61cabef8",
+      "bytes": 5031
+    },
+    {
+      "path": "finite_h_quarter_coupled_comparison.md",
+      "sha256": "3a240742f4ec0b9c929ededa6ec15b66564cb16aac72c8d487ef43b7cdd06b8b",
+      "bytes": 6894
+    },
+    {
+      "path": "finite_h_quarter_verification_20261004.txt",
+      "sha256": "f17bf9bc2989d9cb813fe94016f70d8db01b40e2eeaec74df218db65e1529770",
+      "bytes": 2151
+    },
+    {
+      "path": "first_generation_exact_identity.md",
+      "sha256": "45e219e4dda7d062e7f7df6945b1ddd6929105cfd8a4cab78eb3c002cd7777a2",
+      "bytes": 3389
+    },
+    {
+      "path": "first_generation_moment_certificate.py",
+      "sha256": "9190c0802239926a9d6963bec2ee0a31ac0afc21ee50cf754d98d976b5ee8221",
+      "bytes": 4187
+    },
+    {
+      "path": "general_707_over_500_glue.md",
+      "sha256": "955297c24a8aee20d6e7f62467455bbea4e9122e8a00a1e1fdfaca637474f719",
+      "bytes": 4211
+    },
+    {
+      "path": "general_first_generation_positive.md",
+      "sha256": "86ddbbed70f9e03bf0a9068ccfa0a748a3e92c5fd63121a281f53627697941ce",
+      "bytes": 11147
+    },
+    {
+      "path": "general_source_crossing_sqrt_two.md",
+      "sha256": "e43b734a97ef660b5a01f53e0f4a9d76c38f7a6b77fd6f77303760ffb7b82766",
+      "bytes": 6890
+    },
+    {
+      "path": "general_sqrt2_monotonicity.md",
+      "sha256": "642354357be824c7cd4b928884cdae2a4316a02a653c98820597ec86398edb63",
+      "bytes": 9806
+    },
+    {
+      "path": "general_tilt_degree_harmonic.md",
+      "sha256": "57b781cc59d470e2ec02591e63dc6fc49de84e146dd5be022844b4866662f00d",
+      "bytes": 4088
+    },
+    {
+      "path": "general_two_over_sqrt3_certificates.py",
+      "sha256": "65b32a9542ecaf9a40a8a7c6672caf8e69190967c0b46fdc8a85745dfbd65d24",
+      "bytes": 913
+    },
+    {
+      "path": "general_two_over_sqrt3_verified_20261004.md",
+      "sha256": "aeb6b1022f5ec9fa98febda40e14d679205a912757fb183fd29c184eaf266303",
+      "bytes": 17923
+    },
+    {
+      "path": "general_zero_identity.py",
+      "sha256": "596b6b8dbcdf69b99fc4ce98fbfada9b2bc2cf69206200b26a691ec4dbfd2721",
+      "bytes": 1009
+    },
+    {
+      "path": "general_zero_sign_four_thirds.md",
+      "sha256": "cfd429b92618583b2fcb6dba1a98b5da7f4d95d7645f28bd669d3ab6347430fd",
+      "bytes": 6899
+    },
+    {
+      "path": "hard_d_coupled_certificate.py",
+      "sha256": "2977dfe0a3a9b8d648012149d9b09d23a825ae2abfd1352d390bb767a0e7563f",
+      "bytes": 2142
+    },
+    {
+      "path": "hard_d_coupled_comparison.md",
+      "sha256": "795cc5ea20d77265cad7aedeab22e3c1acd731cdd897698d7ff7432175a36749",
+      "bytes": 5564
+    },
+    {
+      "path": "hard_d_coupled_verification_20261004.txt",
+      "sha256": "c926c1811856a7ad5be6c5188c05c87273f9c0a143ae5e8bc031f4099f615e41",
+      "bytes": 287
+    },
+    {
+      "path": "harmonic_region.md",
+      "sha256": "d83302bc02fd68492cc80ebf5ce2222cc30ad7a28b8abe840139c74d848233c3",
+      "bytes": 2179
+    },
+    {
+      "path": "high_u_original_root_s2.py",
+      "sha256": "ad808a2ce76a83f55cdbc264b53653301d0d150cdac7d3822de5baa70955d9e6",
+      "bytes": 4041
+    },
+    {
+      "path": "high_u_original_root_s2_identities.py",
+      "sha256": "463a17b9f3e7aa393a8b05020c1fb71e17d0fc72bc0e3eaee494844d942d00cf",
+      "bytes": 1952
+    },
+    {
+      "path": "high_u_original_root_s2_result.md",
+      "sha256": "98503a767bee414978798dccff7303ed26a4d983f6151bf3c8cc6cfb8230199d",
+      "bytes": 5884
+    },
+    {
+      "path": "hybrid_rational_moment_reduction.md",
+      "sha256": "568a74592a2a75821c5dd1cf547f71c09bd6baeeab896cf7e8f0c76edc804eb4",
+      "bytes": 6941
+    },
+    {
+      "path": "hybrid_rational_sign_certificate.py",
+      "sha256": "58eff218557bc6c38db0a57e26e79272e6081fa162950059b0449419210dbf7f",
+      "bytes": 6274
+    },
+    {
+      "path": "hybrid_response_low_escape.md",
+      "sha256": "652345ec2e1a68394593aa7116acb3106935a2f2583617c8166918a63e36e3cb",
+      "bytes": 9924
+    },
+    {
+      "path": "joint_SIZE_speed_deficit_correction.md",
+      "sha256": "9f5a88a91159f50cc60f62dc38208ea3f494c4b581e888ebd863b6bdcc899106",
+      "bytes": 8579
+    },
+    {
+      "path": "lambert_head_scale_comparison.md",
+      "sha256": "469857f0ca29caeccf8a74baccfda101fb21ef1be13c7ae9fa0faa459a63aa0d",
+      "bytes": 9814
+    },
+    {
+      "path": "lambert_head_scale_identities.py",
+      "sha256": "c82c83fd0f7b47f39a954123209407050330a52ca0c8ef105ec5ead40c2bea92",
+      "bytes": 5790
+    },
+    {
+      "path": "low_q_full_coupled_certificate.py",
+      "sha256": "bd550a1cd159bbc108d4c5c3d589bb884d2ee5ace058e04886ec19431137981c",
+      "bytes": 8107
+    },
+    {
+      "path": "low_q_full_coupled_proof_20261004.md",
+      "sha256": "edb89e25f2f19b25879faa9a7d81320b649ccceaa73aa08bc232c61d4f3bf03f",
+      "bytes": 5701
+    },
+    {
+      "path": "low_q_full_coupled_verification_20261004.txt",
+      "sha256": "9c6afac7b5cbcd9fdbd3bbd5575046e040d5a346b338dc0b9771792c8e5751dd",
+      "bytes": 2381
+    },
+    {
+      "path": "marker_actual_speed_deficit_balances.py",
+      "sha256": "bd9bb6d62ae31d0e83db671c77b81b3fe0e9bc0ff6263ae24027c5a1f611ec21",
+      "bytes": 1513
+    },
+    {
+      "path": "marker_complete_tail_derivative_identities.py",
+      "sha256": "c06172e494e67097c100c8c718d75841b2a934fb256d325acbc14ec9745bb701",
+      "bytes": 1680
+    },
+    {
+      "path": "marker_cumulative_two_capacity_payment.md",
+      "sha256": "443b141292a578cb8b29a35ac76b7361dab0207f553111811e3bdede3e0a870e",
+      "bytes": 11572
+    },
+    {
+      "path": "marker_root_and_whole_signed_payment.md",
+      "sha256": "019fdc479d1ed15f486aa636f383ae9fef8ceb11a46ff0da0bde3504b94148cb",
+      "bytes": 9587
+    },
+    {
+      "path": "marker_tail_ratio_size_identities.py",
+      "sha256": "19e3a483589301084084329f6d66e59e689be125783d7e97a233c6f92f1fca24",
+      "bytes": 865
+    },
+    {
+      "path": "mid_q_full_same_e_certificate.py",
+      "sha256": "c72954ceacddd215ca65a87135f96ff0bf6c7b10f43ad947097ff880ebe3e072",
+      "bytes": 6846
+    },
+    {
+      "path": "mid_q_full_same_e_proof_20261004.md",
+      "sha256": "e15dfcc7436c07185295a9a101ae959e3e9150c8981b7259c25de43e1b9dbd0f",
+      "bytes": 5883
+    },
+    {
+      "path": "mid_q_full_same_e_verification_20261004.txt",
+      "sha256": "c00c271cb0c4f56d0afd0d357a20d92e486831f8314f324cdc36fd9e5606e0ea",
+      "bytes": 884
+    },
+    {
+      "path": "middle_q_coupled_certificate.py",
+      "sha256": "eea534a7e52c605325a410f286f94f434e42a8fcba8543fc8c34fa1201fb3a47",
+      "bytes": 3908
+    },
+    {
+      "path": "middle_q_coupled_comparison.md",
+      "sha256": "8549e47bd093d5d5f5114cb5a28a74f4e8aee87ec249881ea6be9a4e5db00039",
+      "bytes": 7314
+    },
+    {
+      "path": "middle_q_coupled_verification_20261004.txt",
+      "sha256": "45f058a7c873af5560965f8e64da736d7670599ca695c3ee57df1fb3d0ae1ecb",
+      "bytes": 426
+    },
+    {
+      "path": "response_interface.md",
+      "sha256": "c18848a6b1b28123ad3a51c615c055de7cafa8de7858cfec70253e23deeb8020",
+      "bytes": 12504
+    },
+    {
+      "path": "root_canonical_profile_payment.md",
+      "sha256": "4a9ab266db262be70ca290cebcdfd9ad6c7ee84c4fdb55a46ddddb11822596b6",
+      "bytes": 10182
+    },
+    {
+      "path": "root_canonical_profile_payment.py",
+      "sha256": "e691e1c2e400cf15baf820fa67ed6ecc44c3916f6747f689a936dd69327b93bf",
+      "bytes": 2538
+    },
+    {
+      "path": "root_four_small_u_certificate.py",
+      "sha256": "69780785524865d616a3dce3a71da7869fc2c5019cfce9f692471fa6d5f14d36",
+      "bytes": 1117
+    },
+    {
+      "path": "root_four_term_original_identities.py",
+      "sha256": "9d745a1f73260bb14861f9fb852d16f182f0bcb33cc348280cb7a7bb8ca6bb22",
+      "bytes": 1221
+    },
+    {
+      "path": "root_four_term_payment_certificate.py",
+      "sha256": "61163d88b501555f29e1b6c5d13bd4c6ae69666edc89dbee7dfb3e47532fc8b3",
+      "bytes": 5037
+    },
+    {
+      "path": "same_e_final_normalization_audit_20261004.md",
+      "sha256": "08533f9c1a9cec7022f442775b1aa10fd3aa40c80fc41e2f18f128d41d13bd65",
+      "bytes": 4783
+    },
+    {
+      "path": "same_e_final_normalization_checks_20261004.py",
+      "sha256": "5222c4207b456e577c67461fe3e4863c7add57d61d103a2e1c909633e341fc84",
+      "bytes": 1917
+    },
+    {
+      "path": "scaled_r0_adjacent_defect_identities.py",
+      "sha256": "c7038409939a961992ee91288a68e6bfb105f7f702615ff1489bb3608bb6b435",
+      "bytes": 2458
+    },
+    {
+      "path": "scaled_r0_adjacent_defect_payment.md",
+      "sha256": "40d2a06a69f7ac3871b30cff730b31891cb7dfdd6911d85600e8fc843c74ac49",
+      "bytes": 10443
+    },
+    {
+      "path": "scaled_r0_mellin_identities.py",
+      "sha256": "fe0b6c68ce637fcbbe0178488aa001ce02e22fec2dca475dff764031a50c8984",
+      "bytes": 1135
+    },
+    {
+      "path": "scaled_r0_mellin_payment.md",
+      "sha256": "1a18a819db3e5033848fafbafc3239679d792d88cf7aa2580cff145fff8ded92",
+      "bytes": 8564
+    },
+    {
+      "path": "speed_monotonicity_english_proof_20261004.md",
+      "sha256": "50de39e9440d427e7f4764b192221f4113c22e4c53948d2d986d61d88c529882",
+      "bytes": 34924
+    }
+  ],
+  "excluded": [
+    "obsolete_wrong_assigned_calibration_*",
+    "general_2_over_sqrt3_root_glue.md",
+    "unproved generalH(1)>0",
+    "universal low-bias ConditionF",
+    "two-point offspring reduction",
+    "numerical diagnostics"
+  ],
+  "manual_proof_warning": "The programs certify finite exact algebra. Their written tail, provenance, range, response and integrability proofs remain necessary. Historical pending/open labels are superseded by dated receipts.",
+  "source_scope_notes": {
+    "root_canonical_profile_payment.md": "Only audited assigned-range/common comparison and all-index absorption interfaces are used. Its superseded S3/global-root claims and old general_2_over_sqrt3 links are excluded. Corrected final authority: general_two_over_sqrt3_verified_20261004.md.",
+    "root_four_term_payment_certificate.py": "Runtime support only: construction and original checks prefix before New numerator degree print, via root_four_small_u_certificate.py; corrected AN has no extra u. Exploratory full-domain suffix is not executed or used.",
+    "joint_SIZE_speed_deficit_correction.md": "Only independently audited slope and Chead proofs121--123; old universal SIZE126 not used.",
+    "marker_root_and_whole_signed_payment.md": "Only independently audited actual whole speed loss182--185 and marker/floor186 interfaces; method obstructions/diagnostics not proof inputs.",
+    "actual_defect_paid_subdomain.md": "Only actual marker constraint200a and whole-profile first-term bound200b used in final budget; older additional-domain test unnecessary.",
+    "marker_cumulative_two_capacity_payment.md": "Only audited full scalar TailWp positivity189 and actual positive coefficient190 as needed for floor; dual-envelope proposals and numerical screening excluded.",
+    "actual_square_shape_high_age_payment.md": "Only audited scalar cap-tail positivity206 and complete shape-square regrouping207 needed here; separate law-dependent cutoffs, example obstructions and old open SIZE213 not used.",
+    "final_certificate_manifest_20261004.md": "This explanatory document records V2 presentation assembly; V3 adds only the guarded orchestration runner and separate execution record. All77 non-Python inputs are unchanged from V2."
+  },
+  "continuation_not_a_theorem_dependency": {
+    "proof": "simplification_square_kernel_hand_lemma_20261004.md",
+    "check": "simplification_square_kernel_hand_checks_20261004.py",
+    "audit_packet": "audit_packet_simplification_square_kernel_20261004.md",
+    "status": "NEW_LOCAL_HAND_PROOF_PASS; INDEPENDENT_AUDIT_PENDING; FULL_MANUAL_SPEED_PROOF_STILL_OPEN"
+  },
+  "assembly_revision": "V2; presentation-only clarification; independent file-level review pending",
+  "previous_manifest_sha256": "eb30229719489e0e873aa769a96d8802b6899e241b73277e98dc060dd032467f",
+  "presentation_only_changes": [
+    {
+      "path": "final_certificate_manifest_20261004.md",
+      "v1_sha256": "1ea8e1955191ac6e20d4d2b0757b9ac22df2972657e9fd5d7bf38e76eeeb8c11",
+      "v2_sha256": "7311fc60598abac120c288d35397bb4806c2893e94830eb15e9d83ee2c96938b",
+      "v1_bytes": 5525,
+      "v2_bytes": 6246
+    },
+    {
+      "path": "final_dependency_dag_20261004.md",
+      "v1_sha256": "1406772f5a8fd1f78d9cb1ab98c37fcf2d0bc625092782d4880c527cd1c4aa41",
+      "v2_sha256": "7e09ea19dadf5ed75c7b2fe37b08a8ac9ac9bc26721ed38c9921c46830bfe2fc",
+      "v1_bytes": 10370,
+      "v2_bytes": 10858
+    },
+    {
+      "path": "speed_monotonicity_english_proof_20261004.md",
+      "v1_sha256": "8d7f2355e2a7558562cf86c766d5cea9475ffe189c511ac70bda163c0561242f",
+      "v2_sha256": "50de39e9440d427e7f4764b192221f4113c22e4c53948d2d986d61d88c529882",
+      "v1_bytes": 34290,
+      "v2_bytes": 34924
+    }
+  ],
+  "package_revision": "V3 execution guard; V2 mathematical presentation unchanged",
+  "execution_only_changes": [
+    {
+      "path": "final_certificate_runner_20261004.py",
+      "v2_sha256": "008ff57007131483bb0a4480833aa6747b48020d8e9efc54ca52c04cf070acd0",
+      "v3_sha256": "6f15a4b8570ad1efb151c182d353013ab1f79d4700a0ca7bb308f62882de0b75",
+      "v2_bytes": 3506,
+      "v3_bytes": 4866
+    }
+  ],
+  "execution_guard": {
+    "runner_requires_debug": true,
+    "runner_requires_optimize": 0,
+    "allowed_pythonoptimize_environment": [
+      null,
+      "",
+      "0"
+    ],
+    "child_pythonoptimize_removed": true,
+    "child_interpreter_probe_nonassert": true,
+    "prior_full_run_optimize_state": "NOT_RECORDED; cannot retroactively certify zero",
+    "new_guarded_full_replay": "separate live execution record; not a mathematical lemma"
+  }
+}

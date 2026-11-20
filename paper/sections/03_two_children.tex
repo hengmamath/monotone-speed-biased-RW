@@ -1,0 +1,138 @@
+\section{Strict decrease on \texorpdfstring{$[0,m)$}{[0,m)} when every vertex has at least two children}\label{sec:twochildren}
+
+We give two proofs of Theorem~\ref{thm:twochildren}: one compares nearby biases directly, and the other uses the linear-response formula. Both use the inequality $\E X<2k$ for $1<\lambda<m$, which we prove first. We weight the joint law of the children by $(\lambda-1+\sum_iX_i)^{-2}$. Under this measure, the mean of the first child is at least $k$. Conditional exchangeability then turns $\nu\ge2$ into a lower bound on their sum.
+
+\begin{lemma}\label{lem:two-child}
+Let $\lambda>1$, $c=\lambda-1$, and let $X\in(0,1)$ satisfy~\eqref{eq:rde} with $\nu\ge2$ almost surely. For $k$ defined in~\eqref{eq:weighted-mean}, one has $\E X<2k$.
+\end{lemma}
+
+\begin{proof}
+Let $M$ be the probability law obtained by weighting the law of $X$ with $(c+X)^{-2}$, and write
+\begin{equation}\label{eq:tilted-moments}
+ k=\E_M X,\qquad j=\E_M X^2,\qquad \ell=\E_M X^3.
+\end{equation}
+Undoing this change of measure expresses the original mean as
+\begin{equation}\label{eq:untilted-mean}
+ \E X=\frac{c^2k+2cj+\ell}{c^2+2ck+j}.
+\end{equation}
+We will use $\ell\le j$ and an upper bound on $j$ to prove $\E X<2k$. To obtain the bound on $j$, weight the joint law of $(\nu,X_1,X_2,\ldots)$ by $(c+S)^{-2}$ and denote the resulting probability measure by $Q$. Under the original law, $X_1$ is independent of $H=\sum_{i=2}^{\nu}X_i$. Its marginal under $Q$, relative to $M$, has density proportional to
+\begin{equation*}
+ R(x)=\E\left[\left(\frac{c+x}{c+x+H}\right)^2\right].
+\end{equation*}
+The function $R$ is increasing. The covariance inequality for two increasing functions therefore gives
+\begin{equation*}
+ \E_QX_1=\frac{\E_M[XR(X)]}{\E_MR(X)}\ge k.
+\end{equation*}
+For example, the covariance sign follows by taking independent $U,V$ with law $M$ and writing $2\Cov_M(X,R(X))=\E[(U-V)(R(U)-R(V))]\ge0$. Conditional exchangeability under the symmetric weight and $\nu\ge2$ now imply
+\begin{equation}\label{eq:two-child-constraint}
+ \E_QS=\E_Q[\nu X_1]\ge2\E_QX_1\ge2k.
+\end{equation}
+By~\eqref{eq:rde}, $S$ has the same law as $\lambda X/(1-X)$ and $c+S$ has the same law as $(c+X)/(1-X)$. Thus
+\begin{equation*}
+ \E_QS=\lambda\frac{k-j}{1-2k+j}.
+\end{equation*}
+The denominator is $1-2k+j=\E_M(1-X)^2>0$. Combining this formula with~\eqref{eq:two-child-constraint} gives
+\begin{equation}\label{eq:two-j-bound}
+ j\le\frac{k(c-1+4k)}{c+1+2k}.
+\end{equation}
+Since $j\ge k^2$ and
+\begin{equation*}
+ \frac{k(c-1+4k)}{c+1+2k}-k^2
+ =\frac{k(1-k)(c+2k-1)}{c+1+2k},
+\end{equation*}
+we also have $c+2k-1\ge0$.
+
+If $k\ge1/2$, then $\E X<1\le2k$. Suppose $k<1/2$. First use $\ell\le j$ in~\eqref{eq:untilted-mean}. Since $2k-2c-1<0$, the upper bound for $j$ in~\eqref{eq:two-j-bound} then gives a lower bound for $2k-\E X$:
+\begin{align*}
+ &(2k-\E X)(c^2+2ck+j)\\
+ &\quad\ge c^2k+4ck^2+(2k-2c-1)\frac{k(c-1+4k)}{c+1+2k}\\
+ &\quad=\frac{k}{c+1+2k}\Bigl[
+ (c+2k-1)^3+2(c+2k-1)^2\\
+ &\hspace{7em}+\{2+2k(1-2k)\}(c+2k-1)
+ +2(1-k)(1-2k)\Bigr]>0.
+\end{align*}
+Each term in brackets is nonnegative, and the last is strictly positive. This proves $\E X<2k$.
+\end{proof}
+
+For $1<\lambda<m$, the assumption $\nu\ge2$ enters through~\eqref{eq:two-child-constraint}. Independence is used under the original law and conditional exchangeability under $Q$. If one child is allowed, the same calculation gives only $\E_QS\ge k$. Section~\ref{sec:high} uses this weaker inequality for $(3+\sqrt5)/2\le\lambda<m$.
+
+\subsection{Proof by direct comparison}\label{sec:direct-comparison}
+We first prove a criterion that also applies when single-child vertices are allowed. Fix $1<\lambda<m$ and use the notation of Section~\ref{sec:kernel-identities}, evaluated at this bias and escape law.
+
+\begin{proposition}\label{prop:criterion}
+If $\E X<2k$, then $\Dplus v(\lambda)<0$.
+\end{proposition}
+
+\begin{proof}
+We compare a larger bias with $\lambda$ by changing the escape law and the bias separately. The escape law decreases in stochastic order. We modify $N_\alpha(\rho)-vZ_\alpha(\rho)$ by a term that vanishes when $\rho=\pi_\alpha$, so that the modified expression increases with $\rho$ near $\pi_\lambda$ and has a negative derivative in $\alpha$ at $(\lambda,\pi_\lambda)$. Lemma~\ref{lem:weighted-positivity} gives the two signs needed below.
+
+For a nearby parameter $\alpha>1$ and a child law $\rho$ on $[0,1]$, keep $u$ and $v$ fixed and set
+\begin{align}\label{eq:corrected-functional}
+ \cF(\alpha,\rho)
+ =N_\alpha(\rho)-vZ_\alpha(\rho)
+ -2\left\{\E_\rho u(X)
+ -\E_{\nu,\rho}u\left(F_\alpha\left(\sum_{i=1}^{\nu}X_i\right)\right)\right\}.
+\end{align}
+The expression in braces vanishes at $\rho=\pi_\alpha$ by the recursion. Consequently,
+\begin{equation}\label{eq:on-curve}
+ \cF(\alpha,\pi_\alpha)
+ =Z_\alpha(\pi_\alpha)\{v(\alpha)-v(\lambda)\}.
+\end{equation}
+For an ordered coupling $X_0\le X_1$, write $X_s=(1-s)X_0+sX_1$ and $\rho_s=\Law(X_s)$. Differentiating~\eqref{eq:corrected-functional} gives
+\begin{align}\label{eq:transport}
+ \frac{\dd}{\dd s}\cF(\alpha,\rho_s)
+ &=2\E[(X_1-X_0)G_{\alpha,\rho_s}(X_s)],\\
+ G_{\alpha,\rho}(x)
+ &=\int\frac{y^2+(\alpha-1)h_v(y)}{A_\alpha(x,y)^2}\rho(\dd y)
+ -r(x)+(\cL_{\alpha,\rho}r)(x).\notag
+\end{align}
+At $(\alpha,\rho)=(\lambda,\pi_\lambda)$, the choice of $r$ gives $G_{\lambda,\pi_\lambda}=c\cJ h_v$, which is uniformly positive by~\eqref{eq:J-positive}. The map $(\alpha,\rho)\mapsto G_{\alpha,\rho}$ is continuous in the uniform norm when $\rho$ varies in $W_1$. For the pair-kernel term this follows from uniform continuity on the compact parameter and coordinate domain. For $\cL_{\alpha,\rho}r$, truncate $\nu$ at $M$. For each of the finitely many possible offspring numbers, couple the child variables so their mean absolute differences tend to zero. Uniform continuity of the finite-child integrand then gives convergence uniformly in $x\in[0,1]$. The tail of each operator, on a compact interval with $\alpha\ge a>1$, is bounded by
+\begin{equation*}
+ \frac{\|r\|_\infty}{a}\E[\nu;\nu>M]\longrightarrow0.
+\end{equation*}
+The same bound justifies the differentiation in~\eqref{eq:transport}. Hence $G_{\alpha,\rho}>0$ throughout a neighborhood of $(\lambda,\pi_\lambda)$.
+
+We next vary $\alpha$ with the law fixed at $\pi_\lambda$. Since $\partial_\alpha F_\alpha(s)|_{\alpha=\lambda}=-b(F_\lambda(s))$, the derivative of $\cF(\alpha,\pi_\lambda)$ at $\alpha=\lambda$ equals $C-2\E[br]=-K<0$, by Lemma~\ref{lem:weighted-positivity}.
+
+We now combine the two comparisons. Couple $\beta_{\lambda+\varepsilon}\le\beta_\lambda$ on the same tree. By Lemma~\ref{lem:continuity}, the entire linear interpolation of these variables has law converging to $\pi_\lambda$ in $W_1$, uniformly along the interpolation. Equation~\eqref{eq:transport} therefore gives, for small $\varepsilon>0$,
+\begin{align*}
+ Z_{\lambda+\varepsilon}(\pi_{\lambda+\varepsilon})
+ \{v(\lambda+\varepsilon)-v(\lambda)\}
+ &=\cF(\lambda+\varepsilon,\pi_{\lambda+\varepsilon})\\
+ &\le\cF(\lambda+\varepsilon,\pi_\lambda)
+ =-K\varepsilon+o(\varepsilon).
+\end{align*}
+Since $Z_{\lambda+\varepsilon}(\pi_{\lambda+\varepsilon})\to Z>0$, we obtain $\Dplus v(\lambda)\le-K/Z<0$.
+\end{proof}
+
+We will also use the elementary fact that a continuous function with strictly negative upper right Dini derivative at every point of an interval is strictly decreasing. Indeed, if $f(b)\ge f(a)$ for some $a<b$, a minimum on $[a,b]$ is attained at some $x<b$. All sufficiently small right difference quotients at that $x$ are nonnegative, a contradiction.
+
+\begin{proof}[First proof of Theorem~\ref{thm:twochildren}]
+For each $1<\lambda<m$, Lemma~\ref{lem:two-child} and Proposition~\ref{prop:criterion} give $\Dplus v(\lambda)<0$. Lemma~\ref{lem:continuity} and the Dini criterion above imply strict decrease on $(1,m)$.
+
+To include $\lambda\le1$, we use a known interval of strict decrease that overlaps $(1,m)$. Let $m_1=\min\{k:\PP(\nu=k)>0\}\ge2$. Song--Wang--Xiang~\cite[Theorem~1.2 and Lemma~2.5]{SWX} prove strict decrease on
+\begin{equation}\label{eq:SWX-range}
+ \left[0,\frac{m_1}{1+\sqrt{1-1/m_1}}\right].
+\end{equation}
+The right endpoint is larger than one and smaller than $m_1\le m$. Therefore~\eqref{eq:SWX-range} overlaps $(1,m)$, and the two strict comparisons yield strict decrease on $[0,m)$.
+\end{proof}
+
+\subsection{Proof via linear response}\label{sec:two-child-response}
+The second proof uses the same weighted-mean inequality to determine the sign of the derivative formula from Section~\ref{sec:linear-response}.
+
+\begin{proof}[Second proof of Theorem~\ref{thm:twochildren}]
+Fix $1<\lambda<m$. Lemma~\ref{lem:two-child} gives $\E X<2k$, so Lemma~\ref{lem:weighted-positivity} gives $\cJ h_v>0$ and $K>0$. Recall $\Psi=\cJ(y^2+c h_v)$ and the positive inverse $\mathcal R=(I-\cL)^{-1}$ from~\eqref{eq:full-response-defs} and Lemma~\ref{lem:positive-inverse}. Applying $\mathcal R$ to $(I-\cL)r=\cJ(y^2)$ yields
+\begin{equation}\label{eq:two-child-response}
+ \mathcal R\Psi=r+c\mathcal R\cJ h_v.
+\end{equation}
+Substituting this identity into~\eqref{eq:full-sign} gives
+\begin{align*}
+ D_\lambda
+ &=2\E[b(X)r(X)]-C
+   +2c\E[b(X)(\mathcal R\cJ h_v)(X)]\\
+ &=K+2c\E[b(X)(\mathcal R\cJ h_v)(X)]\ge K>0.
+\end{align*}
+Here $c>0$, $b\ge0$ and positivity of $\mathcal R$ give the inequality. Since $Z>0$, Lemma~\ref{lem:full-response} gives $v'(\lambda)=-D_\lambda/Z<0$. The mean value theorem now gives strict decrease on $(1,m)$. Combining this interval with the overlapping Song--Wang--Xiang interval~\eqref{eq:SWX-range} proves strict decrease on $[0,m)$.
+\end{proof}
+
+The second proof gives $v'(\lambda)<0$ on $(1,m)$ under the finite first-moment assumption. If the offspring law has an exponential moment, Bowditch--Tokushige~\cite[Theorem~1.1]{BT} give differentiability of the speed throughout $(0,m)$ in the leafless case. The bound $\Dplus v(\lambda)<0$ for $1<\lambda<m$, together with~\cite[Lemma~2.5]{SWX}, then gives $v'(\lambda)<0$ for every $0<\lambda<m$. The strict monotonicity in Theorem~\ref{thm:twochildren} itself uses only the finite first moment.

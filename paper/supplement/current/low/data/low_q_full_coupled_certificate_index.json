@@ -1,0 +1,870 @@
+[
+  {
+    "file": "low_q_full_coupled_certificate_001_power.jsonl.gz",
+    "kind": "power",
+    "entries": 62,
+    "bytes": 554,
+    "sha256": "1113756d80f8ecd8d60971dd872ebfac1681e512ec77555d7f1a88b16f9a7f22",
+    "metadata": {
+      "scales": [
+        "3",
+        "1/6"
+      ],
+      "basis": "power before coordinate scaling"
+    }
+  },
+  {
+    "file": "low_q_full_coupled_certificate_002_bernstein.jsonl.gz",
+    "kind": "bernstein",
+    "entries": 70,
+    "bytes": 1040,
+    "sha256": "8a11a0b078c82041e1510edbfccc2d8f6ecd542ca35d0a5a7a9e6dd40ac0d66c",
+    "metadata": {
+      "scales": [
+        "3",
+        "1/6"
+      ],
+      "bernstein_axes": [
+        0,
+        1
+      ],
+      "other_axes": "ordinary nonnegative powers"
+    }
+  },
+  {
+    "file": "low_q_full_coupled_certificate_003_power.jsonl.gz",
+    "kind": "power",
+    "entries": 24,
+    "bytes": 340,
+    "sha256": "4449b3fba8688dfb7abfa55153159b5a1d3f4764886d56793a67718938f39278",
+    "metadata": {
+      "check": "negative KR factor",
+      "domain": "b,c,j>=0"
+    }
+  },
+  {
+    "file": "low_q_full_coupled_certificate_004_power.jsonl.gz",
+    "kind": "power",
+    "entries": 386,
+    "bytes": 1856,
+    "sha256": "9529dc398657bb937f40455ea40c6ad50f0f0cefffb0af2c0a08b10a229dff5c",
+    "metadata": {
+      "scales": [
+        "3",
+        "1/6",
+        "1"
+      ],
+      "basis": "power before coordinate scaling"
+    }
+  },
+  {
+    "file": "low_q_full_coupled_certificate_005_bernstein.jsonl.gz",
+    "kind": "bernstein",
+    "entries": 840,
+    "bytes": 5725,
+    "sha256": "22cd60e208f7ff1f87059d8c60a8ed0bdfc630c8defc800854326c9c2ef407f1",
+    "metadata": {
+      "scales": [
+        "3",
+        "1/6",
+        "1"
+      ],
+      "bernstein_axes": [
+        0,
+        1,
+        2
+      ],
+      "other_axes": "ordinary nonnegative powers"
+    }
+  },
+  {
+    "file": "low_q_full_coupled_certificate_006_power.jsonl.gz",
+    "kind": "power",
+    "entries": 252,
+    "bytes": 1495,
+    "sha256": "e09cfc5572a07ecff69fca9e158aebbdd3ed8159263e3811a060ddb3cc6399a0",
+    "metadata": {
+      "scales": [
+        "3",
+        "1/6",
+        "1"
+      ],
+      "basis": "power before coordinate scaling"
+    }
+  },
+  {
+    "file": "low_q_full_coupled_certificate_007_bernstein.jsonl.gz",
+    "kind": "bernstein",
+    "entries": 294,
+    "bytes": 3506,
+    "sha256": "c2bcfaf27ff57a8da4c0edb0018efb9eefb4b49c522ee479d837e7bea9c56fe5",
+    "metadata": {
+      "scales": [
+        "3",
+        "1/6",
+        "1"
+      ],
+      "bernstein_axes": [
+        0,
+        1,
+        2
+      ],
+      "other_axes": "ordinary nonnegative powers"
+    }
+  },
+  {
+    "file": "low_q_full_coupled_certificate_008_power.jsonl.gz",
+    "kind": "power",
+    "entries": 529,
+    "bytes": 3212,
+    "sha256": "cf719174652ade5044fede2321f51713269629573b1e730e06b32294a4f31405",
+    "metadata": {
+      "scales": [
+        "3",
+        "1/6",
+        "1"
+      ],
+      "basis": "power before coordinate scaling"
+    }
+  },
+  {
+    "file": "low_q_full_coupled_certificate_009_bernstein.jsonl.gz",
+    "kind": "bernstein",
+    "entries": 639,
+    "bytes": 8722,
+    "sha256": "b3102eaf35e4df3e7b150fc61cf2421f6badafd6fe27618f9665c01c3e5f000f",
+    "metadata": {
+      "scales": [
+        "3",
+        "1/6",
+        "1"
+      ],
+      "bernstein_axes": [
+        0,
+        1,
+        2
+      ],
+      "other_axes": "ordinary nonnegative powers"
+    }
+  },
+  {
+    "file": "low_q_full_coupled_certificate_010_power.jsonl.gz",
+    "kind": "power",
+    "entries": 1871,
+    "bytes": 15149,
+    "sha256": "2a844abb4338989c14af2cacf839440d7bea2bede613460d1f59b21b4aff1337",
+    "metadata": {
+      "scales": [
+        "3",
+        "1/6",
+        "1"
+      ],
+      "basis": "power before coordinate scaling"
+    }
+  },
+  {
+    "file": "low_q_full_coupled_certificate_011_bernstein.jsonl.gz",
+    "kind": "bernstein",
+    "entries": 2277,
+    "bytes": 45831,
+    "sha256": "4c41d7cb0550a52a96b66466abb277369a7fdf98d36373358263b8fe4aff492c",
+    "metadata": {
+      "scales": [
+        "3",
+        "1/6",
+        "1"
+      ],
+      "bernstein_axes": [
+        0,
+        1,
+        2
+      ],
+      "other_axes": "ordinary nonnegative powers"
+    }
+  },
+  {
+    "file": "low_q_full_coupled_certificate_012_power.jsonl.gz",
+    "kind": "power",
+    "entries": 2812,
+    "bytes": 24540,
+    "sha256": "2dec8bdbb8a9a2445c4f0ac710f4f2f70348159af32b18d77166cf18bbecc498",
+    "metadata": {
+      "scales": [
+        "3",
+        "1/6",
+        "1"
+      ],
+      "basis": "power before coordinate scaling"
+    }
+  },
+  {
+    "file": "low_q_full_coupled_certificate_013_bernstein.jsonl.gz",
+    "kind": "bernstein",
+    "entries": 3500,
+    "bytes": 79814,
+    "sha256": "69765e2e8308ca64becf9e81508c50d2ad13a42e7e3397f99ee563b5fd0843d6",
+    "metadata": {
+      "scales": [
+        "3",
+        "1/6",
+        "1"
+      ],
+      "bernstein_axes": [
+        0,
+        1,
+        2
+      ],
+      "other_axes": "ordinary nonnegative powers"
+    }
+  },
+  {
+    "file": "low_q_full_coupled_certificate_014_budget_input_power.jsonl.gz",
+    "kind": "budget_input_power",
+    "entries": 4778,
+    "bytes": 49728,
+    "sha256": "44bba6131046370d9d31eca0fee2f7ef486f28dc693165afc14ae16695388712",
+    "metadata": {
+      "endpoint": "Tlo",
+      "sign": 1
+    }
+  },
+  {
+    "file": "low_q_full_coupled_certificate_015_mixed_bernstein_power.jsonl.gz",
+    "kind": "mixed_bernstein_power",
+    "entries": 6090,
+    "bytes": 308080,
+    "sha256": "ab3eecb936bc6b8d67f5ca960298ed5dc5a38f2c83247c6445d289870d81f42d",
+    "metadata": {
+      "endpoint": "Tlo",
+      "q": [
+        "1/29",
+        "3"
+      ],
+      "c": [
+        "0",
+        "1/6"
+      ],
+      "z": [
+        "0",
+        "1"
+      ]
+    }
+  },
+  {
+    "file": "low_q_full_coupled_certificate_016_bernstein.jsonl.gz",
+    "kind": "bernstein",
+    "entries": 6960,
+    "bytes": 316553,
+    "sha256": "d01b6d6a6ece1d69134941790a28dc324715632ff6f9e2a7dfd205ca716d45ec",
+    "metadata": {
+      "endpoint": "Tlo",
+      "q": [
+        "1/29",
+        "3"
+      ],
+      "c": [
+        "0",
+        "1/6"
+      ],
+      "z": [
+        "0",
+        "1"
+      ]
+    }
+  },
+  {
+    "file": "low_q_full_coupled_certificate_017_sturm_input.jsonl.gz",
+    "kind": "sturm_input",
+    "entries": 7,
+    "bytes": 554,
+    "sha256": "64ab4b2e18d598a3da45ed0da05fa602fd348c581d9861159bdb3bbb6709d86a",
+    "metadata": {
+      "endpoint": "Tlo",
+      "group": [
+        0,
+        0
+      ],
+      "interval": [
+        "0",
+        "1"
+      ]
+    }
+  },
+  {
+    "file": "low_q_full_coupled_certificate_018_sturm_sequence.jsonl.gz",
+    "kind": "sturm_sequence",
+    "entries": 34,
+    "bytes": 6411,
+    "sha256": "19ee1b49819a1ff44a6310473b0b5e635d63f68bf3e32561e510d0e40a222e4b",
+    "metadata": {
+      "endpoint": "Tlo",
+      "group": [
+        0,
+        0
+      ],
+      "interval": [
+        "0",
+        "1"
+      ]
+    }
+  },
+  {
+    "file": "low_q_full_coupled_certificate_019_sturm_input.jsonl.gz",
+    "kind": "sturm_input",
+    "entries": 7,
+    "bytes": 579,
+    "sha256": "60cfb8bd0c44d100d00eafd9561eeac30cf13961943822deb6931113155df83b",
+    "metadata": {
+      "endpoint": "Tlo",
+      "group": [
+        0,
+        1
+      ],
+      "interval": [
+        "0",
+        "1"
+      ]
+    }
+  },
+  {
+    "file": "low_q_full_coupled_certificate_020_sturm_sequence.jsonl.gz",
+    "kind": "sturm_sequence",
+    "entries": 34,
+    "bytes": 7967,
+    "sha256": "181397ee50836e8b12b1f3a298d3eb2d031a8a160f14c7597afd285a66bb4159",
+    "metadata": {
+      "endpoint": "Tlo",
+      "group": [
+        0,
+        1
+      ],
+      "interval": [
+        "0",
+        "1"
+      ]
+    }
+  },
+  {
+    "file": "low_q_full_coupled_certificate_021_sturm_input.jsonl.gz",
+    "kind": "sturm_input",
+    "entries": 7,
+    "bytes": 567,
+    "sha256": "33376f766f2cc07ea92217b1550828db47500accea3401972cd7d126965a1234",
+    "metadata": {
+      "endpoint": "Tlo",
+      "group": [
+        0,
+        2
+      ],
+      "interval": [
+        "0",
+        "1"
+      ]
+    }
+  },
+  {
+    "file": "low_q_full_coupled_certificate_022_sturm_sequence.jsonl.gz",
+    "kind": "sturm_sequence",
+    "entries": 34,
+    "bytes": 9132,
+    "sha256": "f4b1a42b3b1d4c1e4eec59347aac37df9644b2627508f6abefac1cced736a26c",
+    "metadata": {
+      "endpoint": "Tlo",
+      "group": [
+        0,
+        2
+      ],
+      "interval": [
+        "0",
+        "1"
+      ]
+    }
+  },
+  {
+    "file": "low_q_full_coupled_certificate_023_sturm_input.jsonl.gz",
+    "kind": "sturm_input",
+    "entries": 7,
+    "bytes": 610,
+    "sha256": "cb8cc0f9a9b0a2e103f0fe36c00e9028b65e72876f89ddd926f00394a837f535",
+    "metadata": {
+      "endpoint": "Tlo",
+      "group": [
+        0,
+        3
+      ],
+      "interval": [
+        "0",
+        "1"
+      ]
+    }
+  },
+  {
+    "file": "low_q_full_coupled_certificate_024_sturm_sequence.jsonl.gz",
+    "kind": "sturm_sequence",
+    "entries": 34,
+    "bytes": 10383,
+    "sha256": "26501e822028375884b6ad07fa06d0868cdb50862f291b170ac28c047e2ca0e8",
+    "metadata": {
+      "endpoint": "Tlo",
+      "group": [
+        0,
+        3
+      ],
+      "interval": [
+        "0",
+        "1"
+      ]
+    }
+  },
+  {
+    "file": "low_q_full_coupled_certificate_025_sturm_input.jsonl.gz",
+    "kind": "sturm_input",
+    "entries": 7,
+    "bytes": 623,
+    "sha256": "16d0fa62a83b6f3f989ec61105fcd1e49574ca04fcf4fdd340ebad0dd1f9f0b1",
+    "metadata": {
+      "endpoint": "Tlo",
+      "group": [
+        0,
+        4
+      ],
+      "interval": [
+        "0",
+        "1"
+      ]
+    }
+  },
+  {
+    "file": "low_q_full_coupled_certificate_026_sturm_sequence.jsonl.gz",
+    "kind": "sturm_sequence",
+    "entries": 34,
+    "bytes": 11447,
+    "sha256": "843d975e4a74dc4c2506506854d905086413257831ec18306d9027f69e8b1972",
+    "metadata": {
+      "endpoint": "Tlo",
+      "group": [
+        0,
+        4
+      ],
+      "interval": [
+        "0",
+        "1"
+      ]
+    }
+  },
+  {
+    "file": "low_q_full_coupled_certificate_027_sturm_input.jsonl.gz",
+    "kind": "sturm_input",
+    "entries": 7,
+    "bytes": 562,
+    "sha256": "b5b68ea934b90a2439efee6a6ca65a85577d8a5a74a48dfbf746bdf03f290aee",
+    "metadata": {
+      "endpoint": "Tlo",
+      "group": [
+        1,
+        0
+      ],
+      "interval": [
+        "0",
+        "1"
+      ]
+    }
+  },
+  {
+    "file": "low_q_full_coupled_certificate_028_sturm_sequence.jsonl.gz",
+    "kind": "sturm_sequence",
+    "entries": 34,
+    "bytes": 7511,
+    "sha256": "4e1165c564525e80843629ca7aa4f703deba3df5c21ee590b95c6f166635e5d7",
+    "metadata": {
+      "endpoint": "Tlo",
+      "group": [
+        1,
+        0
+      ],
+      "interval": [
+        "0",
+        "1"
+      ]
+    }
+  },
+  {
+    "file": "low_q_full_coupled_certificate_029_sturm_input.jsonl.gz",
+    "kind": "sturm_input",
+    "entries": 7,
+    "bytes": 579,
+    "sha256": "748a00ae2e19f58698ebea81b06b2414e68ab9a8120f9bd49504d82466622261",
+    "metadata": {
+      "endpoint": "Tlo",
+      "group": [
+        1,
+        1
+      ],
+      "interval": [
+        "0",
+        "1"
+      ]
+    }
+  },
+  {
+    "file": "low_q_full_coupled_certificate_030_sturm_sequence.jsonl.gz",
+    "kind": "sturm_sequence",
+    "entries": 34,
+    "bytes": 9011,
+    "sha256": "4885e352c3266694388f5991f5a78f45500c97134e5487cc057feb8d2be97b06",
+    "metadata": {
+      "endpoint": "Tlo",
+      "group": [
+        1,
+        1
+      ],
+      "interval": [
+        "0",
+        "1"
+      ]
+    }
+  },
+  {
+    "file": "low_q_full_coupled_certificate_031_budget_input_power.jsonl.gz",
+    "kind": "budget_input_power",
+    "entries": 4889,
+    "bytes": 50714,
+    "sha256": "30c28adbfa1e6ff30f533a48f34eca5f7db5a41b26f9b0b737c4c28f798265fe",
+    "metadata": {
+      "endpoint": "Tup",
+      "sign": -1
+    }
+  },
+  {
+    "file": "low_q_full_coupled_certificate_032_mixed_bernstein_power.jsonl.gz",
+    "kind": "mixed_bernstein_power",
+    "entries": 6076,
+    "bytes": 300968,
+    "sha256": "64e298a099f5186f8fcc72941d22a4d38ea86f1226d5d39cce8f4195d90ac272",
+    "metadata": {
+      "endpoint": "Tup",
+      "q": [
+        "1/29",
+        "3"
+      ],
+      "c": [
+        "0",
+        "1/6"
+      ],
+      "z": [
+        "0",
+        "1"
+      ]
+    }
+  },
+  {
+    "file": "low_q_full_coupled_certificate_033_bernstein.jsonl.gz",
+    "kind": "bernstein",
+    "entries": 6944,
+    "bytes": 309004,
+    "sha256": "b1ddd31668bb21a9e9fb023e9cdb7e10e270059f9d9bd798f1194603408a4d86",
+    "metadata": {
+      "endpoint": "Tup",
+      "q": [
+        "1/29",
+        "3"
+      ],
+      "c": [
+        "0",
+        "1/6"
+      ],
+      "z": [
+        "0",
+        "1"
+      ]
+    }
+  },
+  {
+    "file": "low_q_full_coupled_certificate_034_sturm_input.jsonl.gz",
+    "kind": "sturm_input",
+    "entries": 7,
+    "bytes": 534,
+    "sha256": "bf9ef10f1d796648bf276a3aa29c14aa89f777f7c4cdca8c133e8f84a0d5e3de",
+    "metadata": {
+      "endpoint": "Tup",
+      "group": [
+        0,
+        0
+      ],
+      "interval": [
+        "0",
+        "1"
+      ]
+    }
+  },
+  {
+    "file": "low_q_full_coupled_certificate_035_sturm_sequence.jsonl.gz",
+    "kind": "sturm_sequence",
+    "entries": 34,
+    "bytes": 5604,
+    "sha256": "d8c5c499c82a191e8db66d15a918befe0b6d8bbe189809068d8dfa8f168c5b3f",
+    "metadata": {
+      "endpoint": "Tup",
+      "group": [
+        0,
+        0
+      ],
+      "interval": [
+        "0",
+        "1"
+      ]
+    }
+  },
+  {
+    "file": "low_q_full_coupled_certificate_036_sturm_input.jsonl.gz",
+    "kind": "sturm_input",
+    "entries": 7,
+    "bytes": 548,
+    "sha256": "03a505fe83664bb805b860b75512a1086cec8311c16fab7eb10daea8b9af6bdb",
+    "metadata": {
+      "endpoint": "Tup",
+      "group": [
+        0,
+        1
+      ],
+      "interval": [
+        "0",
+        "1"
+      ]
+    }
+  },
+  {
+    "file": "low_q_full_coupled_certificate_037_sturm_sequence.jsonl.gz",
+    "kind": "sturm_sequence",
+    "entries": 34,
+    "bytes": 7183,
+    "sha256": "596337d2177328784e5f5d49e4475b96d77bbafc959649fd6776aecb00578649",
+    "metadata": {
+      "endpoint": "Tup",
+      "group": [
+        0,
+        1
+      ],
+      "interval": [
+        "0",
+        "1"
+      ]
+    }
+  },
+  {
+    "file": "low_q_full_coupled_certificate_038_sturm_input.jsonl.gz",
+    "kind": "sturm_input",
+    "entries": 7,
+    "bytes": 547,
+    "sha256": "c1af3cf7787d3054547587cde445536f4092ab90e22a1d4ca8d40c60a8640b6a",
+    "metadata": {
+      "endpoint": "Tup",
+      "group": [
+        0,
+        2
+      ],
+      "interval": [
+        "0",
+        "1"
+      ]
+    }
+  },
+  {
+    "file": "low_q_full_coupled_certificate_039_sturm_sequence.jsonl.gz",
+    "kind": "sturm_sequence",
+    "entries": 34,
+    "bytes": 8664,
+    "sha256": "3549aa4646ef0f8e4979328f5278df285407cf8ab0af1f97649a780edbf2155a",
+    "metadata": {
+      "endpoint": "Tup",
+      "group": [
+        0,
+        2
+      ],
+      "interval": [
+        "0",
+        "1"
+      ]
+    }
+  },
+  {
+    "file": "low_q_full_coupled_certificate_040_sturm_input.jsonl.gz",
+    "kind": "sturm_input",
+    "entries": 7,
+    "bytes": 593,
+    "sha256": "8aba98d1f6e30ce5e26fbce0ee10a15546d1180306f0ca27df40c918668ca195",
+    "metadata": {
+      "endpoint": "Tup",
+      "group": [
+        0,
+        3
+      ],
+      "interval": [
+        "0",
+        "1"
+      ]
+    }
+  },
+  {
+    "file": "low_q_full_coupled_certificate_041_sturm_sequence.jsonl.gz",
+    "kind": "sturm_sequence",
+    "entries": 34,
+    "bytes": 9712,
+    "sha256": "b45cc4d4032a77538999994ec2cae32969f47e040d801af3f50c9b06b88c553d",
+    "metadata": {
+      "endpoint": "Tup",
+      "group": [
+        0,
+        3
+      ],
+      "interval": [
+        "0",
+        "1"
+      ]
+    }
+  },
+  {
+    "file": "low_q_full_coupled_certificate_042_sturm_input.jsonl.gz",
+    "kind": "sturm_input",
+    "entries": 7,
+    "bytes": 607,
+    "sha256": "4de84c7f1b3e2f4b6fc1a4caf6737911615db8a70a3cf7c46c409f7e10ae95b1",
+    "metadata": {
+      "endpoint": "Tup",
+      "group": [
+        0,
+        4
+      ],
+      "interval": [
+        "0",
+        "1"
+      ]
+    }
+  },
+  {
+    "file": "low_q_full_coupled_certificate_043_sturm_sequence.jsonl.gz",
+    "kind": "sturm_sequence",
+    "entries": 34,
+    "bytes": 10410,
+    "sha256": "540d9046ea19e6b421c3d10c83c9de836175fb410e335c2aabd5d22386c4d9b1",
+    "metadata": {
+      "endpoint": "Tup",
+      "group": [
+        0,
+        4
+      ],
+      "interval": [
+        "0",
+        "1"
+      ]
+    }
+  },
+  {
+    "file": "low_q_full_coupled_certificate_044_sturm_input.jsonl.gz",
+    "kind": "sturm_input",
+    "entries": 7,
+    "bytes": 619,
+    "sha256": "6a37b2cff53a3930065c1c7fc22d4c8314a8c7360371e047d357476edf51cd7f",
+    "metadata": {
+      "endpoint": "Tup",
+      "group": [
+        0,
+        5
+      ],
+      "interval": [
+        "0",
+        "1"
+      ]
+    }
+  },
+  {
+    "file": "low_q_full_coupled_certificate_045_sturm_sequence.jsonl.gz",
+    "kind": "sturm_sequence",
+    "entries": 34,
+    "bytes": 11326,
+    "sha256": "c9631e16ea600e93d4eb4edd5fdf6955a847919eee09ab511588cd92289c9247",
+    "metadata": {
+      "endpoint": "Tup",
+      "group": [
+        0,
+        5
+      ],
+      "interval": [
+        "0",
+        "1"
+      ]
+    }
+  },
+  {
+    "file": "low_q_full_coupled_certificate_046_sturm_input.jsonl.gz",
+    "kind": "sturm_input",
+    "entries": 7,
+    "bytes": 538,
+    "sha256": "029afa826ae921c34fa6f673d70e8721c88349256965caf5b4d23ce80cde52a3",
+    "metadata": {
+      "endpoint": "Tup",
+      "group": [
+        1,
+        0
+      ],
+      "interval": [
+        "0",
+        "1"
+      ]
+    }
+  },
+  {
+    "file": "low_q_full_coupled_certificate_047_sturm_sequence.jsonl.gz",
+    "kind": "sturm_sequence",
+    "entries": 34,
+    "bytes": 6771,
+    "sha256": "81fef69cd43d0f7f8353ff24ed8843b8e07983040cecbbeda4a836d8ac22aab8",
+    "metadata": {
+      "endpoint": "Tup",
+      "group": [
+        1,
+        0
+      ],
+      "interval": [
+        "0",
+        "1"
+      ]
+    }
+  },
+  {
+    "file": "low_q_full_coupled_certificate_048_sturm_input.jsonl.gz",
+    "kind": "sturm_input",
+    "entries": 7,
+    "bytes": 547,
+    "sha256": "788693b3a3202f9a2dfab9f119b106316159b9e71125ffbd783edab19cb8f923",
+    "metadata": {
+      "endpoint": "Tup",
+      "group": [
+        1,
+        1
+      ],
+      "interval": [
+        "0",
+        "1"
+      ]
+    }
+  },
+  {
+    "file": "low_q_full_coupled_certificate_049_sturm_sequence.jsonl.gz",
+    "kind": "sturm_sequence",
+    "entries": 34,
+    "bytes": 8021,
+    "sha256": "d6fcd8a029258395c4736eb41d3bc7e449d46c902a2ac8fc681ebd8f91c02154",
+    "metadata": {
+      "endpoint": "Tup",
+      "group": [
+        1,
+        1
+      ],
+      "interval": [
+        "0",
+        "1"
+      ]
+    }
+  }
+]

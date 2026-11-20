@@ -1,0 +1,13 @@
+271 COMPLETE theta upper160 PASS
+271/272 ALL ages H slope 0 (14, 9, 4) 735 Sturm 0 PASS
+271/272 ALL ages H slope 1 - 1/(6*q + 6) (16, 11, 5) 1207 Sturm 0 PASS
+271/272 ALL ages H price 0 (30, 20, 11) 7719 Sturm 0 PASS
+271/272 ALL ages H price 1 - 1/(6*q + 6) (32, 22, 12) 9768 Sturm 25 PASS
+271/272 ALL ages J slope 0 (21, 14, 5) 1980 Sturm 0 PASS
+271/272 ALL ages J slope 1 - 1/(6*q + 6) (24, 16, 6) 2975 Sturm 0 PASS
+271/272 ALL ages J price 0 (31, 19, 12) 8288 Sturm 0 PASS
+271/272 ALL ages J price 1 - 1/(6*q + 6) (34, 21, 13) 10745 Sturm 0 PASS
+273 actual-marker SAME-e whole damping PASS
+274 COMPLETE same-e budget Tlo 28 (49, 28, 6) 10150 positive, min 10622425992392132150573135808/7450580596923828125
+274 COMPLETE same-e budget Tup 26 (49, 30, 6) 10850 positive, min 2830446654002430025605967872/298023223876953125
+271--274 LOCAL full middle-q PASS; independent audit PENDING

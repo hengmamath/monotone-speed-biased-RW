@@ -1,0 +1,6 @@
+239 ALL-age q>=10 g 0 4319 coefficients/min69/280 PASS
+239 ALL-age q>=10 g 1 4319 coefficients/min69/280 PASS
+238 full source negative monomials 65345524702337817/204800000000 <320000; constant380160 PASS
+240 ALL-age strengthened shape identity PASS
+243 ENTIRE q>=21 coupled margin 28155382207511429143103/124404112403316879470013600 >1/5000 PASS
+Complete local proofs/exact checks PASS; independent audit pending, q<21 OPEN.

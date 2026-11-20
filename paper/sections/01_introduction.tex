@@ -1,0 +1,73 @@
+\section{Introduction}\label{sec:introduction}
+
+Let $\mathbb T$ be a Galton--Watson tree with offspring variable $\nu$ satisfying
+\begin{equation}\label{eq:assumptions}
+ \PP(\nu=0)=0,\qquad 1<m:=\E\nu<\infty.
+\end{equation}
+At a nonroot vertex with $k$ children, the $\lambda$-biased random walk moves to the parent with probability $\lambda/(\lambda+k)$ and to each child with probability $1/(\lambda+k)$. At the root it chooses a child uniformly. Write $W_n$ for the walk started at the root and $|W_n|$ for its distance from the root. In the transient regime $0\le\lambda<m$, its speed
+\begin{equation*}
+ v(\lambda)=\lim_{n\to\infty}\frac{|W_n|}{n}
+\end{equation*}
+exists almost surely and is a deterministic positive constant; see~\cite{LPP,Aidekon}. Increasing $\lambda$ strengthens the bias towards the root. Lyons, Pemantle and Peres asked whether $v$ is nonincreasing in $\lambda$ for every offspring law satisfying~\eqref{eq:assumptions}~\cite[Question~2.1]{LPP}.
+
+The local drift at a vertex of degree $k+1$ decreases with $\lambda$, but this observation does not settle the question: changing the bias also changes the distribution of the environments visited by the walk. A proof must control both effects. Our analytic arguments make this comparison through the recursive law of the escape probability.
+
+\subsection{Analytic results}
+For a real-valued function $f$, denote its upper right Dini derivative by
+\begin{equation*}
+ \Dplus f(\lambda)=\limsup_{\varepsilon\downarrow0}
+ \frac{f(\lambda+\varepsilon)-f(\lambda)}{\varepsilon}.
+\end{equation*}
+The first result covers the entire transient regime when single-child vertices are absent.
+
+\begin{theorem}\label{thm:twochildren}
+Suppose $\PP(\nu\ge2)=1$ and $m=\E\nu<\infty$. Then $v$ is strictly decreasing on $[0,m)$. Moreover,
+\begin{equation*}
+ \Dplus v(\lambda)<0,\qquad 1<\lambda<m.
+\end{equation*}
+\end{theorem}
+
+For laws with single-child vertices, we prove two complementary analytic results.
+
+\begin{theorem}\label{thm:low}
+Suppose~\eqref{eq:assumptions} holds and $\PP(\nu=1)>0$. Then $v$ is strictly decreasing on $(0,1)$, and $\Dplus v(\lambda)<0$ for every $0<\lambda<1$.
+\end{theorem}
+
+\begin{theorem}\label{thm:high}
+Suppose~\eqref{eq:assumptions} holds and $\PP(\nu=1)>0$. If $m>(3+\sqrt5)/2$, then $v$ is strictly decreasing on $[(3+\sqrt5)/2,m)$, and
+\begin{equation*}
+ \Dplus v(\lambda)<0,\qquad \frac{3+\sqrt5}{2}\le\lambda<m.
+\end{equation*}
+\end{theorem}
+
+All three statements require only a finite first offspring moment. Their proofs in Sections~\ref{sec:preliminaries}--\ref{sec:high} are analytic. For laws with single-child vertices, Theorem~\ref{thm:computer} gives the stronger conclusion $v'(\lambda)<0$ throughout $(1,m)$ by a computer-assisted argument. Section~\ref{sec:computer} describes the reductions to finite rational inequalities and identifies the exact computations; coefficient data and verification programs are supplied separately. Theorems~\ref{thm:twochildren}--\ref{thm:high} are proved independently of that extension. Lemma~\ref{lem:continuity-one} proves continuity at $\lambda=1$. Together with Theorems~\ref{thm:low} and~\ref{thm:computer}, this gives strict decrease throughout $(0,m)$ for laws with single-child vertices as well.
+
+\subsection{Relation to earlier work}
+A\"id\'ekon's explicit speed formula~\cite{Aidekon} provides the starting point for comparisons through the escape law. If the minimum offspring number is $m_1\ge2$, Song--Wang--Xiang proved strict decrease on $[0,m_1/(1+\sqrt{1-1/m_1})]$~\cite[Theorem~1.2]{SWX}. This interval contains $\lambda=1$ in its interior, so it overlaps the interval $(1,m)$ on which we prove strict decrease in Theorem~\ref{thm:twochildren}. Bowditch--Tokushige proved differentiability of speed under an exponential offspring moment assumption~\cite[Theorem~1.1]{BT}. The analytic arguments here establish a strictly negative upper right Dini derivative under a finite first moment.
+
+\begin{remark}[Concurrent work]\label{rem:concurrent-work}
+Schwarzfischer's recent preprint~\cite{Schwarzfischer}, submitted on November 19, 2026, proves $v'(\lambda)<0$ on $(0,m)$ under the assumptions $\nu\ge4$ almost surely and $m<\infty$. Its introduction also states that related techniques can handle $\nu\ge2$, without presenting that extension. Theorem~\ref{thm:twochildren} gives a full analytic argument under $\nu\ge2$, while Theorems~\ref{thm:low} and~\ref{thm:high} treat laws with single-child vertices. Our representation of $v'(\lambda)$ is equivalent to that in~\cite[Proposition~2.9]{Schwarzfischer}. Both build on A\"id\'ekon's speed formula~\cite{Aidekon} and the linearization of the escape-law recursion. The estimates used here to establish strict negativity of $v'(\lambda)$ differ from those in~\cite{Schwarzfischer}.
+
+The result under $\nu\ge2$ was obtained in September 2026. An early draft containing this result and its proof is preserved in the repository's initial commit, dated September 25, 2026.\footnote{See GitHub commit \href{https://github.com/hengmamath/monotone-speed-biased-RW/commit/9374a17682392e39152f1f39f8e7193ef8365c97}{\texttt{9374a17}}.} Posting to arXiv or Hexagon was postponed while we sought a proof of the full conjecture that would not require computer verification.
+\end{remark}
+
+\subsection{Comparing the speed at two biases}
+Attach an extra parent to the root of a Galton--Watson tree. For $0<\lambda<m$, $\lambda\ne1$, let $X,Y$ be independent copies of the quenched probability that the walk, started at the root, never reaches that parent. The speed representation used throughout the paper is
+\begin{equation}\label{eq:intro-speed}
+ v(\lambda)=
+ \frac{\displaystyle\E\frac{XY}{\lambda-1+X+Y-XY}}
+ {\displaystyle\E\frac{X+Y-XY}{\lambda-1+X+Y-XY}}.
+\end{equation}
+The law of $X$ decreases in stochastic order when $\lambda$ increases. For $\lambda>1$, however, the sign of the corresponding speed change is not immediate from~\eqref{eq:intro-speed}. Fix $v=v(\lambda)$ and subtract $v$ times the denominator expectation from the numerator expectation. To control how this difference changes with the law of $X$, we subtract a suitable multiple of
+\begin{equation*}
+ \E u(X)-\E u\left(\frac{\sum_{i=1}^{\nu}X_i}{\lambda+\sum_{i=1}^{\nu}X_i}\right),
+\end{equation*}
+where the $X_i$ are independent copies of $X$, independent of $\nu$. This expression vanishes by the escape recursion. We choose the derivative of $u$ to cancel one term in the change with respect to the law. The remaining change in the law and the change in the bias with the law fixed have the required signs whenever
+\begin{equation}\label{eq:intro-weighted}
+ \E X<2\frac{\E[X/(\lambda-1+X)^2]}{\E[1/(\lambda-1+X)^2]}.
+\end{equation}
+Proposition~\ref{prop:criterion} makes this implication precise. Weighting the joint law of the children by $(\lambda-1+\sum_iX_i)^{-2}$ gives~\eqref{eq:intro-weighted} for $1<\lambda<m$ if there are at least two children, and for $(3+\sqrt5)/2\le\lambda<m$ if there is at least one child.
+
+For $\lambda<1$, the deterministic bound $X\ge1-\lambda$ gives an affine upper bound on the escape probability at a larger bias. The speed quotient preserves stochastic order for laws supported on $[1-\lambda,1]$, so the affine bound gives an upper bound on the new speed. We prove that its derivative is negative using the mean resistance $\E(1/X)$ and two applications of Jensen's inequality. Section~\ref{sec:low} gives the complete argument.
+
+Section~\ref{sec:linear-response} proves local Lipschitz continuity of the escape law and a formula for the derivative of its expectations. A positive inverse of the resulting linear operator expresses $v'(\lambda)$ as the negative of a quantity to be estimated, divided by a positive denominator. This formula gives the second proof in Section~\ref{sec:two-child-response} and the starting point for the computer-assisted estimates in Section~\ref{sec:computer}. Moment inequalities and an identity involving a logarithmic function give lower bounds for that quantity. For each of four bias intervals, estimates on the moments and infinite tails reduce the required strict sign to finitely many rational inequalities. The exact computations verify those inequalities on domains that contain the parameters of every escape law under consideration.

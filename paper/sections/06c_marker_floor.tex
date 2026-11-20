@@ -1,0 +1,243 @@
+\subsection{Integral formulas for moment ratios and a series lower bound}
+\label{subsec:marker-floor}
+The lower bound $F_*$ in Lemma~\ref{lem:calibration} contains the
+logarithmic function $g$. We bound its contribution using the moments
+of $U$ and the successive differences of the ratios $a_s/\beta_s$.
+An integral representation relates these differences at all orders.
+
+For real $s\ge0$ retain
+\[
+ a_s=\E U^s,\qquad \beta_s=\frac{h}{\lambda^s-d},\qquad
+ \rho(s)=\frac{a_s}{\beta_s}.
+\]
+For $s\ge1$ put
+\begin{equation}\label{eq:marker-deficits}
+ \begin{gathered}
+ r_s=\frac{\beta_{s+1}}{\beta_s},\qquad
+ \Delta_s=\rho(s)-\rho(s+1),\qquad
+ \delta_s=a_s r_s-a_{s+1}=\beta_{s+1}\Delta_s,\\
+ r_0=u,\qquad \delta_0=0,\qquad
+ k=\frac{c}{\lambda\log\lambda}.
+ \end{gathered}
+\end{equation}
+In particular, $1/\lambda<k<1$.
+
+\begin{lemma}[Integral representation of the moment ratios]\label{lem:canonical-marker}
+There is a probability measure $\sigma$ on $(0,1)$, constructed from the
+escape law $\pi_\lambda$, such that, for every real $s\ge1$,
+\begin{equation}\label{eq:marker-representation}
+ \rho(s)=\int_0^1 t^{s-1}\{s-(s-1)t\}\,\sigma(\dd t),
+ \qquad
+ \Delta_s=s\int_0^1 t^{s-1}(1-t)^2\,\sigma(\dd t).
+\end{equation}
+The derivative $\rho'(s)$ exists, with the right derivative taken at $s=1$,
+and
+\begin{equation}\label{eq:strict-marker-derivative}
+ -\rho'(s)>\left(1-\frac1{2s}\right)\Delta_s.
+\end{equation}
+Thus, with $e=\Delta_1=1-\rho_2$, one has $0<e<1$ and
+$0<\Delta_i\le i e$ for every integer $i\ge1$.
+\end{lemma}
+\begin{proof}
+Apply the chosen-child inequality~\eqref{eq:chosen-child-comparison} to
+increasing indicator functions.  After the same change of variables as
+in the proof of Lemma~\ref{lem:canonical-moments}, it says that
+\[
+ A_m(t)=\E[(1-\lambda U)\mathbf1_{\{\lambda U>t\}}]
+       -d\E[(1-U)\mathbf1_{\{U>t\}}]\ge0,
+ \qquad 0<t<1.
+\]
+Layer-cake integration gives
+\[
+ h\{\rho(s)-\rho(s+1)\}=s\int_0^1t^{s-1}A_m(t)\dd t,
+ \qquad s\ge1.
+\]
+Indeed, the right side equals
+$(\lambda^s-d)a_s-(\lambda^{s+1}-d)a_{s+1}$.
+The bounded-convergence argument in Lemma~\ref{lem:canonical-moments}
+also gives $\rho(s+n)\to0$ for every real $s\ge1$.  Sum the last
+display over $s,s+1,\ldots$, using Tonelli and
+\[
+ \sum_{j\ge0}(s+j)t^{s+j-1}
+ =\frac{t^{s-1}\{s-(s-1)t\}}{(1-t)^2}.
+\]
+At $s=1$ the resulting left side is $\rho(1)=1$. Consequently
+\[
+ \sigma(\dd t)=\frac{A_m(t)}{h(1-t)^2}\dd t
+\]
+is a probability measure and gives~\eqref{eq:marker-representation}.
+The measure gives full mass to $(0,1)$.
+
+For $s>1$, differentiation under this probability integral is justified
+locally by boundedness of $t^{s-1}|\log t|$.  At $s=1$, the derivative
+of $a_s/\beta_s$ is finite because $U^s|\log U|$ is bounded when $s$
+is bounded away from zero.  Fatou's lemma applied to
+\[
+ \frac{1-t^{\varepsilon}\{1+\varepsilon(1-t)\}}{\varepsilon}
+\]
+then shows that $-\log t-(1-t)$ is $\sigma$-integrable.  Hence
+$|\log t|$ is integrable and dominated convergence also permits
+differentiation from the right at $s=1$. We obtain
+\[
+ -\rho'(s)=\int_0^1 t^{s-1}
+ \bigl[\{1+(s-1)(1-t)\}(-\log t)-(1-t)\bigr]\sigma(\dd t).
+\]
+Write $z=1-t$.  Since $-\log(1-z)>z+z^2/2$ for $0<z<1$, the
+bracket is strictly larger than
+$(s-\tfrac12)z^2+(s-1)z^3/2$.
+Integration proves~\eqref{eq:strict-marker-derivative}.  Finally,
+the formula for $\Delta_i$ and $t^{i-1}\le1$ give $\Delta_i\le i e$.
+Strict positivity follows from the support of $\sigma$.
+\end{proof}
+
+We now replace the speed $v$ by a real parameter $w$ while keeping the
+law of $X$ fixed. Since $wZ-N$ vanishes only at $w=v$, we keep this
+term when substituting an upper bound for $v$. In the next two lemmas,
+$w$ denotes this parameter. It previously denoted $\E W$
+in~\eqref{eq:archive-parameters}.
+
+\begin{lemma}[An affine comparison at fixed escape law]\label{lem:assigned-floor}
+Keep the escape law $\pi_\lambda$ and its moments fixed, and put
+\[
+ A_0=1-(\lambda+1)u+\lambda a_2,\qquad
+ a(w)=\frac{u-(w/c)A_0}{a_2},
+\]
+\[
+ P_c(w;y)=(1-y)\{2w-(1+w)y\}.
+\]
+Define the affine function
+\begin{equation}\label{eq:assigned-floor-definition}
+ \widetilde F(w)=2a(w)\E[br]
+ -\E[b\cJ P_c(w;\cdot)]
+ +2\E\!\left[g\cJ\{(1-a(w))y^2+c((1+w)y-w)\}\right].
+\end{equation}
+If $0<\alpha<1$ in Lemma~\ref{lem:calibration}, then
+$\widetilde F(v)=F_*$ and $\widetilde F'(w)<0$ for every real $w$.
+In particular, $F_*>\widetilde F(w)$ when $w>v$.
+\end{lemma}
+\begin{proof}
+Set $\Gamma=\E[br]-\E[g\cJ(y^2)]$.  Apply
+\eqref{eq:entropy-stationarity} with the strictly positive function $r$,
+using $(I-\cL)r=\cJ(y^2)$.  It gives
+\[
+ \Gamma=\E[\delta_g r(F_\lambda(S))]>0.
+\]
+All these expectations are finite by~\eqref{eq:entropy-integrability}.
+To find the dependence on $w$, symmetrize the bounded
+pair kernels.  For $t=x+y-xy$,
+\[
+ \frac{b(x)P_c(w;y)+b(y)P_c(w;x)}2
+ =\frac{(1-t)(wt-xy)}\lambda.
+\]
+Since $1-t=\lambda-A$, this implies the exact correction
+\begin{equation}\label{eq:assigned-C-correction}
+ \E\frac{wt-XY}{A^2}-\E[b\cJ P_c(w;\cdot)]
+ =\frac{wZ-N}\lambda.
+\end{equation}
+At $w=v=N/Z$ the correction vanishes, giving
+$\widetilde F(v)=F_*$.  Differentiating the affine expression with the
+law fixed gives
+\[
+ \widetilde F'(w)=2c\E[g\cJ(y-1)]
+ -\E[b\cJ((1-y)(2-y))]-\frac{2A_0\Gamma}{c a_2}<0.
+\]
+Here $A_0>0$, $a_2>0$, $\Gamma>0$, $g\ge0$, and
+$0<X,Y<1$ almost surely. Only the scalar $w$ varies in this derivative.
+\end{proof}
+
+\begin{lemma}[A series lower bound in terms of the moments]\label{lem:mellin-floor}
+Fix $w$ satisfying $v\le w<h$ and $0<a(w)<1$.
+Set
+\begin{align}
+ Q_{a(w)}(z)&=-\frac wc+\left(1+(\lambda+1)\frac wc\right)z
+                   -\left(a(w)+\lambda\frac wc\right)z^2,
+ \nonumber\\
+ t_n(w)&=\E[U^nQ_{a(w)}(U)],\label{eq:assigned-t}\\
+ J_{s-1}(w)&=-2w a_{s-1}
+  +\{c(1+2a(w))+(3\lambda+1)w\}a_s
+  \nonumber\\
+ &\quad-\{c(\lambda+2a(w))+\lambda(\lambda+1)w\}a_{s+1},
+ \label{eq:assigned-J}\\
+ \overline\gamma_{s-1}
+ &=a_s(r_s-r_{s-1})-\delta_s
+   +k\left(1-\frac1{2s}\right)\frac{\delta_s}{r_s}.
+ \label{eq:gamma-floor}
+\end{align}
+Then $t_0(w)=0$, $t_n(w)>0$ for every $n\ge1$, and the series
+\begin{equation}\label{eq:complete-mellin-floor}
+ F_{\rm floor}(w)=\sum_{s\ge1}s\lambda^{s-1}
+ \left\{\frac{(a_s-\lambda a_{s+1})J_{s-1}(w)}{\lambda c}
+             +2\overline\gamma_{s-1}t_{s-1}(w)\right\}
+\end{equation}
+converges absolutely.  Moreover,
+\begin{equation}\label{eq:strict-Mellin-gap}
+ \widetilde F(w)-F_{\rm floor}(w)
+ =2\sum_{s\ge2}s\lambda^{s-1}
+ \left\{k\beta_s[-\rho'(s)]
+ -k\left(1-\frac1{2s}\right)\frac{\delta_s}{r_s}\right\}
+ t_{s-1}(w)>0.
+\end{equation}
+In particular, $D_\lambda\ge F_*>F_{\rm floor}(v)$.
+\end{lemma}
+\begin{proof}
+The choice of $a(w)$ gives $t_0(w)=0$. The quadratic $Q_{a(w)}$ is negative
+at zero, strictly concave, and has value $(\lambda-a(w))/\lambda^2>0$
+at $1/\lambda$.  It therefore has exactly one zero $z_0$ in
+$(0,1/\lambda)$, with the sign of $z-z_0$ on that interval.  For
+$n\ge1$,
+\[
+ t_n(w)=\E[(U^n-z_0^n)Q_{a(w)}(U)]>0.
+\]
+The integrand is nonnegative and vanishes only at $U=z_0$.
+The tree starts with a chain of single-child vertices of any given
+length with positive probability. Along such a chain of length $j$,
+the transform $U$ is multiplied by $\lambda^{-j}$. Thus the
+essential infimum of $U$ is zero, although $U>0$ almost surely. In particular, its law cannot be concentrated at $z_0>0$.
+
+Write $V=Y/(c+Y)$ for an independent copy of $U$.  Direct substitution
+gives, with $a=a(w)$,
+\begin{align*}
+ \frac{b(X)Y}{A^2}
+ &=\frac{UV(1-\lambda U)(1-V)}{\lambda(1-\lambda UV)^2},\\
+ \frac{b(X)P_c(w;Y)}{A^2}
+ &=\frac{U(1-\lambda U)(1-\lambda V)
+            \{2w-(c+(\lambda+1)w)V\}}
+          {\lambda c(1-\lambda UV)^2},\\
+ \frac{(1-a)Y^2+c((1+w)Y-w)}{A^2}
+ &=\frac{(1-U)^2Q_a(V)}{(1-\lambda UV)^2}.
+\end{align*}
+Since $\lambda UV\le1/\lambda<1$, expand the common denominator in
+its uniformly convergent series.  With
+\[
+ \gamma_{s-1}=\E[g(X)(1-U)^2U^{s-1}]
+ =k\E[U^s\log(1/U)]-a_s+a_{s+1},
+\]
+the first two kernels produce
+$(a_s-\lambda a_{s+1})J_{s-1}(w)/(\lambda c)$, and the third produces
+$2\gamma_{s-1}t_{s-1}(w)$.  Their sum is exactly
+$\widetilde F(w)$.  In particular, the first factor is
+$a_s-\lambda a_{s+1}$ for every index $s\ge1$, including the first.
+
+Differentiate $a_s=\beta_s\rho(s)$ with respect to the moment order $s$.
+Since
+$-k\beta_s'/\beta_s=1-r_{s-1}$, one obtains
+\[
+ \gamma_{s-1}=a_s(r_s-r_{s-1})-\delta_s
+                    +k\beta_s[-\rho'(s)].
+\]
+Use Lemma~\ref{lem:canonical-marker},
+$\beta_s\Delta_s=\delta_s/r_s$, and $t_{s-1}(w)>0$ for $s\ge2$.
+The term $s=1$ has $t_0(w)=0$.  This proves the equality and strict
+inequality in~\eqref{eq:strict-Mellin-gap}.
+
+For completeness, $a_s\le\lambda^{-s}$ and
+$\delta_s\le\lambda^{-s-1}$.  The ratios $r_s$ are bounded away from
+zero at fixed $\lambda,h$, and $r_s-r_{s-1}$ is bounded.  The integral
+defining $\gamma_{s-1}$ is bounded by
+$\|g\|_\infty\lambda^{-s+1}$; its identity in the preceding display
+therefore bounds $k\beta_s[-\rho'(s)]$ by a constant times
+$\lambda^{-s}$.  Also $t_{s-1}(w)$ and $J_{s-1}(w)$ have bounds of
+the same geometric order.  Every expansion and regrouping above is
+dominated by a constant times $\sum_{s\ge1}s\lambda^{-s}$.
+No unweighted logarithmic moment or inverse escape moment is used.
+\end{proof}

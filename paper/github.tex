@@ -1,0 +1,241 @@
+% !TEX root = github.tex
+% !TEX program = pdflatex
+\documentclass[12pt,reqno]{amsart}
+
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath,amssymb,amsthm,mathtools,mathrsfs,esint}
+\usepackage{mathalpha}
+\usepackage{enumitem}
+%\usepackage[allowunsupported,grade=19]{cmgraded}
+%\usepackage{libertinus}
+\usepackage{microtype}
+\usepackage[a4paper,top=25mm,bottom=26mm,left=29mm,right=29mm,headsep=7mm]{geometry}
+\usepackage[dvipsnames]{xcolor}
+\usepackage[
+  breaklinks=true,
+  pagebackref=true,
+  hypertexnames=false
+]{hyperref}
+\hypersetup{
+  colorlinks=true,
+  bookmarksdepth=2,
+  pdfpagemode=UseNone,
+  citecolor=ForestGreen,
+  linkcolor=MidnightBlue,
+  urlcolor=RoyalBlue,
+  pdfstartview=FitH,
+  pdftitle={Monotonicity of the Speed of Biased Random Walks on Galton--Watson Trees},
+  pdfauthor={GPT-6 Astra and Heng Ma},
+  pdfsubject={Biased random walk, Galton--Watson tree, speed monotonicity}
+}
+\usepackage[nameinlink,noabbrev]{cleveref}
+
+% Page geometry and paragraph spacing from the template.
+\linespread{1.05}
+\normalsize
+\linespacing=\baselineskip
+\setlength{\parindent}{1em}
+\setlength{\parskip}{3pt}
+
+\makeatletter
+
+% First-page title, author block, abstract, and separate AI usage statement.
+\def\@settitle{%
+  \begin{center}%
+    \uppercasenonmath\@title
+    \Large\@title
+  \end{center}}
+
+\def\@setauthors{%
+  \vskip21pt plus6pt minus3pt
+  \begin{center}%
+    {\tiny BY\par}\medskip
+    {\normalsize\scshape\authors\par}\medskip
+    \def\address##1##2{\par ##2\par}%
+    \def\email##1##2{\par e-mail:~##2\par}%
+    {\small\itshape\addresses\par}%
+  \end{center}}
+
+\def\enddoc@text{}
+
+\renewenvironment{abstract}{%
+  \global\setbox\abstractbox=\vtop\bgroup
+  \vskip10pt
+  \normalfont\tiny\centering\MakeUppercase{\abstractname}\par
+  \Small
+  \list{}{%
+    \leftmargin3pc
+    \rightmargin3pc
+    \labelwidth0pt
+    \listparindent\normalparindent
+    \itemindent0pt
+    \parsep0pt plus1pt
+    \let\fullwidthdisplay\relax
+  }%
+  \item[]
+}{%
+  \vspace*{-10pt}
+  \endlist\egroup
+}
+
+\newbox\aiusagebox
+\newenvironment{aiusage}{%
+  \global\setbox\aiusagebox=\vtop\bgroup
+  \normalfont\Small
+  \list{}{%
+    \leftmargin3pc
+    \rightmargin3pc
+    \topsep0pt
+    \partopsep0pt
+    \parsep0pt
+    \itemsep0pt
+    \listparindent0pt
+    \itemindent0pt
+  }%
+  \item[]%
+  \nobreak\vspace{4pt}%
+  {\normalfont\tiny\centering\MakeUppercase{AI usage}\par}%
+  \nobreak\vspace{2pt}%
+  \noindent\ignorespaces
+}{%
+  \par\endlist\egroup
+}
+\let\original@setabstracta\@setabstracta
+\def\@setabstracta{%
+  \original@setabstracta
+  \ifvoid\aiusagebox\else
+    \vskip10pt
+    \box\aiusagebox
+    \prevdepth\z@
+  \fi
+}
+
+% Section headings.
+\let\@secnumfont\@empty
+\def\section{\@startsection{section}{1}{0pt}%
+  {20pt plus4pt minus4pt}
+  {.5\linespacing}
+  {\normalfont\bfseries}}
+\def\subsection{\@startsection{subsection}{2}{0pt}%
+  {.5\linespacing plus.7\linespacing}
+  {-.5em}
+  {\normalfont\scshape}}
+\def\subsubsection{\@startsection{subsubsection}{3}{0pt}%
+  {.5\linespacing plus.7\linespacing}
+  {-.5em}
+  {\normalfont\itshape}}
+\let\@afterindenttrue\@afterindentfalse
+\@afterindentfalse
+
+% Theorem and proof styles.
+\newtheoremstyle{plain}
+  {.5\linespacing}{.5\linespacing}
+  {\itshape}{1em}{\scshape}{.}{.5em}
+  {\thmname{#1}\thmnumber{ #2}\thmnote{\normalfont{} (#3)}}
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+
+\newtheoremstyle{definition}
+  {.5\linespacing}{.5\linespacing}
+  {\upshape}{1em}{\scshape}{.}{.5em}
+  {\thmname{#1}\thmnumber{ #2}\thmnote{\normalfont{} (#3)}}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+
+\newtheoremstyle{remark}
+  {.5\linespacing}{.5\linespacing}
+  {\upshape}{1em}{\scshape}{.}{.5em}
+  {\thmname{#1}\thmnumber{ #2}\thmnote{\normalfont{} (#3)}}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+
+\renewenvironment{proof}[1][\proofname]{%
+  \par
+  \pushQED{\qed}%
+  \normalfont
+  \topsep6pt plus6pt\relax
+  \trivlist
+  \item[\hskip\labelsep\slshape #1\@addpunct{.}]%
+  \ignorespaces
+}{%
+  \popQED
+  \endtrivlist
+  \@endpefalse
+}
+\DeclareRobustCommand{\qed}{%
+  \leavevmode\unskip\penalty9999\hbox{}\nobreak
+  \ifmmode
+    \makebox[0pt][l]{\qquad\hbox{\qedsymbol}}%
+  \else
+    \qquad\hbox{\qedsymbol}%
+  \fi
+}
+\renewcommand{\qedsymbol}{\rule[.47pt]{4pt}{6pt}}
+
+\makeatother
+
+\setlength{\emergencystretch}{1.8em}
+\numberwithin{equation}{section}
+\allowdisplaybreaks[1]
+
+
+\usepackage{booktabs,array}
+\newcommand{\E}{\mathbb E}
+\newcommand{\PP}{\mathbb P}
+\newcommand{\R}{\mathbb R}
+\newcommand{\Law}{\operatorname{Law}}
+\newcommand{\Cov}{\operatorname{Cov}}
+\newcommand{\id}{\mathrm{id}}
+\newcommand{\dd}{\,\mathrm d}
+\newcommand{\Dplus}{D^{+}}
+\newcommand{\cJ}{\mathcal J}
+\newcommand{\cL}{\mathcal L}
+\newcommand{\cF}{\mathscr F}
+\newcommand{\res}{\mathfrak R}
+\crefname{theorem}{Theorem}{Theorems}
+\crefname{lemma}{Lemma}{Lemmas}
+\crefname{proposition}{Proposition}{Propositions}
+\crefname{corollary}{Corollary}{Corollaries}
+\crefname{section}{Section}{Sections}
+
+\title[Monotonicity of the Speed on Galton--Watson Trees]{Monotonicity of the Speed of Biased Random Walks on Galton--Watson Trees}
+\author[GPT-6 Astra]{GPT-6 Astra}
+\author[Heng Ma]{Heng Ma}
+\thanks{Only Heng Ma takes responsibility for this paper.}
+\date{November 20, 2026}
+\subjclass[2020]{60J10, 60J80, 60K37}
+\keywords{Galton--Watson tree, biased random walk, speed monotonicity, escape probability, computer-assisted proof}
+
+\begin{document}
+\begin{abstract}
+We study the speed of the $\lambda$-biased random walk on a Galton--Watson tree without leaves, where the parent edge has weight $\lambda$ and every child edge has weight one. Under only a finite offspring mean $m>1$, we give two analytic proofs of strict decrease throughout $[0,m)$ when every vertex has at least two children. When single-child vertices are allowed, we prove strict decrease on $(0,1)$ and on $[(3+\sqrt5)/2,m)$. The first proof for $\lambda>1$ modifies the speed formula by a term that vanishes under the escape recursion. The comparison then reduces to an inequality between the mean escape probability and a weighted mean. For $\lambda<1$, we bound the change in the escape probability by an affine map and use a resistance estimate and Jensen's inequality. The second proof uses linear response to express $v'(\lambda)$ in terms of the escape law for $1<\lambda<m$. For laws allowing single-child vertices, we use the same derivative formula. Bounds on moments and series tails then reduce the inequality $v'(\lambda)<0$ to finitely many rational checks. The supplement gives the exact coefficient tables and verification programs.
+\end{abstract}
+
+\begin{aiusage}
+This manuscript was substantially generated and revised with the assistance of AI systems. The analytic arguments and exposition received AI-assisted checks. The finite arithmetic used in the computer-assisted part was reconstructed and checked with exact arithmetic; the resulting coefficient data and verification programs accompany the paper. These checks do not constitute independent human verification or formal proof verification.
+\end{aiusage}
+
+\maketitle
+\begingroup
+\setcounter{tocdepth}{1}
+\footnotesize
+\setlength{\linespacing}{8pt}
+\setlength{\parskip}{0pt}
+\tableofcontents
+\endgroup
+\clearpage
+
+\input{sections/01_introduction}
+\input{sections/02_preliminaries}
+\input{sections/03_two_children}
+\input{sections/04_low_bias}
+\input{sections/05_high_bias}
+\clearpage
+\input{sections/06_computer_assisted}
+
+\bibliographystyle{alpha}
+\bibliography{references}
+\end{document}

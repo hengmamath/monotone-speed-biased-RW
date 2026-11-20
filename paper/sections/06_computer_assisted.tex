@@ -1,0 +1,20 @@
+\section{Computer-assisted proof for \texorpdfstring{$1<\lambda<m$}{1 < lambda < m}}\label{sec:computer}
+
+We prove that $v'(\lambda)<0$ for $1<\lambda<m$ when the offspring law allows a single child. All bias intervals below are restricted to $\lambda<m$. We derive bounds for the infinite series and their tails, then reduce the sign of the derivative to finitely many rational inequalities. The coefficient tables and verification programs accompany the paper~\cite{Supplement}.
+
+\begin{theorem}[Computer-assisted monotonicity]\label{thm:computer}
+Fix an offspring law $\mu$ with $\mu(0)=0$, $\mu(1)>0$ and $1<m=\E_\mu\nu<\infty$. With the root and transition conventions of Section~\ref{sec:introduction},
+\begin{equation}\label{eq:computer-result}
+ v_\mu\in C^1((1,m)),\qquad v_\mu'(\lambda)<0\quad(1<\lambda<m).
+\end{equation}
+\end{theorem}
+
+Fix $1<\lambda<m$, put $c=\lambda-1$, and let $X,Y$ be independent with law $\pi_\lambda$. We retain $v=v(\lambda)$ and the notation of Sections~\ref{sec:kernel-identities}--\ref{sec:linear-response}. Lemma~\ref{lem:full-response} gives $v'(\lambda)=-D_\lambda/Z$ with $Z>0$. The escape recursion gives moment inequalities and an identity for a logarithmic function. Together they yield a lower bound for $D_\lambda$ and specify when further estimates are needed. We prove $D_\lambda>0$ on four intervals covering $1<\lambda<(3+\sqrt5)/2$. Section~\ref{sec:high} supplies the sign of the derivative for $(3+\sqrt5)/2\le\lambda<m$.
+
+\input{sections/06b_moments_entropy}
+\input{sections/06c_marker_floor}
+\input{sections/06d_low_region}
+\input{sections/06n_near_region}
+\input{sections/06e_middle_high}
+
+\input{sections/06z_completion}

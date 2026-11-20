@@ -1,0 +1,12 @@
+identity: transformed b(X)Y/A^2
+identity: transformed b(X)Pc(w;Y)/A^2
+identity: transformed calibrated entropy kernel
+identity: off-speed symmetrization
+identity: correct Mellin first factor, exact bare K coefficient
+identity: J versus t, with free assigned speed
+identity: calibration t0
+identity: calibrated endpoint quadratic
+identity: Mellin gamma reorganization
+identity: final continuous budget derivative
+identity: decreasing final rational derivative term
+PASS 11 generic identities, exact Q0 and final Q3c rational checks.
